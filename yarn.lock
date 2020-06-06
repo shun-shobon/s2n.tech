@@ -3093,6 +3093,11 @@ destroy@~1.0.4:
   resolved "https://registry.npm.taobao.org/destroy/download/destroy-1.0.4.tgz#978857442c44749e4206613e37946205826abd80"
   integrity sha1-l4hXRCxEdJ5CBmE+N5RiBYJqvYA=
 
+destyle.css@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/destyle.css/-/destyle.css-1.0.13.tgz#4aecae20c055f8891f2b09777e2426e7c25cad98"
+  integrity sha512-4ypeLPIa1Rs12pnjqxLRh33r73oPUu1McVCD0qS5jDfmim6jvjx+N94C5IybcjzOzWIpGSajVPcmJ16+CmykWg==
+
 detect-node@^2.0.4:
   version "2.0.4"
   resolved "https://registry.npm.taobao.org/detect-node/download/detect-node-2.0.4.tgz#014ee8f8f669c5c58023da64b8179c083a28c46c"
