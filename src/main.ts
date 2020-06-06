@@ -9,14 +9,26 @@ import {
   faBirthdayCake,
   faSchool,
   faGraduationCap,
-  faCommentDots
+  faCommentDots,
+  faCode,
+  faAtom,
+  faServer,
+  faCubes,
+  faUserSecret,
+  faArchive
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faAddressCard,
   faBirthdayCake,
   faSchool,
   faGraduationCap,
-  faCommentDots
+  faCommentDots,
+  faCode,
+  faAtom,
+  faServer,
+  faCubes,
+  faUserSecret,
+  faArchive
 );
 
 Vue.component("fa-icon", FontAwesomeIcon);
