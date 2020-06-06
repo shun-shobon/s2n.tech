@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Title />
+    <AboutMe />
   </div>
 </template>
 
@@ -8,10 +9,11 @@
 import { Component, Vue } from "vue-property-decorator";
 
 import Title from "@/components/Title.vue";
+import AboutMe from "@/components/AboutMe.vue";
 
 @Component({
   name: "App",
-  components: { Title }
+  components: { Title, AboutMe }
 })
 export default class App extends Vue {}
 </script>
