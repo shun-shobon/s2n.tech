@@ -16,8 +16,12 @@ import {
   faCubes,
   faUserSecret,
   faArchive,
-  faProjectDiagram
+  faProjectDiagram,
+  faPhone,
+  faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
+import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
+
 library.add(
   faAddressCard,
   faBirthdayCake,
@@ -30,7 +34,11 @@ library.add(
   faCubes,
   faUserSecret,
   faArchive,
-  faProjectDiagram
+  faProjectDiagram,
+  faPhone,
+  faEnvelope,
+  faTwitter,
+  faGithub
 );
 
 Vue.component("fa-icon", FontAwesomeIcon);

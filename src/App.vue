@@ -4,6 +4,7 @@
     <AboutMe />
     <Skills />
     <Works />
+    <Contact />
   </div>
 </template>
 
@@ -14,10 +15,11 @@ import Title from "@/components/Title.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import Skills from "@/components/Skills.vue";
 import Works from "@/components/Works.vue";
+import Contact from "@/components/Contact.vue";
 
 @Component({
   name: "App",
-  components: { Title, AboutMe, Skills, Works }
+  components: { Title, AboutMe, Skills, Works, Contact }
 })
 export default class App extends Vue {}
 </script>
