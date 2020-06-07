@@ -15,7 +15,8 @@ import {
   faServer,
   faCubes,
   faUserSecret,
-  faArchive
+  faArchive,
+  faProjectDiagram
 } from "@fortawesome/free-solid-svg-icons";
 library.add(
   faAddressCard,
@@ -28,7 +29,8 @@ library.add(
   faServer,
   faCubes,
   faUserSecret,
-  faArchive
+  faArchive,
+  faProjectDiagram
 );
 
 Vue.component("fa-icon", FontAwesomeIcon);

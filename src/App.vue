@@ -3,6 +3,7 @@
     <Title />
     <AboutMe />
     <Skills />
+    <Works />
   </div>
 </template>
 
@@ -12,10 +13,11 @@ import { Component, Vue } from "vue-property-decorator";
 import Title from "@/components/Title.vue";
 import AboutMe from "@/components/AboutMe.vue";
 import Skills from "@/components/Skills.vue";
+import Works from "@/components/Works.vue";
 
 @Component({
   name: "App",
-  components: { Title, AboutMe, Skills }
+  components: { Title, AboutMe, Skills, Works }
 })
 export default class App extends Vue {}
 </script>
