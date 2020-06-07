@@ -20,6 +20,7 @@ import {
   faPhone,
   faEnvelope
 } from "@fortawesome/free-solid-svg-icons";
+import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import { faTwitter, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 library.add(
@@ -37,6 +38,7 @@ library.add(
   faProjectDiagram,
   faPhone,
   faEnvelope,
+  faCopyright,
   faTwitter,
   faGithub
 );
