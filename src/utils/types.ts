@@ -24,3 +24,10 @@ export type CardImageData = {
   alt?: string;
   badges?: BadgeData[];
 };
+
+export type CardData = {
+  title: CardTitleData;
+  content: CardContentData;
+  image?: CardImageData;
+  right: boolean;
+};
