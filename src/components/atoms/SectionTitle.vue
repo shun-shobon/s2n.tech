@@ -7,7 +7,7 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
-import { Icon } from "@/utils/icon-type";
+import { IconData } from "@/utils/types";
 
 @Component({
   name: "SectionTitle"
@@ -17,7 +17,7 @@ export default class SectionTitle extends Vue {
   text!: string;
 
   @Prop({ required: true })
-  icon!: Icon;
+  icon!: IconData;
 }
 </script>
 
