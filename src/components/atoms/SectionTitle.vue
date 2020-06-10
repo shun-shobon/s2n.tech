@@ -1,23 +1,20 @@
 <template>
   <h1 class="section-title">
-    <fa-icon class="section-title__icon" :icon="icon" />
-    <span class="section-title__text">{{ text }}</span>
+    <fa-icon class="section-title__icon" :icon="data.icon" />
+    <span class="section-title__text">{{ data.text }}</span>
   </h1>
 </template>
 
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
-import { IconData } from "@/utils/types";
+import { SectionTitleData } from "@/utils/types";
 
 @Component({
   name: "SectionTitle"
 })
 export default class SectionTitle extends Vue {
   @Prop({ required: true })
-  text!: string;
-
-  @Prop({ required: true })
-  icon!: IconData;
+  data!: SectionTitleData;
 }
 </script>
 
