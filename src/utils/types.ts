@@ -4,3 +4,8 @@ export type SectionTitleData = {
   text: string;
   icon: IconData;
 };
+
+export type BadgeData = {
+  href: string;
+  text: string;
+};
