@@ -29,5 +29,5 @@ export type CardData = {
   title: CardTitleData;
   content: CardContentData;
   image?: CardImageData;
-  right: boolean;
+  direction: "left" | "right";
 };

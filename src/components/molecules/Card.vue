@@ -1,7 +1,10 @@
 <template>
   <div
     class="card"
-    :class="{ 'card--left': !data.right, 'card--right': data.right }"
+    :class="{
+      'card-list__card--left': data.direction === 'left',
+      'card-list__card--right': data.direction === 'right'
+    }"
   >
     <CardImage v-if="data.image" :data="data.image" />
     <CardTitle :data="data.title" />
