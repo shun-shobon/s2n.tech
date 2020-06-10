@@ -18,3 +18,9 @@ export type CardTitleData = {
 export type CardContentData = {
   texts: string | string[];
 };
+
+export type CardImageData = {
+  src: string;
+  alt?: string;
+  badges?: BadgeData[];
+};
