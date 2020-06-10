@@ -9,3 +9,8 @@ export type BadgeData = {
   href: string;
   text: string;
 };
+
+export type CardTitleData = {
+  text: string;
+  icon?: IconData;
+};
