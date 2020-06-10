@@ -1,8 +1,12 @@
 <template>
-  <div class="card__image">
-    <img class="card__image__image" :src="data.src" :alt="data.alt" />
-    <div class="card__image__mask" v-if="data.badges">
-      <p class="card__image__mask__badge-wrapper">
+  <div class="card-list__card__image">
+    <img
+      class="card-list__card__image__image"
+      :src="data.src"
+      :alt="data.alt"
+    />
+    <div class="card-list__card__image__mask" v-if="data.badges">
+      <p class="card-list__card__image__mask__badge-wrapper">
         <template v-for="(badge, index) in data.badges">
           <Badge :key="index" :data="badge" />
         </template>
@@ -28,7 +32,7 @@ export default class CardImage extends Vue {
 </script>
 
 <style lang="scss">
-.card__image {
+.card-list__card__image {
   position: relative;
   height: 15rem;
   &__image {

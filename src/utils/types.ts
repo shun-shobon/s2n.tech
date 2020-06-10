@@ -31,3 +31,8 @@ export type CardData = {
   image?: CardImageData;
   direction: "left" | "right";
 };
+
+export type CardListData = {
+  cards: Omit<CardData, "direction">[];
+  firstDirection: "left" | "right";
+};

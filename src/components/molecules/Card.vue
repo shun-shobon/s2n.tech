@@ -1,6 +1,6 @@
 <template>
   <div
-    class="card"
+    class="card-list__card"
     :class="{
       'card-list__card--left': data.direction === 'left',
       'card-list__card--right': data.direction === 'right'
@@ -31,7 +31,7 @@ export default class Card extends Vue {
 </script>
 
 <style lang="scss">
-.card {
+.card-list__card {
   &--left {
     transform: translateX(calc(-50% - 1rem));
     text-align: right;

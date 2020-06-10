@@ -1,7 +1,11 @@
 <template>
-  <h3 class="card__title">
-    <fa-icon class="card__title__icon" v-if="data.icon" :icon="data.icon" />
-    <span class="card__title__text">{{ data.text }}</span>
+  <h3 class="card-list__card__title">
+    <fa-icon
+      class="card-list__card__title__icon"
+      v-if="data.icon"
+      :icon="data.icon"
+    />
+    <span class="card-list__card__title__text">{{ data.text }}</span>
   </h3>
 </template>
 
@@ -19,7 +23,7 @@ export default class CardTitle extends Vue {
 </script>
 
 <style lang="scss">
-.card__title {
+.card-list__card__title {
   font-size: 1.3rem;
   font-weight: 600;
 

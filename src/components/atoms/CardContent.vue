@@ -1,5 +1,5 @@
 <template>
-  <div class="card__content">
+  <div class="card-list__card__content">
     <template v-if="typeof data.texts === 'string'">
       {{ data.texts }}
     </template>
