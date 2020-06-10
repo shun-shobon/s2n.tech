@@ -14,3 +14,7 @@ export type CardTitleData = {
   text: string;
   icon?: IconData;
 };
+
+export type CardContentData = {
+  texts: string | string[];
+};
