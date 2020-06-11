@@ -1,10 +1,15 @@
 <template>
   <div id="app">
     <Title />
+    <Partition top-color="#000" bottom-color="#fff" up-direction="right" />
     <AboutMe />
+    <Partition top-color="#fff" bottom-color="#000" up-direction="left" />
     <Skills />
+    <Partition top-color="#000" bottom-color="#fff" up-direction="left" />
     <Works />
+    <Partition top-color="#fff" bottom-color="#000" up-direction="right" />
     <Contact />
+    <Partition top-color="#000" bottom-color="#fff" up-direction="left" />
     <Footer />
   </div>
 </template>
@@ -19,9 +24,19 @@ import Works from "@/components/templates/Works.vue";
 import Contact from "@/components/templates/Contact.vue";
 import Footer from "@/components/Footer.vue";
 
+import Partition from "@/components/atoms/Partition.vue";
+
 @Component({
   name: "App",
-  components: { Title, AboutMe, Skills, Works, Contact, Footer }
+  components: {
+    Title,
+    AboutMe,
+    Skills,
+    Works,
+    Contact,
+    Footer,
+    Partition
+  }
 })
 export default class App extends Vue {}
 </script>

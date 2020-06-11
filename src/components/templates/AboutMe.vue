@@ -74,7 +74,6 @@ export default class AboutMe extends Vue {
 <style lang="scss" scoped>
 .about-me {
   width: 100vw;
-  padding: 3rem 0;
   color: black;
   background-color: white;
 
