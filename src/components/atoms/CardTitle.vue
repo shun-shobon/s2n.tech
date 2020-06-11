@@ -25,7 +25,7 @@ export default class CardTitle extends Vue {
 <style lang="scss">
 .card-list__card__title {
   font-size: 1.3rem;
-  font-weight: 600;
+  font-weight: 500;
 
   &__icon {
     margin-right: 0.5rem;
