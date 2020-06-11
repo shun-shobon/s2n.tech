@@ -27,6 +27,7 @@ export default class Works extends Vue {
   };
   cardList: CardListData = {
     firstDirection: "left",
+    lineColor: "#000",
     cards: [
       {
         title: {

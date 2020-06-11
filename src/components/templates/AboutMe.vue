@@ -66,7 +66,8 @@ export default class AboutMe extends Vue {
         }
       }
     ],
-    firstDirection: "right"
+    firstDirection: "right",
+    lineColor: "#000"
   };
 }
 </script>

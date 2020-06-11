@@ -23,6 +23,7 @@ export default class Contact extends Vue {
   };
   cardList: CardListData = {
     firstDirection: "right",
+    lineColor: "#fff",
     cards: [
       {
         title: {
