@@ -28,8 +28,11 @@ export default class App extends Vue {}
 
 <style lang="scss">
 @import "~destyle.css";
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;500&display=swap");
 
 body {
   background-color: black;
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: 300;
 }
 </style>
