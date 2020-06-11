@@ -6,6 +6,7 @@
         :data="{ ...card, direction: decideDirection(index) }"
       />
     </template>
+    <div class="card-list__line" :style="{ backgroundColor: data.lineColor }" />
   </div>
 </template>
 
@@ -39,6 +40,14 @@ export default class CardList extends Vue {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
   margin: 0 auto;
+
+  &__line {
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    border-radius: 1.5px;
+  }
 }
 </style>
