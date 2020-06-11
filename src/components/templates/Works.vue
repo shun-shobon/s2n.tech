@@ -97,6 +97,5 @@ export default class Works extends Vue {
   width: 100vw;
   color: black;
   background-color: white;
-  padding: 3rem 0;
 }
 </style>

@@ -61,6 +61,5 @@ export default class Contact extends Vue {
   width: 100vw;
   color: white;
   background-color: black;
-  padding: 3rem 0;
 }
 </style>
