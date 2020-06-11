@@ -35,4 +35,5 @@ export type CardData = {
 export type CardListData = {
   cards: Omit<CardData, "direction">[];
   firstDirection: "left" | "right";
+  lineColor: string;
 };
