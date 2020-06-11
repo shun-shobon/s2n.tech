@@ -17,6 +17,13 @@ export default class Title extends Vue {}
 </script>
 
 <style lang="scss" scoped>
+@font-face {
+  font-family: "Quantum";
+  font-style: normal;
+  font-weight: 600;
+  src: url("~@/assets/fonts/QuantumSubset.woff2") format("woff2");
+}
+
 #title {
   width: 100vw;
   height: 100vh;
@@ -28,6 +35,7 @@ export default class Title extends Vue {}
     h1,
     h2 {
       text-align: center;
+      font-family: "Quantum", sans-serif;
     }
     h1 {
       font-size: 10rem;
