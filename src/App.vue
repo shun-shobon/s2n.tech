@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Title />
+    <Header />
     <Partition top-color="#000" bottom-color="#fff" up-direction="right" />
     <AboutMe />
     <Partition top-color="#fff" bottom-color="#000" up-direction="left" />
@@ -17,7 +17,7 @@
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
 
-import Title from "@/components/Title.vue";
+import Header from "@/components/templates/Header.vue";
 import AboutMe from "@/components/templates/AboutMe.vue";
 import Skills from "@/components/templates/Skills.vue";
 import Works from "@/components/templates/Works.vue";
@@ -29,7 +29,7 @@ import Partition from "@/components/atoms/Partition.vue";
 @Component({
   name: "App",
   components: {
-    Title,
+    Header,
     AboutMe,
     Skills,
     Works,
