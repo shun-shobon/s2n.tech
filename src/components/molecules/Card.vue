@@ -31,14 +31,24 @@ export default class Card extends Vue {
 </script>
 
 <style lang="scss">
+@import "~@/assets/scss/media-queries";
+
 .card-list__card {
   &--left {
-    transform: translateX(calc(-50% - 1rem));
+    margin-left: auto;
+    @include mq() {
+      margin: 0;
+      transform: translateX(calc(-50% - 1rem));
+    }
     text-align: right;
   }
 
   &--right {
-    transform: translateX(calc(50% + 1rem));
+    margin-right: auto;
+    @include mq() {
+      margin: 0;
+      transform: translateX(calc(50% + 1rem));
+    }
     text-align: left;
   }
 }
