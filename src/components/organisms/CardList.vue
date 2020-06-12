@@ -35,6 +35,8 @@ export default class CardList extends Vue {
 </script>
 
 <style lang="scss">
+@import "~@/assets/scss/media-queries";
+
 .card-list {
   display: flex;
   flex-direction: column;
@@ -42,12 +44,17 @@ export default class CardList extends Vue {
   align-items: center;
   position: relative;
   margin: 0 auto;
+  padding: 0 1rem;
 
   &__line {
+    display: none;
     position: absolute;
     height: 100%;
     width: 3px;
     border-radius: 1.5px;
+    @include mq() {
+      display: block;
+    }
   }
 }
 </style>
