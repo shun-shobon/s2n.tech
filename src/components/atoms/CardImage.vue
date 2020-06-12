@@ -34,9 +34,9 @@ export default class CardImage extends Vue {
 <style lang="scss">
 .card-list__card__image {
   position: relative;
-  height: 15rem;
+  width: 20rem;
   &__image {
-    height: 100%;
+    width: 100%;
   }
 
   &__mask {
