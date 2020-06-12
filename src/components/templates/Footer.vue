@@ -1,7 +1,7 @@
 <template>
-  <footer>
-    <p>
-      Copyright<fa-icon :icon="['far', 'copyright']" />2020 Shuntaro Nishizawa
+  <footer class="footer">
+    <p class="footer__copyright">
+      Copyright©2020 Shuntaro Nishizawa
     </p>
   </footer>
 </template>
@@ -16,13 +16,13 @@ export default class Footer extends Vue {}
 </script>
 
 <style lang="scss" scoped>
-footer {
+.footer {
   width: 100vw;
   background-color: white;
   padding-bottom: 1rem;
-  p {
+  &__copyright {
     text-align: center;
-    color: gray;
+    color: dimgray;
   }
 }
 </style>

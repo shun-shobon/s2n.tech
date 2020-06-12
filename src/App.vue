@@ -22,7 +22,7 @@ import AboutMe from "@/components/templates/AboutMe.vue";
 import Skills from "@/components/templates/Skills.vue";
 import Works from "@/components/templates/Works.vue";
 import Contact from "@/components/templates/Contact.vue";
-import Footer from "@/components/Footer.vue";
+import Footer from "@/components/templates/Footer.vue";
 
 import Partition from "@/components/atoms/Partition.vue";
 
