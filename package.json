@@ -1,9 +1,9 @@
 {
-  "name": "react-template",
-  "version": "0.0.0",
-  "description": "Reactのプロジェクトテンプレートです。",
-  "homepage": "https://github.com/shun-shobon/react-template#readme",
-  "bugs": "https://github.com/shun-shobon/react-template/issues",
+  "name": "shun-shobon.github.io",
+  "version": "2.0.0",
+  "description": "My portfolio",
+  "homepage": "https://github.com/shun-shobon/shun-shobon.github.io#readme",
+  "bugs": "https://github.com/shun-shobon/shun-shobon.github.io/issues",
   "author": {
     "name": "SHUN/しゅん",
     "email": "me@shun.technology",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shun-shobon/react-template.git"
+    "url": "git+https://github.com/shun-shobon/shun-shobon.github.io.git"
   },
   "scripts": {
     "build": "cross-env TS_NODE_PROJECT='tsconfig.config.json' webpack",
