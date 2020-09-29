@@ -1,11 +1,12 @@
 import React, { FC } from "react";
+import { BrowserRouter } from "react-router-dom";
 
 import "./App.scss";
 
 const App: FC = () => (
-  <div>
+  <BrowserRouter>
     <h1>Hello, world!</h1>
-  </div>
+  </BrowserRouter>
 );
 
 export default App;
