@@ -1,11 +1,12 @@
 import React, { FC } from "react";
+import { BrowserRouter } from "react-router-dom";
 
-import styles from "./App.module.scss";
+import "./App.scss";
 
 const App: FC = () => (
-  <div>
-    <h1 className={styles.title}>Hello, world!</h1>
-  </div>
+  <BrowserRouter>
+    <h1>Hello, world!</h1>
+  </BrowserRouter>
 );
 
 export default App;
