@@ -1,11 +1,13 @@
 import React, { FC } from "react";
 import { BrowserRouter } from "react-router-dom";
 
-import "./App.scss";
+import styles from "./App.module.scss";
 
 const App: FC = () => (
   <BrowserRouter>
-    <h1>Hello, world!</h1>
+    <div className={styles.app}>
+      <div />
+    </div>
   </BrowserRouter>
 );
 
