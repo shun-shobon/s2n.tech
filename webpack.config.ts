@@ -66,6 +66,7 @@ const config: webpack.Configuration = {
             options: {
               modules: {
                 auto: /\.module\.\w+$/,
+                exportLocalsConvention: "camelCase",
                 localIdentName: isProduction ? "[hash:base64]" : "[path][name]__[local]",
               },
               importLoaders: 2,
