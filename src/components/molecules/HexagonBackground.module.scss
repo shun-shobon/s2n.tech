@@ -1,14 +1,12 @@
 .hexagon-background {
-  position: relative;
+  position: absolute;
   display: grid;
   width: 100%;
   height: 100%;
   overflow: hidden;
   place-items: center;
 
-  .hexagon__wrapper {
-    position: absolute;
-
+  div {
     &:first-child {
       transform: translate(-30vmax, -20vmax);
     }

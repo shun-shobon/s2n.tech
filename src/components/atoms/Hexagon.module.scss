@@ -6,7 +6,7 @@ $tight: 0.5rem;
 $sqrt3: 1.73205080757;
 
 .hexagon {
-  position: relative;
+  position: absolute;
   width: $size;
 
   &::before {

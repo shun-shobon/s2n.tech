@@ -8,9 +8,7 @@ import styles from "./HexagonBackground.module.scss";
 const HexagonBackground: FC = () => (
   <div className={styles.hexagonBackground}>
     {range({ stop: 2 }).map((i) => (
-      <div key={i} className={styles.hexagon__wrapper}>
-        <HexagonAtom />
-      </div>
+      <HexagonAtom key={i} />
     ))}
   </div>
 );
