@@ -1,0 +1,51 @@
+@use "../scss/color";
+
+$size: 30rem;
+$tight: 0.5rem;
+
+$sqrt3: 1.73205080757;
+
+.hexagon {
+  position: relative;
+  width: $size;
+
+  &::before {
+    display: block;
+    padding-top: percentage(3 / $sqrt3);
+    content: '';
+  }
+
+  .hexagon__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    &:first-child {
+      transform: rotate(120deg);
+    }
+
+    &:last-child {
+      transform: rotate(-120deg);
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: $tight;
+      content: '';
+      background-color: color.$second-color;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+}
