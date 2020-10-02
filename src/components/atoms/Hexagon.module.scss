@@ -24,14 +24,12 @@ $sqrt3: 1.73205080757;
     width: 100%;
     height: 100%;
 
-    &::before {
+    &::before,
+    &::after {
       position: absolute;
-      top: 0;
-      left: 0;
       height: $tight;
       content: '';
       background-color: color.$second-color;
-      animation-name: stretch;
       animation-duration: #{$parts-duration}ms;
       animation-play-state: running;
       animation-timing-function: linear;
@@ -40,24 +38,50 @@ $sqrt3: 1.73205080757;
       animation-fill-mode: forwards;
     }
 
-    @for $i from 0 to 6 {
+    &::before {
+      top: 0;
+      left: 0;
+      animation-name: stretch-before;
+    }
+
+    &::after {
+      right: 0;
+      bottom: 0;
+      animation-name: stretch-after;
+    }
+
+    @for $i from 0 to 3 {
       &:nth-child(#{$i + 1}) {
         transform: rotate(60deg * $i);
 
         &::before {
           animation-delay: #{$first-delay + $parts-duration * $i}ms;
         }
+
+        &::after {
+          animation-delay: #{$first-delay + $parts-duration * ($i + 3)}ms;
+        }
       }
     }
   }
 }
 
-@keyframes stretch {
+@keyframes stretch-before {
   0% {
     right: 100%;
   }
 
   100% {
     right: 0;
+  }
+}
+
+@keyframes stretch-after {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0;
   }
 }
