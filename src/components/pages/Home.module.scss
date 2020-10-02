@@ -19,12 +19,29 @@
     div:last-child {
       margin-left: 5rem;
     }
+
+    opacity: 0;
+    animation-name: appear-welcome;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-timing-function: ease;
+    animation-delay: 2.5s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
   }
 
   .my-name {
     position: absolute;
     right: 1rem;
     bottom: 1rem;
+    opacity: 0;
+    animation-name: appear-name;
+    animation-duration: 1s;
+    animation-play-state: running;
+    animation-timing-function: ease;
+    animation-delay: 2.7s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
   }
 }
 
@@ -39,5 +56,29 @@
       right: 3rem;
       bottom: 3rem;
     }
+  }
+}
+
+@keyframes appear-welcome {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: initial;
+  }
+}
+
+@keyframes appear-name {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: initial;
   }
 }
