@@ -2,6 +2,8 @@
 
 $size: 40vmax;
 $tight: 0.5rem;
+$first-delay: 500;
+$parts-duration: 500;
 
 $sqrt3: 1.73205080757;
 
@@ -22,30 +24,40 @@ $sqrt3: 1.73205080757;
     width: 100%;
     height: 100%;
 
-    &:first-child {
-      transform: rotate(120deg);
-    }
-
-    &:last-child {
-      transform: rotate(-120deg);
-    }
-
-    &::before,
-    &::after {
+    &::before {
       position: absolute;
-      right: 0;
+      top: 0;
       left: 0;
       height: $tight;
       content: '';
       background-color: color.$second-color;
+      animation-name: stretch;
+      animation-duration: #{$parts-duration}ms;
+      animation-play-state: running;
+      animation-timing-function: linear;
+      animation-iteration-count: 1;
+      animation-direction: normal;
+      animation-fill-mode: forwards;
     }
 
-    &::before {
-      top: 0;
-    }
+    @for $i from 0 to 6 {
+      &:nth-child(#{$i + 1}) {
+        transform: rotate(60deg * $i);
 
-    &::after {
-      bottom: 0;
+        &::before {
+          animation-delay: #{$first-delay + $parts-duration * $i}ms;
+        }
+      }
     }
+  }
+}
+
+@keyframes stretch {
+  0% {
+    right: 100%;
+  }
+
+  100% {
+    right: 0;
   }
 }

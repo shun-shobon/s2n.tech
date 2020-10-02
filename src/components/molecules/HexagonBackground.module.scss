@@ -8,11 +8,11 @@
 
   div {
     &:first-child {
-      transform: translate(-30vmax, -20vmax);
+      transform: translate(-30vmax, -20vmax) rotate(60deg);
     }
 
     &:last-child {
-      transform: translate(40vmax, 22vmax);
+      transform: translate(40vmax, 22vmax) rotate(-120deg);
     }
   }
 }
