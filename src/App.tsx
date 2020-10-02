@@ -1,12 +1,16 @@
 import React, { FC } from "react";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import HomePage from "./components/pages/Home";
 
 import styles from "./App.module.scss";
 
 const App: FC = () => (
   <BrowserRouter>
     <div className={styles.app}>
-      <div />
+      <Switch>
+        <Route exact path="/" component={HomePage} />
+      </Switch>
     </div>
   </BrowserRouter>
 );
