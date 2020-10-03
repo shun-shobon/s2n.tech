@@ -34,6 +34,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime-corejs3": "^7.11.2",
+    "classnames": "^2.2.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
@@ -43,6 +44,7 @@
     "@babel/core": "^7.11.6",
     "@babel/plugin-transform-runtime": "^7.11.5",
     "@babel/preset-env": "^7.11.5",
+    "@types/classnames": "^2.2.10",
     "@types/compression-webpack-plugin": "^4.0.1",
     "@types/copy-webpack-plugin": "^6.0.0",
     "@types/fibers": "^3.1.0",
