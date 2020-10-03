@@ -57,8 +57,9 @@ $animation-duration: 500ms;
 
       &:nth-child(2) {
         top: 50%;
+        opacity: 1;
+        transition: opacity 0s $animation-duration / 2 ease-in;
         transform: translateY(-50%);
-        animation: bar-middle-close $animation-duration step-end forwards;
 
         &::before {
           transform: translateX(100%);
@@ -92,7 +93,7 @@ $animation-duration: 500ms;
         }
 
         &:nth-child(2) {
-          animation: bar-middle-open $animation-duration step-start forwards;
+          opacity: 0;
         }
 
         &:nth-child(3) {
@@ -142,34 +143,6 @@ $animation-duration: 500ms;
   100% {
     top: 50%;
     transform: translateY(-50%) rotate(-45deg);
-  }
-}
-
-@keyframes bar-middle-close {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes bar-middle-open {
-  0% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
   }
 }
 
