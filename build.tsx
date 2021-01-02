@@ -1,14 +1,14 @@
+import { oneLineTrim } from "common-tags";
+import { mkdir, readFile, writeFile } from "fs/promises";
+import { sha1 } from "object-hash";
+import { join, resolve } from "path";
+import postcss from "postcss";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import postcss from "postcss";
-const autoprefixer = require("autoprefixer");
-const cssnano = require("cssnano");
-import { sha1 } from "object-hash";
-import { oneLineTrim } from "common-tags";
-import { readFile, writeFile, mkdir } from "fs/promises";
-import { resolve, join } from "path";
 
 import App from "~/App";
+const autoprefixer = require("autoprefixer");
+const cssnano = require("cssnano");
 
 const styleEntryPoint = resolve("src", "styles", "App.pcss");
 const outDir = resolve("dist");
