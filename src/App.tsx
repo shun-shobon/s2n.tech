@@ -1,9 +1,11 @@
 import React, { FC } from "react";
 
+import Heading from "~/components/Heading";
+
 const App: FC = () => (
-  <div>
-    <h1>Hello, world!</h1>
-  </div>
+  <>
+    <Heading />
+  </>
 );
 
 export default App;

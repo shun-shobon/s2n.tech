@@ -16,6 +16,7 @@
   "private": true,
   "scripts": {
     "build": "ts-node -r tsconfig-paths/register build.tsx",
+    "dev": "ts-node-dev --respawn -r tsconfig-paths/register build.tsx",
     "fix": "run-s lint format",
     "check": "run-p *:check",
     "lint": "eslint --ignore-path .gitignore '**/*.{ts,tsx}' --fix",
@@ -29,8 +30,13 @@
     }
   },
   "lint-staged": {
-    "**/*.{ts,tsx}": ["eslint --fix", "prettier --write"],
-    "**/*.{pcss}": ["prettier --write"]
+    "**/*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "**/*.{pcss}": [
+      "prettier --write"
+    ]
   },
   "devDependencies": {
     "@types/common-tags": "^1.8.0",
@@ -57,6 +63,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.1",
     "tsconfig-paths": "^3.9.0",
     "typescript": "^4.1.3"
   }
