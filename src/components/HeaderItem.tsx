@@ -8,7 +8,9 @@ type Props = {
 const HeaderItem: FunctionComponent<Props> = ({ children, link }) => {
   return (
     <li>
-      <a href={link}>{children}</a>
+      <a href={link} class="text-2xl hover:opacity-75">
+        {children}
+      </a>
     </li>
   );
 };
