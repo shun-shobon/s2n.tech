@@ -5,9 +5,11 @@ import ScrollText from "./ScrollText";
 
 const Hero: FunctionComponent = ({ children }) => {
   return (
-    <div>
-      <div>{children}</div>
-      <ScrollText />
+    <div class="relative w-full h-screen flex justify-center items-center">
+      <div class="text-8xl">{children}</div>
+      <div class="absolute bottom-0">
+        <ScrollText />
+      </div>
     </div>
   );
 };
