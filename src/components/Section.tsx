@@ -5,12 +5,13 @@ import SectionTitle from "./SectionTitle";
 
 type Props = {
   title: string;
+  id: string;
 };
 
-const Section: FunctionComponent<Props> = ({ children, title }) => {
+const Section: FunctionComponent<Props> = ({ children, title, id }) => {
   return (
     <section>
-      <SectionTitle>{title}</SectionTitle>
+      <SectionTitle id={id}>{title}</SectionTitle>
       <div>{children}</div>
     </section>
   );
