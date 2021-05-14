@@ -10,9 +10,9 @@ type Props = {
 
 const Section: FunctionComponent<Props> = ({ children, title, id }) => {
   return (
-    <section>
+    <section class="my-6">
       <SectionTitle id={id}>{title}</SectionTitle>
-      <div>{children}</div>
+      <div class="mt-3">{children}</div>
     </section>
   );
 };
