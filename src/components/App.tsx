@@ -1,5 +1,10 @@
 import { h, Fragment } from "preact";
+import { useEffect, useState } from "preact/hooks";
+import { gql, request } from "graphql-request";
 import type { FunctionComponent } from "preact";
+
+import { GQL_API_URL } from "../config";
+import type { ProfileQuery } from "../generated/graphqlQueries";
 
 import Hero from "./Hero";
 import Header from "./Header";
@@ -10,7 +15,44 @@ import SubSection from "./SubSection";
 import SkillProgress from "./SkillProgress";
 import Footer from "./Footer";
 
+const query = gql`
+  query Profile {
+    basic {
+      aka
+      birthday
+      school
+      department
+    }
+    skills {
+      name
+      skills {
+        name
+      }
+    }
+    histories {
+      date
+      title
+      links {
+        name
+        url
+      }
+    }
+    contacts {
+      name
+      uri
+    }
+  }
+`;
+
 const App: FunctionComponent = () => {
+  const [data, setData] = useState<ProfileQuery | null>(null);
+
+  useEffect(() => {
+    request<ProfileQuery>(GQL_API_URL, query)
+      .then(setData)
+      .catch(console.error);
+  }, [setData]);
+
   return (
     <>
       <Hero>SHUN</Hero>

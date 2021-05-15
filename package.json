@@ -9,6 +9,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite serve",
+    "generate": "graphql-codegen --config codegen.yml",
     "check": "run-p check:*",
     "check:type": "tsc",
     "check:format": "prettier --check --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,html,css,sass,scss}\"",
@@ -16,7 +17,7 @@
     "fix": "run-p fix:*",
     "fix:format": "prettier --write --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,html,css,sass,scss}\"",
     "fix:lint": "eslint --fix --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx}\"",
-    "prepare": "husky install"
+    "prepare": "pnpm generate && husky install"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -25,12 +26,17 @@
     ]
   },
   "devDependencies": {
+    "@graphql-codegen/cli": "^1.21.4",
+    "@graphql-codegen/typescript": "^1.22.0",
+    "@graphql-codegen/typescript-operations": "^1.17.16",
     "@typescript-eslint/eslint-plugin": "^4.23.0",
     "@typescript-eslint/parser": "^4.23.0",
     "autoprefixer": "^10.2.5",
     "eslint": "^7.26.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-react": "^7.23.2",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.4.0",
     "husky": "^6.0.0",
     "lint-staged": "^11.0.0",
     "npm-run-all": "^4.1.5",
