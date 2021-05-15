@@ -8,7 +8,6 @@ import Layout from "./Layout";
 import Section from "./Section";
 import SubSection from "./SubSection";
 import SkillProgress from "./SkillProgress";
-import Progress from "./Progress";
 import Footer from "./Footer";
 
 const App: FunctionComponent = () => {
