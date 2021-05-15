@@ -27,6 +27,7 @@ const query = gql`
       name
       skills {
         name
+        level
       }
     }
     histories {
@@ -53,6 +54,8 @@ const App: FunctionComponent = () => {
       .catch(console.error);
   }, [setData]);
 
+  if (data === null) return null;
+
   return (
     <>
       <Hero>SHUN</Hero>
@@ -64,21 +67,22 @@ const App: FunctionComponent = () => {
       </Header>
       <Layout>
         <Section title="Profile" id="profile">
-          <SubSection title="Frontend">
-            <SkillProgress name="TypeScript" completed={95} />
-            <SkillProgress name="HTML5 / CSS3" completed={80} />
-            <SkillProgress name="Google Cloud Platform" completed={30} />
-          </SubSection>
-          <SubSection title="Birthday">
-            これはテストです。これはテストです。これはテストです。これはテストです。
-          </SubSection>
-          <SubSection title="Birthday">
-            これはテストです。これはテストです。これはテストです。これはテストです。
-          </SubSection>
-          <div class="h-screen" />
+          <SubSection title="Birthday">{data.basic.birthday}</SubSection>
+          <SubSection title="School">{data.basic.school}</SubSection>
+          <SubSection title="Department">{data.basic.department}</SubSection>
         </Section>
         <Section title="Skills" id="skills">
-          <div class="h-screen" />
+          {data.skills.map((category, index) => (
+            <SubSection key={index} title={category.name}>
+              {category.skills.map((skill, index) => (
+                <SkillProgress
+                  key={index}
+                  name={skill.name}
+                  completed={skill.level}
+                />
+              ))}
+            </SubSection>
+          ))}
         </Section>
       </Layout>
       <Footer>Copyright©2021 Shuntaro Nishizawa</Footer>
