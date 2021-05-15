@@ -13,6 +13,8 @@ import Layout from "./Layout";
 import Section from "./Section";
 import SubSection from "./SubSection";
 import SkillProgress from "./SkillProgress";
+import LinkPool from "./LinkPool";
+import Link from "./Link";
 import Footer from "./Footer";
 
 const query = gql`
@@ -83,6 +85,15 @@ const App: FunctionComponent = () => {
               ))}
             </SubSection>
           ))}
+        </Section>
+        <Section title="Contacts" id="contacts">
+          <LinkPool>
+            {data.contacts.map((contact, index) => (
+              <Link key={index} href={contact.uri}>
+                {contact.name}
+              </Link>
+            ))}
+          </LinkPool>
         </Section>
       </Layout>
       <Footer>Copyright©2021 Shuntaro Nishizawa</Footer>
