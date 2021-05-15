@@ -9,6 +9,7 @@ module.exports = {
         primary3: "#F9F2E7",
         primary4: "#AEE239",
         primary5: "#8FBE00",
+        primary6: "#656565",
       },
     },
   },

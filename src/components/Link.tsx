@@ -7,7 +7,12 @@ type Props = {
 
 const Link: FunctionComponent<Props> = ({ href, children }) => {
   return (
-    <a href={href} target="_blank" rel="noopener noreferrer" class="text-xl">
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="text-xl text-primary1"
+    >
       {children}
     </a>
   );

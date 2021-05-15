@@ -1,4 +1,4 @@
-import { h, Fragment } from "preact";
+import { h } from "preact";
 import { useEffect, useState } from "preact/hooks";
 import { gql, request } from "graphql-request";
 import type { FunctionComponent } from "preact";
@@ -59,7 +59,7 @@ const App: FunctionComponent = () => {
   if (data === null) return null;
 
   return (
-    <>
+    <div class="bg-primary3">
       <Hero>SHUN</Hero>
       <Header>
         <HeaderItem link={"#profile"}>Profile</HeaderItem>
@@ -97,7 +97,7 @@ const App: FunctionComponent = () => {
         </Section>
       </Layout>
       <Footer>Copyright©2021 Shuntaro Nishizawa</Footer>
-    </>
+    </div>
   );
 };
 

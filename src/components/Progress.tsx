@@ -8,8 +8,8 @@ type Props = {
 const ProgressBar: FunctionComponent<Props> = ({ completed }) => {
   return (
     <div class="relative w-full">
-      <div class="h-1.5 rounded bg-gray-500">
-        <div style={`width:${completed}%`} class="h-full rounded bg-blue-400" />
+      <div class="h-1.5 rounded bg-primary6">
+        <div style={`width:${completed}%`} class="h-full rounded bg-primary2" />
       </div>
     </div>
   );
