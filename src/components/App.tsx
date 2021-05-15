@@ -5,6 +5,8 @@ import Hero from "./Hero";
 import Header from "./Header";
 import HeaderItem from "./HeaderItem";
 import Layout from "./Layout";
+import Section from "./Section";
+import Footer from "./Footer";
 
 const App: FunctionComponent = () => {
   return (
@@ -17,9 +19,14 @@ const App: FunctionComponent = () => {
         <HeaderItem link={"#contacts"}>Contacts</HeaderItem>
       </Header>
       <Layout>
-        <div class="h-screen" />
-        <div class="h-screen" />
+        <Section title="Profile" id="profile">
+          <div class="h-screen" />
+        </Section>
+        <Section title="Skills" id="skills">
+          <div class="h-screen" />
+        </Section>
       </Layout>
+      <Footer>Copyright©2021 Shuntaro Nishizawa</Footer>
     </>
   );
 };
