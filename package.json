@@ -17,7 +17,7 @@
     "fix": "run-p fix:*",
     "fix:format": "prettier --write --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,html,css,sass,scss}\"",
     "fix:lint": "eslint --fix --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx}\"",
-    "prepare": "pnpm generate && husky install"
+    "prepare": "run-s generate && husky install"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
