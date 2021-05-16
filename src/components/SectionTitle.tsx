@@ -7,7 +7,7 @@ type Props = {
 
 const SectionTitle: FunctionComponent<Props> = ({ children, id }) => {
   return (
-    <h1 id={id} class="text-center text-4xl text-primary4 pt-20 -mt-20">
+    <h1 id={id} class="text-center text-4xl text-primary pt-20 -mt-20">
       {children}
     </h1>
   );

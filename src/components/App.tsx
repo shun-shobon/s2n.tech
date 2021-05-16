@@ -59,7 +59,7 @@ const App: FunctionComponent = () => {
   if (data === null) return null;
 
   return (
-    <div class="bg-primary3">
+    <div class="bg-background">
       <Hero>SHUN</Hero>
       <Header>
         <HeaderItem link={"#profile"}>Profile</HeaderItem>

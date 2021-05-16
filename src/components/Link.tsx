@@ -11,7 +11,7 @@ const Link: FunctionComponent<Props> = ({ href, children }) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      class="text-xl text-primary1"
+      class="text-xl text-text"
     >
       {children}
     </a>

@@ -10,7 +10,7 @@ const SubSection: FunctionComponent<Props> = ({ children, title }) => {
   return (
     <section class="my-3">
       <SubSectionTitle>{title}</SubSectionTitle>
-      <div class="text-primary6">{children}</div>
+      <div class="text-text">{children}</div>
     </section>
   );
 };
