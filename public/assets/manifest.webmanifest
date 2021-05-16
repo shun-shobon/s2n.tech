@@ -3,8 +3,8 @@
   "short_name": "SHUN's Portfolio",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#f9f2e7",
-  "theme_color": "#40c0cb",
+  "background_color": "#fffffe",
+  "theme_color": "#278fdc",
   "description": "This is portfolio for SHUN.",
   "icons": [
     {
