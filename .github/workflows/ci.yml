@@ -47,6 +47,8 @@ jobs:
 
       - name: Run build
         run: pnpm build
+        env:
+          BASE_URL: https://shun-shobon.github.io
 
       - name: Upload dist
         uses: actions/upload-artifact@v2
