@@ -1,0 +1,20 @@
+{
+  "name": "SHUN's Portfolio",
+  "short_name": "SHUN's Portfolio",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f9f2e7",
+  "theme_color": "#40c0cb",
+  "description": "This is portfolio for SHUN.",
+  "icons": [
+    {
+      "src": "/assets/icon.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    },
+    {
+      "src": "/assets/favicon.svg",
+      "type": "image/svg"
+    }
+  ]
+}
