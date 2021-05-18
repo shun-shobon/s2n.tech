@@ -3,10 +3,12 @@ import type { FunctionComponent } from "preact";
 
 import ScrollText from "./ScrollText";
 
-const Hero: FunctionComponent = ({ children }) => {
+import heroImg from "../assets/hero.svg";
+
+const Hero: FunctionComponent = () => {
   return (
     <div class="relative w-full h-screen flex justify-center items-center">
-      <div class="text-8xl text-primary">{children}</div>
+      <img class="h-28" alt="Title" src={heroImg} />
       <div class="absolute bottom-4">
         <ScrollText />
       </div>

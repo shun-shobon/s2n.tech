@@ -61,7 +61,7 @@ const App: FunctionComponent = () => {
 
   return (
     <div class="bg-background">
-      <Hero>SHUN</Hero>
+      <Hero />
       <Header>
         <HeaderItem link={"#profile"}>Profile</HeaderItem>
         <HeaderItem link={"#skills"}>Skills</HeaderItem>
