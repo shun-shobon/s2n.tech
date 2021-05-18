@@ -13,6 +13,7 @@ import Layout from "./Layout";
 import Section from "./Section";
 import SubSection from "./SubSection";
 import SkillProgress from "./SkillProgress";
+import History from "./History";
 import LinkPool from "./LinkPool";
 import Link from "./Link";
 import Footer from "./Footer";
@@ -84,6 +85,11 @@ const App: FunctionComponent = () => {
                 />
               ))}
             </SubSection>
+          ))}
+        </Section>
+        <Section title="Histories" id="histories">
+          {data.histories.map((history, index) => (
+            <History key={index} history={history} />
           ))}
         </Section>
         <Section title="Contacts" id="contacts">
