@@ -4,9 +4,9 @@ import type { FunctionComponent } from "preact";
 
 const ScrollText: FunctionComponent = () => {
   return (
-    <div class="flex flex-col items-center text-headline">
+    <div class="flex flex-col items-center text-lg text-headline">
       <div>Scroll</div>
-      <ChevronsDown class="animate-bounce mt-0.5" />
+      <ChevronsDown class="animate-bounce mt-0.5 w-8 h-8" />
     </div>
   );
 };

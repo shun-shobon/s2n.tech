@@ -11,7 +11,7 @@ type Props = {
 const SkillProgress: FunctionComponent<Props> = ({ name, completed }) => {
   return (
     <div class="my-2 flex flex-col sm:flex-row sm:items-center">
-      <span style="min-width:12rem">{name}</span>
+      <span style="min-width:15rem">{name}</span>
       <Progress completed={completed} />
     </div>
   );
