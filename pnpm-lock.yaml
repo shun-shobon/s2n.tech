@@ -5,7 +5,7 @@ specifiers:
   '@types/react': ^18.0.28
   '@types/react-dom': ^18.0.11
   '@vitejs/plugin-react': ^3.1.0
-  prettier: ^2.8.6
+  prettier: ^2.8.7
   react: ^18.2.0
   react-dom: ^18.2.0
   the-new-css-reset: ^1.8.4
@@ -24,7 +24,7 @@ devDependencies:
   '@types/react': 18.0.28
   '@types/react-dom': 18.0.11
   '@vitejs/plugin-react': 3.1.0_vite@4.2.1
-  prettier: 2.8.6
+  prettier: 2.8.7
   typescript: 5.0.2
   vite: 4.2.1_@types+node@18.15.6
   vite-plugin-html: 3.2.0_vite@4.2.1
@@ -1157,8 +1157,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /prettier/2.8.6:
-    resolution: {integrity: sha512-mtuzdiBbHwPEgl7NxWlqOkithPyp4VN93V7VeHVWBF+ad3I5avc0RVDT4oImXQy9H/AqxA2NSQH8pSxHW6FYbQ==}
+  /prettier/2.8.7:
+    resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     dev: true
