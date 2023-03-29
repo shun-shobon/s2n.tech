@@ -1,7 +1,14 @@
+import { css } from "@acab/ecsstatic";
+
+const title = css`
+  font-size: 2rem;
+`;
+
 function App(): JSX.Element {
   return (
     <main>
-      <h1>Hi, I'm Shun🌙</h1>
+      <h1 className={title}>Hello, world!</h1>
+      {/* <Hero /> */}
     </main>
   );
 }

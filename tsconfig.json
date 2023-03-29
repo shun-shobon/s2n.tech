@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     "types": ["vite/client"],
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "paths": {
-      "~/*": ["./*"]
+      "~/*": ["./src/*"]
     },
 
     "target": "ESNext",
