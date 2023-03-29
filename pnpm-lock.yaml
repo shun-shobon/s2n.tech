@@ -13,8 +13,8 @@ dependencies:
 
 devDependencies:
   '@types/node':
-    specifier: ^18.15.10
-    version: 18.15.10
+    specifier: ^18.15.11
+    version: 18.15.11
   '@types/react':
     specifier: ^18.0.30
     version: 18.0.30
@@ -32,7 +32,7 @@ devDependencies:
     version: 5.0.2
   vite:
     specifier: ^4.2.1
-    version: 4.2.1(@types/node@18.15.10)
+    version: 4.2.1(@types/node@18.15.11)
   vite-plugin-html:
     specifier: ^3.2.0
     version: 3.2.0(vite@4.2.1)
@@ -542,8 +542,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@types/node@18.15.10:
-    resolution: {integrity: sha512-9avDaQJczATcXgfmMAW3MIWArOO7A+m90vuCFLr8AotWf8igO/mRoYukrk2cqZVtv38tHs33retzHEilM7FpeQ==}
+  /@types/node@18.15.11:
+    resolution: {integrity: sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==}
     dev: true
 
   /@types/prop-types@15.7.5:
@@ -579,7 +579,7 @@ packages:
       '@babel/plugin-transform-react-jsx-source': 7.19.6(@babel/core@7.21.0)
       magic-string: 0.27.0
       react-refresh: 0.14.0
-      vite: 4.2.1(@types/node@18.15.10)
+      vite: 4.2.1(@types/node@18.15.11)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -1362,7 +1362,7 @@ packages:
       html-minifier-terser: 6.1.0
       node-html-parser: 5.4.2
       pathe: 0.2.0
-      vite: 4.2.1(@types/node@18.15.10)
+      vite: 4.2.1(@types/node@18.15.11)
     dev: true
 
   /vite-tsconfig-paths@4.0.7(typescript@5.0.2)(vite@4.2.1):
@@ -1376,13 +1376,13 @@ packages:
       debug: 4.3.4
       globrex: 0.1.2
       tsconfck: 2.1.0(typescript@5.0.2)
-      vite: 4.2.1(@types/node@18.15.10)
+      vite: 4.2.1(@types/node@18.15.11)
     transitivePeerDependencies:
       - supports-color
       - typescript
     dev: true
 
-  /vite@4.2.1(@types/node@18.15.10):
+  /vite@4.2.1(@types/node@18.15.11):
     resolution: {integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -1407,7 +1407,7 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 18.15.10
+      '@types/node': 18.15.11
       esbuild: 0.17.12
       postcss: 8.4.21
       resolve: 1.22.1
