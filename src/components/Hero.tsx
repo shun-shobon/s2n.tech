@@ -15,24 +15,20 @@ export function Hero(): JSX.Element {
 }
 
 const hero = css`
-  @layer base {
-    width: 100%;
-    height: 100dvh;
-    padding: 3vmin;
-    background-color: #fdfdfd;
-  }
+  width: 100%;
+  height: 100dvh;
+  padding: 3vmin;
+  background-color: #fdfdfd;
 `;
 
 const heroInner = css`
-  @layer base {
-    width: 100%;
-    height: 100%;
-    border: 2px solid #6c757d;
-    border-radius: 2px;
-    animation: hero-inner-in 0.75s ease-in-out;
-    display: grid;
-    place-items: center;
-  }
+  width: 100%;
+  height: 100%;
+  border: 2px solid #6c757d;
+  border-radius: 2px;
+  animation: hero-inner-in 0.75s ease-in-out;
+  display: grid;
+  place-items: center;
 
   @keyframes hero-inner-in {
     0% {
@@ -47,69 +43,63 @@ const heroInner = css`
 `;
 
 const commentWrapper = css`
-  @layer base {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    font-size: 2.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  font-size: 2.5rem;
 
-    @media screen and (max-width: 768px) {
-      flex-direction: column;
-    }
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
   }
 `;
 
 const icon = css`
-  @layer base {
-    width: 3em;
-    height: 3em;
-    border-radius: 50%;
-  }
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
 `;
 
 const comment = css`
-  @layer base {
-    padding: 0.5em;
-    border: 2px solid #6c757d;
-    border-radius: 8px;
-    position: relative;
+  padding: 0.5em;
+  border: 2px solid #6c757d;
+  border-radius: 8px;
+  position: relative;
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      border: 0.5em solid transparent;
-      top: 50%;
-      right: 100%;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border: 0.5em solid transparent;
+    top: 50%;
+    right: 100%;
 
-      @media screen and (max-width: 768px) {
-        top: unset;
-        right: unset;
-        bottom: 100%;
-        left: 50%;
-      }
+    @media screen and (max-width: 768px) {
+      top: unset;
+      right: unset;
+      bottom: 100%;
+      left: 50%;
     }
+  }
 
-    &::before {
-      border-right-color: #6c757d;
-      transform: translateY(-50%);
+  &::before {
+    border-right-color: #6c757d;
+    transform: translateY(-50%);
 
-      @media screen and (max-width: 768px) {
-        border-right-color: transparent;
-        border-bottom-color: #6c757d;
-        transform: translateX(-50%);
-      }
+    @media screen and (max-width: 768px) {
+      border-right-color: transparent;
+      border-bottom-color: #6c757d;
+      transform: translateX(-50%);
     }
+  }
 
-    &::after {
-      border-right-color: #fff;
-      transform: translateY(-50%) translateX(3px);
+  &::after {
+    border-right-color: #fff;
+    transform: translateY(-50%) translateX(3px);
 
-      @media screen and (max-width: 768px) {
-        border-right-color: transparent;
-        border-bottom-color: #fff;
-        transform: translateX(-50%) translateY(3px);
-      }
+    @media screen and (max-width: 768px) {
+      border-right-color: transparent;
+      border-bottom-color: #fff;
+      transform: translateX(-50%) translateY(3px);
     }
   }
 `;
