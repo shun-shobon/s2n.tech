@@ -15,6 +15,12 @@ devDependencies:
   '@acab/ecsstatic':
     specifier: ^0.6.0
     version: 0.6.0
+  '@tsconfig/strictest':
+    specifier: ^2.0.0
+    version: 2.0.0
+  '@tsconfig/vite-react':
+    specifier: ^1.0.1
+    version: 1.0.1
   '@types/node':
     specifier: ^18.15.11
     version: 18.15.11
@@ -566,6 +572,14 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.1
+    dev: true
+
+  /@tsconfig/strictest@2.0.0:
+    resolution: {integrity: sha512-E0dpiZNdwO20c8d3seh7OmjAvDpwoRkTcU6M8cvggzB45Bd45tyTU2XJeA5Wfq+8NzVGhunvqOJ30AjSkywMXA==}
+    dev: true
+
+  /@tsconfig/vite-react@1.0.1:
+    resolution: {integrity: sha512-6Tv0UI88QPSkNobzoI8tMXjHX1j723yPBhrQ+z+gphvTIj7KcH0KF1MjUlPrIgh5TEpRMH8jF5ezZ5qQ0iHGvw==}
     dev: true
 
   /@types/node@18.15.11:
