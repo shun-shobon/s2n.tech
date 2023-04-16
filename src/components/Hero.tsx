@@ -10,7 +10,7 @@ export function Hero(): JSX.Element {
         <hgroup className={nameGroup}>
           <h1>Shuntaro Nishizawa</h1>
           <div className={divider} />
-          <p className={aka}>しゅん/Shun</p>
+          <p className={aka}>しゅん / shun</p>
         </hgroup>
         <p className={attribution}>
           <span>Kosen Student</span>
