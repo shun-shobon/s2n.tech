@@ -34,38 +34,39 @@ const heroInner = css`
 const commentWrapper = css`
   display: flex;
   align-items: center;
-  gap: 1em;
-  font-size: 2.5rem;
+  gap: 0.5em;
+  font-size: 5vw;
 
   @media screen and (max-width: ${breakPoints.md}) {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    font-size: 10vw;
   }
 `;
 
 const icon = css`
-  width: 3em;
-  height: 3em;
+  width: 2.5em;
+  height: 2.5em;
   border-radius: 50%;
 `;
 
 const comment = css`
-  padding: 0.5em;
+  padding: 0.25em 0.5em;
   border: 2px solid #6c757d;
-  border-radius: 8px;
+  border-radius: 0.25em;
   position: relative;
 
   &::before,
   &::after {
     content: "";
     position: absolute;
-    border: 0.5em solid transparent;
+    border: 0.25em solid transparent;
     top: 50%;
     right: 100%;
 
     @media screen and (max-width: ${breakPoints.md}) {
       top: unset;
       right: unset;
-      bottom: 100%;
+      top: 100%;
       left: 50%;
     }
   }
@@ -76,7 +77,7 @@ const comment = css`
 
     @media screen and (max-width: 768px) {
       border-right-color: transparent;
-      border-bottom-color: #6c757d;
+      border-top-color: #6c757d;
       transform: translateX(-50%);
     }
   }
@@ -87,8 +88,8 @@ const comment = css`
 
     @media screen and (max-width: 768px) {
       border-right-color: transparent;
-      border-bottom-color: #fff;
-      transform: translateX(-50%) translateY(3px);
+      border-top-color: #fff;
+      transform: translateX(-50%) translateY(-3px);
     }
   }
 `;
