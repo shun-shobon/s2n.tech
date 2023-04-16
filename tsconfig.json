@@ -3,6 +3,7 @@
   "compilerOptions": {
     "types": ["vite/client"],
     "checkJs": false,
+    "moduleResolution": "bundler",
 
     "baseUrl": "./",
     "paths": {

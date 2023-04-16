@@ -1,5 +1,6 @@
 import { css } from "@acab/ecsstatic";
 import iconSrc from "#/assets/icon.jpg";
+import { breakPoints } from "#/styles/variables";
 
 export function Hero(): JSX.Element {
   return (
@@ -26,20 +27,8 @@ const heroInner = css`
   height: 100%;
   border: 2px solid #6c757d;
   border-radius: 2px;
-  animation: hero-inner-in 0.75s ease-in-out;
   display: grid;
   place-items: center;
-
-  @keyframes hero-inner-in {
-    0% {
-      opacity: 0;
-      transform: scale(0.8);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
 `;
 
 const commentWrapper = css`
@@ -48,7 +37,7 @@ const commentWrapper = css`
   gap: 1em;
   font-size: 2.5rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: ${breakPoints.md}) {
     flex-direction: column;
   }
 `;
@@ -73,7 +62,7 @@ const comment = css`
     top: 50%;
     right: 100%;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: ${breakPoints.md}) {
       top: unset;
       right: unset;
       bottom: 100%;

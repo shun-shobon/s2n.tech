@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": true,
   "packageManager": "pnpm@8.2.0",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
