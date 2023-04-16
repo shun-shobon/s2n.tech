@@ -3,7 +3,7 @@
     "types": ["vite/client"],
     "baseUrl": "./",
     "paths": {
-      "~/*": ["./src/*"]
+      "#/*": ["./src/*"]
     },
 
     "target": "ESNext",

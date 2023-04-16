@@ -1,5 +1,5 @@
 import { css } from "@acab/ecsstatic";
-import iconSrc from "../assets/icon.jpg";
+import iconSrc from "#/assets/icon.jpg";
 
 export function Hero(): JSX.Element {
   return (

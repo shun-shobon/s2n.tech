@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import { createHtmlPlugin } from "vite-plugin-html";
-import tsconfigPaths from "vite-tsconfig-paths";
 import { ecsstatic } from "@acab/ecsstatic/vite";
 
 export default defineConfig({
@@ -11,6 +10,5 @@ export default defineConfig({
     createHtmlPlugin({
       minify: true,
     }),
-    tsconfigPaths(),
   ],
 });
