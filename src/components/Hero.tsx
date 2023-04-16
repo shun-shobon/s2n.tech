@@ -5,11 +5,18 @@ import { breakPoints } from "#/styles/variables";
 export function Hero(): JSX.Element {
   return (
     <div className={hero}>
-      <div className={heroInner}>
-        <h1 className={commentWrapper}>
-          <img src={iconSrc} className={icon} />
-          <div className={comment}>Hello, World!</div>
-        </h1>
+      <div className={content}>
+        <img src={iconSrc} className={icon} />
+        <hgroup className={nameGroup}>
+          <h1>Shuntaro Nishizawa</h1>
+          <div className={divider} />
+          <p className={aka}>しゅん/Shun</p>
+        </hgroup>
+        <p className={attribution}>
+          <span>Kosen Student</span>
+          <span>&</span>
+          <span>“Yuruhuwa” Web App Developer</span>
+        </p>
       </div>
     </div>
   );
@@ -17,79 +24,52 @@ export function Hero(): JSX.Element {
 
 const hero = css`
   width: 100%;
-  height: 100dvh;
+  min-height: 100dvh;
   padding: 3vmin;
+  display: grid;
+  place-items: center;
   background-color: #fdfdfd;
 `;
 
-const heroInner = css`
-  width: 100%;
-  height: 100%;
-  border: 2px solid #6c757d;
-  border-radius: 2px;
-  display: grid;
-  place-items: center;
-`;
-
-const commentWrapper = css`
+const content = css`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.5em;
-  font-size: 5vw;
+  gap: 0.25em;
+  font-size: 8vw;
+  text-align: center;
 
-  @media screen and (max-width: ${breakPoints.md}) {
-    flex-direction: column-reverse;
-    font-size: 10vw;
+  @media screen and (min-width: ${breakPoints.lg}) {
+    font-size: 4vw;
   }
 `;
 
 const icon = css`
-  width: 2.5em;
-  height: 2.5em;
+  width: 5em;
+  height: 5em;
   border-radius: 50%;
 `;
 
-const comment = css`
-  padding: 0.25em 0.5em;
-  border: 2px solid #6c757d;
-  border-radius: 0.25em;
-  position: relative;
+const nameGroup = css`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    border: 0.25em solid transparent;
-    top: 50%;
-    right: 100%;
+const divider = css`
+  width: 80%;
+  height: 1px;
+  background-color: #000;
+`;
 
-    @media screen and (max-width: ${breakPoints.md}) {
-      top: unset;
-      right: unset;
-      top: 100%;
-      left: 50%;
-    }
-  }
+const aka = css`
+  font-size: 0.5em;
+`;
 
-  &::before {
-    border-right-color: #6c757d;
-    transform: translateY(-50%);
-
-    @media screen and (max-width: 768px) {
-      border-right-color: transparent;
-      border-top-color: #6c757d;
-      transform: translateX(-50%);
-    }
-  }
-
-  &::after {
-    border-right-color: #fff;
-    transform: translateY(-50%) translateX(3px);
-
-    @media screen and (max-width: 768px) {
-      border-right-color: transparent;
-      border-top-color: #fff;
-      transform: translateX(-50%) translateY(-3px);
-    }
-  }
+const attribution = css`
+  font-size: 0.8em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 0.25em;
 `;
