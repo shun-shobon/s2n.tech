@@ -6,3 +6,12 @@ export const breakPoints = {
   xl: "1200px",
   xxl: "1400px",
 };
+
+export const colors = {
+  bg: "--color-bg",
+  text: "--color-text",
+};
+
+export function getColor(color: keyof typeof colors) {
+  return `hsl(var(${colors[color]}))`;
+}

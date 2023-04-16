@@ -1,6 +1,6 @@
 import { css } from "@acab/ecsstatic";
 import iconSrc from "#/assets/icon.jpg";
-import { breakPoints } from "#/styles/variables";
+import { breakPoints, getColor } from "#/styles/variables";
 
 export function Hero(): JSX.Element {
   return (
@@ -28,7 +28,6 @@ const hero = css`
   padding: 3vmin;
   display: grid;
   place-items: center;
-  background-color: #fdfdfd;
 `;
 
 const content = css`
@@ -59,7 +58,7 @@ const nameGroup = css`
 const divider = css`
   width: 80%;
   height: 1px;
-  background-color: #000;
+  background-color: ${getColor("text")};
 `;
 
 const aka = css`

@@ -2,6 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap");
 
 :root {
+  --color-bg: 0deg 0% 99%;
+  --color-text: 0deg 0% 20%;
+}
+
+:root {
   font-family: "Zen Kurenaido", "Helvetica Neue", Arial,
     "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  background-color: hsl(var(--color-bg));
+  color: hsl(var(--color-text));
 }
