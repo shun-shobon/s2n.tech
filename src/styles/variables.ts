@@ -12,6 +12,6 @@ export const colors = {
   text: "--color-text",
 };
 
-export function getColor(color: keyof typeof colors) {
+export function getColor(color: keyof typeof colors): string {
   return `hsl(var(${colors[color]}))`;
 }

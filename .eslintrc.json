@@ -1,0 +1,3 @@
+{
+  "extends": ["@shun-shobon/base", "@shun-shobon/react"]
+}

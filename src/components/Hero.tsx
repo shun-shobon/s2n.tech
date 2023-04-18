@@ -1,4 +1,5 @@
 import { css } from "@acab/ecsstatic";
+
 import iconSrc from "#/assets/icon.jpg";
 import { breakPoints, getColor } from "#/styles/variables";
 
@@ -6,7 +7,7 @@ export function Hero(): JSX.Element {
   return (
     <div className={hero}>
       <div className={content}>
-        <img src={iconSrc} className={icon} />
+        <img alt="" src={iconSrc} className={icon} />
         <hgroup className={nameGroup}>
           <h1>Shuntaro Nishizawa</h1>
           <div className={divider} />
