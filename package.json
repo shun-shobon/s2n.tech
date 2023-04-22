@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.17",
+    "@shun-shobon/resume": "^0.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "the-new-css-reset": "^1.8.4"

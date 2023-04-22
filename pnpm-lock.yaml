@@ -4,6 +4,9 @@ dependencies:
   '@heroicons/react':
     specifier: ^2.0.17
     version: 2.0.17(react@18.2.0)
+  '@shun-shobon/resume':
+    specifier: ^0.1.1
+    version: 0.1.1
   react:
     specifier: ^18.2.0
     version: 18.2.0
@@ -707,6 +710,10 @@ packages:
       - supports-color
       - typescript
     dev: true
+
+  /@shun-shobon/resume@0.1.1:
+    resolution: {integrity: sha512-AMJh2uY+atlqFpGHiyFX1wJVQAteExILV6HcmRCoecM9uAOHs268EZwfQPP+UM4Qm0QUGrdl5M/gBphD88ntaA==, tarball: https://npm.pkg.github.com/download/@shun-shobon/resume/0.1.1/905bed7d3a71e1f288e5aab6ae901c4aea38b0c2}
+    dev: false
 
   /@tsconfig/strictest@2.0.0:
     resolution: {integrity: sha512-E0dpiZNdwO20c8d3seh7OmjAvDpwoRkTcU6M8cvggzB45Bd45tyTU2XJeA5Wfq+8NzVGhunvqOJ30AjSkywMXA==}
