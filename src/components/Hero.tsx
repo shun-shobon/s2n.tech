@@ -1,4 +1,5 @@
 import { css } from "@acab/ecsstatic";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 import iconSrc from "#/assets/icon.jpg";
 import { breakPoints, getColor } from "#/styles/variables";
@@ -19,6 +20,7 @@ export function Hero(): JSX.Element {
           <span>“Yuruhuwa” Web App Developer</span>
         </p>
       </div>
+      <ChevronDownIcon className={scrollIcon} />
     </div>
   );
 }
@@ -26,22 +28,25 @@ export function Hero(): JSX.Element {
 const hero = css`
   width: 100%;
   min-height: 100dvh;
-  padding: 3vmin;
-  display: grid;
-  place-items: center;
-`;
-
-const content = css`
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.25em;
   font-size: 8vw;
-  text-align: center;
 
   @media screen and (min-width: ${breakPoints.lg}) {
     font-size: 4vw;
   }
+`;
+
+const content = css`
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25em;
+  text-align: center;
 `;
 
 const icon = css`
@@ -72,4 +77,9 @@ const attribution = css`
   flex-wrap: wrap;
   justify-content: center;
   column-gap: 0.25em;
+`;
+
+const scrollIcon = css`
+  width: 1em;
+  height: 1em;
 `;
