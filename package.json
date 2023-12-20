@@ -31,7 +31,7 @@
     "@acab/ecsstatic": "^0.6.0",
     "@shun-shobon/eslint-config-base": "^0.4.3",
     "@shun-shobon/eslint-config-react": "^0.1.6",
-    "@tsconfig/strictest": "^2.0.0",
+    "@tsconfig/strictest": "^2.0.2",
     "@tsconfig/vite-react": "^1.0.1",
     "@types/node": "^18.15.11",
     "@types/react": "^18.0.37",
