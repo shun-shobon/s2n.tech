@@ -28,7 +28,7 @@
     "the-new-css-reset": "^1.8.4"
   },
   "devDependencies": {
-    "@acab/ecsstatic": "^0.6.0",
+    "@acab/ecsstatic": "^0.7.1",
     "@shun-shobon/eslint-config-base": "^0.4.3",
     "@shun-shobon/eslint-config-react": "^0.1.6",
     "@tsconfig/strictest": "^2.0.0",
