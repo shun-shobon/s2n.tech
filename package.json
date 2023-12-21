@@ -1,13 +1,14 @@
 {
   "name": "s2n.tech",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.1.0",
+  "author": "NISHIZAWA Shuntaro <me@s2n.tech> (https://s2n.tech/)",
+  "packageManager": "pnpm@8.12.1",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro check && astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+    "start": "astro preview",
+    "build": "astro check && astro build"
   },
   "dependencies": {
     "@astrojs/check": "^0.3.3",
