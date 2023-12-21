@@ -9,8 +9,8 @@ devDependencies:
     specifier: ^0.3.3
     version: 0.3.3(prettier@3.1.1)(typescript@5.3.3)
   '@shun-shobon/eslint-config':
-    specifier: ^0.4.0
-    version: 0.4.0(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3)
+    specifier: ^0.4.1
+    version: 0.4.1(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3)
   '@shun-shobon/prettier-config':
     specifier: ^0.2.0
     version: 0.2.0(prettier@3.1.1)
@@ -1656,8 +1656,8 @@ packages:
     dev: true
     optional: true
 
-  /@shun-shobon/eslint-config@0.4.0(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-SYrctm51aFLrBV+DVMwx8DldR5Zb6Lemc6hlu3A12K/Ocxe8cuLftMdC0lSBX3/HPgmjCet44R9eDOjWe8bG6Q==}
+  /@shun-shobon/eslint-config@0.4.1(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-gGm9kOvm65JnH1Wdnj3EJS0BXWh8swqQ2RWDSAeN0unKtf9gOQvicfrDv4Mq9Xmdjn0i9uieA9GV6CbKIaVMxg==}
     peerDependencies:
       eslint: ^8.21.0
     dependencies:
@@ -1678,7 +1678,7 @@ packages:
       eslint-plugin-react-hooks: 4.6.0(eslint@8.56.0)
       eslint-plugin-simple-import-sort: 10.0.0(eslint@8.56.0)
       eslint-plugin-storybook: 0.6.15(eslint@8.56.0)(typescript@5.3.3)
-      eslint-plugin-unicorn: 49.0.0(eslint@8.56.0)
+      eslint-plugin-unicorn: 50.0.1(eslint@8.56.0)
       globals: 13.24.0
       local-pkg: 0.5.0
     transitivePeerDependencies:
@@ -2883,6 +2883,12 @@ packages:
     engines: {node: '>= 0.6'}
     dev: true
 
+  /core-js-compat@3.34.0:
+    resolution: {integrity: sha512-4ZIyeNbW/Cn1wkMMDy+mvrRUxrwFNjKwbhCfQpDd+eLgYipDqp8oGFGtLmhh18EDPKA0g3VUBYOxQGGwvWLVpA==}
+    dependencies:
+      browserslist: 4.22.2
+    dev: true
+
   /cross-spawn@7.0.3:
     resolution: {integrity: sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==}
     engines: {node: '>= 8'}
@@ -3733,16 +3739,18 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-unicorn@49.0.0(eslint@8.56.0):
-    resolution: {integrity: sha512-0fHEa/8Pih5cmzFW5L7xMEfUTvI9WKeQtjmKpTUmY+BiFCDxkxrTdnURJOHKykhtwIeyYsxnecbGvDCml++z4Q==}
+  /eslint-plugin-unicorn@50.0.1(eslint@8.56.0):
+    resolution: {integrity: sha512-KxenCZxqSYW0GWHH18okDlOQcpezcitm5aOSz6EnobyJ6BIByiPDviQRjJIUAjG/tMN11958MxaQ+qCoU6lfDA==}
     engines: {node: '>=16'}
     peerDependencies:
-      eslint: '>=8.52.0'
+      eslint: '>=8.56.0'
     dependencies:
       '@babel/helper-validator-identifier': 7.22.20
       '@eslint-community/eslint-utils': 4.4.0(eslint@8.56.0)
-      ci-info: 3.9.0
+      '@eslint/eslintrc': 2.1.4
+      ci-info: 4.0.0
       clean-regexp: 1.0.0
+      core-js-compat: 3.34.0
       eslint: 8.56.0
       esquery: 1.5.0
       indent-string: 4.0.0
@@ -3754,6 +3762,8 @@ packages:
       regjsparser: 0.10.0
       semver: 7.5.4
       strip-indent: 3.0.0
+    transitivePeerDependencies:
+      - supports-color
     dev: true
 
   /eslint-scope@5.1.1:
