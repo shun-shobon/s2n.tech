@@ -9,8 +9,9 @@
 		"build": "astro check && astro build",
 		"dev": "astro dev",
 		"format": "prettier --write .",
-		"format:check": "prettier --check .",
+		"format:ci": "prettier --check .",
 		"lint": "eslint src",
+		"lint:ci": "eslint --max-warnings 0 src",
 		"lint:fix": "eslint --fix src",
 		"start": "astro preview"
 	},
