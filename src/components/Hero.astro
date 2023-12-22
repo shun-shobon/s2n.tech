@@ -1,0 +1,22 @@
+---
+import { Image } from "astro:assets";
+
+import Icon from "@/assets/meru.svg";
+
+import * as styles from "./Hero.css";
+---
+
+<div class={styles.hero}>
+	<Image alt="" src={Icon} class={styles.icon} />
+	<hgroup>
+		<h1 class={styles.title}>NISHIZAWA Shuntaro</h1>
+		<p>
+			a.k.a.
+			<strong>しゅん</strong>
+			 /
+			<strong>shun</strong>
+			 /
+			<strong>shun_shobon</strong>
+		</p>
+	</hgroup>
+</div>
