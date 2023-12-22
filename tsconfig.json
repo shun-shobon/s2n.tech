@@ -3,6 +3,12 @@
 	"compilerOptions": {
 		"exactOptionalPropertyTypes": false,
 
+		"plugins": [
+			{
+				"name": "@astrojs/ts-plugin"
+			}
+		],
+
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/*"]
