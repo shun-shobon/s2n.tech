@@ -9,8 +9,8 @@ devDependencies:
     specifier: ^0.3.4
     version: 0.3.4(prettier@3.1.1)(typescript@5.3.3)
   '@shun-shobon/eslint-config':
-    specifier: ^0.4.2
-    version: 0.4.2(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3)
+    specifier: ^0.4.3
+    version: 0.4.3(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3)
   '@shun-shobon/prettier-config':
     specifier: ^0.2.0
     version: 0.2.0(prettier@3.1.1)
@@ -1656,8 +1656,8 @@ packages:
     dev: true
     optional: true
 
-  /@shun-shobon/eslint-config@0.4.2(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-RHoTtxg33y3G/20gRlqjT1UyBQKGYx38R+2kej456l+sy4Ag7h+7B8EAjTxGK8fvkvB1/iBloMDFkW/lOl7bdQ==}
+  /@shun-shobon/eslint-config@0.4.3(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-TTT1Er+NXAneQPrMGoLCcDQJOdtmBS78eB3JfZcso1IBgEsXkoC7lBTtR9EtX7+/j3RmIud9285aVW/mjlRanA==}
     peerDependencies:
       eslint: ^8.21.0
     dependencies:
@@ -3920,7 +3920,7 @@ packages:
       human-signals: 4.3.1
       is-stream: 3.0.0
       merge-stream: 2.0.0
-      npm-run-path: 5.1.0
+      npm-run-path: 5.2.0
       onetime: 6.0.0
       signal-exit: 3.0.7
       strip-final-newline: 3.0.0
@@ -5699,6 +5699,13 @@ packages:
 
   /npm-run-path@5.1.0:
     resolution: {integrity: sha512-sJOdmRGrY2sjNTRMbSvluQqg+8X7ZK61yvzBEIDhz4f8z1TZFYABsqjjCBd/0PUNE9M6QDgHJXQkGUEm7Q+l9Q==}
+    engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dependencies:
+      path-key: 4.0.0
+    dev: true
+
+  /npm-run-path@5.2.0:
+    resolution: {integrity: sha512-W4/tgAXFqFA0iL7fk0+uQ3g7wkL8xJmx3XdK0VGb4cHW//eZTtKGvFBBoRKVTpY7n6ze4NL9ly7rgXcHufqXKg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     dependencies:
       path-key: 4.0.0
