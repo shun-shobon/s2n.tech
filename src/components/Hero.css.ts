@@ -33,3 +33,20 @@ export const title = style({
 		},
 	},
 });
+
+export const aka = style({
+	"@layer": {
+		[layers.components]: {
+			marginBottom: "8px",
+		},
+	},
+});
+
+export const links = style({
+	"@layer": {
+		[layers.components]: {
+			display: "flex",
+			gap: "16px",
+		},
+	},
+});
