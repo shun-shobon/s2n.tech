@@ -55,3 +55,11 @@ export const entryPoint = style({
 		},
 	},
 });
+
+export const entryHeading = style({
+	"@layer": {
+		[layers.components]: {
+			fontSize: "1.2rem",
+		},
+	},
+});

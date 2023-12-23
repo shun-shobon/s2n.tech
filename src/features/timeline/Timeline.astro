@@ -7,7 +7,7 @@ import Heading from "@/components/Heading.astro";
 import * as styles from "./Timeline.css";
 
 const entries = await getCollection("timeline").then((entries) =>
-	entries.sort((a, b) => -a.slug.localeCompare(b.slug)),
+	entries.sort((a, b) => a.slug.localeCompare(b.slug)),
 );
 ---
 
@@ -28,7 +28,7 @@ const entries = await getCollection("timeline").then((entries) =>
 							<time datetime={date.toString()}>
 								{date.toLocaleString("ja-JP")}
 							</time>
-							<h2>{entry.data.title}</h2>
+							<h2 class={styles.entryHeading}>{entry.data.title}</h2>
 						</div>
 					</li>
 				);
