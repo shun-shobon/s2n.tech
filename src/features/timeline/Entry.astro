@@ -1,8 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
-import { Temporal } from "temporal-polyfill";
 
 import * as styles from "./Entry.css";
+import { slugToYearMonth } from "./utils";
 
 interface Props {
 	entry: CollectionEntry<"timeline">;
@@ -10,9 +10,7 @@ interface Props {
 
 const { entry } = Astro.props;
 
-const date = Temporal.PlainYearMonth.from(
-	entry.slug.replace(/^(?<date>\d+-\d+)-.+/u, "$<date>"),
-);
+const date = slugToYearMonth(entry.slug);
 
 const { Content } = await entry.render();
 ---
