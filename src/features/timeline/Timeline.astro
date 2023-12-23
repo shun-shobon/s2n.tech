@@ -23,6 +23,8 @@ const entries = await getCollection("timeline").then((entries) =>
 				return (
 					<li class={styles.entryWrapper}>
 						<div class={styles.entry}>
+							<span aria-hidden="true" class={styles.entryLine} />
+							<span aria-hidden="true" class={styles.entryPoint} />
 							<time datetime={date.toString()}>
 								{date.toLocaleString("ja-JP")}
 							</time>

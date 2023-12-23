@@ -5,7 +5,7 @@ import * as layers from "@/styles/layers.css";
 export const entryWrapper = style({
 	"@layer": {
 		[layers.components]: {
-			paddingInlineStart: "8px",
+			paddingInlineStart: "16px",
 		},
 	},
 });
@@ -13,8 +13,45 @@ export const entryWrapper = style({
 export const entry = style({
 	"@layer": {
 		[layers.components]: {
-			paddingInlineStart: "8px",
+			paddingInlineStart: "16px",
 			paddingBlock: "8px",
+			position: "relative",
+		},
+	},
+});
+
+export const entryLine = style({
+	"@layer": {
+		[layers.components]: {
+			position: "absolute",
+			top: 0,
+			bottom: 0,
+			left: -1,
+			width: "2px",
+			backgroundColor: "#000",
+
+			selectors: {
+				[`${entryWrapper}:first-child &`]: {
+					top: "16px",
+				},
+				[`${entryWrapper}:last-child &`]: {
+					bottom: "calc(100% - 16px)",
+				},
+			},
+		},
+	},
+});
+
+export const entryPoint = style({
+	"@layer": {
+		[layers.components]: {
+			position: "absolute",
+			top: "16px",
+			left: "-4px",
+			width: "8px",
+			height: "8px",
+			borderRadius: "50%",
+			backgroundColor: "#000",
 		},
 	},
 });
