@@ -13,7 +13,8 @@
 		"lint": "eslint src",
 		"lint:ci": "eslint --max-warnings 0 src",
 		"lint:fix": "eslint --fix src",
-		"start": "astro preview"
+		"start": "astro preview",
+		"sync": "astro sync"
 	},
 	"dependencies": {
 		"temporal-polyfill": "^0.1.1"
