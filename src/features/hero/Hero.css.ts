@@ -61,6 +61,7 @@ export const aka = style({
 export const occupation = style({
 	"@layer": {
 		[layers.components]: {
+			textAlign: "center",
 			fontSize: "2.5rem",
 		},
 	},
