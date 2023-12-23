@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from "astro:content";
+import { Temporal } from "temporal-polyfill";
+
+import * as styles from "./Entry.css";
+
+interface Props {
+	entry: CollectionEntry<"timeline">;
+}
+
+const { entry } = Astro.props;
+
+const date = Temporal.PlainYearMonth.from(
+	entry.slug.replace(/^(?<date>\d+-\d+)-.+/u, "$<date>"),
+);
+
+const { Content } = await entry.render();
+---
+
+<li class={styles.entry}>
+	<span aria-hidden="true" class={styles.entryLine}></span>
+	<span aria-hidden="true" class={styles.entryPoint}></span>
+	<time datetime={date.toString()}>
+		{date.toLocaleString("ja-JP")}
+	</time>
+	<h3 class={styles.entryHeading}>{entry.data.title}</h3>
+	<Content />
+</li>
