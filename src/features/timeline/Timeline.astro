@@ -1,0 +1,36 @@
+---
+import { getCollection } from "astro:content";
+import { Temporal } from "temporal-polyfill";
+
+import Heading from "@/components/Heading.astro";
+
+import * as styles from "./Timeline.css";
+
+const entries = await getCollection("timeline").then((entries) =>
+	entries.sort((a, b) => -a.slug.localeCompare(b.slug)),
+);
+---
+
+<section>
+	<Heading>Timeline</Heading>
+	<ul>
+		{
+			entries.map((entry) => {
+				const date = Temporal.PlainYearMonth.from(
+					entry.slug.replace(/^(?<date>\d+-\d+)-.+/u, "$<date>"),
+				);
+
+				return (
+					<li class={styles.entryWrapper}>
+						<div class={styles.entry}>
+							<time datetime={date.toString()}>
+								{date.toLocaleString("ja-JP")}
+							</time>
+							<h2>{entry.data.title}</h2>
+						</div>
+					</li>
+				);
+			})
+		}
+	</ul>
+</section>
