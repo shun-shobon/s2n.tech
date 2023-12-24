@@ -1,9 +1,17 @@
 ---
 import * as styles from "./Heading.css";
 import Star from "./star.svg";
+
+interface Props {
+	level?: 1 | 2 | 3 | 4 | 5 | 6;
+}
+
+const { level = 2 } = Astro.props;
+
+const Tag = `h${level}` as const;
 ---
 
-<h2 class={styles.heading}>
+<Tag class={styles.heading}>
 	<span class={styles.textWrapper}>
 		<span aria-hidden="true" class={styles.line}></span>
 		<img src={Star.src} alt="" aria-hidden="true" class={styles.star} />
@@ -11,4 +19,4 @@ import Star from "./star.svg";
 			<slot />
 		</span>
 	</span>
-</h2>
+</Tag>
