@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { Temporal } from "temporal-polyfill";
 
 import { slugToYearMonth } from "../utils";
 import * as styles from "./Entry.css";
@@ -10,7 +11,13 @@ interface Props {
 
 const { entry } = Astro.props;
 
+const MY_BIRTHDAY = Temporal.PlainYearMonth.from("2003-04");
+
 const date = slugToYearMonth(entry.slug);
+const duration = date.since(MY_BIRTHDAY);
+// 月の差が0(誕生月)のときは基本誕生日前の出来事なので-1する
+const yearsOld =
+	duration.months === 0 ? Math.max(duration.years - 1, 0) : duration.years;
 
 const { Content } = await entry.render();
 ---
@@ -20,6 +27,7 @@ const { Content } = await entry.render();
 	<span aria-hidden="true" class={styles.entryPoint}></span>
 	<time datetime={date.toString()}>
 		{date.toLocaleString("ja-JP")}
+		 ({yearsOld}歳)
 	</time>
 	<h3 class={styles.entryHeading}>{entry.data.title}</h3>
 	<Content />
