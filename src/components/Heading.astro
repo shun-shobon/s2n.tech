@@ -1,7 +1,14 @@
 ---
 import * as styles from "./Heading.css";
+import Star from "./star.svg";
 ---
 
 <h2 class={styles.heading}>
-	<slot />
+	<span class={styles.textWrapper}>
+		<span aria-hidden="true" class={styles.line}></span>
+		<img src={Star.src} alt="" aria-hidden="true" class={styles.star} />
+		<span class={styles.text}>
+			<slot />
+		</span>
+	</span>
 </h2>
