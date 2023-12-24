@@ -1,5 +1,21 @@
 ---
-import Page from "@/_pages/index.astro";
+import About from "@/features/about/About.astro";
+import Footer from "@/features/footer/Footer.astro";
+import Hero from "@/features/hero/Hero.astro";
+import Timeline from "@/features/timeline/Timeline.astro";
+import WorksList from "@/features/works/WorksList.astro";
+import Layout from "@/layouts/Layout.astro";
+import * as styles from "@/styles/utils.css";
 ---
 
-<Page />
+<Layout>
+	<main>
+		<Hero />
+		<div class={styles.prose}>
+			<About />
+			<Timeline />
+			<WorksList />
+		</div>
+	</main>
+	<Footer />
+</Layout>
