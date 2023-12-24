@@ -3,8 +3,8 @@ import { style } from "@vanilla-extract/css";
 export const heading = style({
 	fontSize: "4rem",
 	textAlign: "center",
-	marginTop: "0.75em",
-	marginBottom: "0.25em",
+	marginTop: "1em",
+	marginBottom: "0.5em",
 	display: "flex",
 	lineHeight: "1",
 	justifyContent: "center",
