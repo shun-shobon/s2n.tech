@@ -1,8 +1,8 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
+import { slugToYearMonth } from "../utils";
 import * as styles from "./Entry.css";
-import { slugToYearMonth } from "./utils";
 
 interface Props {
 	entry: CollectionEntry<"timeline">;

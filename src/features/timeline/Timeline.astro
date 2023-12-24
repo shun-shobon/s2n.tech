@@ -4,8 +4,8 @@ import { Temporal } from "temporal-polyfill";
 
 import Heading from "@/components/Heading.astro";
 
+import { slugToYearMonth } from "../utils";
 import Entry from "./Entry.astro";
-import { slugToYearMonth } from "./utils";
 
 const entries = await getCollection("timeline").then((entries) =>
 	entries.sort(
