@@ -1,65 +1,45 @@
 import { style } from "@vanilla-extract/css";
 
-import * as layers from "@/styles/layers.css";
-
-export const entryWrapper = style({
-	"@layer": {
-		[layers.components]: {
-			paddingInlineStart: "16px",
-		},
-	},
-});
+const LINE_LEFT = "0px";
+const LINE_WIDTH = "2px";
+const POINT_SIZE = "14px";
+const POINT_TOP = "14px";
 
 export const entry = style({
-	"@layer": {
-		[layers.components]: {
-			paddingInlineStart: "32px",
-			paddingBlock: "8px",
-			position: "relative",
-		},
-	},
+	paddingInlineStart: "16px",
+	paddingBlock: "8px",
+	position: "relative",
 });
 
 export const entryLine = style({
-	"@layer": {
-		[layers.components]: {
-			position: "absolute",
-			top: 0,
-			bottom: 0,
-			left: "calc(16px - 1px)",
-			width: "2px",
-			backgroundColor: "#000",
+	position: "absolute",
+	top: 0,
+	bottom: 0,
+	left: `calc(${LINE_LEFT} - ${LINE_WIDTH} / 2)`,
+	width: LINE_WIDTH,
+	backgroundColor: "#fff",
 
-			selectors: {
-				[`${entryWrapper}:first-child &`]: {
-					top: "16px",
-				},
-				[`${entryWrapper}:last-child &`]: {
-					bottom: "calc(100% - 16px)",
-				},
-			},
+	selectors: {
+		[`${entry}:first-child &`]: {
+			top: POINT_TOP,
+		},
+		[`${entry}:last-child &`]: {
+			bottom: `calc(100% - ${POINT_TOP})`,
 		},
 	},
 });
 
 export const entryPoint = style({
-	"@layer": {
-		[layers.components]: {
-			position: "absolute",
-			top: "16px",
-			left: "calc(16px - 4px)",
-			width: "8px",
-			height: "8px",
-			borderRadius: "50%",
-			backgroundColor: "#000",
-		},
-	},
+	position: "absolute",
+	top: POINT_TOP,
+	left: `calc(${LINE_LEFT} - ${POINT_SIZE} / 2)`,
+	width: POINT_SIZE,
+	height: POINT_SIZE,
+	borderRadius: "50%",
+	backgroundColor: "#fff",
 });
 
 export const entryHeading = style({
-	"@layer": {
-		[layers.components]: {
-			fontSize: "1.2rem",
-		},
-	},
+	fontSize: "1.5rem",
+	marginBottom: "0.125em",
 });
