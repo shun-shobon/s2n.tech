@@ -1,9 +1,9 @@
 import { style } from "@vanilla-extract/css";
 
 const LINE_LEFT = "0px";
-const LINE_WIDTH = "2px";
-const POINT_SIZE = "14px";
-const POINT_TOP = "14px";
+const LINE_WIDTH = "1px";
+const POINT_SIZE = "8px";
+const POINT_TOP = "16px";
 
 export const entry = style({
 	paddingInlineStart: "16px",
