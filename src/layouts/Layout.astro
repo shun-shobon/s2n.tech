@@ -1,0 +1,37 @@
+---
+import "@/styles/global.css";
+
+interface Props {
+	title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="ja">
+	<head>
+		<meta charset="utf8" />
+		<meta
+			name="description"
+			content="学生WebエンジニアShuntaro Nishizawaのポートフォリオサイトです。略歴や制作物などを掲載しています。"
+		/>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+		{/* Google Font */}
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
+			rel="stylesheet"
+		/>
+
+		<title>
+			{title ?? "Shuntaro Nishizawa ― Web App Delopver"}
+		</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>

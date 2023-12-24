@@ -1,5 +1,22 @@
+# build output
+dist/
+functions/
+
+# generated types
+.astro/
+
+# dependencies
 node_modules/
 
-dist/
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-src/generated/
+# environment variables
+.env
+.env.production
+
+# macOS-specific files
+.DS_Store

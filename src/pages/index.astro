@@ -1,0 +1,21 @@
+---
+import Container from "@/components/Container.astro";
+import About from "@/features/about/About.astro";
+import Footer from "@/features/footer/Footer.astro";
+import Hero from "@/features/hero/Hero.astro";
+import Timeline from "@/features/timeline/Timeline.astro";
+import WorksList from "@/features/works/WorksList.astro";
+import Layout from "@/layouts/Layout.astro";
+---
+
+<Layout>
+	<main>
+		<Hero />
+		<Container>
+			<About />
+			<Timeline />
+			<WorksList />
+		</Container>
+	</main>
+	<Footer />
+</Layout>

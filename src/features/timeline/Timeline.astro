@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import { Temporal } from "temporal-polyfill";
+
+import Heading from "@/components/Heading.astro";
+
+import { slugToYearMonth } from "../utils";
+import Entry from "./Entry.astro";
+
+const entries = await getCollection("timeline").then((entries) =>
+	entries.sort(
+		(a, b) =>
+			-Temporal.PlainYearMonth.compare(
+				slugToYearMonth(a.slug),
+				slugToYearMonth(b.slug),
+			),
+	),
+);
+---
+
+<section>
+	<Heading lineOffset={0.6}>Timeline</Heading>
+	<ul>
+		{entries.map((entry) => <Entry entry={entry} />)}
+	</ul>
+</section>

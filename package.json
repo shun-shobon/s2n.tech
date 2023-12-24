@@ -1,52 +1,39 @@
 {
-  "name": "shun-shobon.github.io",
-  "version": "0.0.0",
-  "description": "My portfolio",
-  "author": "Shuntaro Nishizawa <me@shun.technology> (https://github.com/shun-shobon)",
-  "license": "MIT",
-  "private": true,
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite serve",
-    "generate": "graphql-codegen --config codegen.yml",
-    "check": "run-p check:*",
-    "check:type": "tsc",
-    "check:format": "prettier --check --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,html,css,sass,scss}\"",
-    "check:lint": "eslint --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx}\"",
-    "fix": "run-p fix:*",
-    "fix:format": "prettier --write --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx,html,css,sass,scss}\"",
-    "fix:lint": "eslint --fix --ignore-path .gitignore \"**/*.{js,jsx,ts,tsx}\"",
-    "prepare": "run-s generate && husky install"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ]
-  },
-  "devDependencies": {
-    "@graphql-codegen/cli": "^1.21.4",
-    "@graphql-codegen/typescript": "^1.22.0",
-    "@graphql-codegen/typescript-operations": "^1.17.16",
-    "@typescript-eslint/eslint-plugin": "^4.23.0",
-    "@typescript-eslint/parser": "^4.23.0",
-    "autoprefixer": "^10.2.5",
-    "eslint": "^7.26.0",
-    "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-react": "^7.23.2",
-    "graphql": "^15.5.0",
-    "graphql-request": "^3.4.0",
-    "husky": "^6.0.0",
-    "lint-staged": "^11.0.0",
-    "npm-run-all": "^4.1.5",
-    "postcss": "^8.2.15",
-    "preact": "^10.5.13",
-    "preact-feather": "^4.2.1",
-    "prettier": "^2.2.1",
-    "tailwindcss": "^2.1.2",
-    "typescript": "^4.2.4",
-    "vite": "^2.2.3",
-    "vite-plugin-html": "^2.0.7"
-  }
+	"name": "s2n.tech",
+	"version": "0.1.0",
+	"type": "module",
+	"author": "NISHIZAWA Shuntaro <me@s2n.tech> (https://s2n.tech/)",
+	"private": true,
+	"packageManager": "pnpm@8.12.1",
+	"scripts": {
+		"build": "astro build",
+		"dev": "astro dev",
+		"format": "prettier --write .",
+		"format:ci": "prettier --check .",
+		"lint": "eslint src",
+		"lint:ci": "eslint --max-warnings 0 src",
+		"lint:fix": "eslint --fix src",
+		"start": "astro preview",
+		"sync": "astro sync"
+	},
+	"dependencies": {
+		"@astrojs/cloudflare": "^8.0.0",
+		"@vanilla-extract/css-utils": "^0.1.3",
+		"@vanilla-extract/dynamic": "^2.1.0",
+		"temporal-polyfill": "^0.1.1"
+	},
+	"devDependencies": {
+		"@astrojs/check": "^0.3.4",
+		"@astrojs/ts-plugin": "^1.3.1",
+		"@shun-shobon/eslint-config": "^0.4.5",
+		"@shun-shobon/prettier-config": "^0.2.1",
+		"@vanilla-extract/css": "^1.14.0",
+		"@vanilla-extract/vite-plugin": "^3.9.3",
+		"astro": "^4.0.7",
+		"astro-compress": "^2.2.5",
+		"eslint": "^8.56.0",
+		"prettier": "^3.1.1",
+		"sharp": "^0.33.1",
+		"typescript": "^5.3.3"
+	}
 }

@@ -1,0 +1,30 @@
+name: Deploy
+on:
+  push:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup | Node.js
+        uses: shun-shobon/actions/setup-node@master
+        with:
+          node-version-file: .tool-versions
+
+      - name: Run | Build
+        run: pnpm build
+
+      - name: Deploy | Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: s2n-tech
+          directory: ./dist
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

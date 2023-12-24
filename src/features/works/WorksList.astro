@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import { Temporal } from "temporal-polyfill";
+
+import Heading from "@/components/Heading.astro";
+
+import { slugToYearMonth } from "../utils";
+import * as styles from "./WorksList.css";
+
+const entries = await getCollection("works").then((entries) =>
+	entries.sort(
+		(a, b) =>
+			-Temporal.PlainYearMonth.compare(
+				slugToYearMonth(a.slug),
+				slugToYearMonth(b.slug),
+			),
+	),
+);
+---
+
+<section>
+	<Heading>Works</Heading>
+	<ul class={styles.list}>
+		{
+			entries.map((entry) => (
+				<li>
+					<article class={styles.entry}>
+						<img
+							src={entry.data.image.src}
+							alt=""
+							class={styles.entryThumbnail}
+						/>
+						<h3 class={styles.entryTitle}>{entry.data.title}</h3>
+					</article>
+				</li>
+			))
+		}
+	</ul>
+</section>
