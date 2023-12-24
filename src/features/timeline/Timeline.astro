@@ -19,7 +19,7 @@ const entries = await getCollection("timeline").then((entries) =>
 ---
 
 <section>
-	<Heading>Timeline</Heading>
+	<Heading lineOffset={0.6}>Timeline</Heading>
 	<ul>
 		{entries.map((entry) => <Entry entry={entry} />)}
 	</ul>
