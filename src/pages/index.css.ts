@@ -1,6 +1,6 @@
 import { style } from "@vanilla-extract/css";
 
-export const main = style({
+export const contents = style({
 	width: "100%",
 	maxWidth: "80ch",
 	margin: "0 auto",

@@ -2,11 +2,17 @@
 import About from "@/features/about/About.astro";
 import Hero from "@/features/hero/Hero.astro";
 import Timeline from "@/features/timeline/Timeline.astro";
-import MainLayout from "@/layouts/MainLayout.astro";
+import Layout from "@/layouts/Layout.astro";
+
+import * as styles from "./index.css";
 ---
 
-<MainLayout>
-	<Hero />
-	<About />
-	<Timeline />
-</MainLayout>
+<Layout>
+	<main>
+		<Hero />
+		<div class={styles.contents}>
+			<About />
+			<Timeline />
+		</div>
+	</main>
+</Layout>
