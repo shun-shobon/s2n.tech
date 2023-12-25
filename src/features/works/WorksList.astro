@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 import { Temporal } from "temporal-polyfill";
 
@@ -25,11 +26,10 @@ const entries = await getCollection("works").then((entries) =>
 			entries.map((entry) => (
 				<li>
 					<article class={styles.entry}>
-						<img
-							src={entry.data.image.src}
+						<Image
+							src={entry.data.image}
 							alt=""
 							class={styles.entryThumbnail}
-							loading="lazy"
 						/>
 						<h3 class={styles.entryTitle}>{entry.data.title}</h3>
 					</article>

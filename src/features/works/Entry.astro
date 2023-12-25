@@ -1,4 +1,5 @@
 ---
+import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 
 import { slugToYearMonth } from "../utils";
@@ -17,7 +18,7 @@ const { Content } = await entry.render();
 
 <aritcle>
 	<header class={styles.header}>
-		<img src={entry.data.image.src} alt="" class={styles.thumbnail} />
+		<Image src={entry.data.image} alt="" class={styles.thumbnail} />
 		<h1 class={styles.title}>{entry.data.title}</h1>
 		<time datetime={date.toString()} class={styles.date}>
 			{date.toLocaleString("ja-JP")}

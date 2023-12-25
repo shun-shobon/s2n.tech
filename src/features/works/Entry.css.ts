@@ -7,7 +7,7 @@ export const header = style({
 
 export const thumbnail = style({
 	width: "100%",
-	aspectRatio: "16 / 9",
+	height: "auto",
 });
 
 export const title = style({
