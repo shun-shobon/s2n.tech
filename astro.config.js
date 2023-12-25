@@ -6,12 +6,15 @@ import qwikdev from "@qwikdev/astro";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [compress(), qwikdev()],
-  output: "hybrid",
-  adapter: cloudflare({
-    mode: "directory"
-  }),
-  vite: {
-    plugins: [vanillaExtractPlugin()]
-  }
+	integrations: [compress(), qwikdev()],
+	output: "hybrid",
+	adapter: cloudflare({
+		mode: "directory",
+	}),
+	build: {
+		format: "file",
+	},
+	vite: {
+		plugins: [vanillaExtractPlugin()],
+	},
 });
