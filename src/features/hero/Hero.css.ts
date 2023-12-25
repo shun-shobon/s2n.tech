@@ -1,68 +1,66 @@
 import { style } from "@vanilla-extract/css";
 
-import * as layers from "@/styles/layers.css";
+import * as queries from "@/styles/media-queries.css";
 
 export const heroWrapper = style({
-	"@layer": {
-		[layers.components]: {
-			width: "100%",
-			height: ["100vh", "100svh"],
-			display: "grid",
-			placeItems: "center",
-		},
-	},
+	width: "100%",
+	height: ["100vh", "100svh"],
+	display: "grid",
+	placeItems: "center",
 });
 
 export const hero = style({
-	"@layer": {
-		[layers.components]: {
-			display: "grid",
-			justifyItems: "center",
-			gap: "16px",
+	"display": "grid",
+	"justifyItems": "center",
+	"gap": "0.5em",
+	"fontSize": "1.5rem",
+
+	"@media": {
+		[queries.sm]: {
+			fontSize: "2.5rem",
 		},
 	},
 });
 
 export const icon = style({
-	"@layer": {
-		[layers.components]: {
+	"width": "128px",
+	"height": "128px",
+	"borderRadius": "50%",
+
+	"@media": {
+		[queries.sm]: {
 			width: "256px",
 			height: "256px",
-			borderRadius: "50%",
 		},
 	},
 });
 
 export const names = style({
-	"@layer": {
-		[layers.components]: {
-			textAlign: "center",
-		},
-	},
+	textAlign: "center",
 });
 
 export const name = style({
-	"@layer": {
-		[layers.components]: {
+	"fontSize": "2rem",
+
+	"@media": {
+		[queries.sm]: {
 			fontSize: "4rem",
-			lineHeight: "1.2",
 		},
 	},
 });
 
 export const aka = style({
-	"@layer": {
-		[layers.components]: {
-			fontSize: "2.5rem",
+	"fontSize": "1.5rem",
+	"lineHeight": "1",
+	"marginTop": "-0.5em",
+
+	"@media": {
+		[queries.sm]: {
+			fontSize: "2rem",
 		},
 	},
 });
 
 export const occupation = style({
-	"@layer": {
-		[layers.components]: {
-			textAlign: "center",
-			fontSize: "2.5rem",
-		},
-	},
+	textAlign: "center",
 });
