@@ -2,7 +2,7 @@ import { style } from "@vanilla-extract/css";
 
 export const list = style({
 	display: "grid",
-	gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+	gridTemplateColumns: "repeat(auto-fit, minmax(30ch, 1fr))",
 	gap: "1rem",
 });
 
