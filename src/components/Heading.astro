@@ -1,8 +1,8 @@
 ---
 import { assignInlineVars } from "@vanilla-extract/dynamic";
+import { Icon } from "astro-icon/components";
 
 import * as styles from "./Heading.css";
-import Star from "./star.svg";
 
 interface Props {
 	level?: 1 | 2 | 3 | 4 | 5 | 6;
@@ -22,7 +22,7 @@ const Tag = `h${level}` as const;
 >
 	<span class={styles.textWrapper}>
 		<span aria-hidden="true" class={styles.line}></span>
-		<img src={Star.src} alt="" aria-hidden="true" class={styles.star} />
+		<Icon class={styles.star} name="star" />
 		<span class={styles.text}>
 			<slot />
 		</span>
