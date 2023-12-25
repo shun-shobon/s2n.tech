@@ -14,6 +14,7 @@ export const entry = style({
 
 export const entryThumbnail = style({
 	width: "100%",
+	height: "auto",
 	aspectRatio: "16 / 9",
 	objectFit: "cover",
 	gridArea: "1 / 1 / -1 / -1",
