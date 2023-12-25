@@ -1,7 +1,5 @@
 ---
-import { Image } from "astro:assets";
-
-import Icon from "@/assets/meru.svg";
+import { Icon } from "astro-icon/components";
 
 import * as styles from "./Hero.css";
 import Links from "./Links";
@@ -9,7 +7,7 @@ import Links from "./Links";
 
 <section class={styles.heroWrapper}>
 	<div class={styles.hero}>
-		<Image alt="" src={Icon} class={styles.icon} />
+		<Icon name="meru" class={styles.icon} />
 		<hgroup class={styles.names}>
 			<h1 class={styles.name}>Shuntaro Nishizawa</h1>
 			<p class={styles.aka}>しゅん / shun</p>
