@@ -6,12 +6,6 @@
 		"jsx": "react-jsx",
 		"jsxImportSource": "@builder.io/qwik",
 
-		"plugins": [
-			{
-				"name": "@astrojs/ts-plugin"
-			}
-		],
-
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/*"]
