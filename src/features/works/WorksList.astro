@@ -4,6 +4,7 @@ import { getCollection } from "astro:content";
 import { Temporal } from "temporal-polyfill";
 
 import Heading from "@/components/Heading.astro";
+import * as queries from "@/styles/media-queries.css";
 
 import { slugToYearMonth } from "../utils";
 import * as styles from "./WorksList.css";
@@ -29,6 +30,9 @@ const entries = await getCollection("works").then((entries) =>
 						<Image
 							src={entry.data.image}
 							alt=""
+							widths={[300, 600, 1200, entry.data.image.width]}
+							sizes={`${queries.sm} 300px, 600px`}
+							quality="low"
 							class={styles.entryThumbnail}
 						/>
 						<h3 class={styles.entryTitle}>{entry.data.title}</h3>

@@ -1,9 +1,16 @@
 import { style } from "@vanilla-extract/css";
 
+import * as queries from "@/styles/media-queries.css";
+
 export const list = style({
-	display: "grid",
-	gridTemplateColumns: "repeat(auto-fit, minmax(30ch, 1fr))",
-	gap: "1rem",
+	"display": "grid",
+	"gap": "1rem",
+
+	"@media": {
+		[queries.sm]: {
+			gridTemplateColumns: "repeat(2, 1fr)",
+		},
+	},
 });
 
 export const entry = style({
