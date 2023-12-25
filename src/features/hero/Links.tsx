@@ -7,12 +7,16 @@ const Links = component$(() => {
 	return (
 		<ul class={styles.links}>
 			<li>
-				<a href="https://github.com/shun-shobon" target="_blank">
+				<a
+					href="https://github.com/shun-shobon"
+					target="_blank"
+					class={styles.link}
+				>
 					<SiGithub aria-label="GitHub" />
 				</a>
 			</li>
 			<li>
-				<a href="https://x.com/shun_shobon" target="_blank">
+				<a href="https://x.com/shun_shobon" target="_blank" class={styles.link}>
 					<SiX aria-label="X" />
 				</a>
 			</li>
