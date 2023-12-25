@@ -29,6 +29,7 @@ const entries = await getCollection("works").then((entries) =>
 							src={entry.data.image.src}
 							alt=""
 							class={styles.entryThumbnail}
+							loading="lazy"
 						/>
 						<h3 class={styles.entryTitle}>{entry.data.title}</h3>
 					</article>
