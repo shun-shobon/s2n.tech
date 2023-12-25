@@ -1,5 +1,6 @@
-import { vars } from "@/styles/theme.css";
 import { style } from "@vanilla-extract/css";
+
+import { vars } from "@/styles/theme.css";
 
 export const links = style({
 	display: "flex",
