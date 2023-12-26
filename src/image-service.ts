@@ -8,7 +8,7 @@ const service: LocalImageService = {
 	async transform(inputBuffer, transform, serviceConfig) {
 		// Purposefully obfuscate the import to prevent bundling => will only work at build time!
 		const imageService = (
-			await new Function('return import("astro/assets/services/sharp")')()
+			await new Function('return import("astro/assets/services/squoosh")')()
 		).default;
 
 		return await imageService.transform(inputBuffer, transform, serviceConfig);
