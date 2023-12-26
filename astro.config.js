@@ -12,6 +12,11 @@ export default defineConfig({
 	adapter: cloudflare({
 		mode: "directory",
 	}),
+	image: {
+		service: {
+			entrypoint: "./src/image-service.ts",
+		},
+	},
 	build: {
 		format: "file",
 	},
