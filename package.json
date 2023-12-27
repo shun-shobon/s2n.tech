@@ -27,7 +27,7 @@
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.3.4",
-		"@shun-shobon/eslint-config": "^0.4.6",
+		"@shun-shobon/eslint-config": "^0.4.7",
 		"@shun-shobon/prettier-config": "^0.2.1",
 		"@vanilla-extract/css": "^1.14.0",
 		"@vanilla-extract/vite-plugin": "^3.9.3",
