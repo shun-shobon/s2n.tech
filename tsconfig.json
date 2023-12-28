@@ -6,9 +6,6 @@
 
 		"exactOptionalPropertyTypes": false,
 
-		"jsx": "react-jsx",
-		"jsxImportSource": "@builder.io/qwik",
-
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/*"]
