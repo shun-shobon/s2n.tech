@@ -5,6 +5,7 @@ declare global {
 }
 ---
 
+{/* Google Analytics */}
 <script
 	type="text/partytown"
 	src={`https://www.googletagmanager.com/gtag/js?id=G-804RTWXBJP`}></script>
@@ -16,3 +17,8 @@ declare global {
 	gtag("js", new Date());
 	gtag("config", "G-804RTWXBJP");
 </script>
+{/* Cloudflare Web Analytics */}
+<script
+	type="text/partytown"
+	src="https://static.cloudflareinsights.com/beacon.min.js"
+	data-cf-beacon='{"token": "ba5f15fd198645b4a2f432d60eff5319"}'></script>

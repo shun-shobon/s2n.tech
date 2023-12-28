@@ -1,7 +1,7 @@
 ---
 import "@/styles/global.css";
 
-import GoogleTagManager from "@/components/GoogleTagManager.astro";
+import Analytics from "@/components/Analytics.astro";
 
 interface Props {
 	title?: string;
@@ -16,8 +16,8 @@ const { title } = Astro.props;
 		<meta charset="utf8" />
 		<meta name="viewport" content="width=device-width" />
 
-		{/* Google Tag Manager */}
-		<GoogleTagManager />
+		{/* Analytics */}
+		<Analytics />
 
 		{/* Google Font */}
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
