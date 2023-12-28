@@ -27,7 +27,7 @@ const { Content } = await entry.render();
 	<span aria-hidden="true" class={styles.entryPoint}></span>
 	<time datetime={date.toString()}>
 		{date.toLocaleString("ja-JP")}
-		 ({yearsOld}歳)
+		({yearsOld}歳)
 	</time>
 	<h3 class={styles.entryHeading}>{entry.data.title}</h3>
 	<Content />
