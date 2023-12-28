@@ -1,4 +1,5 @@
 import cloudflare from "@astrojs/cloudflare";
+import sitemap from "@astrojs/sitemap";
 import qwikdev from "@qwikdev/astro";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import { defineConfig } from "astro/config";
@@ -7,7 +8,8 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-	integrations: [compress(), qwikdev(), icon()],
+	site: "https://s2n.tech",
+	integrations: [compress(), qwikdev(), icon(), sitemap()],
 	output: "hybrid",
 	adapter: cloudflare({
 		mode: "directory",
