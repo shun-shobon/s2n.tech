@@ -50,8 +50,8 @@ devDependencies:
     specifier: ^2.2.5
     version: 2.2.5
   astro-icon:
-    specifier: next
-    version: 1.0.0-next.4
+    specifier: ^1.0.0
+    version: 1.0.0
   eslint:
     specifier: ^8.56.0
     version: 8.56.0
@@ -2626,8 +2626,8 @@ packages:
       - supports-color
     dev: true
 
-  /astro-icon@1.0.0-next.4:
-    resolution: {integrity: sha512-950UCYHdNeuOPsjuDy61Qxttuqx4PYYVc+OmJzWbu/0RDaT5vkmD262il73gNiGbt7Ydpb8XrHLjhxnfS0lN8w==}
+  /astro-icon@1.0.0:
+    resolution: {integrity: sha512-Jkvlmg0DUMBbOmjYB3Pawdo4cgNq+uTpEGYIHnXiyrpMyv1RuSk56MKc6VmwKxRMY05d8mtPZjiVdutCvuROyA==}
     dependencies:
       '@iconify/tools': 3.0.7
       '@iconify/types': 2.0.0
