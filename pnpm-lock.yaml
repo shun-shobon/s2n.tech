@@ -50,8 +50,8 @@ devDependencies:
     specifier: ^2.2.5
     version: 2.2.5
   astro-icon:
-    specifier: ^1.0.0
-    version: 1.0.0
+    specifier: ^1.0.1
+    version: 1.0.1
   eslint:
     specifier: ^8.56.0
     version: 8.56.0
@@ -1908,11 +1908,6 @@ packages:
       - supports-color
     dev: true
 
-  /@skarab/detect-package-manager@1.0.0:
-    resolution: {integrity: sha512-CuU1x6LgkJIF+H8FCnKijx6DbWVP1Y7kqPk88LSxNe0ulbe3BZ37qd3AaX3t5vnFZESLFMcjQd2dlPhdvWNSdQ==}
-    engines: {node: '>=14', pnpm: '>=7'}
-    dev: true
-
   /@storybook/csf@0.0.1:
     resolution: {integrity: sha512-USTLkZze5gkel8MYCujSRBVIrUQ3YPBrLOx7GNk/0wttvVtlzWXAq9eLbQ4p/NicGxP+3T7KPEMVV//g+yubpw==}
     dependencies:
@@ -2615,13 +2610,12 @@ packages:
       - supports-color
     dev: true
 
-  /astro-icon@1.0.0:
-    resolution: {integrity: sha512-Jkvlmg0DUMBbOmjYB3Pawdo4cgNq+uTpEGYIHnXiyrpMyv1RuSk56MKc6VmwKxRMY05d8mtPZjiVdutCvuROyA==}
+  /astro-icon@1.0.1:
+    resolution: {integrity: sha512-NtPyGeoSe/TJsGsea6T+8SDcW/wwZ7OIUq731DT7M6nw2B1p5BHuChiQI0bQvIIL79r48nMN7mQ8GBtwsDEucA==}
     dependencies:
       '@iconify/tools': 3.0.7
       '@iconify/types': 2.0.0
       '@iconify/utils': 2.1.13
-      '@skarab/detect-package-manager': 1.0.0
     transitivePeerDependencies:
       - supports-color
     dev: true
