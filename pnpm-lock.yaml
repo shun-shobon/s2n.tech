@@ -34,6 +34,9 @@ devDependencies:
   '@astrojs/sitemap':
     specifier: ^3.0.4
     version: 3.0.4
+  '@iconify-json/simple-icons':
+    specifier: ^1.1.86
+    version: 1.1.86
   '@shun-shobon/eslint-config':
     specifier: ^0.4.8
     version: 0.4.8(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3)
@@ -1381,6 +1384,12 @@ packages:
   /@iarna/toml@2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
     dev: false
+
+  /@iconify-json/simple-icons@1.1.86:
+    resolution: {integrity: sha512-rD5VlIgiOBPDcVQUCNbGu31WRYt+bj6bWFjH6+KEsxK/hDZTzylT5odF4Jo85PJUGZeJcGn18woE6P6I1Jiuxg==}
+    dependencies:
+      '@iconify/types': 2.0.0
+    dev: true
 
   /@iconify/tools@3.0.7:
     resolution: {integrity: sha512-DxfhFLMnooS34dHelpGUnnYrxLZHs0czC1CgrBhAbuL8ddVzBb2VEQm8kh9qGh7A34qeXAB5iSHH3A72rAaFrg==}

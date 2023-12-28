@@ -9,7 +9,16 @@ import icon from "astro-icon";
 // https://astro.build/config
 export default defineConfig({
 	site: "https://s2n.tech",
-	integrations: [compress(), qwikdev(), icon(), sitemap()],
+	integrations: [
+		compress(),
+		qwikdev(),
+		icon({
+			include: {
+				["simple-icons"]: ["x", "github"],
+			},
+		}),
+		sitemap(),
+	],
 	output: "hybrid",
 	adapter: cloudflare({
 		mode: "directory",
