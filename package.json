@@ -18,6 +18,7 @@
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "^8.0.0",
+		"@iconify-json/simple-icons": "^1.1.86",
 		"@vanilla-extract/css-utils": "^0.1.3",
 		"@vanilla-extract/dynamic": "^2.1.0",
 		"temporal-polyfill": "^0.1.1"
@@ -25,7 +26,6 @@
 	"devDependencies": {
 		"@astrojs/check": "^0.3.4",
 		"@astrojs/sitemap": "^3.0.4",
-		"@iconify-json/simple-icons": "^1.1.86",
 		"@shun-shobon/eslint-config": "^0.4.8",
 		"@shun-shobon/prettier-config": "^0.2.2",
 		"@vanilla-extract/css": "^1.14.0",
