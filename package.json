@@ -10,9 +10,9 @@
 		"dev": "astro dev",
 		"format": "prettier --write .",
 		"format:ci": "prettier --check .",
-		"lint": "eslint src",
-		"lint:ci": "eslint --max-warnings 0 src",
-		"lint:fix": "eslint --fix src",
+		"lint": "eslint .",
+		"lint:ci": "eslint --max-warnings 0 .",
+		"lint:fix": "eslint --fix .",
 		"start": "astro preview",
 		"sync": "astro sync"
 	},
@@ -27,7 +27,7 @@
 	},
 	"devDependencies": {
 		"@astrojs/check": "^0.3.4",
-		"@shun-shobon/eslint-config": "^0.4.7",
+		"@shun-shobon/eslint-config": "^0.4.8",
 		"@shun-shobon/prettier-config": "^0.2.2",
 		"@vanilla-extract/css": "^1.14.0",
 		"@vanilla-extract/vite-plugin": "^3.9.3",

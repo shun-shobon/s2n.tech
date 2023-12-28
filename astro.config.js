@@ -1,8 +1,8 @@
-import { defineConfig } from "astro/config";
-import compress from "astro-compress";
-import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import cloudflare from "@astrojs/cloudflare";
 import qwikdev from "@qwikdev/astro";
+import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
+import { defineConfig } from "astro/config";
+import compress from "astro-compress";
 import icon from "astro-icon";
 
 // https://astro.build/config
