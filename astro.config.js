@@ -1,4 +1,5 @@
 import cloudflare from "@astrojs/cloudflare";
+import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
 import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
 import { defineConfig } from "astro/config";
@@ -16,6 +17,11 @@ export default defineConfig({
 			},
 		}),
 		sitemap(),
+		partytown({
+			config: {
+				forward: ["dataLayer.push"],
+			},
+		}),
 	],
 	output: "hybrid",
 	adapter: cloudflare({
