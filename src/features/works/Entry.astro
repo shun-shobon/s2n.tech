@@ -25,7 +25,13 @@ const { Content } = await entry.render();
 
 <aritcle>
 	<header class={styles.header}>
-		<Image src={entry.data.image} alt="" class={styles.thumbnail} />
+		<Image
+			src={entry.data.image}
+			widths={[300, 600, 1200, entry.data.image.width]}
+			sizes={`600px`}
+			alt=""
+			class={styles.thumbnail}
+		/>
 		<div>
 			<h1 class={styles.title}>{entry.data.title}</h1>
 			<time datetime={date.toString()} class={styles.date}>
