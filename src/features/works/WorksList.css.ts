@@ -17,6 +17,7 @@ export const entry = style({
 	width: "100%",
 	aspectRatio: "16 / 9",
 	display: "grid",
+	overflow: "hidden",
 });
 
 export const entryThumbnail = style({
@@ -25,6 +26,13 @@ export const entryThumbnail = style({
 	aspectRatio: "16 / 9",
 	objectFit: "cover",
 	gridArea: "1 / 1 / -1 / -1",
+	transition: "transform 0.4s ease",
+
+	selectors: {
+		[`${entry}:hover &`]: {
+			transform: "scale(1.1)",
+		},
+	},
 });
 
 export const entryTitle = style({
@@ -38,4 +46,5 @@ export const entryTitle = style({
 	textOverflow: "ellipsis",
 	overflow: "hidden",
 	whiteSpace: "nowrap",
+	zIndex: 1,
 });

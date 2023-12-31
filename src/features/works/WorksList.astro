@@ -26,17 +26,21 @@ const entries = await getCollection("works").then((entries) =>
 		{
 			entries.map((entry) => (
 				<li>
-					<article class={styles.entry}>
-						<Image
-							src={entry.data.image}
-							alt=""
-							widths={[300, 600, 1200, entry.data.image.width]}
-							sizes={`${queries.sm} 300px, 600px`}
-							quality="low"
-							class={styles.entryThumbnail}
-						/>
-						<h3 class={styles.entryTitle}>{entry.data.title}</h3>
-					</article>
+					<a href={`/works/${entry.slug}`} aria-labelledby={entry.slug}>
+						<article class={styles.entry}>
+							<Image
+								src={entry.data.image}
+								alt=""
+								widths={[300, 600, 1200, entry.data.image.width]}
+								sizes={`${queries.sm} 300px, 600px`}
+								quality="low"
+								class={styles.entryThumbnail}
+							/>
+							<h3 id={entry.slug} class={styles.entryTitle}>
+								{entry.data.title}
+							</h3>
+						</article>
+					</a>
 				</li>
 			))
 		}
