@@ -36,6 +36,27 @@ const { title } = Astro.props;
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<link rel="sitemap" href="/sitemap-index.xml" type="application/xml" />
 
+		{/* OGP */}
+		<meta property="og:title" content="Shuntaro Nishizawa - Web App Delopver" />
+		<meta
+			property="og:description"
+			content="学生WebエンジニアShuntaro Nishizawaのポートフォリオサイトです。略歴や制作物などを掲載しています。"
+		/>
+		<meta property="og:url" content="https://s2n.tech" />
+		<meta property="og:image" content="https://s2n.tech/og-image.png" />
+		<meta property="og:type" content="website" />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta
+			property="twitter:title"
+			content="Shuntaro Nishizawa - Web App Delopver"
+		/>
+		<meta
+			property="twitter:description"
+			content="学生WebエンジニアShuntaro Nishizawaのポートフォリオサイトです。略歴や制作物などを掲載しています。"
+		/>
+		<meta property="twitter:image" content="https://s2n.tech/og-image.png" />
+		<meta property="twitter:site" content="@shun_shobon" />
+
 		{/* Analytics */}
 		<Analytics />
 	</head>
