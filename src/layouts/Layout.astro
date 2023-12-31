@@ -16,9 +16,6 @@ const { title } = Astro.props;
 		<meta charset="utf8" />
 		<meta name="viewport" content="width=device-width" />
 
-		{/* Analytics */}
-		<Analytics />
-
 		{/* Google Font */}
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,6 +35,9 @@ const { title } = Astro.props;
 		<link rel="icon" href="/favicon.ico" sizes="any" />
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<link rel="sitemap" href="/sitemap-index.xml" type="application/xml" />
+
+		{/* Analytics */}
+		<Analytics />
 	</head>
 	<body>
 		<slot />
