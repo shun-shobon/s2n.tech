@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
+import { getDataEntryById } from "astro:content";
 
 import { slugToYearMonth } from "../utils";
 import * as styles from "./Entry.css.ts";
@@ -13,16 +14,60 @@ const { entry } = Astro.props;
 
 const date = slugToYearMonth(entry.slug);
 
+const technologies = await Promise.all(
+	entry.data.technologies.map((technology) =>
+		getDataEntryById("technologies", technology.id),
+	),
+);
+
 const { Content } = await entry.render();
 ---
 
 <aritcle>
 	<header class={styles.header}>
 		<Image src={entry.data.image} alt="" class={styles.thumbnail} />
-		<h1 class={styles.title}>{entry.data.title}</h1>
-		<time datetime={date.toString()} class={styles.date}>
-			{date.toLocaleString("ja-JP")}
-		</time>
+		<div>
+			<h1 class={styles.title}>{entry.data.title}</h1>
+			<time datetime={date.toString()} class={styles.date}>
+				{date.toLocaleString("ja-JP")}
+			</time>
+		</div>
+		<table class={styles.table}>
+			<tr>
+				<th>Technologies</th>
+				<td>
+					<ul class={styles.list}>
+						{technologies.map((technology) => <li>{technology.data.name}</li>)}
+					</ul>
+				</td>
+			</tr>
+			<tr>
+				<th>Platform</th>
+				<td>
+					<ul class={styles.list}>
+						{entry.data.platforms.map((platform) => <li>{platform}</li>)}
+					</ul>
+				</td>
+			</tr>
+			{
+				entry.data.links && (
+					<tr>
+						<th>Links</th>
+						<td>
+							<ul class={styles.list}>
+								{entry.data.links.map((link) => (
+									<li>
+										<a href={link.url} class={styles.link}>
+											{link.name}
+										</a>
+									</li>
+								))}
+							</ul>
+						</td>
+					</tr>
+				)
+			}
+		</table>
 	</header>
 	<Content />
 </aritcle>

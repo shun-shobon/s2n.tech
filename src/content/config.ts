@@ -18,7 +18,7 @@ const worksCollection = defineCollection({
 			links: z
 				.array(
 					z.object({
-						label: z.string(),
+						name: z.string(),
 						url: z.string().url(),
 					}),
 				)

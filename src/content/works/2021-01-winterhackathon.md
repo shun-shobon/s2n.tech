@@ -6,6 +6,8 @@ technologies:
   - react
   - webrtc
   - websocket
+platforms:
+  - Web
 links:
   - name: Repository
     url: https://github.com/approvers/genkainet

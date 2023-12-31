@@ -4,6 +4,8 @@ image: "./2022-08-bullets.jpg"
 technologies:
   - c
   - opengl
+platforms:
+  - PC
 links:
   - name: Repository
     url: https://github.com/shun-shobon/bullets

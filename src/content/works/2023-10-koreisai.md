@@ -6,6 +6,8 @@ technologies:
   - react
   - nextjs
   - leaflet
+platforms:
+  - Web
 links:
   - name: Blog
     url: https://blog.s2n.tech/articles/koreisai-2023
