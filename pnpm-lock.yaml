@@ -18,8 +18,8 @@ dependencies:
     specifier: ^2.1.0
     version: 2.1.0
   temporal-polyfill:
-    specifier: ^0.1.1
-    version: 0.1.1
+    specifier: ^0.2.0
+    version: 0.2.0
 
 devDependencies:
   '@astrojs/check':
@@ -6579,14 +6579,14 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /temporal-polyfill@0.1.1:
-    resolution: {integrity: sha512-/5e4EVRA0wBI/bEhWLirSjwUg1lELhQyTXxw9zNbVhqjKvI9BLczs+3wtsoD9sn3HN2ImAMW5XJQwAiXgWT+GA==}
+  /temporal-polyfill@0.2.0:
+    resolution: {integrity: sha512-ra5tfISsVwUlDk9fhvEiIuvfBshV7jDtHYxmC8ACLIVV91MYoVlOBE1RpIrDjqGTYkCrZf0mWhgAW9XSOVPuGw==}
     dependencies:
-      temporal-spec: 0.1.0
+      temporal-spec: 0.2.0
     dev: false
 
-  /temporal-spec@0.1.0:
-    resolution: {integrity: sha512-sMNggMeS6trCgMQuudgFHhX1gtBK3e+AT1zGrMsFYG1wlqtRT5E9rcvm3I1iNlvHpJX/3DO6L4qtWAuEl/T04Q==}
+  /temporal-spec@0.2.0:
+    resolution: {integrity: sha512-r1AT0XdEp8TMQ13FLvOt8mOtAxDQsRt2QU5rSWCA7YfshddU651Y1NHVrceLANvixKdf9fYO8B/S9fXHodB7HQ==}
     dev: false
 
   /terser@5.26.0:
