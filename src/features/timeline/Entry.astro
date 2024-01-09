@@ -2,6 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 import { Temporal } from "temporal-polyfill";
 
+import { calendar } from "../locale";
 import { slugToYearMonth } from "../utils";
 import * as styles from "./Entry.css";
 
@@ -11,7 +12,11 @@ interface Props {
 
 const { entry } = Astro.props;
 
-const MY_BIRTHDAY = Temporal.PlainYearMonth.from("2003-04");
+const MY_BIRTHDAY = Temporal.PlainYearMonth.from({
+	year: 2003,
+	month: 4,
+	calendar,
+});
 
 const date = slugToYearMonth(entry.slug);
 const duration = date.since(MY_BIRTHDAY);
