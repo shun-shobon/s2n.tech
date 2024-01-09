@@ -30,12 +30,8 @@ export default defineConfig({
 	output: "hybrid",
 	adapter: cloudflare({
 		mode: "directory",
+		imageService: "compile",
 	}),
-	image: {
-		service: {
-			entrypoint: "./src/image-service.ts",
-		},
-	},
 	build: {
 		format: "file",
 	},
