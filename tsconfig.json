@@ -1,11 +1,6 @@
 {
 	"extends": "astro/tsconfigs/strictest",
 	"compilerOptions": {
-		"allowJs": true,
-		"checkJs": true,
-
-		"exactOptionalPropertyTypes": false,
-
 		"baseUrl": ".",
 		"paths": {
 			"@/*": ["src/*"]
