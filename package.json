@@ -14,7 +14,8 @@
 		"lint:ci": "eslint --max-warnings 0 .",
 		"lint:fix": "eslint --fix .",
 		"start": "astro preview",
-		"sync": "astro sync"
+		"sync": "astro sync",
+		"type-check": "tsc --noEmit && astro check"
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "^8.1.0",

@@ -6,6 +6,23 @@ permissions:
   contents: read
 
 jobs:
+  type-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup | Node
+        uses: shun-shobon/actions/setup-node@master
+        with:
+          node-version-file: .tool-versions
+
+      - name: Run | Sync
+        run: pnpm sync
+
+      - name: Run | Lint
+        run: pnpm type-check
+
   lint:
     runs-on: ubuntu-latest
     steps:
