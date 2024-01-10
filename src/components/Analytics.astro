@@ -29,7 +29,7 @@ const cfData = {
 {
 	cfWebAnalyticsToken && (
 		<script
-			type="text/partytown"
+			defer
 			src="https://static.cloudflareinsights.com/beacon.min.js"
 			data-cf-beacon={JSON.stringify(cfData)}
 		/>
