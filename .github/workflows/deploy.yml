@@ -34,6 +34,9 @@ jobs:
 
       - name: Run | Build
         run: pnpm build
+        env:
+          PUBLIC_GTAG_ID: ${{ secrets.GTAG_ID }}
+          PUBLIC_CF_WEB_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_WEB_ANALYTICS_TOKEN }}
 
       - name: Deploy | Cloudflare Pages
         id: cloudflare

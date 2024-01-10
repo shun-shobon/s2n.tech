@@ -1,14 +1,37 @@
 ---
-const script = `window.dataLayer??=[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","G-804RTWXBJP")`;
+export interface Props {
+	gtagId?: string;
+	cfWebAnalyticsToken?: string;
+}
+
+const { gtagId, cfWebAnalyticsToken } = Astro.props;
+
+const script = `window.dataLayer??=[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","${gtagId}")`;
+const cfData = {
+	token: cfWebAnalyticsToken,
+};
 ---
 
 {/* Google Analytics */}
-<script
-	type="text/partytown"
-	src={`https://www.googletagmanager.com/gtag/js?id=G-804RTWXBJP`}></script>
-<script type="text/partytown" set:html={script} />
+{
+	gtagId && (
+		<Fragment>
+			<script
+				type="text/partytown"
+				src={`https://www.googletagmanager.com/gtag/js?id=${gtagId}`}
+			/>
+			<script type="text/partytown" set:html={script} />
+		</Fragment>
+	)
+}
+
 {/* Cloudflare Web Analytics */}
-<script
-	type="text/partytown"
-	src="https://static.cloudflareinsights.com/beacon.min.js"
-	data-cf-beacon='{"token": "ba5f15fd198645b4a2f432d60eff5319"}'></script>
+{
+	cfWebAnalyticsToken && (
+		<script
+			type="text/partytown"
+			src="https://static.cloudflareinsights.com/beacon.min.js"
+			data-cf-beacon={JSON.stringify(cfData)}
+		/>
+	)
+}
