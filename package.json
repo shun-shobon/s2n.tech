@@ -28,7 +28,7 @@
 		"@astrojs/check": "^0.4.1",
 		"@astrojs/partytown": "^2.0.4",
 		"@astrojs/sitemap": "^3.0.5",
-		"@shun-shobon/eslint-config": "^0.6.5",
+		"@shun-shobon/eslint-config": "^0.6.6",
 		"@shun-shobon/prettier-config": "^0.2.4",
 		"@vanilla-extract/css": "^1.14.0",
 		"@vanilla-extract/vite-plugin": "^3.9.4",
