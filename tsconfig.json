@@ -3,8 +3,8 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["src/*"]
-		}
+			"@/*": ["src/*"],
+		},
 	},
-	"exclude": ["**/node_modules", "dist", "functions"]
+	"exclude": ["**/node_modules", "dist", "functions"],
 }
