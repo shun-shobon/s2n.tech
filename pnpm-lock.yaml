@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@astrojs/cloudflare':
     specifier: ^9.0.0
-    version: 9.0.0(astro@4.2.4)
+    version: 9.0.0(astro@4.2.5)
   '@iconify-json/simple-icons':
     specifier: ^1.1.89
     version: 1.1.89
@@ -44,8 +44,8 @@ devDependencies:
     specifier: ^3.9.4
     version: 3.9.4(vite@5.0.12)
   astro:
-    specifier: ^4.2.4
-    version: 4.2.4(typescript@5.3.3)
+    specifier: ^4.2.5
+    version: 4.2.5(typescript@5.3.3)
   astro-compress:
     specifier: ^2.2.8
     version: 2.2.8
@@ -107,7 +107,7 @@ packages:
       - prettier-plugin-astro
     dev: true
 
-  /@astrojs/cloudflare@9.0.0(astro@4.2.4):
+  /@astrojs/cloudflare@9.0.0(astro@4.2.5):
     resolution: {integrity: sha512-EkUUCCGp35O0pPgRIBuahbz/eQlnOPoCM4aszFMqIWcjfOJMXMlXLma5MEHFDdNOdLdPb53LmuWBVIjDOvsUfQ==}
     peerDependencies:
       astro: ^4.2.0
@@ -115,7 +115,7 @@ packages:
       '@astrojs/underscore-redirects': 0.3.3
       '@cloudflare/workers-types': 4.20240117.0
       '@iarna/toml': 2.2.5
-      astro: 4.2.4(typescript@5.3.3)
+      astro: 4.2.5(typescript@5.3.3)
       dotenv: 16.3.2
       esbuild: 0.19.11
       find-up: 6.3.0
@@ -2145,8 +2145,8 @@ packages:
       - supports-color
     dev: true
 
-  /astro@4.2.4(typescript@5.3.3):
-    resolution: {integrity: sha512-z1f52lXkHf71M5HSLKrd5G1PH5/Zfq4kMp0iUT7Na5VHcPDma/NYFPFPewDxqV6UPmyxupj3xuooFaN3j8zaow==}
+  /astro@4.2.5(typescript@5.3.3):
+    resolution: {integrity: sha512-V6CrBVFTiskCYV80ax9bimZR5Nkq7Jm3WJ06YBOWTVF3QYns1jvq98JV+zEb+CiA4TUl8aChI3Mm1DN/OoAbCg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -2170,6 +2170,7 @@ packages:
       clsx: 2.1.0
       common-ancestor-path: 1.0.1
       cookie: 0.6.0
+      cssesc: 3.0.0
       debug: 4.3.4
       deterministic-object-hash: 2.0.2
       devalue: 4.3.2
@@ -2569,6 +2570,7 @@ packages:
 
   /color-name@1.1.4:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
+    requiresBuild: true
 
   /color-string@1.9.1:
     resolution: {integrity: sha512-shrVawQFojnZv6xM40anx4CkoDP+fZsw/ZerEMsW/pyzsRbElpsL/DBVW7q3ExxwusdNXI3lXpuhEZkzs8p5Eg==}
@@ -2674,7 +2676,6 @@ packages:
     resolution: {integrity: sha512-/Tb/JcjK111nNScGob5MNtsntNM1aCNUDipB/TkwZFhyDrrE47SOx/18wF2bbjgc3ZzCSKW1T5nt5EbFoAz/Vg==}
     engines: {node: '>=4'}
     hasBin: true
-    dev: true
 
   /csso@5.0.5:
     resolution: {integrity: sha512-0LrrStPOdJj+SPCCrGhzryycLjwcgUSHBtxNA8aIDxf0GLsRh1cKYhB00Gd1lDOS4yGH69+SNn13+TWbVHETFQ==}
