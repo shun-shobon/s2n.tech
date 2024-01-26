@@ -34,7 +34,7 @@
 		"@vanilla-extract/vite-plugin": "^3.9.4",
 		"astro": "^4.2.5",
 		"astro-compress": "^2.2.8",
-		"astro-icon": "^1.0.2",
+		"astro-icon": "^1.0.3",
 		"eslint": "^8.56.0",
 		"prettier": "^3.2.4",
 		"sharp": "^0.33.2",
