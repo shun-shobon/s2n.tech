@@ -1,5 +1,6 @@
 ---
 import "@/styles/global.css";
+import { AstroFont } from "astro-font";
 
 import Analytics from "@/components/Analytics.astro";
 
@@ -17,11 +18,18 @@ const { title } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 
 		{/* Google Font */}
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
-			rel="stylesheet"
+		<AstroFont
+			config={[
+				{
+					src: [],
+					preload: false,
+					display: "swap",
+					name: "Zen Kurenaido",
+					fallback: "sans-serif",
+					cssVariable: "font-inter",
+					googleFontsURL: 'https://fonts.googleapis.com/css2?family=Zen+Kurenaido',
+				},
+			]}
 		/>
 
 		{/* SEO */}
