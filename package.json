@@ -28,15 +28,15 @@
 		"@astrojs/check": "^0.4.1",
 		"@astrojs/partytown": "^2.0.4",
 		"@astrojs/sitemap": "^3.0.5",
-		"@shun-shobon/eslint-config": "^0.6.8",
-		"@shun-shobon/prettier-config": "^0.2.5",
+		"@shun-shobon/eslint-config": "^0.6.9",
+		"@shun-shobon/prettier-config": "^0.3.0",
 		"@vanilla-extract/css": "^1.14.1",
 		"@vanilla-extract/vite-plugin": "^4.0.3",
 		"astro": "^4.3.2",
 		"astro-compress": "^2.2.9",
 		"astro-icon": "^1.1.0",
 		"eslint": "^8.56.0",
-		"prettier": "^3.2.4",
+		"prettier": "^3.2.5",
 		"sharp": "^0.33.2",
 		"typescript": "^5.3.3"
 	}
