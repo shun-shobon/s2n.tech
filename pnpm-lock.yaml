@@ -32,11 +32,11 @@ devDependencies:
     specifier: ^3.0.5
     version: 3.0.5
   '@shun-shobon/eslint-config':
-    specifier: ^0.6.9
-    version: 0.6.9(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3)
+    specifier: ^0.7.0
+    version: 0.7.0(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3)
   '@shun-shobon/prettier-config':
-    specifier: ^0.3.0
-    version: 0.3.0(prettier@3.2.5)
+    specifier: ^0.3.1
+    version: 0.3.1(prettier@3.2.5)
   '@vanilla-extract/css':
     specifier: ^1.14.1
     version: 1.14.1
@@ -1179,8 +1179,8 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@shun-shobon/eslint-config@0.6.9(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-vcAjzv+iZsTQbTm9Nftlw+5xRYNxrJoD+Lpzhjoea5nCIytafGHhedynmxonmRPZLwfSYWJqeyt7JfIthpuWqA==}
+  /@shun-shobon/eslint-config@0.7.0(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-g5y9wU2awHcxTQl+OZnyJ0P2jgwsCDRRQK6skubO/rHQwkaqzqk4jagjKi7tpbZ+EwdU2aCoYzznhOJGhqqThA==}
     peerDependencies:
       eslint: ^8.21.0
     dependencies:
@@ -1201,7 +1201,7 @@ packages:
       eslint-plugin-react-hooks: 4.6.0(eslint@8.56.0)
       eslint-plugin-simple-import-sort: 10.0.0(eslint@8.56.0)
       eslint-plugin-storybook: 0.6.15(eslint@8.56.0)(typescript@5.3.3)
-      eslint-plugin-unicorn: 51.0.0(eslint@8.56.0)
+      eslint-plugin-unicorn: 51.0.1(eslint@8.56.0)
       globals: 13.24.0
       local-pkg: 0.5.0
     transitivePeerDependencies:
@@ -1212,8 +1212,8 @@ packages:
       - typescript
     dev: true
 
-  /@shun-shobon/prettier-config@0.3.0(prettier@3.2.5):
-    resolution: {integrity: sha512-8nbTqhh/ZUXCyt6ElwbxCAdWue6dlYnPc0f0QgoDsz2kG2q1LTU795AM02HxIF+JM9Xti6XAOINxZcuSdK/JPw==}
+  /@shun-shobon/prettier-config@0.3.1(prettier@3.2.5):
+    resolution: {integrity: sha512-LuVGEL15oCDg20DZj/Kk2GeV98cpfIWZM9NxEhWBpXHFJ+LJtqyfFvHl322CsJBmzFyMKHYGwLfj2n1nfnd6sQ==}
     peerDependencies:
       prettier: ^3.0.0
     dependencies:
@@ -3180,8 +3180,8 @@ packages:
       - typescript
     dev: true
 
-  /eslint-plugin-unicorn@51.0.0(eslint@8.56.0):
-    resolution: {integrity: sha512-104L+VrZQ0RlyTYQPmF0ofoN1/rot1U/BoCSUDTTiPgumzA/QUzDwUqbR4Q0laOYXi5sYI2HDrJQ/b5PlJteCA==}
+  /eslint-plugin-unicorn@51.0.1(eslint@8.56.0):
+    resolution: {integrity: sha512-MuR/+9VuB0fydoI0nIn2RDA5WISRn4AsJyNSaNKLVwie9/ONvQhxOBbkfSICBPnzKrB77Fh6CZZXjgTt/4Latw==}
     engines: {node: '>=16'}
     peerDependencies:
       eslint: '>=8.56.0'
