@@ -7,7 +7,7 @@ settings:
 dependencies:
   '@astrojs/cloudflare':
     specifier: 9.0.1
-    version: 9.0.1(astro@4.4.0)
+    version: 9.0.1(astro@4.4.1)
   '@iconify-json/simple-icons':
     specifier: 1.1.92
     version: 1.1.92
@@ -44,8 +44,8 @@ devDependencies:
     specifier: 4.0.3
     version: 4.0.3(vite@5.1.3)
   astro:
-    specifier: 4.4.0
-    version: 4.4.0(typescript@5.3.3)
+    specifier: 4.4.1
+    version: 4.4.1(typescript@5.3.3)
   astro-compress:
     specifier: 2.2.10
     version: 2.2.10
@@ -107,7 +107,7 @@ packages:
       - prettier-plugin-astro
     dev: true
 
-  /@astrojs/cloudflare@9.0.1(astro@4.4.0):
+  /@astrojs/cloudflare@9.0.1(astro@4.4.1):
     resolution: {integrity: sha512-ygiW2jhUEyi0timPhk5St3iuEbmCJ1zGrnQJDNQe6VrKI0floJOGqnIB2LyagnxX45Lk7Hrm+LZmw+imK1ETUQ==}
     peerDependencies:
       astro: ^4.2.0
@@ -115,7 +115,7 @@ packages:
       '@astrojs/underscore-redirects': 0.3.3
       '@cloudflare/workers-types': 4.20240208.0
       '@iarna/toml': 2.2.5
-      astro: 4.4.0(typescript@5.3.3)
+      astro: 4.4.1(typescript@5.3.3)
       dotenv: 16.4.4
       esbuild: 0.19.12
       find-up: 6.3.0
@@ -1970,8 +1970,8 @@ packages:
       - supports-color
     dev: true
 
-  /astro@4.4.0(typescript@5.3.3):
-    resolution: {integrity: sha512-JAsMrm1Z6W4Iqg9Q7LW/6lCXrqa4jndEOlR/yu7NGNP0BrPwSM8i4+yzya6hxgsNvyyVK8ywthaNhFmqd8Z+cg==}
+  /astro@4.4.1(typescript@5.3.3):
+    resolution: {integrity: sha512-nJLgNg8UXKBJYXjWtekgv1TYZES++LAdShgyKL8L5yJMeiqlDSO+/Laq5VfRKoL9hzBdyolJMB0WDE/+bRZytg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
@@ -2027,7 +2027,6 @@ packages:
       rehype: 13.0.1
       resolve: 1.22.8
       semver: 7.6.0
-      server-destroy: 1.0.1
       shikiji: 0.9.19
       shikiji-core: 0.9.19
       string-width: 7.1.0
@@ -5997,9 +5996,6 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
-
-  /server-destroy@1.0.1:
-    resolution: {integrity: sha512-rb+9B5YBIEzYcD6x2VKidaa+cqYBJQKnU4oe4E3ANwRRN56yk/ua1YCJT1n21NTS8w6CcOclAKNP3PhdCXKYtQ==}
 
   /set-function-length@1.2.1:
     resolution: {integrity: sha512-j4t6ccc+VsKwYHso+kElc5neZpjtq9EnRICFZtWyBsLojhmeF/ZBd/elqm22WJh/BziDe/SBiOeAt0m2mfLD0g==}
