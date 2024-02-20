@@ -27,7 +27,7 @@
 	"devDependencies": {
 		"@astrojs/check": "0.5.5",
 		"@astrojs/partytown": "2.0.4",
-		"@astrojs/sitemap": "3.0.5",
+		"@astrojs/sitemap": "3.1.0",
 		"@shun-shobon/eslint-config": "0.7.2",
 		"@shun-shobon/prettier-config": "0.3.1",
 		"@vanilla-extract/css": "1.14.1",
