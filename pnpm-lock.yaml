@@ -29,8 +29,8 @@ devDependencies:
     specifier: 2.0.4
     version: 2.0.4
   '@astrojs/sitemap':
-    specifier: 3.0.5
-    version: 3.0.5
+    specifier: 3.1.0
+    version: 3.1.0
   '@shun-shobon/eslint-config':
     specifier: 0.7.2
     version: 0.7.2(eslint-plugin-import@2.29.1)(eslint@8.56.0)(typescript@5.3.3)
@@ -203,8 +203,8 @@ packages:
     dependencies:
       prismjs: 1.29.0
 
-  /@astrojs/sitemap@3.0.5:
-    resolution: {integrity: sha512-60eLzNjMza3ABypiQPUC6ElOSZNZeY5CwSwgJ03hfeonl+Db9x12CCzBFdTw7A5Mq+O54xEZVUrR0tB+yWgX8w==}
+  /@astrojs/sitemap@3.1.0:
+    resolution: {integrity: sha512-eAlD3ISaESByanYtr08yfwIYNZdLEvF8shSne5SaxSdrvtK7fS8UQTF0GpDFUpU/NOyqwB7YmndjlTplhYLP1A==}
     dependencies:
       sitemap: 7.1.1
       zod: 3.22.4
@@ -1355,7 +1355,7 @@ packages:
   /@types/sax@1.2.7:
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 20.11.19
     dev: true
 
   /@types/semver@7.5.7:
