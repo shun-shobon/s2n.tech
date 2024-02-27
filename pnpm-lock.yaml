@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@astrojs/cloudflare':
-    specifier: 9.0.1
-    version: 9.0.1(astro@4.4.5)
+    specifier: 9.0.2
+    version: 9.0.2(astro@4.4.5)
   '@iconify-json/simple-icons':
     specifier: 1.1.93
     version: 1.1.93
@@ -107,8 +107,8 @@ packages:
       - prettier-plugin-astro
     dev: true
 
-  /@astrojs/cloudflare@9.0.1(astro@4.4.5):
-    resolution: {integrity: sha512-ygiW2jhUEyi0timPhk5St3iuEbmCJ1zGrnQJDNQe6VrKI0floJOGqnIB2LyagnxX45Lk7Hrm+LZmw+imK1ETUQ==}
+  /@astrojs/cloudflare@9.0.2(astro@4.4.5):
+    resolution: {integrity: sha512-5nJbI4+HW7SJYBkLIfhKaOA+D1rkxjcXB7Z3uIYHIK98Cqf7KYbmVM5o7f66A0OKWmcEI9EJXlle7IPFvKQUuQ==}
     peerDependencies:
       astro: ^4.2.0
     dependencies:
