@@ -25,7 +25,7 @@
 		"temporal-polyfill": "0.2.3"
 	},
 	"devDependencies": {
-		"@astrojs/check": "0.5.6",
+		"@astrojs/check": "0.5.7",
 		"@astrojs/partytown": "2.0.4",
 		"@astrojs/sitemap": "3.1.1",
 		"@shun-shobon/eslint-config": "0.7.2",
