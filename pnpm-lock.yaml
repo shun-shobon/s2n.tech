@@ -47,8 +47,8 @@ devDependencies:
     specifier: 4.4.15
     version: 4.4.15(typescript@5.4.2)
   astro-compress:
-    specifier: 2.2.13
-    version: 2.2.13
+    specifier: 2.2.14
+    version: 2.2.14
   astro-icon:
     specifier: 1.1.0
     version: 1.1.0
@@ -1943,13 +1943,13 @@ packages:
     resolution: {integrity: sha512-OH/2E5Fg20h2aPrbe+QL8JZQFko0YZaF+j4mnQ7BGhfavO7OpSLa8a0y9sBwomHdSbkhTS8TQNayBfnW5DwbvQ==}
     dev: true
 
-  /astro-compress@2.2.13:
-    resolution: {integrity: sha512-U50h2yo9fBXAyWhlZ1pG62aUuUeB9vMa/9kScnHOE7iXfBXN8p4PgM2zbkGv2CpS0Rnsl20248JGdhWZD/hVzQ==}
+  /astro-compress@2.2.14:
+    resolution: {integrity: sha512-zQvzsDHm3/Hco/uoIs32ZCykH2OdxijeQ306oKc6yJp17CRZClVMjBBc6pdWTua7FJuWNfV7TKt+dZyvOOMbBg==}
     dependencies:
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
       csso: 5.0.5
-      files-pipe: 2.1.10
+      files-pipe: 2.1.12
       html-minifier-terser: 7.2.0
       kleur: 4.1.5
       lightningcss: 1.24.0
@@ -3494,8 +3494,8 @@ packages:
       flat-cache: 3.2.0
     dev: true
 
-  /files-pipe@2.1.10:
-    resolution: {integrity: sha512-0ZKo0hd7D4g+hdsMPv3bxvlagJ42lMsj170AMXwCS8PN3rL3GlsPBVyE2lgQsY0zUOAKtcQmEF3QV91CfHS9Yw==}
+  /files-pipe@2.1.12:
+    resolution: {integrity: sha512-5yuP6+OfZ3EsarYxp64X6TofDjxUTJQFMzVOsX7HXClNoRD4+6uJr98alzs9VJg4ISgEXPU7HlWufdKnd26JsQ==}
     dependencies:
       '@types/node': 20.11.25
       deepmerge-ts: 5.1.0
