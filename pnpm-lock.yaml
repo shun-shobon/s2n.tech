@@ -41,8 +41,8 @@ devDependencies:
     specifier: 1.14.1
     version: 1.14.1
   '@vanilla-extract/vite-plugin':
-    specifier: 4.0.3
-    version: 4.0.3(vite@5.2.6)
+    specifier: 4.0.6
+    version: 4.0.6(vite@5.2.6)
   astro:
     specifier: 4.5.9
     version: 4.5.9(typescript@5.4.3)
@@ -1828,8 +1828,8 @@ packages:
   /@vanilla-extract/private@1.0.3:
     resolution: {integrity: sha512-17kVyLq3ePTKOkveHxXuIJZtGYs+cSoev7BlP+Lf4916qfDhk/HBjvlYDe8egrea7LNPHKwSZJK/bzZC+Q6AwQ==}
 
-  /@vanilla-extract/vite-plugin@4.0.3(vite@5.2.6):
-    resolution: {integrity: sha512-dosZKbS5hnn8K0KlFd6LqwsEzcUphImHUpDKG3hHmqKZOkurwXCqcg06qFkb0rnW72v6W/QoUXNxxjw5YhdNqg==}
+  /@vanilla-extract/vite-plugin@4.0.6(vite@5.2.6):
+    resolution: {integrity: sha512-uT2AhzxEC8qdn7SFxD/MHF7pxyFMb2e7HY3+isyPDzkTyIdiA/ZXk7qwWhcigFMNCJ6YuyxFQJmiDhP9U9oOmg==}
     peerDependencies:
       vite: ^4.0.3 || ^5.0.0
     dependencies:
