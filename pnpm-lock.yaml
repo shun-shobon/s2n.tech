@@ -9,8 +9,8 @@ dependencies:
     specifier: 9.2.1
     version: 9.2.1(astro@4.5.15)
   '@iconify-json/simple-icons':
-    specifier: 1.1.97
-    version: 1.1.97
+    specifier: 1.1.98
+    version: 1.1.98
   '@vanilla-extract/css-utils':
     specifier: 0.1.3
     version: 0.1.3
@@ -973,8 +973,8 @@ packages:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
     dev: false
 
-  /@iconify-json/simple-icons@1.1.97:
-    resolution: {integrity: sha512-/jTwrcAM2Gh8FtgEn8mHolaoY1iNbRgH3AE8OXu7JULi4Tdp31u7bmCSIaNDTLdBrXjcDpw0y98Dm20TbauBCg==}
+  /@iconify-json/simple-icons@1.1.98:
+    resolution: {integrity: sha512-oL1ucUCQE/aGVhb9Bvo556EcNjww9yzFITvwOKI0h3KYkF5iSAiwCqWkqxUJzrJHobQdd5R91jYfLG847G9uIA==}
     dependencies:
       '@iconify/types': 2.0.0
     dev: false
