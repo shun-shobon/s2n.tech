@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: 9.2.1
-        version: 9.2.1(astro@4.6.2(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5))
+        version: 9.2.1(astro@4.6.3(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5))
       '@iconify-json/simple-icons':
         specifier: 1.1.99
         version: 1.1.99
@@ -46,8 +46,8 @@ importers:
         specifier: 4.0.3
         version: 4.0.3(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3)(vite@5.2.8(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3))
       astro:
-        specifier: 4.6.2
-        version: 4.6.2(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5)
+        specifier: 4.6.3
+        version: 4.6.3(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5)
       astro-compress:
         specifier: 2.2.22
         version: 2.2.22(@types/node@20.12.7)(typescript@5.4.5)
@@ -1244,8 +1244,8 @@ packages:
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
 
-  astro@4.6.2:
-    resolution: {integrity: sha512-Kl+Wd7MJMQFnI3+V0JxF4HPbs8M67eltqQgtztReOwDLSl0VnOd39rM61W/3LEh10FZ0F13xrDgtdgfXzuLVbg==}
+  astro@4.6.3:
+    resolution: {integrity: sha512-p2zs1Gac+ysdc/yFCoc8pOXTZE5L9foAtmqUzUVL22WX68bYTRovd03GRs7J1MDpwzsl9kJtlK20ROpjyIFpNw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4206,12 +4206,12 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@9.2.1(astro@4.6.2(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5))':
+  '@astrojs/cloudflare@9.2.1(astro@4.6.3(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5))':
     dependencies:
       '@astrojs/underscore-redirects': 0.3.3
       '@cloudflare/workers-types': 4.20240405.0
       '@iarna/toml': 2.2.5
-      astro: 4.6.2(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5)
+      astro: 4.6.3(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5)
       dotenv: 16.4.5
       esbuild: 0.19.12
       find-up: 6.3.0
@@ -5600,7 +5600,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.6.2(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5):
+  astro@4.6.3(@types/node@20.12.7)(lightningcss@1.24.1)(terser@5.30.3)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.7.1
       '@astrojs/internal-helpers': 0.4.0
