@@ -32,7 +32,7 @@
 		"@shun-shobon/prettier-config": "0.4.0",
 		"@vanilla-extract/css": "1.14.2",
 		"@vanilla-extract/vite-plugin": "4.0.3",
-		"astro": "4.6.2",
+		"astro": "4.6.3",
 		"astro-compress": "2.2.22",
 		"astro-icon": "1.1.0",
 		"eslint": "8.57.0",
