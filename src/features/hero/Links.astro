@@ -1,8 +1,6 @@
 ---
 import { Icon } from "astro-icon/components";
 
-import * as styles from "./Links.css";
-
 const links = [
 	{
 		title: "GitHub",
@@ -17,11 +15,15 @@ const links = [
 ];
 ---
 
-<ul class={styles.links}>
+<ul class="flex gap-6">
 	{
 		links.map((link) => (
 			<li>
-				<a href={link.href} target="_blank" class={styles.link}>
+				<a
+					href={link.href}
+					target="_blank"
+					class="transition-colors duration-200 ease-in-out hover:text-indigo-300"
+				>
 					<Icon name={link.icon} aria-label={link.title} />
 				</a>
 			</li>

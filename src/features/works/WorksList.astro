@@ -7,7 +7,6 @@ import Heading from "@/components/Heading.astro";
 import * as queries from "@/styles/media-queries.css";
 
 import { slugToYearMonth } from "../utils";
-import * as styles from "./WorksList.css";
 
 const entries = await getCollection("works").then((entries) =>
 	entries.sort(
@@ -22,21 +21,24 @@ const entries = await getCollection("works").then((entries) =>
 
 <section>
 	<Heading>Works</Heading>
-	<ul class={styles.list}>
+	<ul class="grid gap-4 sm:grid-cols-2">
 		{
 			entries.map((entry) => (
 				<li>
 					<a href={`/works/${entry.slug}`} aria-labelledby={entry.slug}>
-						<article class={styles.entry}>
+						<article class="grid aspect-video w-full overflow-hidden">
 							<Image
 								src={entry.data.image}
 								alt=""
 								widths={[300, 600, 1200, entry.data.image.width]}
 								sizes={`${queries.sm} 300px, 600px`}
 								quality="low"
-								class={styles.entryThumbnail}
+								class="col-span-full row-span-full aspect-video h-auto w-full object-cover transition-transform duration-300 ease-in hover:scale-110"
 							/>
-							<h3 id={entry.slug} class={styles.entryTitle}>
+							<h3
+								id={entry.slug}
+								class="z-10 col-span-full row-span-full w-full self-end overflow-hidden text-ellipsis text-nowrap bg-[linear-gradient(transparent,40%,rgb(0_30_48/0.8))] p-2 pt-4 text-2xl"
+							>
 								{entry.data.title}
 							</h3>
 						</article>

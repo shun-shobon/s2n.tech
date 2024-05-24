@@ -4,7 +4,6 @@ import { Temporal } from "temporal-polyfill";
 
 import { calendar } from "../locale";
 import { slugToYearMonth } from "../utils";
-import * as styles from "./Entry.css";
 
 interface Props {
 	entry: CollectionEntry<"timeline">;
@@ -27,13 +26,19 @@ const yearsOld =
 const { Content } = await entry.render();
 ---
 
-<li class={styles.entry}>
-	<span aria-hidden="true" class={styles.entryLine}></span>
-	<span aria-hidden="true" class={styles.entryPoint}></span>
+<li class="group relative py-2 pl-4">
+	<span
+		role="presentation"
+		class="absolute bottom-0 left-[calc(0px-1px/2)] top-0 w-px bg-white group-first:top-[16px] group-last:bottom-[calc(100%-16px)]"
+	></span>
+	<span
+		role="presentation"
+		class="absolute left-[calc(0px-8px/2)] top-[16px] h-[8px] w-[8px] rounded-full bg-white"
+	></span>
 	<time datetime={date.toString()}>
 		{date.toLocaleString("ja-JP")}
 		({yearsOld}歳)
 	</time>
-	<h3 class={styles.entryHeading}>{entry.data.title}</h3>
+	<h3 class="mb-[0.125em] text-2xl">{entry.data.title}</h3>
 	<Content />
 </li>

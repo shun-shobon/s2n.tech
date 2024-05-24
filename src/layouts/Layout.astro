@@ -1,5 +1,5 @@
 ---
-import "@/styles/global.css";
+// import "@/styles/global.css";
 
 import Analytics from "@/components/Analytics.astro";
 
@@ -63,7 +63,9 @@ const { title } = Astro.props;
 			cfWebAnalyticsToken={import.meta.env.PUBLIC_CF_WEB_ANALYTICS_TOKEN}
 		/>
 	</head>
-	<body>
+	<body
+		class="min-h-dvh bg-[linear-gradient(to_bottom,#000912,#001E30,#2D4556)] text-white [font-family:'Zen_Kurenaido',sans-serif]"
+	>
 		<slot />
 	</body>
 </html>

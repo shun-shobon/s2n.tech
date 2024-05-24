@@ -1,8 +1,5 @@
 ---
-import { assignInlineVars } from "@vanilla-extract/dynamic";
 import { Icon } from "astro-icon/components";
-
-import * as styles from "./Heading.css";
 
 interface Props {
 	level?: 1 | 2 | 3 | 4 | 5 | 6;
@@ -15,15 +12,21 @@ const Tag = `h${level}` as const;
 ---
 
 <Tag
-	class={styles.heading}
-	style={assignInlineVars({
-		[styles.lineOffset]: `${lineOffset}em`,
-	})}
+	class="relative mb-[0.5em] mt-[1em] flex justify-center text-center text-[4rem] leading-none"
+	style={{ "--line-offset": `${lineOffset}em` }}
 >
-	<span class={styles.textWrapper}>
-		<span aria-hidden="true" class={styles.line}></span>
-		<Icon class={styles.star} name="star" />
-		<span class={styles.text}>
+	<span class="relative flex">
+		<span
+			role="presentation"
+			class="absolute left-0 top-[--line-offset] h-[2px] w-[2em] origin-left translate-x-[-0.25em] translate-y-[0.25em] -rotate-45 rounded-[1px] bg-current"
+		></span>
+		<Icon
+			class="absolute left-[-5px] top-[calc(var(--line-offset)-5px)] h-[10px] w-[10px] translate-x-[calc(-0.25em-5px)] translate-y-[calc(0.25em+5px)]"
+			name="star"
+		/>
+		<span
+			class="[clip-path:polygon(var(--line-offset)_0,100%_0,100%_100%,0_100%,0_var(--line-offset))]"
+		>
 			<slot />
 		</span>
 	</span>

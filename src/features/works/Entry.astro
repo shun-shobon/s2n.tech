@@ -4,7 +4,6 @@ import type { CollectionEntry } from "astro:content";
 import { getDataEntryById } from "astro:content";
 
 import { slugToYearMonth } from "../utils";
-import * as styles from "./Entry.css.ts";
 
 interface Props {
 	entry: CollectionEntry<"works">;
@@ -24,25 +23,27 @@ const { Content } = await entry.render();
 ---
 
 <aritcle>
-	<header class={styles.header}>
+	<header class="mb-4 grid gap-4">
 		<Image
 			src={entry.data.image}
 			widths={[300, 600, 1200, entry.data.image.width]}
 			sizes={`600px`}
 			alt=""
-			class={styles.thumbnail}
+			class="h-auto w-full"
 		/>
 		<div>
-			<h1 class={styles.title}>{entry.data.title}</h1>
-			<time datetime={date.toString()} class={styles.date}>
+			<h1 class="text-[2rem]">{entry.data.title}</h1>
+			<time datetime={date.toString()} class="block">
 				{date.toLocaleString("ja-JP")}
 			</time>
 		</div>
-		<table class={styles.table}>
+		<table
+			class="border-y-2 border-y-white [&_:is(th,td)]:border-b-[1px] [&_:is(th,td)]:border-b-white [&_:is(th,td)]:p-1"
+		>
 			<tr>
 				<th>Technologies</th>
 				<td>
-					<ul class={styles.list}>
+					<ul class="flex flex-wrap gap-2">
 						{technologies.map((technology) => <li>{technology.data.name}</li>)}
 					</ul>
 				</td>
@@ -50,7 +51,7 @@ const { Content } = await entry.render();
 			<tr>
 				<th>Platform</th>
 				<td>
-					<ul class={styles.list}>
+					<ul class="flex flex-wrap gap-2">
 						{entry.data.platforms.map((platform) => <li>{platform}</li>)}
 					</ul>
 				</td>
@@ -60,10 +61,13 @@ const { Content } = await entry.render();
 					<tr>
 						<th>Links</th>
 						<td>
-							<ul class={styles.list}>
+							<ul class="flex flex-wrap gap-2">
 								{entry.data.links.map((link) => (
 									<li>
-										<a href={link.url} class={styles.link}>
+										<a
+											href={link.url}
+											class="underline transition-colors duration-200 ease-in hover:text-indigo-300"
+										>
 											{link.name}
 										</a>
 									</li>

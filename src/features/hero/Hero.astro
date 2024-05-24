@@ -1,18 +1,17 @@
 ---
 import { Icon } from "astro-icon/components";
 
-import * as styles from "./Hero.css";
 import Links from "./Links.astro";
 ---
 
-<section class={styles.heroWrapper}>
-	<div class={styles.hero}>
-		<Icon name="meru" class={styles.icon} />
-		<hgroup class={styles.names}>
-			<h1 class={styles.name}>Shuntaro Nishizawa</h1>
-			<p class={styles.aka}>しゅん / shun</p>
+<section class="grid h-svh w-full place-items-center">
+	<div class="grid justify-items-center gap-[0.5em] text-2xl sm:text-[2.5rem]">
+		<Icon name="meru" class="h-32 w-32 rounded-full sm:h-64 sm:w-64" />
+		<hgroup class="text-center">
+			<h1 class="text-[2rem] sm:text-[4rem]">Shuntaro Nishizawa</h1>
+			<p class="text-[1.5rem] leading-none sm:text-[2rem]">しゅん / shun</p>
 		</hgroup>
-		<p class={styles.occupation}>Web App Developer</p>
+		<p class="text-center">Web App Developer</p>
 		<Links />
 	</div>
 </section>
