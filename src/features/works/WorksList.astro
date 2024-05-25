@@ -1,12 +1,14 @@
 ---
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
 import { Temporal } from "temporal-polyfill";
 
 import Heading from "@/components/Heading.astro";
 import * as queries from "@/styles/media-queries.css";
 
 import { slugToYearMonth } from "../utils";
+import Entry from "./Entry.astro";
 
 const entries = await getCollection("works").then((entries) =>
 	entries.sort(
@@ -17,6 +19,8 @@ const entries = await getCollection("works").then((entries) =>
 			),
 	),
 );
+
+const entriesSlugs = JSON.stringify(entries.map((entry) => entry.slug));
 ---
 
 <section>
@@ -25,7 +29,11 @@ const entries = await getCollection("works").then((entries) =>
 		{
 			entries.map((entry) => (
 				<li>
-					<a href={`/works/${entry.slug}`} aria-labelledby={entry.slug}>
+					<button
+						id={`${entry.slug}-button`}
+						aria-labelledby={`${entry.slug}-title`}
+						aria-controls={`${entry.slug}-modal`}
+					>
 						<article class="grid aspect-video w-full overflow-hidden">
 							<Image
 								src={entry.data.image}
@@ -36,15 +44,53 @@ const entries = await getCollection("works").then((entries) =>
 								class="col-span-full row-span-full aspect-video h-auto w-full object-cover transition-transform duration-200 ease-in-out hover:scale-110"
 							/>
 							<h3
-								id={entry.slug}
-								class="z-10 col-span-full row-span-full w-full self-end overflow-hidden text-ellipsis text-nowrap bg-[linear-gradient(transparent,40%,rgb(0_30_48/0.8))] p-2 pt-4 text-2xl"
+								id={`${entry.slug}-title`}
+								class="z-10 col-span-full row-span-full w-full self-end overflow-hidden text-ellipsis text-nowrap bg-[linear-gradient(transparent,40%,rgb(0_30_48/0.8))] p-2 pt-4 text-start text-2xl"
 							>
 								{entry.data.title}
 							</h3>
 						</article>
-					</a>
+					</button>
+					<dialog
+						id={`${entry.slug}-modal`}
+						class="max-h-[min(100%,100dvh-theme(spacing.4))] w-[min(100%,100dvw-theme(spacing.4))] max-w-prose overscroll-contain rounded-md bg-slate-800 text-white backdrop:bg-black backdrop:bg-opacity-50"
+					>
+						<div class="grid gap-4 p-4">
+							<form method="dialog" class="flex justify-end">
+								<button
+									type="submit"
+									class="z-10 rounded-md border border-white bg-slate-800"
+								>
+									<Icon
+										name="material-symbols-light:close"
+										aria-label="閉じる"
+										class="text-4xl"
+									/>
+								</button>
+							</form>
+							<Entry entry={entry} />
+						</div>
+					</dialog>
 				</li>
 			))
 		}
 	</ul>
 </section>
+<script data-slugs={entriesSlugs}>
+	const slugs = JSON.parse(document.currentScript.dataset.slugs);
+
+	slugs.forEach((slug) => {
+		const button = document.getElementById(`${slug}-button`);
+		const modal = document.getElementById(`${slug}-modal`);
+
+		button.addEventListener("click", () => {
+			modal.showModal();
+		});
+
+		modal.addEventListener("click", (event) => {
+			if (event.target === modal) {
+				modal.close();
+			}
+		});
+	});
+</script>

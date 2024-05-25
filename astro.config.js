@@ -20,6 +20,7 @@ export default defineConfig({
 			include: {
 				["simple-icons"]: ["x", "github"],
 				["lucide"]: ["pencil-line"],
+				["material-symbols-light"]: ["close"],
 			},
 		}),
 		sitemap(),
