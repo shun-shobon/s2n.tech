@@ -33,14 +33,14 @@ const entries = await getCollection("works").then((entries) =>
 						aria-labelledby={`work-card-title-${entry.slug}`}
 						aria-controls={`work-card-modal-${entry.slug}`}
 					>
-						<article class="grid aspect-video w-full overflow-hidden">
+						<article class="group grid aspect-video w-full overflow-hidden">
 							<Image
 								src={entry.data.image}
 								alt=""
 								widths={[300, 600, 1200, entry.data.image.width]}
 								sizes={`${queries.sm} 300px, 600px`}
 								quality="low"
-								class="col-span-full row-span-full aspect-video h-auto w-full object-cover transition-transform duration-200 ease-in-out hover:scale-110"
+								class="col-span-full row-span-full aspect-video h-auto w-full object-cover transition-transform duration-200 ease-in-out group-hover:scale-110"
 							/>
 							<h3
 								id={`work-card-title-${entry.slug}`}
@@ -52,7 +52,7 @@ const entries = await getCollection("works").then((entries) =>
 					</button>
 					<dialog
 						id={`work-card-modal-${entry.slug}`}
-						class="work-card-modal max-h-[min(100%,100dvh-theme(spacing.4))] w-[min(100%,100dvw-theme(spacing.4))] max-w-prose overscroll-contain rounded-md bg-slate-800 text-white backdrop:bg-black backdrop:bg-opacity-50"
+						class="work-card-modal max-h-[min(100%,100dvh-theme(spacing.4))] w-[min(100%,100dvw-theme(spacing.4))] max-w-prose overscroll-contain rounded-md bg-slate-800 text-white backdrop:bg-black backdrop:bg-opacity-50 backdrop:backdrop-blur"
 					>
 						<div class="grid gap-4 p-4">
 							<form method="dialog" class="flex justify-end">
