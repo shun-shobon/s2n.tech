@@ -75,22 +75,4 @@ const entries = await getCollection("works").then((entries) =>
 		}
 	</ul>
 </section>
-<script>
-	const cards = document.querySelectorAll(".work-card");
-	for (const card of cards) {
-		const button = card.querySelector(
-			".work-card-button",
-		)! as HTMLButtonElement;
-		const modal = card.querySelector(".work-card-modal")! as HTMLDialogElement;
-
-		button.addEventListener("click", () => {
-			modal.showModal();
-		});
-
-		modal.addEventListener("click", (event) => {
-			if (event.target === modal) {
-				modal.close();
-			}
-		});
-	}
-</script>
+<script src="./WorksList.ts"></script>
