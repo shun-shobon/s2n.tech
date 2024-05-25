@@ -1,9 +1,9 @@
 import cloudflare from "@astrojs/cloudflare";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
-import { vanillaExtractPlugin } from "@vanilla-extract/vite-plugin";
+import tailwind from "@astrojs/tailwind";
+import compress from "@playform/compress";
 import { defineConfig } from "astro/config";
-import compress from "astro-compress";
 import icon from "astro-icon";
 
 // https://astro.build/config
@@ -14,10 +14,12 @@ export default defineConfig({
 	},
 	site: "https://s2n.tech",
 	integrations: [
+		tailwind(),
 		compress(),
 		icon({
 			include: {
 				["simple-icons"]: ["x", "github"],
+				["lucide"]: ["pencil-line"],
 			},
 		}),
 		sitemap(),
@@ -34,8 +36,5 @@ export default defineConfig({
 	}),
 	build: {
 		format: "file",
-	},
-	vite: {
-		plugins: [vanillaExtractPlugin()],
 	},
 });

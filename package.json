@@ -18,26 +18,25 @@
 		"type-check": "tsc --noEmit && astro check"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "9.2.1",
+		"@astrojs/cloudflare": "10.2.6",
+		"@iconify-json/lucide": "1.1.188",
 		"@iconify-json/simple-icons": "1.1.102",
-		"@vanilla-extract/css-utils": "0.1.4",
-		"@vanilla-extract/dynamic": "2.1.1",
 		"temporal-polyfill": "0.2.4"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.7.0",
 		"@astrojs/partytown": "2.1.0",
-		"@astrojs/sitemap": "3.1.4",
+		"@astrojs/sitemap": "3.1.5",
+		"@astrojs/tailwind": "5.1.0",
+		"@playform/compress": "0.0.7",
 		"@shun-shobon/eslint-config": "0.12.3",
 		"@shun-shobon/prettier-config": "0.4.2",
-		"@vanilla-extract/css": "1.15.2",
-		"@vanilla-extract/vite-plugin": "4.0.3",
-		"astro": "4.6.3",
-		"astro-compress": "2.2.25",
+		"astro": "4.9.1",
 		"astro-icon": "1.1.0",
 		"eslint": "8.57.0",
 		"prettier": "3.2.5",
 		"sharp": "0.33.4",
+		"tailwindcss": "3.4.3",
 		"typescript": "5.4.5"
 	}
 }
