@@ -33,11 +33,11 @@ const entries = await getCollection("works").then((entries) =>
 								widths={[300, 600, 1200, entry.data.image.width]}
 								sizes={`${queries.sm} 300px, 600px`}
 								quality="low"
-								class="col-span-full row-span-full aspect-video h-auto w-full object-cover transition-transform duration-300 ease-in hover:scale-110"
+								class="col-span-full row-span-full aspect-video h-auto w-full object-cover transition-transform duration-200 ease-in-out hover:scale-110"
 							/>
 							<h3
 								id={entry.slug}
-								class="z-10 col-span-full row-span-full w-full self-end overflow-hidden text-ellipsis text-nowrap bg-[linear-gradient(transparent,40%,rgb(0_30_48/0.8))] p-2 pt-4 text-2xl"
+								class="col-span-full row-span-full w-full self-end overflow-hidden text-ellipsis text-nowrap bg-[linear-gradient(transparent,40%,rgb(0_30_48/0.8))] p-2 pt-4 text-2xl"
 							>
 								{entry.data.title}
 							</h3>
