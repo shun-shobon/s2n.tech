@@ -31,7 +31,7 @@
 		"@shun-shobon/eslint-config": "0.12.3",
 		"@shun-shobon/prettier-config": "0.4.2",
 		"@vanilla-extract/css": "1.15.2",
-		"@vanilla-extract/vite-plugin": "4.0.3",
+		"@vanilla-extract/vite-plugin": "4.0.10",
 		"astro": "4.6.3",
 		"astro-compress": "2.2.25",
 		"astro-icon": "1.1.0",
