@@ -19,6 +19,7 @@ export default defineConfig({
 		icon({
 			include: {
 				["simple-icons"]: ["x", "github"],
+				["lucide"]: ["pencil-line"],
 			},
 		}),
 		sitemap(),
