@@ -1,5 +1,4 @@
 ---
-import Container from "@/components/Container.astro";
 import About from "@/features/about/About.astro";
 import Footer from "@/features/footer/Footer.astro";
 import Hero from "@/features/hero/Hero.astro";
@@ -11,11 +10,11 @@ import Layout from "@/layouts/Layout.astro";
 <Layout>
 	<main>
 		<Hero />
-		<Container>
+		<div class="mx-auto grid w-full max-w-prose gap-16 p-4">
 			<About />
 			<Timeline />
 			<WorksList />
-		</Container>
+		</div>
 	</main>
 	<Footer />
 </Layout>

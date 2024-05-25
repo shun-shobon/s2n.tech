@@ -2,7 +2,6 @@
 import type { GetStaticPaths } from "astro";
 import { getCollection } from "astro:content";
 
-import Container from "@/components/Container.astro";
 import Footer from "@/features/footer/Footer.astro";
 import Entry from "@/features/works/Entry.astro";
 import Layout from "@/layouts/Layout.astro";
@@ -20,8 +19,8 @@ const { entry } = Astro.props;
 ---
 
 <Layout>
-	<Container as="main">
+	<main class="mx-auto w-full max-w-prose p-4">
 		<Entry {entry} />
-	</Container>
+	</main>
 	<Footer />
 </Layout>
