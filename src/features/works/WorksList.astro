@@ -77,11 +77,11 @@ const entriesSlugs = JSON.stringify(entries.map((entry) => entry.slug));
 	</ul>
 </section>
 <script data-slugs={entriesSlugs}>
-	const slugs = JSON.parse(document.currentScript.dataset.slugs);
+	const slugs = JSON.parse(document.currentScript.dataset.slugs) as string[];
 
 	slugs.forEach((slug) => {
-		const button = document.getElementById(`${slug}-button`);
-		const modal = document.getElementById(`${slug}-modal`);
+		const button: HTMLButtonElement = document.querySelector(`#${slug}-button`);
+		const modal: HTMLDialogElement = document.querySelector(`#${slug}-modal`);
 
 		button.addEventListener("click", () => {
 			modal.showModal();
