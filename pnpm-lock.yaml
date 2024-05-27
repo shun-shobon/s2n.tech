@@ -37,8 +37,8 @@ importers:
         specifier: 5.1.0
         version: 5.1.0(astro@4.9.2(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5))(tailwindcss@3.4.3)
       '@playform/compress':
-        specifier: 0.0.8
-        version: 0.0.8(astro@4.9.2(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5))
+        specifier: 0.0.10
+        version: 0.0.10(@types/node@20.12.12)(typescript@5.4.5)
       '@shun-shobon/eslint-config':
         specifier: 0.12.3
         version: 0.12.3(@typescript-eslint/parser@7.10.0(eslint@8.57.0)(typescript@5.4.5))(eslint-plugin-import@2.29.1(@typescript-eslint/parser@7.10.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0))(eslint@8.57.0)(typescript@5.4.5)
@@ -1136,16 +1136,8 @@ packages:
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@playform/compress@0.0.8':
-    resolution: {integrity: sha512-jBzNacy11T+bJf1NrJq7WaVmQg9L/y3B7IkoKTG+eb6Fc3LyO2KwVHvQujHUDRwhV8fU/7z8zw2ws/4aHfyd0A==}
-    peerDependencies:
-      '@playform/build': 0.0.9
-      astro: 4.9.1
-    peerDependenciesMeta:
-      '@playform/build':
-        optional: true
-      astro:
-        optional: true
+  '@playform/compress@0.0.10':
+    resolution: {integrity: sha512-oJqLXVRSDXKgX+8ZxeiQd9dNTNplZZYThP+2nlSBgt/NedaFdKduKaryezdFK8ymwIjGSLE4DrrS8xazSxRRPw==}
 
   '@playform/pipe@0.0.5':
     resolution: {integrity: sha512-lUQTs5duOtnBvpfFzoiIUuZt6148PcEYv3pESm7kTaVaFAb2shhYLdueYcy4Jr1F6gCFsCv6jUvAwDD1f8f5ZQ==}
@@ -5369,11 +5361,12 @@ snapshots:
 
   '@pkgr/core@0.1.1': {}
 
-  '@playform/compress@0.0.8(astro@4.9.2(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5))':
+  '@playform/compress@0.0.10(@types/node@20.12.12)(typescript@5.4.5)':
     dependencies:
       '@playform/pipe': 0.0.5
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
+      astro: 4.9.2(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)
       csso: 5.0.5
       html-minifier-terser: 7.2.0
       kleur: 4.1.5
@@ -5381,10 +5374,16 @@ snapshots:
       sharp: 0.33.4
       svgo: 3.3.2
       terser: 5.31.0
-    optionalDependencies:
-      astro: 4.9.2(@types/node@20.12.12)(lightningcss@1.25.1)(terser@5.31.0)(typescript@5.4.5)
     transitivePeerDependencies:
+      - '@playform/build'
       - '@playform/document'
+      - '@types/node'
+      - less
+      - sass
+      - stylus
+      - sugarss
+      - supports-color
+      - typescript
 
   '@playform/pipe@0.0.5':
     dependencies:
