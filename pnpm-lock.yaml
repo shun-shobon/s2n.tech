@@ -21,8 +21,8 @@ importers:
         specifier: 1.1.103
         version: 1.1.103
       temporal-polyfill:
-        specifier: 0.2.4
-        version: 0.2.4
+        specifier: 0.2.5
+        version: 0.2.5
     devDependencies:
       '@astrojs/check':
         specifier: 0.7.0
@@ -4008,8 +4008,8 @@ packages:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
 
-  temporal-polyfill@0.2.4:
-    resolution: {integrity: sha512-WA5p0CjQTkMjF9m8sP4wSYgpqI8m2d4q7wPUyaJOWhy4bI9mReLb2yGvTV4qf/DPMTe6H6M/Dig5KmTMB7ev6Q==}
+  temporal-polyfill@0.2.5:
+    resolution: {integrity: sha512-ye47xp8Cb0nDguAhrrDS1JT1SzwEV9e26sSsrWzVu+yPZ7LzceEcH0i2gci9jWfOfSCCgM3Qv5nOYShVUUFUXA==}
 
   temporal-spec@0.2.4:
     resolution: {integrity: sha512-lDMFv4nKQrSjlkHKAlHVqKrBG4DyFfa9F74cmBZ3Iy3ed8yvWnlWSIdi4IKfSqwmazAohBNwiN64qGx4y5Q3IQ==}
@@ -9030,7 +9030,7 @@ snapshots:
       mkdirp: 1.0.4
       yallist: 4.0.0
 
-  temporal-polyfill@0.2.4:
+  temporal-polyfill@0.2.5:
     dependencies:
       temporal-spec: 0.2.4
 
