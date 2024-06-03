@@ -1,7 +1,6 @@
 ---
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
-import { Icon } from "astro-icon/components";
 import { Temporal } from "temporal-polyfill";
 
 import Heading from "@/components/Heading.astro";
@@ -50,26 +49,7 @@ const entries = await getCollection("works").then((entries) =>
 							</h3>
 						</article>
 					</button>
-					<dialog
-						id={`work-card-modal-${entry.slug}`}
-						class="work-card-modal max-h-[min(100%,100dvh-theme(spacing.4))] w-[min(100%,100dvw-theme(spacing.4))] max-w-prose overscroll-contain rounded-md bg-slate-800 text-white backdrop:bg-black backdrop:bg-opacity-50 backdrop:backdrop-blur"
-					>
-						<div class="grid gap-4 p-4">
-							<form method="dialog" class="flex justify-end">
-								<button
-									type="submit"
-									class="z-10 rounded-md border border-white bg-slate-800"
-								>
-									<Icon
-										name="material-symbols-light:close"
-										aria-label="閉じる"
-										class="text-4xl"
-									/>
-								</button>
-							</form>
-							<Entry entry={entry} />
-						</div>
-					</dialog>
+					<Entry id={`work-card-modal-${entry.slug}`} entry={entry} />
 				</li>
 			))
 		}

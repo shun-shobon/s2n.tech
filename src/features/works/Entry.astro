@@ -2,14 +2,16 @@
 import { Image } from "astro:assets";
 import type { CollectionEntry } from "astro:content";
 import { getDataEntryById } from "astro:content";
+import { Icon } from "astro-icon/components";
 
 import { slugToYearMonth } from "../utils";
 
 interface Props {
+	id?: string;
 	entry: CollectionEntry<"works">;
 }
 
-const { entry } = Astro.props;
+const { id, entry } = Astro.props;
 
 const date = slugToYearMonth(entry.slug);
 
@@ -22,62 +24,89 @@ const technologies = await Promise.all(
 const { Content } = await entry.render();
 ---
 
-<aritcle>
-	<header class="mb-4 grid gap-4">
-		<Image
-			src={entry.data.image}
-			widths={[300, 600, 1200, entry.data.image.width]}
-			sizes={`600px`}
-			alt=""
-			class="h-auto w-full"
-		/>
-		<div>
-			<h1 class="text-[2rem]">{entry.data.title}</h1>
-			<time datetime={date.toString()} class="block">
-				{date.toLocaleString("ja-JP")}
-			</time>
-		</div>
-		<table
-			class="border-y-2 border-y-white [&_:is(th,td)]:border-b-[1px] [&_:is(th,td)]:border-b-white [&_:is(th,td)]:p-1"
-		>
-			<tr>
-				<th>Technologies</th>
-				<td>
-					<ul class="flex flex-wrap gap-2">
-						{technologies.map((technology) => <li>{technology.data.name}</li>)}
-					</ul>
-				</td>
-			</tr>
-			<tr>
-				<th>Platform</th>
-				<td>
-					<ul class="flex flex-wrap gap-2">
-						{entry.data.platforms.map((platform) => <li>{platform}</li>)}
-					</ul>
-				</td>
-			</tr>
-			{
-				entry.data.links && (
+<dialog
+	id={id}
+	popover
+	class="work-card-modal max-h-[min(100%,100dvh-theme(spacing.4))] w-[min(100%,100dvw-theme(spacing.4))] max-w-prose overscroll-contain rounded-md bg-slate-800 text-white backdrop:bg-black backdrop:bg-opacity-50 backdrop:backdrop-blur"
+	aria-labelledby={`work-entry-title-${entry.slug}`}
+>
+	<div class="grid gap-4 p-4">
+		<form method="dialog" class="ml-auto">
+			<button type="submit" class="rounded-md border border-white bg-slate-800">
+				<Icon
+					name="material-symbols-light:close"
+					aria-label="閉じる"
+					class="text-4xl"
+				/>
+			</button>
+		</form>
+		<aritcle>
+			<header class="mb-4 grid gap-4">
+				<Image
+					src={entry.data.image}
+					widths={[300, 600, 1200, entry.data.image.width]}
+					sizes={`600px`}
+					alt=""
+					class="h-auto w-full"
+				/>
+				<div>
+					<h1 id={`work-entry-title-${entry.slug}`} class="text-[2rem]">
+						{entry.data.title}
+					</h1>
+					<time
+						datetime={date.toString({ calendarName: "never" })}
+						class="block"
+					>
+						{date.toLocaleString("ja-JP")}
+					</time>
+				</div>
+				<table
+					class="border-y-2 border-y-white [&_:is(th,td)]:border-b-[1px] [&_:is(th,td)]:border-b-white [&_:is(th,td)]:p-1 [&_th]:text-center"
+				>
 					<tr>
-						<th>Links</th>
+						<th>Technologies</th>
 						<td>
 							<ul class="flex flex-wrap gap-2">
-								{entry.data.links.map((link) => (
-									<li>
-										<a
-											href={link.url}
-											class="underline transition-colors duration-200 ease-in-out hover:text-indigo-300"
-										>
-											{link.name}
-										</a>
-									</li>
-								))}
+								{
+									technologies.map((technology) => (
+										<li>{technology.data.name}</li>
+									))
+								}
 							</ul>
 						</td>
 					</tr>
-				)
-			}
-		</table>
-	</header>
-	<Content />
-</aritcle>
+					<tr>
+						<th>Platform</th>
+						<td>
+							<ul class="flex flex-wrap gap-2">
+								{entry.data.platforms.map((platform) => <li>{platform}</li>)}
+							</ul>
+						</td>
+					</tr>
+					{
+						entry.data.links && (
+							<tr>
+								<th>Links</th>
+								<td>
+									<ul class="flex flex-wrap gap-2">
+										{entry.data.links.map((link) => (
+											<li>
+												<a
+													href={link.url}
+													class="underline transition-colors duration-200 ease-in-out hover:text-indigo-300"
+												>
+													{link.name}
+												</a>
+											</li>
+										))}
+									</ul>
+								</td>
+							</tr>
+						)
+					}
+				</table>
+			</header>
+			<Content />
+		</aritcle>
+	</div>
+</dialog>
