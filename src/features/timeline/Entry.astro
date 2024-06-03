@@ -35,7 +35,7 @@ const { Content } = await entry.render();
 		role="presentation"
 		class="absolute left-[calc(0px-8px/2)] top-[16px] h-[8px] w-[8px] rounded-full bg-white"
 	></span>
-	<time datetime={date.toString()}>
+	<time datetime={date.toString({ calendarName: "never" })}>
 		{date.toLocaleString("ja-JP")}
 		({yearsOld}歳)
 	</time>
