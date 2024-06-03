@@ -28,7 +28,7 @@ const entries = await getCollection("works").then((entries) =>
 			entries.map((entry) => (
 				<li class="work-card">
 					<button
-						class="work-card-button"
+						class="work-card-button w-full"
 						id={`work-card-button-${entry.slug}`}
 						aria-labelledby={`work-card-title-${entry.slug}`}
 						aria-controls={`work-card-modal-${entry.slug}`}
