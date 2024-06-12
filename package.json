@@ -29,7 +29,7 @@
 		"@astrojs/partytown": "2.1.1",
 		"@astrojs/sitemap": "3.1.5",
 		"@astrojs/tailwind": "5.1.0",
-		"@playform/compress": "0.0.12",
+		"@playform/compress": "0.0.13",
 		"@shun-shobon/eslint-config": "0.13.1",
 		"@shun-shobon/prettier-config": "0.4.4",
 		"astro": "4.10.2",
