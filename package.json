@@ -18,7 +18,7 @@
 		"type-check": "tsc --noEmit && astro check"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "9.2.1",
+		"@astrojs/cloudflare": "10.4.2",
 		"@iconify-json/lucide": "1.1.194",
 		"@iconify-json/material-symbols-light": "1.1.22",
 		"@iconify-json/simple-icons": "1.1.106",
