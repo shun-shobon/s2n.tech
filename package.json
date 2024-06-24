@@ -32,7 +32,7 @@
 		"@playform/compress": "0.0.13",
 		"@shun-shobon/eslint-config": "0.13.2",
 		"@shun-shobon/prettier-config": "0.4.5",
-		"astro": "4.11.0",
+		"astro": "4.11.1",
 		"astro-icon": "1.1.0",
 		"eslint": "9.5.0",
 		"prettier": "3.3.2",
