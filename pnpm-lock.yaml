@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: 9.2.1
-        version: 9.2.1(astro@4.11.1(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2))
+        version: 9.2.1(astro@4.11.3(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2))
       '@iconify-json/lucide':
         specifier: 1.1.195
         version: 1.1.195
@@ -35,7 +35,7 @@ importers:
         version: 3.1.6
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.11.1(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2))(tailwindcss@3.4.4)
+        version: 5.1.0(astro@4.11.3(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2))(tailwindcss@3.4.4)
       '@playform/compress':
         specifier: 0.0.13
         version: 0.0.13(@types/node@20.14.8)(typescript@5.5.2)
@@ -46,8 +46,8 @@ importers:
         specifier: 0.4.6
         version: 0.4.6(prettier@3.3.2)
       astro:
-        specifier: 4.11.1
-        version: 4.11.1(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2)
+        specifier: 4.11.3
+        version: 4.11.3(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2)
       astro-icon:
         specifier: 1.1.0
         version: 1.1.0
@@ -1422,8 +1422,8 @@ packages:
   astro-icon@1.1.0:
     resolution: {integrity: sha512-Nksc09p7UuHeMcPNS9w1pKqRw3+wEmmh0A3FJW+FNXvqaeWI4RLvD1MCWErpY3Z5Cvad317rvLdik/Hg8GEk8Q==}
 
-  astro@4.11.1:
-    resolution: {integrity: sha512-6e9/9nafmnxzaLSq2+9VNpi+7j0E4UoK2IJ7gkhyv1wk3XfciA6zHc3ESx7/Sk/rjenz9NSTTzAwcmVzWWHv/g==}
+  astro@4.11.3:
+    resolution: {integrity: sha512-SuZbB/71XVn+WqWNCe7XOfHuqhS+k4gj8+A3wluTZQrORGaHUFRn/f8F9Tu5yESQZB1q8UKhahvHwkTV3AdVsg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4346,12 +4346,12 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@9.2.1(astro@4.11.1(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2))':
+  '@astrojs/cloudflare@9.2.1(astro@4.11.3(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2))':
     dependencies:
       '@astrojs/underscore-redirects': 0.3.3
       '@cloudflare/workers-types': 4.20240620.0
       '@iarna/toml': 2.2.5
-      astro: 4.11.1(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2)
+      astro: 4.11.3(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2)
       dotenv: 16.4.5
       esbuild: 0.19.12
       find-up: 6.3.0
@@ -4432,9 +4432,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.11.1(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2))(tailwindcss@3.4.4)':
+  '@astrojs/tailwind@5.1.0(astro@4.11.3(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2))(tailwindcss@3.4.4)':
     dependencies:
-      astro: 4.11.1(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2)
+      astro: 4.11.3(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2)
       autoprefixer: 10.4.19(postcss@8.4.38)
       postcss: 8.4.38
       postcss-load-config: 4.0.2(postcss@8.4.38)
@@ -5121,7 +5121,7 @@ snapshots:
       '@playform/pipe': 0.0.6
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 4.11.1(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2)
+      astro: 4.11.3(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2)
       csso: 5.0.5
       html-minifier-terser: 7.2.0
       kleur: 4.1.5
@@ -5699,7 +5699,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@4.11.1(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2):
+  astro@4.11.3(@types/node@20.14.8)(lightningcss@1.25.1)(terser@5.31.1)(typescript@5.5.2):
     dependencies:
       '@astrojs/compiler': 2.8.1
       '@astrojs/internal-helpers': 0.4.1
@@ -5750,7 +5750,6 @@ snapshots:
       preferred-pm: 3.1.3
       prompts: 2.4.2
       rehype: 13.0.1
-      resolve: 1.22.8
       semver: 7.6.2
       shiki: 1.9.0
       string-width: 7.1.0
