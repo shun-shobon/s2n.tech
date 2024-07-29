@@ -19,7 +19,7 @@
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "9.2.1",
-		"@iconify-json/lucide": "1.1.202",
+		"@iconify-json/lucide": "1.1.203",
 		"@iconify-json/material-symbols-light": "1.1.25",
 		"@iconify-json/simple-icons": "1.1.110",
 		"temporal-polyfill": "0.2.5"
