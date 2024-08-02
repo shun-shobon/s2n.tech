@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: 9.2.1
-        version: 9.2.1(astro@4.13.0(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))
+        version: 9.2.1(astro@4.13.1(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))
       '@iconify-json/lucide':
         specifier: 1.1.204
         version: 1.1.204
@@ -35,7 +35,7 @@ importers:
         version: 3.1.6
       '@astrojs/tailwind':
         specifier: 5.1.0
-        version: 5.1.0(astro@4.13.0(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(tailwindcss@3.4.7)
+        version: 5.1.0(astro@4.13.1(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(tailwindcss@3.4.7)
       '@playform/compress':
         specifier: 0.1.1
         version: 0.1.1(@types/node@22.0.0)(typescript@5.5.4)
@@ -46,8 +46,8 @@ importers:
         specifier: 0.4.6
         version: 0.4.6(prettier@3.3.3)
       astro:
-        specifier: 4.13.0
-        version: 4.13.0(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
+        specifier: 4.13.1
+        version: 4.13.1(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
       astro-icon:
         specifier: 1.1.0
         version: 1.1.0
@@ -102,9 +102,6 @@ packages:
 
   '@astrojs/compiler@2.10.1':
     resolution: {integrity: sha512-XmM4j6BjvOVMag2xELq0JuG2yKOW8wgIu6dvb9BsjbGYmnvoStJn/pqEzVqc1EBszf2xYT7onIkftIOUz9AwrQ==}
-
-  '@astrojs/compiler@2.9.2':
-    resolution: {integrity: sha512-Vpu0Ffsj8SoV+N0DFHlxxOMKHwSC9059Xy/OlG1t6uFYSoJXxkBC2WyF6igO7x10V+8uJrhOxaXr3nA90kJXow==}
 
   '@astrojs/internal-helpers@0.4.1':
     resolution: {integrity: sha512-bMf9jFihO8YP940uD70SI/RDzIhUHJAolWVcO1v5PUivxGKvfLZTLTVVxEYzGYyPsA3ivdLNqMnL5VgmQySa+g==}
@@ -1431,8 +1428,8 @@ packages:
   astro-icon@1.1.0:
     resolution: {integrity: sha512-Nksc09p7UuHeMcPNS9w1pKqRw3+wEmmh0A3FJW+FNXvqaeWI4RLvD1MCWErpY3Z5Cvad317rvLdik/Hg8GEk8Q==}
 
-  astro@4.13.0:
-    resolution: {integrity: sha512-tExzJeK1rh7OdVipi1e8S6koVgjQyveSy5fNEc/4Tit4GKl/olMTUEHepZSAKR7VCyiEC/hi3rjaV3t4lxR3tA==}
+  astro@4.13.1:
+    resolution: {integrity: sha512-VnMjAc+ykFsIVjgbu9Mt/EA1fMIcPMXbU89h3ATwGOzSIKDsQH72bDgfJkWiwk6u0OE90GeP5EPhAT28Twf9oA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4360,12 +4357,12 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@9.2.1(astro@4.13.0(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))':
+  '@astrojs/cloudflare@9.2.1(astro@4.13.1(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))':
     dependencies:
       '@astrojs/underscore-redirects': 0.3.4
       '@cloudflare/workers-types': 4.20240725.0
       '@iarna/toml': 2.2.5
-      astro: 4.13.0(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
+      astro: 4.13.1(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
       dotenv: 16.4.5
       esbuild: 0.19.12
       find-up: 6.3.0
@@ -4379,8 +4376,6 @@ snapshots:
   '@astrojs/compiler@1.8.2': {}
 
   '@astrojs/compiler@2.10.1': {}
-
-  '@astrojs/compiler@2.9.2': {}
 
   '@astrojs/internal-helpers@0.4.1': {}
 
@@ -4447,9 +4442,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.0(astro@4.13.0(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(tailwindcss@3.4.7)':
+  '@astrojs/tailwind@5.1.0(astro@4.13.1(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(tailwindcss@3.4.7)':
     dependencies:
-      astro: 4.13.0(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
+      astro: 4.13.1(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
       autoprefixer: 10.4.19(postcss@8.4.40)
       postcss: 8.4.40
       postcss-load-config: 4.0.2(postcss@8.4.40)
@@ -5110,7 +5105,7 @@ snapshots:
       '@playform/pipe': 0.1.0
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 4.13.0(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
+      astro: 4.13.1(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
       csso: 5.0.5
       deepmerge-ts: 7.1.0
       html-minifier-terser: 7.2.0
@@ -5700,11 +5695,11 @@ snapshots:
 
   astro-eslint-parser@1.0.2(typescript@5.5.4):
     dependencies:
-      '@astrojs/compiler': 2.9.2
+      '@astrojs/compiler': 2.10.1
       '@typescript-eslint/scope-manager': 7.17.0
       '@typescript-eslint/types': 7.17.0
       '@typescript-eslint/typescript-estree': 7.17.0(typescript@5.5.4)
-      astrojs-compiler-sync: 1.0.0(@astrojs/compiler@2.9.2)
+      astrojs-compiler-sync: 1.0.0(@astrojs/compiler@2.10.1)
       debug: 4.3.6
       entities: 4.5.0
       eslint-scope: 8.0.2
@@ -5725,7 +5720,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@4.13.0(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4):
+  astro@4.13.1(@types/node@22.0.0)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.1
       '@astrojs/internal-helpers': 0.4.1
@@ -5743,7 +5738,6 @@ snapshots:
       aria-query: 5.3.0
       axobject-query: 4.1.0
       boxen: 7.1.1
-      chokidar: 3.6.0
       ci-info: 4.0.0
       clsx: 2.1.1
       common-ancestor-path: 1.0.1
@@ -5802,9 +5796,9 @@ snapshots:
       - terser
       - typescript
 
-  astrojs-compiler-sync@1.0.0(@astrojs/compiler@2.9.2):
+  astrojs-compiler-sync@1.0.0(@astrojs/compiler@2.10.1):
     dependencies:
-      '@astrojs/compiler': 2.9.2
+      '@astrojs/compiler': 2.10.1
       synckit: 0.9.1
 
   autoprefixer@10.4.19(postcss@8.4.40):
