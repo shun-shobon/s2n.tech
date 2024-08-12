@@ -21,7 +21,7 @@
 		"@astrojs/cloudflare": "9.2.1",
 		"@iconify-json/lucide": "1.1.205",
 		"@iconify-json/material-symbols-light": "1.1.27",
-		"@iconify-json/simple-icons": "1.1.112",
+		"@iconify-json/simple-icons": "1.1.113",
 		"temporal-polyfill": "0.2.5"
 	},
 	"devDependencies": {
