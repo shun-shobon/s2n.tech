@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: 9.2.1
-        version: 9.2.1(astro@4.15.7(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2))
+        version: 9.2.1(astro@4.15.8(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2))
       '@iconify-json/lucide':
         specifier: 1.2.4
         version: 1.2.4
@@ -35,7 +35,7 @@ importers:
         version: 3.1.6
       '@astrojs/tailwind':
         specifier: 5.1.1
-        version: 5.1.1(astro@4.15.7(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2))(tailwindcss@3.4.12)
+        version: 5.1.1(astro@4.15.8(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2))(tailwindcss@3.4.12)
       '@playform/compress':
         specifier: 0.1.1
         version: 0.1.1(@types/node@22.5.5)(rollup@4.21.3)(typescript@5.6.2)
@@ -46,8 +46,8 @@ importers:
         specifier: 0.4.8
         version: 0.4.8(prettier@3.3.3)
       astro:
-        specifier: 4.15.7
-        version: 4.15.7(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2)
+        specifier: 4.15.8
+        version: 4.15.8(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2)
       astro-icon:
         specifier: 1.1.1
         version: 1.1.1
@@ -1562,8 +1562,8 @@ packages:
   astro-icon@1.1.1:
     resolution: {integrity: sha512-HKBesWk2Faw/0+klLX+epQVqdTfSzZz/9+5vxXUjTJaN/HnpDf608gRPgHh7ZtwBPNJMEFoU5GLegxoDcT56OQ==}
 
-  astro@4.15.7:
-    resolution: {integrity: sha512-RGZjGpLcR3jcnXA1+g56i73O77krmqs7VjpoBOfk9UVP8Js5T2YSeUBAyComOUb6vj31wEw1vgRgOEN0MzYc8w==}
+  astro@4.15.8:
+    resolution: {integrity: sha512-pdXjtRF6O1xChiPAUF32R7oVRTW7AK1/Oy/JqPNhLfbelO0l6C7cLdSEuSLektwOEnMhOVXqccetjBs7HPaoxA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3414,9 +3414,6 @@ packages:
     resolution: {integrity: sha512-Xa4Nw17FS9ApQFJ9umLiJS4orGjm7ZzwUrwamcGQuHSzDyth9boKDaycYdDcZDuqYATXw4HFXgaqWTctW/v1HA==}
     engines: {node: '>=16 || 14 >=14.18'}
 
-  path-to-regexp@6.2.2:
-    resolution: {integrity: sha512-GQX3SSMokngb36+whdpRXE+3f9V8UzyAorlYvOGx87ufGHehNTn5lCxrKtLyZ4Yl/wEKnNnr98ZzOwwDZV5ogw==}
-
   path-to-regexp@6.3.0:
     resolution: {integrity: sha512-Yhpw4T9C6hPpgPeA28us07OJeqZ5EzQTkbfwuhsUg0c237RomFoETJgmp2sa3F/41gfLE6G5cqcYwznmeEeOlQ==}
 
@@ -4571,12 +4568,12 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@9.2.1(astro@4.15.7(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2))':
+  '@astrojs/cloudflare@9.2.1(astro@4.15.8(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2))':
     dependencies:
       '@astrojs/underscore-redirects': 0.3.4
       '@cloudflare/workers-types': 4.20240909.0
       '@iarna/toml': 2.2.5
-      astro: 4.15.7(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2)
+      astro: 4.15.8(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2)
       dotenv: 16.4.5
       esbuild: 0.19.12
       find-up: 6.3.0
@@ -4656,9 +4653,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.1(astro@4.15.7(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2))(tailwindcss@3.4.12)':
+  '@astrojs/tailwind@5.1.1(astro@4.15.8(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2))(tailwindcss@3.4.12)':
     dependencies:
-      astro: 4.15.7(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2)
+      astro: 4.15.8(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2)
       autoprefixer: 10.4.20(postcss@8.4.47)
       postcss: 8.4.47
       postcss-load-config: 4.0.2(postcss@8.4.47)
@@ -5411,7 +5408,7 @@ snapshots:
       '@playform/pipe': 0.1.0
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 4.15.7(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2)
+      astro: 4.15.8(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2)
       csso: 5.0.5
       deepmerge-ts: 7.1.0
       html-minifier-terser: 7.2.0
@@ -6051,7 +6048,7 @@ snapshots:
       - debug
       - supports-color
 
-  astro@4.15.7(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2):
+  astro@4.15.8(@types/node@22.5.5)(lightningcss@1.25.1)(rollup@4.21.3)(terser@5.31.3)(typescript@5.6.2):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
@@ -6099,7 +6096,6 @@ snapshots:
       ora: 8.1.0
       p-limit: 6.1.0
       p-queue: 8.0.1
-      path-to-regexp: 6.2.2
       preferred-pm: 4.0.0
       prompts: 2.4.2
       rehype: 13.0.1
@@ -8455,8 +8451,6 @@ snapshots:
     dependencies:
       lru-cache: 10.4.3
       minipass: 7.1.2
-
-  path-to-regexp@6.2.2: {}
 
   path-to-regexp@6.3.0: {}
 
