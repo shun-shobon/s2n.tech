@@ -12,8 +12,8 @@ importers:
         specifier: 9.2.1
         version: 9.2.1(astro@4.15.12(@types/node@22.7.4)(lightningcss@1.27.0)(rollup@4.24.0)(terser@5.34.1)(typescript@5.6.2))
       '@iconify-json/lucide':
-        specifier: 1.2.7
-        version: 1.2.7
+        specifier: 1.2.8
+        version: 1.2.8
       '@iconify-json/material-symbols-light':
         specifier: 1.2.3
         version: 1.2.3
@@ -818,8 +818,8 @@ packages:
   '@iarna/toml@2.2.5':
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
 
-  '@iconify-json/lucide@1.2.7':
-    resolution: {integrity: sha512-j85GBSDqQoBJCKU3XrVV97alx4ADuphrt5u/LfAGEybuXyQCn63ZahUJ164LELGvxqTbt4ZoRLb4PsFuMzkeWg==}
+  '@iconify-json/lucide@1.2.8':
+    resolution: {integrity: sha512-knmDUXky8AAQ0rnGdnBjS1mBr6c0tT7aVbBd7AJcDTcJYvx9XEeyHlabFKG03DaLbOkCy0QHwCYoeZHRDEzOFA==}
 
   '@iconify-json/material-symbols-light@1.2.3':
     resolution: {integrity: sha512-thBShVys5C3JIhJxt67JcW0KmGCZP5l4M1OMSNOx9TwRknp1volBBGFQ320BGN15JWVA6nJib0CO92aPIur6+g==}
@@ -5055,7 +5055,7 @@ snapshots:
 
   '@iarna/toml@2.2.5': {}
 
-  '@iconify-json/lucide@1.2.7':
+  '@iconify-json/lucide@1.2.8':
     dependencies:
       '@iconify/types': 2.0.0
 
