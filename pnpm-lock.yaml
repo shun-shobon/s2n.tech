@@ -15,8 +15,8 @@ importers:
         specifier: 1.2.11
         version: 1.2.11
       '@iconify-json/material-symbols-light':
-        specifier: 1.2.5
-        version: 1.2.5
+        specifier: 1.2.6
+        version: 1.2.6
       '@iconify-json/simple-icons':
         specifier: 1.2.10
         version: 1.2.10
@@ -821,8 +821,8 @@ packages:
   '@iconify-json/lucide@1.2.11':
     resolution: {integrity: sha512-dqpbV7+g1qqxtZOHCZKwdKhtYYqEUjFhYiOg/+PcADbjtapoL+bwa1Brn12gAHq5r2K7Mf29xRHOTmZ3UHHOrw==}
 
-  '@iconify-json/material-symbols-light@1.2.5':
-    resolution: {integrity: sha512-Xv/vhVeVDX8KsDBbL2WoBQ537uRcEHclg9W704Zu26HFB/0dOs+dzb351OglAXzRDNATAWh5EyQ+wuPOrJSyGA==}
+  '@iconify-json/material-symbols-light@1.2.6':
+    resolution: {integrity: sha512-TpDzfXt5Br1e7xuzKEy63bEuc56xsQBS07Am4fpXqQWvtvDxAQ4y1Ik3ca3ougmNPtW2dsR1XQmjMxNb5mGoUw==}
 
   '@iconify-json/simple-icons@1.2.10':
     resolution: {integrity: sha512-9OK1dsSjXlH36lhu5n+BlSoXuqFjHUErGLtNdzHpq0vHq4YFBuGYWtZ+vZTHLreRQ8ijPRv/6EsgkV+nf6AReQ==}
@@ -5053,7 +5053,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/material-symbols-light@1.2.5':
+  '@iconify-json/material-symbols-light@1.2.6':
     dependencies:
       '@iconify/types': 2.0.0
 
