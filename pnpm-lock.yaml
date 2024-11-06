@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: 9.2.1
-        version: 9.2.1(astro@4.16.9(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3))
+        version: 9.2.1(astro@4.16.10(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3))
       '@iconify-json/lucide':
         specifier: 1.2.11
         version: 1.2.11
@@ -35,7 +35,7 @@ importers:
         version: 3.2.1
       '@astrojs/tailwind':
         specifier: 5.1.2
-        version: 5.1.2(astro@4.16.9(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3))(tailwindcss@3.4.14)
+        version: 5.1.2(astro@4.16.10(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3))(tailwindcss@3.4.14)
       '@playform/compress':
         specifier: 0.1.6
         version: 0.1.6(@types/node@22.8.7)(rollup@4.24.3)(typescript@5.6.3)
@@ -46,8 +46,8 @@ importers:
         specifier: 0.4.8
         version: 0.4.8(prettier@3.3.3)
       astro:
-        specifier: 4.16.9
-        version: 4.16.9(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3)
+        specifier: 4.16.10
+        version: 4.16.10(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3)
       astro-icon:
         specifier: 1.1.2
         version: 1.1.2
@@ -1463,8 +1463,8 @@ packages:
   astro-icon@1.1.2:
     resolution: {integrity: sha512-2qAHBtZLYuFEIMP0Ck0edyLi5fQmJjwP2Qbv41f8L4KAJ2sra/dH7q5lCOn4q0DHVtS0w3tPG8UKQRits3UPcg==}
 
-  astro@4.16.9:
-    resolution: {integrity: sha512-DFYzPZooVArKSGu969BBByUV44tJMVDPGKxgqWNFBaIrkvGljdVUqQSVwD+/iPYACoSkI8BRYvDMEBDkathIUQ==}
+  astro@4.16.10:
+    resolution: {integrity: sha512-a+nB4bZE50NXHLzVXUHtx/lYct2Aa8kbqZnWNrWqkU97RuhBuWJ5H5/LQbKRnBWGvqChKfJBiMWJe53TY9ieYQ==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4452,12 +4452,12 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@9.2.1(astro@4.16.9(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3))':
+  '@astrojs/cloudflare@9.2.1(astro@4.16.10(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3))':
     dependencies:
       '@astrojs/underscore-redirects': 0.3.4
       '@cloudflare/workers-types': 4.20241022.0
       '@iarna/toml': 2.2.5
-      astro: 4.16.9(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3)
+      astro: 4.16.10(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3)
       dotenv: 16.4.5
       esbuild: 0.19.12
       find-up: 6.3.0
@@ -4536,9 +4536,9 @@ snapshots:
       stream-replace-string: 2.0.0
       zod: 3.23.8
 
-  '@astrojs/tailwind@5.1.2(astro@4.16.9(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3))(tailwindcss@3.4.14)':
+  '@astrojs/tailwind@5.1.2(astro@4.16.10(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3))(tailwindcss@3.4.14)':
     dependencies:
-      astro: 4.16.9(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3)
+      astro: 4.16.10(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3)
       autoprefixer: 10.4.20(postcss@8.4.47)
       postcss: 8.4.47
       postcss-load-config: 4.0.2(postcss@8.4.47)
@@ -5213,7 +5213,7 @@ snapshots:
       '@playform/pipe': 0.1.1
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 4.16.9(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3)
+      astro: 4.16.10(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3)
       commander: 12.1.0
       csso: 5.0.5
       deepmerge-ts: 7.1.3
@@ -5857,7 +5857,7 @@ snapshots:
       - debug
       - supports-color
 
-  astro@4.16.9(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3):
+  astro@4.16.10(@types/node@22.8.7)(lightningcss@1.27.0)(rollup@4.24.3)(terser@5.36.0)(typescript@5.6.3):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.1
