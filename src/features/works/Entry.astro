@@ -22,17 +22,19 @@ const technologies = await Promise.all(
 );
 
 const { Content } = await entry.render();
+
+const listItem = "after:content-[','] after:last:hidden";
 ---
 
 <dialog
 	id={id}
 	popover
-	class="work-card-modal max-h-[min(100%,100dvh-theme(spacing.4))] w-[min(100%,100dvw-theme(spacing.4))] max-w-prose overscroll-contain rounded-md bg-slate-800 text-white backdrop:bg-black backdrop:bg-opacity-50 backdrop:backdrop-blur"
+	class="work-card-modal max-h-[min(100%,100dvh-theme(spacing.8))] w-[min(100%,100dvw-theme(spacing.8))] max-w-prose overscroll-contain rounded-md border border-zinc-700/80 bg-zinc-800/80 text-white shadow-lg shadow-zinc-800 backdrop-blur backdrop:bg-black/60"
 	aria-labelledby={`work-entry-title-${entry.slug}`}
 >
 	<div class="grid gap-4 p-4">
 		<form method="dialog" class="ml-auto">
-			<button type="submit" class="rounded-md border border-white bg-slate-800">
+			<button type="submit" class="rounded-md border border-zinc-700">
 				<Icon
 					name="material-symbols-light:close"
 					aria-label="閉じる"
@@ -50,7 +52,7 @@ const { Content } = await entry.render();
 					class="h-auto w-full"
 				/>
 				<div>
-					<h1 id={`work-entry-title-${entry.slug}`} class="text-[2rem]">
+					<h1 id={`work-entry-title-${entry.slug}`} class="text-3xl">
 						{entry.data.title}
 					</h1>
 					<time
@@ -69,7 +71,7 @@ const { Content } = await entry.render();
 							<ul class="flex flex-wrap gap-2">
 								{
 									technologies.map((technology) => (
-										<li>{technology.data.name}</li>
+										<li class={listItem}>{technology.data.name}</li>
 									))
 								}
 							</ul>
@@ -79,7 +81,11 @@ const { Content } = await entry.render();
 						<th>Platform</th>
 						<td>
 							<ul class="flex flex-wrap gap-2">
-								{entry.data.platforms.map((platform) => <li>{platform}</li>)}
+								{
+									entry.data.platforms.map((platform) => (
+										<li class={listItem}>{platform}</li>
+									))
+								}
 							</ul>
 						</td>
 					</tr>
@@ -89,16 +95,10 @@ const { Content } = await entry.render();
 								<th>Links</th>
 								<td>
 									<ul class="flex flex-wrap gap-2">
-										{entry.data.links.map((link) => (
-											<li>
-												<a
-													href={link.url}
-													class="underline transition-colors duration-200 ease-in-out hover:text-indigo-300"
-												>
-													{link.name}
-												</a>
-											</li>
-										))}
+										{entry.data.links.map((link) =>
+											// prettier-ignore
+											<li class={listItem}><a href={link.url} class="underline transition-colors duration-200 ease-in-out hover:text-indigo-300">{link.name}</a></li>,
+										)}
 									</ul>
 								</td>
 							</tr>
