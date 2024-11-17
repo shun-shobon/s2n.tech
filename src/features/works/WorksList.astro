@@ -39,6 +39,7 @@ const entries = await getCollection("works").then((entries) =>
 								widths={[300, 600, 1200, entry.data.image.width]}
 								sizes={`${queries.sm} 300px, 600px`}
 								quality="low"
+								draggable="false"
 								class="col-span-full row-span-full aspect-video h-auto w-full object-cover transition-transform duration-200 ease-in-out group-hover:scale-110"
 							/>
 							<h3

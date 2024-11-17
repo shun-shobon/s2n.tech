@@ -97,7 +97,7 @@ const listItem = "after:content-[','] after:last:hidden";
 									<ul class="flex flex-wrap gap-2">
 										{entry.data.links.map((link) =>
 											// prettier-ignore
-											<li class={listItem}><a href={link.url} class="underline transition-colors duration-200 ease-in-out hover:text-sky-300">{link.name}</a></li>,
+											<li class={listItem}><a href={link.url} target="_blank" class="underline transition-colors duration-200 ease-in-out hover:text-sky-300">{link.name}</a></li>,
 										)}
 									</ul>
 								</td>
