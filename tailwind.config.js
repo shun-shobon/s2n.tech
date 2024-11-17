@@ -8,6 +8,9 @@ export default {
 			maxWidth: {
 				prose: "80ch",
 			},
+			fontFamily: {
+				zen: ["Zen Kurenaido", "sans-serif"],
+			},
 		},
 	},
 	plugins: [],
