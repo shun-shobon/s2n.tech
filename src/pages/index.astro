@@ -10,11 +10,13 @@ import Layout from "@/layouts/Layout.astro";
 <Layout>
 	<main>
 		<Hero />
-		<div class="mx-auto grid w-full max-w-prose gap-16 p-4">
-			<About />
-			<Timeline />
-			<WorksList />
+		<div class="bg-black/50">
+			<div class="mx-auto grid w-full max-w-prose gap-16 p-4">
+				<About />
+				<Timeline />
+				<WorksList />
+			</div>
+			<Footer />
 		</div>
 	</main>
-	<Footer />
 </Layout>
