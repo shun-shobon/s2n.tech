@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { Icon } from "astro-icon/components";
 import { Temporal } from "temporal-polyfill";
 
 import { calendar } from "../locale";
@@ -29,12 +30,13 @@ const { Content } = await entry.render();
 <li class="group relative py-2 pl-4">
 	<span
 		role="presentation"
-		class="absolute bottom-0 left-[calc(0px-1px/2)] top-0 w-px bg-white group-first:top-[16px] group-last:bottom-[calc(100%-16px)]"
+		class="absolute bottom-[-8px] left-[calc(0px-1px/2)] top-[36px] w-px bg-white group-last:hidden"
 	></span>
-	<span
+	<Icon
+		name="star"
 		role="presentation"
-		class="absolute left-[calc(0px-8px/2)] top-[16px] h-[8px] w-[8px] rounded-full bg-white"
-	></span>
+		class="animate-duration-[5s] absolute left-[calc(0px-16px/2)] top-[14px] size-[16px] animate-spin"
+	/>
 	<time datetime={date.toString({ calendarName: "never" })}>
 		{date.toLocaleString("ja-JP")}
 		({yearsOld}歳)
