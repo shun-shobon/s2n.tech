@@ -46,8 +46,8 @@ importers:
         specifier: 4.16.14
         version: 4.16.14(@types/node@22.9.0)(lightningcss@1.27.0)(rollup@4.27.2)(terser@5.36.0)(typescript@5.7.2)
       astro-icon:
-        specifier: 1.1.2
-        version: 1.1.2
+        specifier: 1.1.4
+        version: 1.1.4
       eslint:
         specifier: 9.14.0
         version: 9.14.0(jiti@1.21.6)
@@ -1238,8 +1238,8 @@ packages:
     resolution: {integrity: sha512-F6NW1RJo5pp2kPnnM97M5Ohw8zAGjv83MpxHqfAochH68n/kiXN57+hYaNUCA7XkScoVNr6yzvly3hsY34TGfQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro-icon@1.1.2:
-    resolution: {integrity: sha512-2qAHBtZLYuFEIMP0Ck0edyLi5fQmJjwP2Qbv41f8L4KAJ2sra/dH7q5lCOn4q0DHVtS0w3tPG8UKQRits3UPcg==}
+  astro-icon@1.1.4:
+    resolution: {integrity: sha512-sMLkQaevIQLv38WBzb/RDbsmxhg5+X+KcNmpTi9cE6MLurNWU1MPnlO87d9Vwg4HxTenKpDlYp81A3syXFW/gw==}
 
   astro-integration-kit@0.16.1:
     resolution: {integrity: sha512-N/iam0PAFrRT9azYZqscP1HowQhC77Dwlp912P0/72k+kwUVgO3m73F26XXukHYoZBsrHgrUrfsWBxuCH3kEUg==}
@@ -5393,7 +5393,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-icon@1.1.2:
+  astro-icon@1.1.4:
     dependencies:
       '@iconify/tools': 4.0.7
       '@iconify/types': 2.0.0
