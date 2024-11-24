@@ -30,7 +30,7 @@
 		"@astrojs/sitemap": "3.2.1",
 		"@astrojs/tailwind": "5.1.2",
 		"@playform/compress": "0.1.6",
-		"@shun-shobon/style-guide": "0.1.1",
+		"@shun-shobon/style-guide": "0.1.2",
 		"astro": "4.16.14",
 		"astro-icon": "1.1.4",
 		"eslint": "9.14.0",
