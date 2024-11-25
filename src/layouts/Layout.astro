@@ -70,8 +70,10 @@ const { title } = Astro.props;
 		<Image
 			src={Background}
 			alt=""
-			quality="max"
+			quality={85}
 			class="fixed inset-0 -z-10 h-full w-full bg-[linear-gradient(to_bottom,#000912,#001E30,#2D4556)] object-cover"
+			widths={[Background.width / 4, Background.width / 2, Background.width]}
+			sizes="100vw"
 		/>
 		<slot />
 	</body>
