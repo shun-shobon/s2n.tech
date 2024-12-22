@@ -18,8 +18,8 @@ importers:
         specifier: 1.2.10
         version: 1.2.10
       '@iconify-json/simple-icons':
-        specifier: 1.2.15
-        version: 1.2.15
+        specifier: 1.2.16
+        version: 1.2.16
       temporal-polyfill:
         specifier: 0.2.5
         version: 0.2.5
@@ -658,8 +658,8 @@ packages:
   '@iconify-json/material-symbols-light@1.2.10':
     resolution: {integrity: sha512-W7evNvjf5ZM0L2r9J0aEzg844C9l6cBNRFtGkveeOkLnjV6dMtDx9lgOHMvFnzjmZ2EMenv/ZLg4P/EyG5R/Ig==}
 
-  '@iconify-json/simple-icons@1.2.15':
-    resolution: {integrity: sha512-4vxMQwkjsbjVIVGsPjKBnLMqAXu4wSlHmeN35KaJLK0UJNUj/ef6ES5c4bT/U4bSZjD2oZqOjOWTPD+HCrSUkg==}
+  '@iconify-json/simple-icons@1.2.16':
+    resolution: {integrity: sha512-mnQ0Ih8CDIgOqbi0qz01AJNOeFVuGFRimelg3JmJtD0y5EpZVw+enPPcpcxJKipsRZ/oqhcP3AhYkF1kM7yomg==}
 
   '@iconify/tools@4.0.7':
     resolution: {integrity: sha512-zOJxKIfZn96ZRGGvIWzDRLD9vb2CsxjcLuM+QIdvwWbv6SWhm49gECzUnd4d2P0sq9sfodT7yCNobWK8nvavxQ==}
@@ -4742,7 +4742,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/simple-icons@1.2.15':
+  '@iconify-json/simple-icons@1.2.16':
     dependencies:
       '@iconify/types': 2.0.0
 
