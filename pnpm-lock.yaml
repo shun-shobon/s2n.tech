@@ -12,8 +12,8 @@ importers:
         specifier: 11.2.0
         version: 11.2.0(astro@4.16.18(@types/node@22.10.5)(lightningcss@1.28.2)(rollup@4.30.1)(terser@5.37.0)(typescript@5.7.3))
       '@iconify-json/lucide':
-        specifier: 1.2.22
-        version: 1.2.22
+        specifier: 1.2.23
+        version: 1.2.23
       '@iconify-json/material-symbols-light':
         specifier: 1.2.12
         version: 1.2.12
@@ -647,8 +647,8 @@ packages:
     resolution: {integrity: sha512-c7hNEllBlenFTHBky65mhq8WD2kbN9Q6gk0bTk8lSBvc554jpXSkST1iePudpt7+A/AQvuHs9EMqjHDXMY1lrA==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/lucide@1.2.22':
-    resolution: {integrity: sha512-sHRN/UFVTPTKCA9dVdO34OydvAf5d3CmT16a/U2+VzogI1uIsBXoYILU5oHGFMMq12aMJ65zgr1YOJCI0glxeg==}
+  '@iconify-json/lucide@1.2.23':
+    resolution: {integrity: sha512-UpwgsET4bCT/hj9JhPIzQjyjP81qT6CKbrqtFfj5VdBwKz/HgyU6iL5GIpk2QtjBnUkY85LR2LshKOWZubD2XQ==}
 
   '@iconify-json/material-symbols-light@1.2.12':
     resolution: {integrity: sha512-9ys2my8tdC3UUAV10UXF2SSE+7wwcmHbZtW4JIZuMu+S4E7hZCn3R0sxg8izdazyXCK0tnGrSNPfS5JY+SpPDw==}
@@ -4136,6 +4136,7 @@ packages:
   wrangler@3.100.0:
     resolution: {integrity: sha512-+nsZK374Xnp2BEQQuB/18pnObgsOey0AHVlg75pAdwNaKAmB2aa0/E5rFb7i89DiiwFYoZMz3cARY1UKcm/WQQ==}
     engines: {node: '>=16.17.0'}
+    deprecated: Downgrade to 3.99.0
     hasBin: true
     peerDependencies:
       '@cloudflare/workers-types': ^4.20241230.0
@@ -4761,7 +4762,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.1': {}
 
-  '@iconify-json/lucide@1.2.22':
+  '@iconify-json/lucide@1.2.23':
     dependencies:
       '@iconify/types': 2.0.0
 
