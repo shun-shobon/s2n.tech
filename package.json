@@ -29,7 +29,7 @@
 		"@astrojs/sitemap": "3.2.1",
 		"@astrojs/tailwind": "5.1.5",
 		"@shun-shobon/style-guide": "0.2.0",
-		"astro": "5.2.1",
+		"astro": "5.2.5",
 		"astro-icon": "1.1.5",
 		"eslint": "9.19.0",
 		"prettier": "3.4.2",
