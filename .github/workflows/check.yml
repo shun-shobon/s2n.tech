@@ -13,9 +13,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup | Node
-        uses: shun-shobon/actions/setup-node@master
-        with:
-          node-version-file: .tool-versions
+        uses: ./.github/actions/setup-node
 
       - name: Run | Sync
         run: pnpm sync
@@ -30,9 +28,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup | Node
-        uses: shun-shobon/actions/setup-node@master
-        with:
-          node-version-file: .tool-versions
+        uses: ./.github/actions/setup-node
 
       - name: Run | Sync
         run: pnpm sync
@@ -47,9 +43,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup | Node
-        uses: shun-shobon/actions/setup-node@master
-        with:
-          node-version-file: .tool-versions
+        uses: ./.github/actions/setup-node
 
       - name: Run | Format
         run: pnpm format:ci

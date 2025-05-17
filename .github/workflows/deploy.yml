@@ -28,9 +28,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Setup | Node.js
-        uses: shun-shobon/actions/setup-node@master
-        with:
-          node-version-file: .tool-versions
+        uses: ./.github/actions/setup-node
 
       - name: Run | Build
         run: pnpm build
