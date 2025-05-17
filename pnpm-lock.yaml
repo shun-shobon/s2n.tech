@@ -12,8 +12,8 @@ importers:
         specifier: 1.2.25
         version: 1.2.25
       '@iconify-json/material-symbols-light':
-        specifier: 1.2.12
-        version: 1.2.12
+        specifier: 1.2.20
+        version: 1.2.20
       '@iconify-json/simple-icons':
         specifier: 1.2.22
         version: 1.2.22
@@ -578,8 +578,8 @@ packages:
   '@iconify-json/lucide@1.2.25':
     resolution: {integrity: sha512-OsHihLfqdjxwoLWDEnGesrYbCG6VCCoLvmb1U6UJhggsppW+D3DUY/LhhcppZM4Yw3AM4USDIn/gkzqjdRYgEw==}
 
-  '@iconify-json/material-symbols-light@1.2.12':
-    resolution: {integrity: sha512-9ys2my8tdC3UUAV10UXF2SSE+7wwcmHbZtW4JIZuMu+S4E7hZCn3R0sxg8izdazyXCK0tnGrSNPfS5JY+SpPDw==}
+  '@iconify-json/material-symbols-light@1.2.20':
+    resolution: {integrity: sha512-xGPhQR80cNLAXRKAlbHQJednqaimVBqQGTz3WZUlStzIaUhrbVpFscyQT/taAe0X9+Ra6XlhsIN+MPG8HDJCeA==}
 
   '@iconify-json/simple-icons@1.2.22':
     resolution: {integrity: sha512-0UzThRMwHuOJfgpp+tyV/y2uEBLjFVrxC4igv9iWjSEQEBK4tNjWZNTRCBCYyv/FwWVYyKAsA8tZQ8vUYzvFnw==}
@@ -1673,6 +1673,7 @@ packages:
   eslint-define-config@2.1.0:
     resolution: {integrity: sha512-QUp6pM9pjKEVannNAbSJNeRuYwW3LshejfyBBpjeMGaJjaDUpVps4C6KVR8R7dWZnD3i0synmrE36znjTkJvdQ==}
     engines: {node: '>=18.0.0', npm: '>=9.0.0', pnpm: '>=8.6.0'}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   eslint-import-resolver-node@0.3.9:
     resolution: {integrity: sha512-WFj2isz22JahUv+B788TlO3N6zL3nNJGU8CcZbPZvVEkBPaJdCV4vy5wyghty5ROFbCRnm132v8BScu5/1BQ8g==}
@@ -4433,7 +4434,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/material-symbols-light@1.2.12':
+  '@iconify-json/material-symbols-light@1.2.20':
     dependencies:
       '@iconify/types': 2.0.0
 
