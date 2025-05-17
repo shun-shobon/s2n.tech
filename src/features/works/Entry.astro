@@ -29,7 +29,7 @@ const listItem = "after:content-[','] after:last:hidden";
 <dialog
 	id={id}
 	popover
-	class="work-card-modal max-h-[min(100%,100dvh-theme(spacing.8))] w-[min(100%,100dvw-theme(spacing.8))] max-w-prose overscroll-contain rounded-md border border-zinc-700/80 bg-zinc-800/80 text-white shadow-lg shadow-zinc-800 backdrop-blur backdrop:bg-black/60"
+	class="work-card-modal m-auto max-h-[min(100%,100dvh-(--spacing(8)))] w-[min(100%,100dvw-(--spacing(8)))] max-w-prose overscroll-contain rounded-md border border-zinc-700/80 bg-zinc-800/80 text-white shadow-lg shadow-zinc-800 backdrop-blur backdrop:bg-black/60"
 	aria-labelledby={`work-entry-title-${entry.slug}`}
 >
 	<div class="grid gap-4 p-4">
@@ -42,7 +42,7 @@ const listItem = "after:content-[','] after:last:hidden";
 				/>
 			</button>
 		</form>
-		<aritcle>
+		<article>
 			<header class="mb-4 grid gap-4">
 				<Image
 					src={entry.data.image}
@@ -63,7 +63,7 @@ const listItem = "after:content-[','] after:last:hidden";
 					</time>
 				</div>
 				<table
-					class="border-y-2 border-y-white [&_:is(th,td)]:border-b-[1px] [&_:is(th,td)]:border-b-white [&_:is(th,td)]:p-1 [&_th]:text-center"
+					class="border-y-2 border-y-white [&_:is(th,td)]:border-b [&_:is(th,td)]:border-b-white [&_:is(th,td)]:p-1 [&_th]:text-center"
 				>
 					<tr>
 						<th>Technologies</th>
@@ -107,6 +107,6 @@ const listItem = "after:content-[','] after:last:hidden";
 				</table>
 			</header>
 			<Content />
-		</aritcle>
+		</article>
 	</div>
 </dialog>

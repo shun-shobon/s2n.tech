@@ -1,5 +1,5 @@
 ---
-// import "@/styles/global.css";
+import "@/styles/global.css";
 
 import { Image } from "astro:assets";
 
@@ -66,7 +66,7 @@ const { title } = Astro.props;
 			cfWebAnalyticsToken={import.meta.env.PUBLIC_CF_WEB_ANALYTICS_TOKEN}
 		/>
 	</head>
-	<body class="min-h-dvh font-zen text-white">
+	<body class="font-zen min-h-dvh text-white">
 		<Image
 			src={Background}
 			alt=""

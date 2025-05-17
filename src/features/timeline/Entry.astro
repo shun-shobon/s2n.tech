@@ -30,12 +30,12 @@ const { Content } = await entry.render();
 <li class="group relative py-2 pl-4">
 	<span
 		role="presentation"
-		class="absolute bottom-[-8px] left-[calc(0px-1px/2)] top-[36px] w-px bg-white group-last:hidden"
+		class="absolute top-[36px] bottom-[-8px] left-[calc(0px-1px/2)] w-px bg-white group-last:hidden"
 	></span>
 	<Icon
 		name="star"
 		role="presentation"
-		class="absolute left-[calc(0px-16px/2)] top-[14px] size-[16px] animate-spin animate-duration-[5s]"
+		class="animate-duration-[5s] absolute top-[14px] left-[calc(0px-16px/2)] size-[16px] animate-spin"
 	/>
 	<time datetime={date.toString({ calendarName: "never" })}>
 		{date.toLocaleString("ja-JP")}
