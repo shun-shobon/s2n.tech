@@ -35,7 +35,7 @@
 		"pnpm": "10.11.0",
 		"prettier": "3.5.3",
 		"sharp": "0.33.5",
-		"tailwindcss": "4.1.6",
+		"tailwindcss": "4.1.7",
 		"tailwindcss-animated": "2.0.0",
 		"typescript": "5.7.3",
 		"wrangler": "3.114.8"
