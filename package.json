@@ -21,13 +21,13 @@
 		"@iconify-json/lucide": "1.2.25",
 		"@iconify-json/material-symbols-light": "1.2.20",
 		"@iconify-json/simple-icons": "1.2.34",
+		"@tailwindcss/vite": "4.1.7",
 		"temporal-polyfill": "0.2.5"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.9.4",
 		"@astrojs/partytown": "2.1.4",
 		"@astrojs/sitemap": "3.4.0",
-		"@astrojs/tailwind": "5.1.5",
 		"@shun-shobon/style-guide": "0.4.1",
 		"astro": "5.7.13",
 		"astro-icon": "1.1.5",
