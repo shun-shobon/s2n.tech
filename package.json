@@ -34,7 +34,7 @@
 		"eslint": "9.26.0",
 		"pnpm": "10.11.0",
 		"prettier": "3.5.3",
-		"sharp": "0.33.5",
+		"sharp": "0.34.2",
 		"tailwindcss": "4.1.7",
 		"tailwindcss-animated": "2.0.0",
 		"typescript": "5.7.3",
