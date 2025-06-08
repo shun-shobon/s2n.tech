@@ -20,7 +20,7 @@
 	"dependencies": {
 		"@iconify-json/lucide": "1.2.46",
 		"@iconify-json/material-symbols-light": "1.2.22",
-		"@iconify-json/simple-icons": "1.2.36",
+		"@iconify-json/simple-icons": "1.2.37",
 		"@tailwindcss/vite": "4.1.8",
 		"temporal-polyfill": "0.3.0"
 	},
