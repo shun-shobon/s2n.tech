@@ -3,8 +3,8 @@ import StarrySkyBackground from "@/components/StarrySkyBackground.astro";
 import About from "@/features/about/About.astro";
 import Footer from "@/features/footer/Footer.astro";
 import Hero from "@/features/hero/Hero.astro";
-import Timeline from "@/features/timeline/Timeline.astro";
-import WorksList from "@/features/works/WorksList.astro";
+// import Timeline from "@/features/timeline/Timeline.astro";
+// import WorksList from "@/features/works/WorksList.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
@@ -12,13 +12,15 @@ import Layout from "@/layouts/Layout.astro";
 	<StarrySkyBackground />
 	<main>
 		<Hero />
-		<div>
-			<div class="mx-auto grid w-full max-w-prose gap-16 p-4">
-				<About />
+		<div class="py-16">
+			<About />
+			{
+				/*
 				<Timeline />
 				<WorksList />
-			</div>
-			<Footer />
+			*/
+			}
 		</div>
+		<Footer />
 	</main>
 </Layout>
