@@ -2,7 +2,7 @@
 @plugin "tailwindcss-animated";
 
 @theme {
-	--font-zen: "Zen Kurenaido", sans-serif;
+	--font-heading: var(--font-acafad), ui-sans-serif, system-ui, sans-serif;
 	--max-width-prose: 80ch;
 	--bg-night: linear-gradient(to bottom, #000912 0%, #001e30 64.06%, #2d4556 100%);
 }

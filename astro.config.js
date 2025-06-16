@@ -1,7 +1,7 @@
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
-import { defineConfig } from "astro/config";
+import { defineConfig, fontProviders } from "astro/config";
 import icon from "astro-icon";
 
 // https://astro.build/config
@@ -32,5 +32,15 @@ export default defineConfig({
 	output: "static",
 	build: {
 		format: "file",
+	},
+	experimental: {
+		fonts: [
+			{
+				provider: fontProviders.google(),
+				name: "Afacad",
+				cssVariable: "--font-acafad",
+				fallbacks: [],
+			},
+		],
 	},
 });

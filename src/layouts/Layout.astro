@@ -1,6 +1,8 @@
 ---
 import "@/styles/global.css";
 
+import { Font } from "astro:assets";
+
 import Analytics from "@/components/Analytics.astro";
 
 interface Props {
@@ -16,45 +18,33 @@ const { title } = Astro.props;
 		<meta charset="utf8" />
 		<meta name="viewport" content="width=device-width" />
 
-		{/* Google Font */}
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap"
-			rel="stylesheet"
-		/>
+		<Font cssVariable="--font-acafad" preload />
 
 		{/* SEO */}
 		<title>
-			{title ?? "Shuntaro Nishizawa - Web App Delopver"}
+			{title ?? "Shuntaro Nishizawa - Web Frontend Developer"}
 		</title>
 		<meta
 			name="description"
-			content="学生WebエンジニアShuntaro Nishizawaのポートフォリオサイトです。略歴や制作物などを掲載しています。"
+			content="学生WebフロントエンドエンジニアShuntaro Nishizawaのポートフォリオサイトです。略歴や制作物などを掲載しています。"
 		/>
 		<link rel="icon" href="/favicon.ico" sizes="any" />
 		<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 		<link rel="sitemap" href="/sitemap-index.xml" type="application/xml" />
 
 		{/* OGP */}
-		<meta property="og:title" content="Shuntaro Nishizawa - Web App Delopver" />
+		<meta
+			property="og:title"
+			content="Shuntaro Nishizawa - Web Frontend Developer"
+		/>
 		<meta
 			property="og:description"
-			content="学生WebエンジニアShuntaro Nishizawaのポートフォリオサイトです。略歴や制作物などを掲載しています。"
+			content="学生WebフロントエンドエンジニアShuntaro Nishizawaのポートフォリオサイトです。略歴や制作物などを掲載しています。"
 		/>
 		<meta property="og:url" content="https://s2n.tech" />
 		<meta property="og:image" content="https://s2n.tech/og-image.png" />
 		<meta property="og:type" content="website" />
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta
-			property="twitter:title"
-			content="Shuntaro Nishizawa - Web App Delopver"
-		/>
-		<meta
-			property="twitter:description"
-			content="学生WebエンジニアShuntaro Nishizawaのポートフォリオサイトです。略歴や制作物などを掲載しています。"
-		/>
-		<meta property="twitter:image" content="https://s2n.tech/og-image.png" />
 		<meta property="twitter:site" content="@shun_shobon" />
 
 		{/* Analytics */}
@@ -63,7 +53,7 @@ const { title } = Astro.props;
 			cfWebAnalyticsToken={import.meta.env.PUBLIC_CF_WEB_ANALYTICS_TOKEN}
 		/>
 	</head>
-	<body class="font-zen min-h-dvh text-white">
+	<body class="min-h-dvh text-white">
 		<slot />
 	</body>
 </html>
