@@ -1,33 +1,41 @@
 ---
 import { Icon } from "astro-icon/components";
-
-interface Props {
-	level?: 1 | 2 | 3 | 4 | 5 | 6;
-	lineOffset?: number;
-}
-
-const { level = 2, lineOffset = 0.75 } = Astro.props;
-
-const Tag = `h${level}` as const;
 ---
 
-<Tag
-	class="relative mt-16 mb-8 flex justify-center text-center text-6xl"
-	style={{ "--line-offset": `${lineOffset}em` }}
->
-	<span class="relative flex">
-		<span
-			role="presentation"
-			class="absolute top-(--line-offset) left-0 h-[2px] w-[2em] origin-left translate-x-[-0.25em] translate-y-[0.25em] -rotate-45 rounded-[1px] bg-current"
-		></span>
-		<Icon
-			class="animate-duration-[3s] absolute top-[calc(var(--line-offset)-5px)] left-[-5px] h-[10px] w-[10px] translate-x-[calc(-0.25em-5px)] translate-y-[calc(0.25em+5px)] animate-pulse"
-			name="star"
-		/>
-		<span
-			class="[clip-path:polygon(var(--line-offset)_0,100%_0,100%_100%,0_100%,0_var(--line-offset))]"
-		>
-			<slot />
-		</span>
+<h2 class="drop-shadow-neon grid gap-1">
+	<span
+		class="font-heading text-center text-[4rem] leading-none font-bold tracking-[0.12rem] uppercase [text-box:trim-both_cap_alphabetic]"
+		lang="en"
+	>
+		<slot />
 	</span>
-</Tag>
+
+	{/* 月の区切り線 */}
+	<div role="presentation" class="flex items-center gap-1 px-6">
+		<span class="grow rounded-full border"></span>
+		<Icon class="size-2" name="moon" />
+		<span class="grow rounded-full border"></span>
+	</div>
+
+	<span
+		class="text-center text-[0.75rem] leading-none font-bold tracking-[0.0225rem] [text-box:trim-both_cap_alphabetic]"
+	>
+		<slot name="ja" />
+	</span>
+
+	{/* 流れ星の装飾 */}
+	<div
+		role="presentation"
+		class="absolute top-0 left-0 flex translate-x-[-50%] translate-y-[-70%] rotate-[-30deg] items-center gap-1"
+	>
+		<Icon class="size-4" name="star" />
+		<span class="w-12 rounded border"></span>
+	</div>
+	<div
+		role="presentation"
+		class="absolute right-0 bottom-0 flex translate-x-[50%] translate-y-[-20%] rotate-[-30deg] items-center gap-1"
+	>
+		<Icon class="size-4" name="star" />
+		<span class="w-12 rounded border"></span>
+	</div>
+</h2>

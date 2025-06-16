@@ -2,8 +2,11 @@
 import Heading from "@/components/Heading.astro";
 ---
 
-<section>
-	<Heading>About Me</Heading>
+<section class="flex flex-col items-center gap-8">
+	<Heading>
+		About Me
+		<Fragment slot="ja">私について</Fragment>
+	</Heading>
 	<p
 		class="text-center leading-loose *:wrap-anywhere *:break-keep *:[line-break:strict]"
 	>
