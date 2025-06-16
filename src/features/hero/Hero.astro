@@ -1,17 +1,19 @@
 ---
-import { Icon } from "astro-icon/components";
 
-import Links from "./Links.astro";
 ---
 
 <section class="relative grid h-svh w-full place-items-center">
-	<div class="grid justify-items-center gap-8 text-2xl sm:text-4xl">
-		<Icon name="meru" class="h-32 w-32 rounded-full sm:h-64 sm:w-64" />
+	<div class="font-heading drop-shadow-neon grid justify-center gap-6">
 		<hgroup class="text-center">
-			<h1 class="text-4xl sm:text-6xl">Shuntaro Nishizawa</h1>
-			<p>しゅん / SHUN</p>
+			<h1 class="text-[4rem] leading-tight max-sm:text-[2rem]">
+				Shuntaro Nishizawa
+			</h1>
+			<p class="text-[2rem] leading-tight max-sm:text-xl">
+				<span class="text-[0.8em]">しゅん</span> / SHUN
+			</p>
 		</hgroup>
-		<p class="text-center">Web App Developer</p>
-		<Links />
+		<p class="text-center text-2xl leading-tight max-sm:text-xl">
+			Web Frontend Developer
+		</p>
 	</div>
 </section>
