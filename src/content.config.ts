@@ -1,14 +1,15 @@
+import { glob } from "astro/loaders";
 import { defineCollection, reference, z } from "astro:content";
 
 const timelineCollection = defineCollection({
-	type: "content",
+	loader: glob({ pattern: "*.md", base: "./src/content/timeline" }),
 	schema: z.object({
 		title: z.string(),
 	}),
 });
 
 const worksCollection = defineCollection({
-	type: "content",
+	loader: glob({ pattern: "*.md", base: "./src/content/works" }),
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
@@ -27,7 +28,7 @@ const worksCollection = defineCollection({
 });
 
 const technologyCollection = defineCollection({
-	type: "data",
+	loader: glob({ pattern: "*.json", base: "./src/content/technologies" }),
 	schema: z.object({
 		name: z.string(),
 		icon: z.string().optional(),
