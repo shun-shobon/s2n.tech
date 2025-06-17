@@ -4,12 +4,17 @@
 @theme {
 	--font-heading: var(--font-acafad), ui-sans-serif, system-ui, sans-serif;
 	--max-width-prose: 80ch;
-	--bg-night: linear-gradient(to bottom, #000912 0%, #001e30 64.06%, #2d4556 100%);
+	--bg-night: linear-gradient(
+		to bottom,
+		#000912 0%,
+		#001e30 64.06%,
+		#2d4556 100%
+	);
 
 	--leading-*: initial;
 	--leading-tight: 1.25;
 	--leading-normal: 1.5;
-	--leading-relaxed: 2.0;
+	--leading-relaxed: 2;
 
 	--shadow-neon: 0 0 8px #b0ccf1;
 	--drop-shadow-neon: 0 0 8px #b0ccf1;
