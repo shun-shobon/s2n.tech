@@ -1,6 +1,8 @@
 ---
 title: betris
-image: "./2023-07-betris.png"
+description: "RustとWebRTCを用いた1対1のオンライン対戦型テトリスゲーム"
+date: "2023-07-01"
+image: "./betris.png"
 technologies:
   - rust
   - bevy

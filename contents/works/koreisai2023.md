@@ -1,6 +1,8 @@
 ---
 title: 第58回工嶺祭HP
-image: "./2023-10-koreisai.jpg"
+description: "長野高専の学園祭のHP制作"
+date: "2023-10-01"
+image: "./koreisai2023.jpg"
 technologies:
   - typescript
   - react

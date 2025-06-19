@@ -1,6 +1,8 @@
 ---
 title: GENKAINET
-image: "./2021-01-winterhackathon.jpg"
+description: "WebRTCとWebSocketを用いて、ブラウザ上でインターネット通信の仕組みを再現"
+date: "2021-01-01"
+image: "./genkainet.jpg"
 technologies:
   - typescript
   - react

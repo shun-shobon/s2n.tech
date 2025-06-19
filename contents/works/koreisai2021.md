@@ -1,6 +1,8 @@
 ---
 title: 第56回工嶺祭HP
-image: "./2021-10-koreisai.webp"
+description: "長野高専の学園祭のHP制作"
+date: "2021-10-02"
+image: "./koreisai2021.webp"
 technologies:
   - react
   - nextjs

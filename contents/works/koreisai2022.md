@@ -1,6 +1,8 @@
 ---
 title: 第57回工嶺祭HP
-image: "./2022-10-koreisai.webp"
+description: "長野高専の学園祭のHP制作"
+date: "2022-10-01"
+image: "./koreisai2022.webp"
 technologies:
   - react
   - nextjs

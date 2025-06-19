@@ -1,6 +1,8 @@
 ---
 title: ARLD
-image: "./2021-10-procon.jpg"
+description: "ARとブロックプログラミングを組み合わせた教育向けアプリケーション"
+date: "2021-10-01"
+image: "./arld.jpg"
 technologies:
   - typescript
   - react

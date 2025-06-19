@@ -1,6 +1,8 @@
 ---
 title: BULLETS
-image: "./2022-08-bullets.jpg"
+description: "C言語で書かれたシューティングゲーム"
+date: "2022-08-01"
+image: "./bullets.jpg"
 technologies:
   - c
   - opengl

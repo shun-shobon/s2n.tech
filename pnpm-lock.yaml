@@ -20,6 +20,9 @@ importers:
       '@tailwindcss/vite':
         specifier: 4.1.10
         version: 4.1.10(vite@6.3.5(@types/node@24.0.1)(jiti@2.4.2)(lightningcss@1.30.1)(yaml@2.8.0))
+      confbox:
+        specifier: 0.2.2
+        version: 0.2.2
       temporal-polyfill:
         specifier: 0.3.0
         version: 0.3.0

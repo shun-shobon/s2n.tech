@@ -1,6 +1,8 @@
 ---
 title: blog.s2n.tech
-image: "./2023-03-blog.png"
+description: "自作のブログサイト"
+date: "2023-03-01"
+image: "./blog-s2n-tech.png"
 technologies:
   - typescript
   - react

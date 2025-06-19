@@ -1,0 +1,83 @@
+[[technologies]]
+id = "arjs"
+name = "AR.js"
+
+[[technologies]]
+id = "aws"
+name = "AWS"
+
+[[technologies]]
+id = "bevy"
+name = "Bevy"
+
+[[technologies]]
+id = "c"
+name = "C"
+
+[[technologies]]
+id = "chakraui"
+name = "Chakra UI"
+
+[[technologies]]
+id = "fastify"
+name = "Fastify"
+
+[[technologies]]
+id = "firebase"
+name = "Firebase"
+
+[[technologies]]
+id = "flask"
+name = "Flask"
+
+[[technologies]]
+id = "leaflet"
+name = "Leaflet"
+
+[[technologies]]
+id = "nextjs"
+name = "Next.js"
+
+[[technologies]]
+id = "opengl"
+name = "OpenGL"
+
+[[technologies]]
+id = "python"
+name = "Python"
+
+[[technologies]]
+id = "react"
+name = "React"
+
+[[technologies]]
+id = "remix"
+name = "Remix"
+
+[[technologies]]
+id = "rust"
+name = "Rust"
+
+[[technologies]]
+id = "supabase"
+name = "Supabase"
+
+[[technologies]]
+id = "threejs"
+name = "Three.js"
+
+[[technologies]]
+id = "typescript"
+name = "TypeScript"
+
+[[technologies]]
+id = "unity"
+name = "Unity"
+
+[[technologies]]
+id = "webrtc"
+name = "WebRTC"
+
+[[technologies]]
+id = "websocket"
+name = "WebSocket"

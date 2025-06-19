@@ -4,7 +4,7 @@ import About from "@/features/about/About.astro";
 import Footer from "@/features/footer/Footer.astro";
 import Hero from "@/features/hero/Hero.astro";
 // import Timeline from "@/features/timeline/Timeline.astro";
-// import WorksList from "@/features/works/WorksList.astro";
+import WorksList from "@/features/works/WorksList.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
@@ -12,12 +12,12 @@ import Layout from "@/layouts/Layout.astro";
 	<StarrySkyBackground />
 	<main>
 		<Hero />
-		<div class="py-16">
+		<div class="grid gap-16 py-16">
 			<About />
+			<WorksList />
 			{
 				/*
 				<Timeline />
-				<WorksList />
 			*/
 			}
 		</div>

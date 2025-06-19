@@ -4,56 +4,49 @@ import { getCollection } from "astro:content";
 import { Temporal } from "temporal-polyfill";
 
 import Heading from "@/components/Heading.astro";
-import * as queries from "@/styles/media-queries.css";
-
-import { slugToYearMonth } from "../utils";
-import Entry from "./Entry.astro";
 
 const entries = await getCollection("works").then((entries) =>
 	entries.sort(
 		(a, b) =>
-			-Temporal.PlainYearMonth.compare(
-				slugToYearMonth(a.slug),
-				slugToYearMonth(b.slug),
+			-Temporal.PlainDate.compare(
+				Temporal.PlainDate.from(a.data.date),
+				Temporal.PlainDate.from(b.data.date),
 			),
 	),
 );
 ---
 
-<section>
-	<Heading>Works</Heading>
-	<ul class="grid gap-4 sm:grid-cols-2">
+<section class="container mx-auto flex flex-col items-center gap-8 px-4">
+	<Heading>
+		Works
+		<Fragment slot="ja">作ったもの</Fragment>
+	</Heading>
+	<div class="grid w-full gap-12 max-lg:gap-8 sm:grid-cols-2 2xl:grid-cols-3">
 		{
 			entries.map((entry) => (
-				<li class="work-card">
-					<button
-						class="work-card-button w-full"
-						id={`work-card-button-${entry.slug}`}
-						aria-labelledby={`work-card-title-${entry.slug}`}
-						aria-controls={`work-card-modal-${entry.slug}`}
-					>
-						<article class="group grid aspect-video w-full overflow-hidden">
-							<Image
-								src={entry.data.image}
-								alt=""
-								widths={[300, 600, 1200, entry.data.image.width]}
-								sizes={`${queries.sm} 300px, 600px`}
-								quality="low"
-								draggable="false"
-								class="col-span-full row-span-full aspect-video h-auto w-full object-cover transition-transform duration-200 ease-in-out group-hover:scale-110"
-							/>
-							<h3
-								id={`work-card-title-${entry.slug}`}
-								class="z-10 col-span-full row-span-full w-full self-end overflow-hidden bg-[linear-gradient(transparent,40%,rgb(0_0_0/0.8))] p-2 pt-4 text-start text-2xl text-nowrap text-ellipsis"
-							>
+				<article class="relative">
+					<div class="shadow-neon flex h-full flex-col gap-2 overflow-hidden rounded-tl-2xl rounded-tr-4xl rounded-br-2xl rounded-bl-4xl border pb-6">
+						<Image
+							src={entry.data.image}
+							alt=""
+							widths={[300, 600, 1200, entry.data.image.width]}
+							sizes="auto"
+							quality="low"
+							draggable="false"
+							class="aspect-video h-auto w-full object-cover"
+						/>
+						<div class="text-shadow-neon flex grow flex-col gap-1 px-6 max-lg:px-4">
+							<h3 class="text-[1.5rem] leading-normal font-semibold max-lg:text-xl">
 								{entry.data.title}
 							</h3>
-						</article>
-					</button>
-					<Entry id={`work-card-modal-${entry.slug}`} entry={entry} />
-				</li>
+							<p class="grow leading-tight">{entry.data.description}</p>
+						</div>
+					</div>
+
+					<div class="shadow-neon absolute top-4 right-0 w-32 translate-x-[30%] rotate-[35deg] rounded-full border max-lg:w-24" />
+					<div class="shadow-neon absolute bottom-4 left-0 w-32 translate-x-[-30%] rotate-[35deg] rounded-full border max-lg:w-24" />
+				</article>
 			))
 		}
-	</ul>
+	</div>
 </section>
-<script src="./WorksList.ts"></script>

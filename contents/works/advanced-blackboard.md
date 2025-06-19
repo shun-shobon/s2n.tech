@@ -1,6 +1,8 @@
 ---
 title: Advanced Blackboard
-image: "./2020-08-hacku.jpg"
+description: "タブレットだけで使えるお手軽電子黒板"
+date: "2020-08-01"
+image: "./advanced-blackboard.jpg"
 technologies:
   - typescript
   - react

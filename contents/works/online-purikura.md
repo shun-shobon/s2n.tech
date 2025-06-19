@@ -1,6 +1,8 @@
 ---
 title: オンラインプリクラ
-image: "./2021-03-hacku.jpeg"
+description: "WebRTCを用いたオンラインでのプリクラ撮影サービス"
+date: "2021-03-01"
+image: "./online-purikura.jpeg"
 technologies:
   - react
   - webrtc
@@ -9,7 +11,7 @@ platforms:
 links:
   - name: Repository
     url: https://github.com/ProvinDevs/2020vol5-frontend
-  - name: Resentation
+  - name: Presentation
     url: https://youtu.be/KG09AJPwhqo?t=1180
 ---
 

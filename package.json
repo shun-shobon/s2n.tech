@@ -22,6 +22,7 @@
 		"@iconify-json/material-symbols-light": "1.2.26",
 		"@iconify-json/simple-icons": "1.2.38",
 		"@tailwindcss/vite": "4.1.10",
+		"confbox": "0.2.2",
 		"temporal-polyfill": "0.3.0"
 	},
 	"devDependencies": {

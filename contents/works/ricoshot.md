@@ -1,6 +1,8 @@
 ---
 title: RicoShot
-image: "./2024-11-nokosai.png"
+description: "4vs4のオンラインシューティングゲーム"
+date: "2024-11-01"
+image: "./ricoshot.png"
 technologies:
   - typescript
   - react

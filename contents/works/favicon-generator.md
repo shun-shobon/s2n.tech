@@ -1,6 +1,8 @@
 ---
 title: SVG Favicon Generator
-image: "./2023-05-favicon-generator.jpeg"
+description: "SVG画像から各種ファビコン用画像を生成するWebアプリケーション"
+date: "2023-05-01"
+image: "./favicon-generator.jpeg"
 technologies:
   - typescript
   - react

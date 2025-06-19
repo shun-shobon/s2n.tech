@@ -1,6 +1,8 @@
 ---
 title: Who is?
-image: "./2024-09-hacku.jpeg"
+description: "顔とプロフィールを紐づけるWebアプリケーション"
+date: "2024-09-01"
+image: "./whois.jpeg"
 technologies:
   - typescript
   - react
