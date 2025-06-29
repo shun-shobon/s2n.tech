@@ -1,6 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
 import { Temporal } from "temporal-polyfill";
 
 import Heading from "@/components/Heading.astro";
@@ -21,11 +22,11 @@ const entries = await getCollection("works").then((entries) =>
 		Works
 		<Fragment slot="ja">作ったもの</Fragment>
 	</Heading>
-	<div class="grid w-full gap-12 max-lg:gap-8 sm:grid-cols-2 2xl:grid-cols-3">
+	<div class="grid w-full gap-6 sm:grid-cols-2 lg:gap-8 xl:grid-cols-3">
 		{
 			entries.map((entry) => (
 				<article class="relative">
-					<div class="shadow-neon flex h-full flex-col gap-2 overflow-hidden rounded-tl-2xl rounded-tr-4xl rounded-br-2xl rounded-bl-4xl border pb-6">
+					<div class="shadow-neon flex h-full flex-col gap-2 overflow-hidden rounded-xl border pb-4">
 						<Image
 							src={entry.data.image}
 							alt=""
@@ -43,8 +44,10 @@ const entries = await getCollection("works").then((entries) =>
 						</div>
 					</div>
 
-					<div class="shadow-neon absolute top-4 right-0 w-32 translate-x-[30%] rotate-[35deg] rounded-full border max-lg:w-24" />
-					<div class="shadow-neon absolute bottom-4 left-0 w-32 translate-x-[-30%] rotate-[35deg] rounded-full border max-lg:w-24" />
+					<Icon
+						name="6star"
+						class="drop-shadow-neon absolute top-0 left-0 size-8 translate-x-[-45%] translate-y-[-45%] rotate-[15deg]"
+					/>
 				</article>
 			))
 		}
