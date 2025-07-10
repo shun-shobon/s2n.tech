@@ -15,7 +15,11 @@ export default defineConfig({
 	site: "https://s2n.tech",
 	integrations: [
 		mdx(),
-		icon(),
+		icon({
+			include: {
+				"simple-icons": ["github", "x"],
+			},
+		}),
 		sitemap(),
 		partytown({
 			config: {

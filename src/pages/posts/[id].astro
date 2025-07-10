@@ -1,6 +1,9 @@
 ---
+import { Image } from "astro:assets";
 import { render } from "astro:content";
+import { Icon } from "astro-icon/components";
 
+import MyIcon from "@/assets/my-icon.png";
 import Tag from "@/components/Tag.astro";
 import { getPost, getPosts } from "@/features/posts/repository";
 import BasicLayout from "@/layouts/BasicLayout.astro";
@@ -69,6 +72,45 @@ const { Content, headings } = await render(post);
 				class="prose prose-neutral bg-background-primary border-border w-full max-w-4xl min-w-0 rounded-2xl border p-4 shadow-lg sm:px-8 sm:py-6"
 			>
 				<Content />
+				<hr />
+				<h2>書いた人</h2>
+				<div class="not-prose flex items-center gap-4">
+					<a href="/">
+						<Image
+							src={MyIcon}
+							alt=""
+							widths={[64, 128]}
+							sizes="64px"
+							class="border-border size-16 rounded-full border"
+						/>
+					</a>
+					<div class="flex flex-col gap-2">
+						<div class="flex flex-col">
+							<a href="/" class="text-lg font-bold">しゅん🌙</a>
+							<a href="/" class="text-xs">@shun_shobon</a>
+						</div>
+						<div class="flex gap-2">
+							<a
+								href="https://github.com/shun-shobon"
+								target="_blank"
+								class="text-text-secondary hover:text-text-primary transition-colors"
+							>
+								<Icon
+									name="simple-icons:github"
+									class="size-5"
+									title="GitHub"
+								/>
+							</a>
+							<a
+								href="https://x.com/shun_shobon"
+								target="_blank"
+								class="text-text-secondary hover:text-text-primary transition-colors"
+							>
+								<Icon name="simple-icons:x" class="size-5" title="X" />
+							</a>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div
 				class="bg-background-primary border-border sticky top-8 hidden max-h-[calc(100dvh-var(--spacing)*16)] w-full max-w-xs gap-2 overflow-y-auto rounded-2xl border p-4 shadow-lg xl:grid"
