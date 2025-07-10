@@ -28,14 +28,14 @@ updatedAt: "2024-06-20"
 
 ```json
 {
-  "editor.formatOnSave": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "editor.tabSize": 2,
-  "editor.detectIndentation": false,
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000
+	"editor.formatOnSave": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	},
+	"editor.tabSize": 2,
+	"editor.detectIndentation": false,
+	"files.autoSave": "afterDelay",
+	"files.autoSaveDelay": 1000
 }
 ```
 
@@ -125,31 +125,31 @@ name: CI
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [main, develop]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'
-          cache: 'npm'
-      
+          node-version: "18"
+          cache: "npm"
+
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Run tests
         run: npm test
-      
+
       - name: Run ESLint
         run: npm run lint
-      
+
       - name: Build project
         run: npm run build
 ```
@@ -163,16 +163,16 @@ jobs:
 ```json
 // .eslintrc.json
 {
-  "extends": [
-    "eslint:recommended",
-    "@typescript-eslint/recommended",
-    "react-hooks"
-  ],
-  "rules": {
-    "no-console": "warn",
-    "no-unused-vars": "error",
-    "prefer-const": "error"
-  }
+	"extends": [
+		"eslint:recommended",
+		"@typescript-eslint/recommended",
+		"react-hooks"
+	],
+	"rules": {
+		"no-console": "warn",
+		"no-unused-vars": "error",
+		"prefer-const": "error"
+	}
 }
 ```
 
@@ -208,22 +208,22 @@ yarn dev
 
 ```javascript
 // components/Button.test.js
-import { render, screen, fireEvent } from '@testing-library/react';
-import Button from './Button';
+import { render, screen, fireEvent } from "@testing-library/react";
+import Button from "./Button";
 
-describe('Button component', () => {
-  test('renders button with text', () => {
-    render(<Button>Click me</Button>);
-    expect(screen.getByText('Click me')).toBeInTheDocument();
-  });
+describe("Button component", () => {
+	test("renders button with text", () => {
+		render(<Button>Click me</Button>);
+		expect(screen.getByText("Click me")).toBeInTheDocument();
+	});
 
-  test('calls onClick when clicked', () => {
-    const handleClick = jest.fn();
-    render(<Button onClick={handleClick}>Click me</Button>);
-    
-    fireEvent.click(screen.getByText('Click me'));
-    expect(handleClick).toHaveBeenCalledTimes(1);
-  });
+	test("calls onClick when clicked", () => {
+		const handleClick = jest.fn();
+		render(<Button onClick={handleClick}>Click me</Button>);
+
+		fireEvent.click(screen.getByText("Click me"));
+		expect(handleClick).toHaveBeenCalledTimes(1);
+	});
 });
 ```
 
@@ -233,16 +233,16 @@ describe('Button component', () => {
 
 ```javascript
 // cypress/integration/user-flow.spec.js
-describe('User Authentication Flow', () => {
-  it('should allow user to login', () => {
-    cy.visit('/login');
-    cy.get('[data-testid=email-input]').type('user@example.com');
-    cy.get('[data-testid=password-input]').type('password123');
-    cy.get('[data-testid=login-button]').click();
-    
-    cy.url().should('include', '/dashboard');
-    cy.get('[data-testid=welcome-message]').should('be.visible');
-  });
+describe("User Authentication Flow", () => {
+	it("should allow user to login", () => {
+		cy.visit("/login");
+		cy.get("[data-testid=email-input]").type("user@example.com");
+		cy.get("[data-testid=password-input]").type("password123");
+		cy.get("[data-testid=login-button]").click();
+
+		cy.url().should("include", "/dashboard");
+		cy.get("[data-testid=welcome-message]").should("be.visible");
+	});
 });
 ```
 
@@ -267,17 +267,17 @@ describe('User Authentication Flow', () => {
 import * as Sentry from "@sentry/react";
 
 Sentry.init({
-  dsn: "YOUR_SENTRY_DSN",
-  environment: process.env.NODE_ENV,
+	dsn: "YOUR_SENTRY_DSN",
+	environment: process.env.NODE_ENV,
 });
 
 // エラーの自動キャッチ
 function App() {
-  return (
-    <Sentry.ErrorBoundary fallback={ErrorFallback}>
-      <MyApp />
-    </Sentry.ErrorBoundary>
-  );
+	return (
+		<Sentry.ErrorBoundary fallback={ErrorFallback}>
+			<MyApp />
+		</Sentry.ErrorBoundary>
+	);
 }
 ```
 
@@ -301,9 +301,9 @@ vercel --prod
 ```javascript
 // 本番環境での設定例
 const config = {
-  apiUrl: process.env.NEXT_PUBLIC_API_URL,
-  analyticsId: process.env.NEXT_PUBLIC_GA_ID,
-  sentryDsn: process.env.SENTRY_DSN,
+	apiUrl: process.env.NEXT_PUBLIC_API_URL,
+	analyticsId: process.env.NEXT_PUBLIC_GA_ID,
+	sentryDsn: process.env.SENTRY_DSN,
 };
 ```
 
@@ -315,14 +315,14 @@ const config = {
 
 ```javascript
 // Google Analytics 設定
-import { gtag } from 'ga-gtag';
+import { gtag } from "ga-gtag";
 
 export function trackEvent(action, category, label, value) {
-  gtag('event', action, {
-    event_category: category,
-    event_label: label,
-    value: value,
-  });
+	gtag("event", action, {
+		event_category: category,
+		event_label: label,
+		value: value,
+	});
 }
 ```
 
@@ -333,7 +333,7 @@ export function trackEvent(action, category, label, value) {
 Core Web Vitalsの監視：
 
 - **LCP (Largest Contentful Paint)**: 2.5秒以下
-- **FID (First Input Delay)**: 100ms以下  
+- **FID (First Input Delay)**: 100ms以下
 - **CLS (Cumulative Layout Shift)**: 0.1以下
 
 ## 継続的改善
@@ -401,4 +401,4 @@ updates:
 ![ワークフロー全体図](./complete-workflow.png)
 
 このワークフローを参考に、あなたのチームに最適な開発プロセスを構築してください。
-継続的な改善を心がけることで、より良い開発体験と高品質なプロダクトを実現できます！ 
+継続的な改善を心がけることで、より良い開発体験と高品質なプロダクトを実現できます！

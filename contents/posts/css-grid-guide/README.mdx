@@ -22,13 +22,13 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 ```css
 /* Grid Container（親要素）*/
 .grid-container {
-  display: grid;
-  /* グリッドを有効化 */
+	display: grid;
+	/* グリッドを有効化 */
 }
 
 /* Grid Item（子要素）*/
 .grid-item {
-  /* 子要素は自動的にGrid Itemになる */
+	/* 子要素は自動的にGrid Itemになる */
 }
 ```
 
@@ -36,21 +36,21 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .grid-container {
-  display: grid;
-  
-  /* 列を定義 */
-  grid-template-columns: 1fr 1fr 1fr; /* 3列均等 */
-  /* または */
-  grid-template-columns: repeat(3, 1fr);
-  
-  /* 行を定義 */
-  grid-template-rows: 200px auto 100px;
-  
-  /* 隙間を設定 */
-  gap: 20px; /* 行と列の両方 */
-  /* または */
-  row-gap: 20px;
-  column-gap: 10px;
+	display: grid;
+
+	/* 列を定義 */
+	grid-template-columns: 1fr 1fr 1fr; /* 3列均等 */
+	/* または */
+	grid-template-columns: repeat(3, 1fr);
+
+	/* 行を定義 */
+	grid-template-rows: 200px auto 100px;
+
+	/* 隙間を設定 */
+	gap: 20px; /* 行と列の両方 */
+	/* または */
+	row-gap: 20px;
+	column-gap: 10px;
 }
 ```
 
@@ -60,22 +60,22 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .grid-examples {
-  display: grid;
-  
-  /* 固定サイズ */
-  grid-template-columns: 200px 300px 150px;
-  
-  /* 比率（fractional unit）*/
-  grid-template-columns: 1fr 2fr 1fr; /* 1:2:1の比率 */
-  
-  /* 混合 */
-  grid-template-columns: 200px 1fr auto; /* 固定、可変、コンテンツサイズ */
-  
-  /* 最小・最大サイズ */
-  grid-template-columns: minmax(200px, 1fr) 300px;
-  
-  /* 自動フィット */
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	display: grid;
+
+	/* 固定サイズ */
+	grid-template-columns: 200px 300px 150px;
+
+	/* 比率（fractional unit）*/
+	grid-template-columns: 1fr 2fr 1fr; /* 1:2:1の比率 */
+
+	/* 混合 */
+	grid-template-columns: 200px 1fr auto; /* 固定、可変、コンテンツサイズ */
+
+	/* 最小・最大サイズ */
+	grid-template-columns: minmax(200px, 1fr) 300px;
+
+	/* 自動フィット */
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 ```
 
@@ -83,19 +83,25 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .repeat-examples {
-  display: grid;
-  
-  /* 3回繰り返し */
-  grid-template-columns: repeat(3, 1fr);
-  /* ↑ これは下記と同じ */
-  /* grid-template-columns: 1fr 1fr 1fr; */
-  
-  /* パターンの繰り返し */
-  grid-template-columns: repeat(2, 200px 1fr); /* 200px 1fr 200px 1fr */
-  
-  /* 自動繰り返し */
-  grid-template-columns: repeat(auto-fill, 200px); /* 200pxの列を可能な限り配置 */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* レスポンシブ対応 */
+	display: grid;
+
+	/* 3回繰り返し */
+	grid-template-columns: repeat(3, 1fr);
+	/* ↑ これは下記と同じ */
+	/* grid-template-columns: 1fr 1fr 1fr; */
+
+	/* パターンの繰り返し */
+	grid-template-columns: repeat(2, 200px 1fr); /* 200px 1fr 200px 1fr */
+
+	/* 自動繰り返し */
+	grid-template-columns: repeat(
+		auto-fill,
+		200px
+	); /* 200pxの列を可能な限り配置 */
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(200px, 1fr)
+	); /* レスポンシブ対応 */
 }
 ```
 
@@ -106,31 +112,31 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 ```css
 /* Grid Containerの設定 */
 .grid-layout {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 200px);
-  gap: 10px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(3, 200px);
+	gap: 10px;
 }
 
 /* 個別のアイテム配置 */
 .header {
-  grid-column: 1 / 5; /* 1列目から5列目まで（1-4列をスパン）*/
-  grid-row: 1;
+	grid-column: 1 / 5; /* 1列目から5列目まで（1-4列をスパン）*/
+	grid-row: 1;
 }
 
 .sidebar {
-  grid-column: 1;
-  grid-row: 2 / 4; /* 2行目から4行目まで */
+	grid-column: 1;
+	grid-row: 2 / 4; /* 2行目から4行目まで */
 }
 
 .main {
-  grid-column: 2 / 5;
-  grid-row: 2;
+	grid-column: 2 / 5;
+	grid-row: 2;
 }
 
 .footer {
-  grid-column: 2 / 5;
-  grid-row: 3;
+	grid-column: 2 / 5;
+	grid-row: 3;
 }
 ```
 
@@ -138,18 +144,18 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .grid-item {
-  /* grid-column-start / grid-column-end */
-  grid-column: 1 / 3;
-  
-  /* grid-row-start / grid-row-end */
-  grid-row: 2 / 4;
-  
-  /* 全体をまとめて指定 */
-  grid-area: 2 / 1 / 4 / 3; /* row-start / column-start / row-end / column-end */
-  
-  /* span記法 */
-  grid-column: span 2; /* 2列分のスパン */
-  grid-row: span 3; /* 3行分のスパン */
+	/* grid-column-start / grid-column-end */
+	grid-column: 1 / 3;
+
+	/* grid-row-start / grid-row-end */
+	grid-row: 2 / 4;
+
+	/* 全体をまとめて指定 */
+	grid-area: 2 / 1 / 4 / 3; /* row-start / column-start / row-end / column-end */
+
+	/* span記法 */
+	grid-column: span 2; /* 2列分のスパン */
+	grid-row: span 3; /* 3行分のスパン */
 }
 ```
 
@@ -159,58 +165,68 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .grid-layout {
-  display: grid;
-  grid-template-columns: 200px 1fr 200px;
-  grid-template-rows: auto 1fr auto;
-  grid-template-areas:
-    "header header header"
-    "sidebar main aside"
-    "footer footer footer";
-  gap: 20px;
-  min-height: 100vh;
+	display: grid;
+	grid-template-columns: 200px 1fr 200px;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+		"header header header"
+		"sidebar main aside"
+		"footer footer footer";
+	gap: 20px;
+	min-height: 100vh;
 }
 
-.header { grid-area: header; }
-.sidebar { grid-area: sidebar; }
-.main { grid-area: main; }
-.aside { grid-area: aside; }
-.footer { grid-area: footer; }
+.header {
+	grid-area: header;
+}
+.sidebar {
+	grid-area: sidebar;
+}
+.main {
+	grid-area: main;
+}
+.aside {
+	grid-area: aside;
+}
+.footer {
+	grid-area: footer;
+}
 ```
 
 ### レスポンシブレイアウト
 
 ```css
 .responsive-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-    "header"
-    "main"
-    "sidebar"
-    "footer";
-  gap: 20px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"sidebar"
+		"footer";
+	gap: 20px;
 }
 
 /* タブレット以上 */
 @media (min-width: 768px) {
-  .responsive-grid {
-    grid-template-columns: 200px 1fr;
-    grid-template-areas:
-      "header header"
-      "sidebar main"
-      "footer footer";
-  }
+	.responsive-grid {
+		grid-template-columns: 200px 1fr;
+		grid-template-areas:
+			"header header"
+			"sidebar main"
+			"footer footer";
+	}
 }
 
 /* デスクトップ */
 @media (min-width: 1024px) {
-  .responsive-grid {
-    grid-template-columns: 200px 1fr 200px;
-    grid-template-areas:
-      "header header header"
-      "sidebar main aside"
-      "footer footer footer";
-  }
+	.responsive-grid {
+		grid-template-columns: 200px 1fr 200px;
+		grid-template-areas:
+			"header header header"
+			"sidebar main aside"
+			"footer footer footer";
+	}
 }
 ```
 
@@ -220,36 +236,36 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+	padding: 20px;
 }
 
 .card {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  
-  /* 内部もGridレイアウト */
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  gap: 15px;
+	background: white;
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	padding: 20px;
+
+	/* 内部もGridレイアウト */
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+	gap: 15px;
 }
 
 .card-header {
-  font-size: 1.25rem;
-  font-weight: bold;
+	font-size: 1.25rem;
+	font-weight: bold;
 }
 
 .card-content {
-  /* flexが1frの役割を果たす */
+	/* flexが1frの役割を果たす */
 }
 
 .card-footer {
-  border-top: 1px solid #eee;
-  padding-top: 15px;
+	border-top: 1px solid #eee;
+	padding-top: 15px;
 }
 ```
 
@@ -257,42 +273,42 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .dashboard {
-  display: grid;
-  grid-template-columns: 250px 1fr;
-  grid-template-rows: 60px 1fr;
-  grid-template-areas:
-    "sidebar header"
-    "sidebar main";
-  height: 100vh;
+	display: grid;
+	grid-template-columns: 250px 1fr;
+	grid-template-rows: 60px 1fr;
+	grid-template-areas:
+		"sidebar header"
+		"sidebar main";
+	height: 100vh;
 }
 
 .dashboard-header {
-  grid-area: header;
-  background: #f8f9fa;
-  border-bottom: 1px solid #dee2e6;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  padding: 0 20px;
+	grid-area: header;
+	background: #f8f9fa;
+	border-bottom: 1px solid #dee2e6;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	padding: 0 20px;
 }
 
 .dashboard-sidebar {
-  grid-area: sidebar;
-  background: #343a40;
-  color: white;
-  overflow-y: auto;
+	grid-area: sidebar;
+	background: #343a40;
+	color: white;
+	overflow-y: auto;
 }
 
 .dashboard-main {
-  grid-area: main;
-  padding: 20px;
-  overflow-y: auto;
-  
-  /* メインエリア内もGrid */
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  align-content: start;
+	grid-area: main;
+	padding: 20px;
+	overflow-y: auto;
+
+	/* メインエリア内もGrid */
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	gap: 20px;
+	align-content: start;
 }
 ```
 
@@ -300,51 +316,51 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .magazine-layout {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(8, 100px);
-  gap: 10px;
-  max-width: 1200px;
-  margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(8, 100px);
+	gap: 10px;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 .hero-article {
-  grid-column: 1 / 8;
-  grid-row: 1 / 5;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  display: grid;
-  place-items: center;
+	grid-column: 1 / 8;
+	grid-row: 1 / 5;
+	background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+	color: white;
+	display: grid;
+	place-items: center;
 }
 
 .featured-article {
-  grid-column: 8 / 13;
-  grid-row: 1 / 3;
-  background: #f8f9fa;
+	grid-column: 8 / 13;
+	grid-row: 1 / 3;
+	background: #f8f9fa;
 }
 
 .side-article {
-  grid-column: 8 / 13;
-  grid-row: 3 / 5;
-  background: #e9ecef;
+	grid-column: 8 / 13;
+	grid-row: 3 / 5;
+	background: #e9ecef;
 }
 
 .small-article-1 {
-  grid-column: 1 / 5;
-  grid-row: 5 / 7;
-  background: #dee2e6;
+	grid-column: 1 / 5;
+	grid-row: 5 / 7;
+	background: #dee2e6;
 }
 
 .small-article-2 {
-  grid-column: 5 / 9;
-  grid-row: 5 / 7;
-  background: #ced4da;
+	grid-column: 5 / 9;
+	grid-row: 5 / 7;
+	background: #ced4da;
 }
 
 .small-article-3 {
-  grid-column: 9 / 13;
-  grid-row: 5 / 7;
-  background: #adb5bd;
+	grid-column: 9 / 13;
+	grid-row: 5 / 7;
+	background: #adb5bd;
 }
 ```
 
@@ -354,18 +370,18 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(2, 150px);
-  gap: 20px;
-  height: 500px;
-  
-  /* Grid全体の配置 */
-  justify-content: center; /* 水平方向：start, end, center, space-between, space-around, space-evenly */
-  align-content: center; /* 垂直方向：start, end, center, space-between, space-around, space-evenly */
-  
-  /* ショートハンド */
-  place-content: center; /* align-content と justify-content をまとめて指定 */
+	display: grid;
+	grid-template-columns: repeat(3, 200px);
+	grid-template-rows: repeat(2, 150px);
+	gap: 20px;
+	height: 500px;
+
+	/* Grid全体の配置 */
+	justify-content: center; /* 水平方向：start, end, center, space-between, space-around, space-evenly */
+	align-content: center; /* 垂直方向：start, end, center, space-between, space-around, space-evenly */
+
+	/* ショートハンド */
+	place-content: center; /* align-content と justify-content をまとめて指定 */
 }
 ```
 
@@ -373,24 +389,24 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  
-  /* すべてのアイテム内のコンテンツ配置 */
-  justify-items: center; /* 水平方向：start, end, center, stretch */
-  align-items: center; /* 垂直方向：start, end, center, stretch */
-  
-  /* ショートハンド */
-  place-items: center; /* align-items と justify-items をまとめて指定 */
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+
+	/* すべてのアイテム内のコンテンツ配置 */
+	justify-items: center; /* 水平方向：start, end, center, stretch */
+	align-items: center; /* 垂直方向：start, end, center, stretch */
+
+	/* ショートハンド */
+	place-items: center; /* align-items と justify-items をまとめて指定 */
 }
 
 .grid-item {
-  /* 個別のアイテムで上書き */
-  justify-self: end;
-  align-self: start;
-  
-  /* ショートハンド */
-  place-self: start end;
+	/* 個別のアイテムで上書き */
+	justify-self: end;
+	align-self: start;
+
+	/* ショートハンド */
+	place-self: start end;
 }
 ```
 
@@ -400,18 +416,18 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .main-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 20px;
 }
 
 .nested-grid {
-  grid-column: span 2;
-  
-  /* 親グリッドの列を継承 */
-  display: grid;
-  grid-template-columns: subgrid;
-  gap: 10px;
+	grid-column: span 2;
+
+	/* 親グリッドの列を継承 */
+	display: grid;
+	grid-template-columns: subgrid;
+	gap: 10px;
 }
 ```
 
@@ -419,20 +435,20 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .dynamic-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 20px;
 }
 
 /* アイテム数に応じて調整 */
 .dynamic-grid:has(.item:nth-child(1):last-child) {
-  /* 1つだけの場合 */
-  grid-template-columns: 1fr;
+	/* 1つだけの場合 */
+	grid-template-columns: 1fr;
 }
 
 .dynamic-grid:has(.item:nth-child(2):last-child) {
-  /* 2つの場合 */
-  grid-template-columns: 1fr 1fr;
+	/* 2つの場合 */
+	grid-template-columns: 1fr 1fr;
 }
 ```
 
@@ -440,27 +456,27 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 
 ```css
 .animated-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  transition: all 0.3s ease;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	transition: all 0.3s ease;
 }
 
 .grid-item {
-  transition: all 0.3s ease;
-  grid-column: span 1;
+	transition: all 0.3s ease;
+	grid-column: span 1;
 }
 
 .grid-item:hover {
-  grid-column: span 2;
-  transform: scale(1.05);
+	grid-column: span 2;
+	transform: scale(1.05);
 }
 
 /* レイアウト変更アニメーション */
 @media (max-width: 768px) {
-  .animated-grid {
-    grid-template-columns: 1fr;
-  }
+	.animated-grid {
+		grid-template-columns: 1fr;
+	}
 }
 ```
 
@@ -471,14 +487,24 @@ CSS Gridは、2次元レイアウトシステムで、行と列を使って複�
 ```css
 /* 開発時に便利なスタイル */
 .grid-debug {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  
-  /* グリッドラインを表示（デバッグ用） */
-  background-image: 
-    linear-gradient(to right, rgba(255, 0, 0, 0.1) 0%, rgba(255, 0, 0, 0.1) 100%),
-    linear-gradient(to bottom, rgba(0, 0, 255, 0.1) 0%, rgba(0, 0, 255, 0.1) 100%);
-  background-size: calc(100% / 12) 100%, 100% 50px;
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+
+	/* グリッドラインを表示（デバッグ用） */
+	background-image:
+		linear-gradient(
+			to right,
+			rgba(255, 0, 0, 0.1) 0%,
+			rgba(255, 0, 0, 0.1) 100%
+		),
+		linear-gradient(
+			to bottom,
+			rgba(0, 0, 255, 0.1) 0%,
+			rgba(0, 0, 255, 0.1) 100%
+		);
+	background-size:
+		calc(100% / 12) 100%,
+		100% 50px;
 }
 ```
 
@@ -494,22 +520,22 @@ https://cssgridgarden.com/
 ```css
 /* Grid対応チェック */
 @supports (display: grid) {
-  .modern-layout {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
+	.modern-layout {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+	}
 }
 
 /* フォールバック */
 @supports not (display: grid) {
-  .modern-layout {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .modern-layout .item {
-    flex: 0 0 33.333%;
-  }
+	.modern-layout {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.modern-layout .item {
+		flex: 0 0 33.333%;
+	}
 }
 ```
 
@@ -524,4 +550,4 @@ CSS Gridを使うことで：
 
 CSS Gridは現代のWebレイアウトには欠かせない技術です。
 Flexboxと組み合わせることで、より柔軟で美しいレイアウトを作成できます。
-ぜひ実際のプロジェクトで活用してみてください！ 
+ぜひ実際のプロジェクトで活用してみてください！

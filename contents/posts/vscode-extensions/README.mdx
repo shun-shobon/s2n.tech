@@ -24,15 +24,15 @@ Visual Studio Code（VS Code）は、拡張機能によってその真価を発�
 ```json
 // settings.json
 {
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.formatOnPaste": true,
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.formatOnSave": true,
+	"editor.formatOnPaste": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	}
 }
 ```
 
@@ -54,16 +54,16 @@ Visual Studio Code（VS Code）は、拡張機能によってその真価を発�
 ```json
 // settings.json
 {
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "javascriptreact",
-    "typescriptreact"
-  ],
-  "eslint.format.enable": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  }
+	"eslint.validate": [
+		"javascript",
+		"typescript",
+		"javascriptreact",
+		"typescriptreact"
+	],
+	"eslint.format.enable": true,
+	"editor.codeActionsOnSave": {
+		"source.fixAll.eslint": true
+	}
 }
 ```
 
@@ -74,10 +74,10 @@ Visual Studio Code（VS Code）は、拡張機能によってその真価を発�
 ```json
 // settings.json
 {
-  "gitlens.currentLine.enabled": true,
-  "gitlens.codeLens.enabled": true,
-  "gitlens.blame.highlight.enabled": true,
-  "gitlens.hovers.currentLine.over": "line"
+	"gitlens.currentLine.enabled": true,
+	"gitlens.codeLens.enabled": true,
+	"gitlens.blame.highlight.enabled": true,
+	"gitlens.hovers.currentLine.over": "line"
 }
 ```
 
@@ -92,7 +92,7 @@ Visual Studio Code（VS Code）は、拡張機能によってその真価を発�
 ```html
 <!-- 開始タグを変更すると終了タグも自動で変更される -->
 <div class="container">
-  <p>コンテンツ</p>
+	<p>コンテンツ</p>
 </div>
 ```
 
@@ -102,26 +102,24 @@ Visual Studio Code（VS Code）は、拡張機能によってその真価を発�
 
 ```javascript
 // rafce を入力すると
-import React from 'react'
+import React from "react";
 
 const ComponentName = () => {
-  return (
-    <div>ComponentName</div>
-  )
-}
+	return <div>ComponentName</div>;
+};
 
-export default ComponentName
+export default ComponentName;
 
 // useState スニペット：us
-const [state, setState] = useState(initialState)
+const [state, setState] = useState(initialState);
 
 // useEffect スニペット：uef
 useEffect(() => {
-  // effect
-  return () => {
-    // cleanup
-  }
-}, [dependency])
+	// effect
+	return () => {
+		// cleanup
+	};
+}, [dependency]);
 ```
 
 #### TypeScript Importer
@@ -130,8 +128,8 @@ useEffect(() => {
 
 ```typescript
 // 自動で適切なインポート文を追加
-import { Component } from './Component';
-import { utilities } from '../utils/utilities';
+import { Component } from "./Component";
+import { utilities } from "../utils/utilities";
 ```
 
 ### Python開発
@@ -164,9 +162,9 @@ import { utilities } from '../utils/utilities';
 ```json
 // settings.json
 {
-  "python.languageServer": "Pylance",
-  "python.analysis.typeCheckingMode": "basic",
-  "python.analysis.autoImportCompletions": true
+	"python.languageServer": "Pylance",
+	"python.analysis.typeCheckingMode": "basic",
+	"python.analysis.autoImportCompletions": true
 }
 ```
 
@@ -180,13 +178,13 @@ import { utilities } from '../utils/utilities';
 <!-- index.html を右クリック → "Open with Live Server" -->
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Live Server Demo</title>
-</head>
-<body>
-    <h1>Hello World</h1>
-    <!-- 変更が即座にブラウザに反映される -->
-</body>
+	<head>
+		<title>Live Server Demo</title>
+	</head>
+	<body>
+		<h1>Hello World</h1>
+		<!-- 変更が即座にブラウザに反映される -->
+	</body>
 </html>
 ```
 
@@ -197,20 +195,20 @@ import { utilities } from '../utils/utilities';
 ```html
 <!-- div.container>div.row>div.col*3 -->
 <div class="container">
-    <div class="row">
-        <div class="col"></div>
-        <div class="col"></div>
-        <div class="col"></div>
-    </div>
+	<div class="row">
+		<div class="col"></div>
+		<div class="col"></div>
+		<div class="col"></div>
+	</div>
 </div>
 
 <!-- ul>li{Item $}*5 -->
 <ul>
-    <li>Item 1</li>
-    <li>Item 2</li>
-    <li>Item 3</li>
-    <li>Item 4</li>
-    <li>Item 5</li>
+	<li>Item 1</li>
+	<li>Item 2</li>
+	<li>Item 3</li>
+	<li>Item 4</li>
+	<li>Item 5</li>
 </ul>
 ```
 
@@ -224,20 +222,20 @@ import { utilities } from '../utils/utilities';
 // コメントを書くとコードが提案される
 // Function to calculate fibonacci number
 function fibonacci(n) {
-  if (n <= 1) return n;
-  return fibonacci(n - 1) + fibonacci(n - 2);
+	if (n <= 1) return n;
+	return fibonacci(n - 1) + fibonacci(n - 2);
 }
 
 // APIからユーザー情報を取得する関数
 async function fetchUserData(userId) {
-  try {
-    const response = await fetch(`/api/users/${userId}`);
-    const userData = await response.json();
-    return userData;
-  } catch (error) {
-    console.error('Error fetching user data:', error);
-    return null;
-  }
+	try {
+		const response = await fetch(`/api/users/${userId}`);
+		const userData = await response.json();
+		return userData;
+	} catch (error) {
+		console.error("Error fetching user data:", error);
+		return null;
+	}
 }
 ```
 
@@ -247,9 +245,9 @@ async function fetchUserData(userId) {
 
 ```javascript
 // ファイルパスを入力時に候補が表示される
-import Component from './components/Header';
-import utils from '../utils/helpers';
-import config from '../../config/app.config';
+import Component from "./components/Header";
+import utils from "../utils/helpers";
+import config from "../../config/app.config";
 ```
 
 ### 3. Bracket Pair Colorizer 2
@@ -259,8 +257,8 @@ import config from '../../config/app.config';
 ```json
 // settings.json
 {
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": true
 }
 ```
 
@@ -317,17 +315,17 @@ def complex_function():
 
 ```javascript
 // test/user.test.js
-describe('User functions', () => {
-  test('should create user', () => {
-    const user = createUser('John', 'john@example.com');
-    expect(user.name).toBe('John');
-    expect(user.email).toBe('john@example.com');
-  });
+describe("User functions", () => {
+	test("should create user", () => {
+		const user = createUser("John", "john@example.com");
+		expect(user.name).toBe("John");
+		expect(user.email).toBe("john@example.com");
+	});
 
-  test('should validate email', () => {
-    expect(validateEmail('john@example.com')).toBe(true);
-    expect(validateEmail('invalid-email')).toBe(false);
-  });
+	test("should validate email", () => {
+		expect(validateEmail("john@example.com")).toBe(true);
+		expect(validateEmail("invalid-email")).toBe(false);
+	});
 });
 ```
 
@@ -338,12 +336,12 @@ describe('User functions', () => {
 ```json
 // settings.json
 {
-  "coverage-gutters.coverageFileNames": [
-    "lcov.info",
-    "cov.xml",
-    "coverage.xml",
-    "jacoco.xml"
-  ]
+	"coverage-gutters.coverageFileNames": [
+		"lcov.info",
+		"cov.xml",
+		"coverage.xml",
+		"jacoco.xml"
+	]
 }
 ```
 
@@ -356,9 +354,9 @@ describe('User functions', () => {
 ```json
 // settings.json
 {
-  "workbench.iconTheme": "material-icon-theme",
-  "material-icon-theme.folders.theme": "specific",
-  "material-icon-theme.activeIconPack": "react"
+	"workbench.iconTheme": "material-icon-theme",
+	"material-icon-theme.folders.theme": "specific",
+	"material-icon-theme.activeIconPack": "react"
 }
 ```
 
@@ -369,10 +367,10 @@ describe('User functions', () => {
 ```json
 // settings.json
 {
-  "workbench.colorTheme": "One Dark Pro",
-  "editor.fontFamily": "'JetBrains Mono', 'Fira Code', monospace",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 14
+	"workbench.colorTheme": "One Dark Pro",
+	"editor.fontFamily": "'JetBrains Mono', 'Fira Code', monospace",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 14
 }
 ```
 
@@ -383,20 +381,20 @@ describe('User functions', () => {
 ```json
 // settings.json
 {
-  "peacock.favoriteColors": [
-    {
-      "name": "Angular Red",
-      "value": "#dd0531"
-    },
-    {
-      "name": "React Blue",
-      "value": "#61dafb"
-    },
-    {
-      "name": "Vue Green",
-      "value": "#42b883"
-    }
-  ]
+	"peacock.favoriteColors": [
+		{
+			"name": "Angular Red",
+			"value": "#dd0531"
+		},
+		{
+			"name": "React Blue",
+			"value": "#61dafb"
+		},
+		{
+			"name": "Vue Green",
+			"value": "#42b883"
+		}
+	]
 }
 ```
 
@@ -409,8 +407,8 @@ describe('User functions', () => {
 ```javascript
 // TODO: リファクタリング必要
 function oldFunction() {
-  // FIXME: バグがある可能性
-  return result;
+	// FIXME: バグがある可能性
+	return result;
 }
 
 // HACK: 一時的な修正
@@ -427,10 +425,10 @@ const importantValue = 42;
 ```json
 // 同期される設定
 {
-  "sync.gist": "your-gist-id",
-  "sync.quietSync": false,
-  "sync.removeExtensions": true,
-  "sync.syncExtensions": true
+	"sync.gist": "your-gist-id",
+	"sync.quietSync": false,
+	"sync.removeExtensions": true,
+	"sync.syncExtensions": true
 }
 ```
 
@@ -441,18 +439,18 @@ const importantValue = 42;
 ```json
 // projects.json
 [
-  {
-    "name": "My Web App",
-    "rootPath": "/path/to/webapp",
-    "tags": ["react", "typescript"],
-    "enabled": true
-  },
-  {
-    "name": "API Server",
-    "rootPath": "/path/to/api",
-    "tags": ["node", "express"],
-    "enabled": true
-  }
+	{
+		"name": "My Web App",
+		"rootPath": "/path/to/webapp",
+		"tags": ["react", "typescript"],
+		"enabled": true
+	},
+	{
+		"name": "API Server",
+		"rootPath": "/path/to/api",
+		"tags": ["node", "express"],
+		"enabled": true
+	}
 ]
 ```
 
@@ -482,12 +480,10 @@ CMD ["npm", "start"]
 ```json
 // SSH設定
 {
-  "remote.SSH.remotePlatform": {
-    "hostname": "linux"
-  },
-  "remote.SSH.defaultExtensions": [
-    "ms-vscode.vscode-json"
-  ]
+	"remote.SSH.remotePlatform": {
+		"hostname": "linux"
+	},
+	"remote.SSH.defaultExtensions": ["ms-vscode.vscode-json"]
 }
 ```
 
@@ -498,20 +494,17 @@ CMD ["npm", "start"]
 ```json
 // .devcontainer/devcontainer.json
 {
-  "name": "Node.js",
-  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:16",
-  "features": {
-    "github-cli": "latest"
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "esbenp.prettier-vscode",
-        "ms-vscode.vscode-eslint"
-      ]
-    }
-  },
-  "postCreateCommand": "npm install"
+	"name": "Node.js",
+	"image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:16",
+	"features": {
+		"github-cli": "latest"
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": ["esbenp.prettier-vscode", "ms-vscode.vscode-eslint"]
+		}
+	},
+	"postCreateCommand": "npm install"
 }
 ```
 
@@ -522,19 +515,19 @@ CMD ["npm", "start"]
 ```json
 // settings.json
 {
-  // 拡張機能の自動更新
-  "extensions.autoUpdate": true,
-  
-  // 推奨拡張機能の通知
-  "extensions.showRecommendationsOnlyOnDemand": false,
-  
-  // 拡張機能の同期
-  "settingsSync.keybindingsPerPlatform": false,
-  
-  // パフォーマンス監視
-  "extensions.experimental.affinity": {
-    "vscodevim.vim": 1
-  }
+	// 拡張機能の自動更新
+	"extensions.autoUpdate": true,
+
+	// 推奨拡張機能の通知
+	"extensions.showRecommendationsOnlyOnDemand": false,
+
+	// 拡張機能の同期
+	"settingsSync.keybindingsPerPlatform": false,
+
+	// パフォーマンス監視
+	"extensions.experimental.affinity": {
+		"vscodevim.vim": 1
+	}
 }
 ```
 
@@ -543,15 +536,13 @@ CMD ["npm", "start"]
 ```json
 // .vscode/extensions.json
 {
-  "recommendations": [
-    "esbenp.prettier-vscode",
-    "ms-vscode.vscode-eslint",
-    "bradlc.vscode-tailwindcss",
-    "ms-vscode.vscode-typescript-next"
-  ],
-  "unwantedRecommendations": [
-    "ms-vscode.vscode-typescript"
-  ]
+	"recommendations": [
+		"esbenp.prettier-vscode",
+		"ms-vscode.vscode-eslint",
+		"bradlc.vscode-tailwindcss",
+		"ms-vscode.vscode-typescript-next"
+	],
+	"unwantedRecommendations": ["ms-vscode.vscode-typescript"]
 }
 ```
 
@@ -562,27 +553,27 @@ CMD ["npm", "start"]
 ```json
 // javascript.json (スニペット)
 {
-  "React Functional Component": {
-    "prefix": "rfc",
-    "body": [
-      "import React from 'react';",
-      "",
-      "interface ${1:ComponentName}Props {",
-      "  $2",
-      "}",
-      "",
-      "const ${1:ComponentName}: React.FC<${1:ComponentName}Props> = ({ $3 }) => {",
-      "  return (",
-      "    <div>",
-      "      $4",
-      "    </div>",
-      "  );",
-      "};",
-      "",
-      "export default ${1:ComponentName};"
-    ],
-    "description": "React Functional Component with TypeScript"
-  }
+	"React Functional Component": {
+		"prefix": "rfc",
+		"body": [
+			"import React from 'react';",
+			"",
+			"interface ${1:ComponentName}Props {",
+			"  $2",
+			"}",
+			"",
+			"const ${1:ComponentName}: React.FC<${1:ComponentName}Props> = ({ $3 }) => {",
+			"  return (",
+			"    <div>",
+			"      $4",
+			"    </div>",
+			"  );",
+			"};",
+			"",
+			"export default ${1:ComponentName};"
+		],
+		"description": "React Functional Component with TypeScript"
+	}
 }
 ```
 
@@ -590,33 +581,33 @@ CMD ["npm", "start"]
 
 ```json
 {
-  "Async API Function": {
-    "prefix": "apifunc",
-    "body": [
-      "export const ${1:functionName} = async (${2:params}) => {",
-      "  try {",
-      "    const response = await fetch(`${3:url}`, {",
-      "      method: '${4:GET}',",
-      "      headers: {",
-      "        'Content-Type': 'application/json',",
-      "      },",
-      "      ${5:body: JSON.stringify(data),}",
-      "    });",
-      "",
-      "    if (!response.ok) {",
-      "      throw new Error(`HTTP error! status: ${response.status}`);",
-      "    }",
-      "",
-      "    const result = await response.json();",
-      "    return result;",
-      "  } catch (error) {",
-      "    console.error('API Error:', error);",
-      "    throw error;",
-      "  }",
-      "};"
-    ],
-    "description": "Create async API function with error handling"
-  }
+	"Async API Function": {
+		"prefix": "apifunc",
+		"body": [
+			"export const ${1:functionName} = async (${2:params}) => {",
+			"  try {",
+			"    const response = await fetch(`${3:url}`, {",
+			"      method: '${4:GET}',",
+			"      headers: {",
+			"        'Content-Type': 'application/json',",
+			"      },",
+			"      ${5:body: JSON.stringify(data),}",
+			"    });",
+			"",
+			"    if (!response.ok) {",
+			"      throw new Error(`HTTP error! status: ${response.status}`);",
+			"    }",
+			"",
+			"    const result = await response.json();",
+			"    return result;",
+			"  } catch (error) {",
+			"    console.error('API Error:', error);",
+			"    throw error;",
+			"  }",
+			"};"
+		],
+		"description": "Create async API function with error handling"
+	}
 }
 ```
 
@@ -627,17 +618,17 @@ CMD ["npm", "start"]
 ```json
 // settings.json
 {
-  // 特定の言語でのみ有効化
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  
-  // 不要な機能を無効化
-  "git.enabled": false,  // Gitを使わないプロジェクトで
-  "typescript.suggest.autoImports": false  // 重い場合
+	// 特定の言語でのみ有効化
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	// 不要な機能を無効化
+	"git.enabled": false, // Gitを使わないプロジェクトで
+	"typescript.suggest.autoImports": false // 重い場合
 }
 ```
 
@@ -646,14 +637,14 @@ CMD ["npm", "start"]
 ```json
 // .vscode/settings.json
 {
-  "search.exclude": {
-    "**/node_modules": true,
-    "**/dist": true,
-    "**/.git": true
-  },
-  "files.watcherExclude": {
-    "**/node_modules/**": true
-  }
+	"search.exclude": {
+		"**/node_modules": true,
+		"**/dist": true,
+		"**/.git": true
+	},
+	"files.watcherExclude": {
+		"**/node_modules/**": true
+	}
 }
 ```
 
@@ -668,4 +659,4 @@ VS Codeの拡張機能を効果的に活用することで：
 
 拡張機能は適度に厳選し、プロジェクトに応じて使い分けることが重要です。
 まずは基本的な拡張機能から始めて、必要に応じて追加していきましょう。
-あなたの開発スタイルに合った最適な環境を構築してください！ 
+あなたの開発スタイルに合った最適な環境を構築してください！

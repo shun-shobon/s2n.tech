@@ -69,26 +69,29 @@ updatedAt: "2024-07-15"
 ```typescript
 // User Domain（ユーザー管理）
 interface UserService {
-  createUser(userData: CreateUserRequest): Promise<User>;
-  getUser(userId: string): Promise<User>;
-  updateUser(userId: string, updates: UpdateUserRequest): Promise<User>;
-  deleteUser(userId: string): Promise<void>;
+	createUser(userData: CreateUserRequest): Promise<User>;
+	getUser(userId: string): Promise<User>;
+	updateUser(userId: string, updates: UpdateUserRequest): Promise<User>;
+	deleteUser(userId: string): Promise<void>;
 }
 
 // Order Domain（注文管理）
 interface OrderService {
-  createOrder(orderData: CreateOrderRequest): Promise<Order>;
-  getOrder(orderId: string): Promise<Order>;
-  updateOrderStatus(orderId: string, status: OrderStatus): Promise<Order>;
-  getOrdersByUser(userId: string): Promise<Order[]>;
+	createOrder(orderData: CreateOrderRequest): Promise<Order>;
+	getOrder(orderId: string): Promise<Order>;
+	updateOrderStatus(orderId: string, status: OrderStatus): Promise<Order>;
+	getOrdersByUser(userId: string): Promise<Order[]>;
 }
 
 // Product Domain（商品管理）
 interface ProductService {
-  createProduct(productData: CreateProductRequest): Promise<Product>;
-  getProduct(productId: string): Promise<Product>;
-  updateProduct(productId: string, updates: UpdateProductRequest): Promise<Product>;
-  searchProducts(criteria: SearchCriteria): Promise<Product[]>;
+	createProduct(productData: CreateProductRequest): Promise<Product>;
+	getProduct(productId: string): Promise<Product>;
+	updateProduct(
+		productId: string,
+		updates: UpdateProductRequest,
+	): Promise<Product>;
+	searchProducts(criteria: SearchCriteria): Promise<Product[]>;
 }
 ```
 
@@ -97,21 +100,21 @@ interface ProductService {
 ```typescript
 // User Context
 export class User {
-  constructor(
-    public readonly id: UserId,
-    public readonly email: Email,
-    public readonly profile: UserProfile,
-    public readonly createdAt: Date
-  ) {}
+	constructor(
+		public readonly id: UserId,
+		public readonly email: Email,
+		public readonly profile: UserProfile,
+		public readonly createdAt: Date,
+	) {}
 }
 
 // Order Context（異なるUserの表現）
 export class OrderCustomer {
-  constructor(
-    public readonly customerId: CustomerId,
-    public readonly name: string,
-    public readonly shippingAddress: Address
-  ) {}
+	constructor(
+		public readonly customerId: CustomerId,
+		public readonly name: string,
+		public readonly shippingAddress: Address,
+	) {}
 }
 ```
 
@@ -122,26 +125,26 @@ export class OrderCustomer {
 ```typescript
 // User Service API
 export class UserController {
-  @Get('/users/:id')
-  async getUser(@Param('id') id: string): Promise<UserResponse> {
-    const user = await this.userService.getUser(id);
-    return this.toUserResponse(user);
-  }
+	@Get("/users/:id")
+	async getUser(@Param("id") id: string): Promise<UserResponse> {
+		const user = await this.userService.getUser(id);
+		return this.toUserResponse(user);
+	}
 
-  @Post('/users')
-  async createUser(@Body() request: CreateUserRequest): Promise<UserResponse> {
-    const user = await this.userService.createUser(request);
-    return this.toUserResponse(user);
-  }
+	@Post("/users")
+	async createUser(@Body() request: CreateUserRequest): Promise<UserResponse> {
+		const user = await this.userService.createUser(request);
+		return this.toUserResponse(user);
+	}
 
-  @Put('/users/:id')
-  async updateUser(
-    @Param('id') id: string,
-    @Body() request: UpdateUserRequest
-  ): Promise<UserResponse> {
-    const user = await this.userService.updateUser(id, request);
-    return this.toUserResponse(user);
-  }
+	@Put("/users/:id")
+	async updateUser(
+		@Param("id") id: string,
+		@Body() request: UpdateUserRequest,
+	): Promise<UserResponse> {
+		const user = await this.userService.updateUser(id, request);
+		return this.toUserResponse(user);
+	}
 }
 ```
 
@@ -150,46 +153,46 @@ export class UserController {
 ```typescript
 // ドメインイベントの定義
 export interface DomainEvent {
-  eventId: string;
-  eventType: string;
-  aggregateId: string;
-  timestamp: Date;
-  version: number;
+	eventId: string;
+	eventType: string;
+	aggregateId: string;
+	timestamp: Date;
+	version: number;
 }
 
 export class UserCreatedEvent implements DomainEvent {
-  constructor(
-    public readonly eventId: string,
-    public readonly aggregateId: string,
-    public readonly userEmail: string,
-    public readonly timestamp: Date,
-    public readonly version: number
-  ) {}
+	constructor(
+		public readonly eventId: string,
+		public readonly aggregateId: string,
+		public readonly userEmail: string,
+		public readonly timestamp: Date,
+		public readonly version: number,
+	) {}
 
-  eventType = 'UserCreated';
+	eventType = "UserCreated";
 }
 
 // イベントパブリッシャー
 export class EventBus {
-  async publish(event: DomainEvent): Promise<void> {
-    await this.messageQueue.send({
-      topic: event.eventType,
-      message: JSON.stringify(event),
-      partition: event.aggregateId
-    });
-  }
+	async publish(event: DomainEvent): Promise<void> {
+		await this.messageQueue.send({
+			topic: event.eventType,
+			message: JSON.stringify(event),
+			partition: event.aggregateId,
+		});
+	}
 }
 
 // イベントハンドラー
 export class OrderEventHandler {
-  @EventHandler('UserCreated')
-  async handleUserCreated(event: UserCreatedEvent): Promise<void> {
-    // 注文サービス側でユーザー情報のコピーを作成
-    await this.orderService.createCustomerProfile({
-      customerId: event.aggregateId,
-      email: event.userEmail
-    });
-  }
+	@EventHandler("UserCreated")
+	async handleUserCreated(event: UserCreatedEvent): Promise<void> {
+		// 注文サービス側でユーザー情報のコピーを作成
+		await this.orderService.createCustomerProfile({
+			customerId: event.aggregateId,
+			email: event.userEmail,
+		});
+	}
 }
 ```
 
@@ -197,52 +200,54 @@ export class OrderEventHandler {
 
 ```typescript
 export class CircuitBreaker {
-  private state: 'CLOSED' | 'OPEN' | 'HALF_OPEN' = 'CLOSED';
-  private failureCount = 0;
-  private lastFailureTime?: Date;
+	private state: "CLOSED" | "OPEN" | "HALF_OPEN" = "CLOSED";
+	private failureCount = 0;
+	private lastFailureTime?: Date;
 
-  constructor(
-    private readonly failureThreshold: number = 5,
-    private readonly timeoutDuration: number = 60000
-  ) {}
+	constructor(
+		private readonly failureThreshold: number = 5,
+		private readonly timeoutDuration: number = 60000,
+	) {}
 
-  async execute<T>(operation: () => Promise<T>): Promise<T> {
-    if (this.state === 'OPEN') {
-      if (this.shouldAttemptReset()) {
-        this.state = 'HALF_OPEN';
-      } else {
-        throw new Error('Circuit breaker is OPEN');
-      }
-    }
+	async execute<T>(operation: () => Promise<T>): Promise<T> {
+		if (this.state === "OPEN") {
+			if (this.shouldAttemptReset()) {
+				this.state = "HALF_OPEN";
+			} else {
+				throw new Error("Circuit breaker is OPEN");
+			}
+		}
 
-    try {
-      const result = await operation();
-      this.onSuccess();
-      return result;
-    } catch (error) {
-      this.onFailure();
-      throw error;
-    }
-  }
+		try {
+			const result = await operation();
+			this.onSuccess();
+			return result;
+		} catch (error) {
+			this.onFailure();
+			throw error;
+		}
+	}
 
-  private onSuccess(): void {
-    this.failureCount = 0;
-    this.state = 'CLOSED';
-  }
+	private onSuccess(): void {
+		this.failureCount = 0;
+		this.state = "CLOSED";
+	}
 
-  private onFailure(): void {
-    this.failureCount++;
-    this.lastFailureTime = new Date();
-    
-    if (this.failureCount >= this.failureThreshold) {
-      this.state = 'OPEN';
-    }
-  }
+	private onFailure(): void {
+		this.failureCount++;
+		this.lastFailureTime = new Date();
 
-  private shouldAttemptReset(): boolean {
-    return this.lastFailureTime && 
-           (Date.now() - this.lastFailureTime.getTime()) > this.timeoutDuration;
-  }
+		if (this.failureCount >= this.failureThreshold) {
+			this.state = "OPEN";
+		}
+	}
+
+	private shouldAttemptReset(): boolean {
+		return (
+			this.lastFailureTime &&
+			Date.now() - this.lastFailureTime.getTime() > this.timeoutDuration
+		);
+	}
 }
 ```
 
@@ -253,36 +258,36 @@ export class CircuitBreaker {
 ```typescript
 // User Service Database
 export class UserRepository {
-  constructor(private readonly userDb: Database) {}
+	constructor(private readonly userDb: Database) {}
 
-  async save(user: User): Promise<void> {
-    await this.userDb.users.insert({
-      id: user.id.value,
-      email: user.email.value,
-      profile: user.profile.toJSON(),
-      created_at: user.createdAt
-    });
-  }
+	async save(user: User): Promise<void> {
+		await this.userDb.users.insert({
+			id: user.id.value,
+			email: user.email.value,
+			profile: user.profile.toJSON(),
+			created_at: user.createdAt,
+		});
+	}
 
-  async findById(id: UserId): Promise<User | null> {
-    const userData = await this.userDb.users.findOne({ id: id.value });
-    return userData ? User.fromJSON(userData) : null;
-  }
+	async findById(id: UserId): Promise<User | null> {
+		const userData = await this.userDb.users.findOne({ id: id.value });
+		return userData ? User.fromJSON(userData) : null;
+	}
 }
 
 // Order Service Database（独立したデータベース）
 export class OrderRepository {
-  constructor(private readonly orderDb: Database) {}
+	constructor(private readonly orderDb: Database) {}
 
-  async save(order: Order): Promise<void> {
-    await this.orderDb.orders.insert({
-      id: order.id.value,
-      customer_id: order.customerId.value,
-      items: order.items.map(item => item.toJSON()),
-      status: order.status,
-      created_at: order.createdAt
-    });
-  }
+	async save(order: Order): Promise<void> {
+		await this.orderDb.orders.insert({
+			id: order.id.value,
+			customer_id: order.customerId.value,
+			items: order.items.map((item) => item.toJSON()),
+			status: order.status,
+			created_at: order.createdAt,
+		});
+	}
 }
 ```
 
@@ -290,41 +295,40 @@ export class OrderRepository {
 
 ```typescript
 export class OrderSaga {
-  async processOrder(command: CreateOrderCommand): Promise<void> {
-    const sagaId = generateId();
-    
-    try {
-      // Step 1: 在庫確保
-      const reservationResult = await this.inventoryService.reserveItems(
-        command.items, 
-        sagaId
-      );
-      
-      // Step 2: 決済処理
-      const paymentResult = await this.paymentService.processPayment(
-        command.paymentInfo, 
-        sagaId
-      );
-      
-      // Step 3: 注文作成
-      const order = await this.orderService.createOrder(command, sagaId);
-      
-      // 全てのステップが成功
-      await this.commitSaga(sagaId);
-      
-    } catch (error) {
-      // エラー時は補償トランザクションを実行
-      await this.rollbackSaga(sagaId, error);
-      throw error;
-    }
-  }
+	async processOrder(command: CreateOrderCommand): Promise<void> {
+		const sagaId = generateId();
 
-  private async rollbackSaga(sagaId: string, error: Error): Promise<void> {
-    // 逆順で補償処理を実行
-    await this.orderService.cancelOrder(sagaId);
-    await this.paymentService.refundPayment(sagaId);
-    await this.inventoryService.releaseReservation(sagaId);
-  }
+		try {
+			// Step 1: 在庫確保
+			const reservationResult = await this.inventoryService.reserveItems(
+				command.items,
+				sagaId,
+			);
+
+			// Step 2: 決済処理
+			const paymentResult = await this.paymentService.processPayment(
+				command.paymentInfo,
+				sagaId,
+			);
+
+			// Step 3: 注文作成
+			const order = await this.orderService.createOrder(command, sagaId);
+
+			// 全てのステップが成功
+			await this.commitSaga(sagaId);
+		} catch (error) {
+			// エラー時は補償トランザクションを実行
+			await this.rollbackSaga(sagaId, error);
+			throw error;
+		}
+	}
+
+	private async rollbackSaga(sagaId: string, error: Error): Promise<void> {
+		// 逆順で補償処理を実行
+		await this.orderService.cancelOrder(sagaId);
+		await this.paymentService.refundPayment(sagaId);
+		await this.inventoryService.releaseReservation(sagaId);
+	}
 }
 ```
 
@@ -333,92 +337,95 @@ export class OrderSaga {
 ### 分散トレーシング
 
 ```typescript
-import { trace, context } from '@opentelemetry/api';
+import { trace, context } from "@opentelemetry/api";
 
 export class UserService {
-  private tracer = trace.getTracer('user-service');
+	private tracer = trace.getTracer("user-service");
 
-  async getUser(userId: string): Promise<User> {
-    return this.tracer.startActiveSpan('get-user', async (span) => {
-      span.setAttributes({
-        'user.id': userId,
-        'service.name': 'user-service'
-      });
+	async getUser(userId: string): Promise<User> {
+		return this.tracer.startActiveSpan("get-user", async (span) => {
+			span.setAttributes({
+				"user.id": userId,
+				"service.name": "user-service",
+			});
 
-      try {
-        const user = await this.userRepository.findById(new UserId(userId));
-        
-        if (!user) {
-          span.setStatus({ code: SpanStatusCode.ERROR, message: 'User not found' });
-          throw new UserNotFoundError(userId);
-        }
+			try {
+				const user = await this.userRepository.findById(new UserId(userId));
 
-        span.setAttributes({
-          'user.email': user.email.value,
-          'user.created_at': user.createdAt.toISOString()
-        });
+				if (!user) {
+					span.setStatus({
+						code: SpanStatusCode.ERROR,
+						message: "User not found",
+					});
+					throw new UserNotFoundError(userId);
+				}
 
-        return user;
-      } catch (error) {
-        span.recordException(error);
-        span.setStatus({ code: SpanStatusCode.ERROR, message: error.message });
-        throw error;
-      } finally {
-        span.end();
-      }
-    });
-  }
+				span.setAttributes({
+					"user.email": user.email.value,
+					"user.created_at": user.createdAt.toISOString(),
+				});
+
+				return user;
+			} catch (error) {
+				span.recordException(error);
+				span.setStatus({ code: SpanStatusCode.ERROR, message: error.message });
+				throw error;
+			} finally {
+				span.end();
+			}
+		});
+	}
 }
 ```
 
 ### メトリクス収集
 
 ```typescript
-import { metrics } from '@opentelemetry/api-metrics';
+import { metrics } from "@opentelemetry/api-metrics";
 
 export class MetricsCollector {
-  private meter = metrics.getMeter('order-service');
-  private orderCounter = this.meter.createCounter('orders_total');
-  private orderDuration = this.meter.createHistogram('order_duration_seconds');
+	private meter = metrics.getMeter("order-service");
+	private orderCounter = this.meter.createCounter("orders_total");
+	private orderDuration = this.meter.createHistogram("order_duration_seconds");
 
-  recordOrderCreated(status: string): void {
-    this.orderCounter.add(1, { status });
-  }
+	recordOrderCreated(status: string): void {
+		this.orderCounter.add(1, { status });
+	}
 
-  recordOrderDuration(duration: number, status: string): void {
-    this.orderDuration.record(duration, { status });
-  }
+	recordOrderDuration(duration: number, status: string): void {
+		this.orderDuration.record(duration, { status });
+	}
 }
 
 export class OrderService {
-  constructor(
-    private readonly orderRepository: OrderRepository,
-    private readonly metrics: MetricsCollector
-  ) {}
+	constructor(
+		private readonly orderRepository: OrderRepository,
+		private readonly metrics: MetricsCollector,
+	) {}
 
-  async createOrder(command: CreateOrderCommand): Promise<Order> {
-    const startTime = Date.now();
-    
-    try {
-      const order = new Order(command);
-      await this.orderRepository.save(order);
-      
-      this.metrics.recordOrderCreated('success');
-      this.metrics.recordOrderDuration(
-        (Date.now() - startTime) / 1000, 
-        'success'
-      );
-      
-      return order;
-    } catch (error) {
-      this.metrics.recordOrderCreated('error');
-      this.metrics.recordOrderDuration(
-        (Date.now() - startTime) / 1000, 
-        'error'
-      );
-      throw error;
-    }
-  }
+	async createOrder(command: CreateOrderCommand): Promise<Order> {
+		const startTime = Date.now();
+
+		try {
+			const order = new Order(command);
+			await this.orderRepository.save(order);
+
+			this.metrics.recordOrderCreated("success");
+			this.metrics.recordOrderDuration(
+				(Date.now() - startTime) / 1000,
+				"success",
+			);
+
+			return order;
+		} catch (error) {
+			this.metrics.recordOrderCreated("error");
+			this.metrics.recordOrderDuration(
+				(Date.now() - startTime) / 1000,
+				"error",
+			);
+			throw error;
+		}
+	}
 }
 ```
 
@@ -467,33 +474,33 @@ spec:
         app: user-service
     spec:
       containers:
-      - name: user-service
-        image: user-service:latest
-        ports:
-        - containerPort: 3000
-        env:
-        - name: DATABASE_URL
-          valueFrom:
-            secretKeyRef:
-              name: user-service-secrets
-              key: database-url
-        - name: REDIS_URL
-          valueFrom:
-            configMapKeyRef:
-              name: user-service-config
-              key: redis-url
-        livenessProbe:
-          httpGet:
-            path: /health
-            port: 3000
-          initialDelaySeconds: 30
-          periodSeconds: 10
-        readinessProbe:
-          httpGet:
-            path: /ready
-            port: 3000
-          initialDelaySeconds: 5
-          periodSeconds: 5
+        - name: user-service
+          image: user-service:latest
+          ports:
+            - containerPort: 3000
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: user-service-secrets
+                  key: database-url
+            - name: REDIS_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: user-service-config
+                  key: redis-url
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 3000
+            initialDelaySeconds: 30
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 3000
+            initialDelaySeconds: 5
+            periodSeconds: 5
 
 ---
 apiVersion: v1
@@ -504,9 +511,9 @@ spec:
   selector:
     app: user-service
   ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 3000
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
   type: ClusterIP
 ```
 
@@ -516,38 +523,38 @@ spec:
 
 ```typescript
 // Consumer Test (Order Service)
-describe('User Service Contract', () => {
-  test('should get user by id', async () => {
-    const mockUserService = new MockUserService();
-    mockUserService.addInteraction({
-      state: 'user exists',
-      uponReceiving: 'a request for user',
-      withRequest: {
-        method: 'GET',
-        path: '/users/123',
-        headers: {
-          'Accept': 'application/json'
-        }
-      },
-      willRespondWith: {
-        status: 200,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: {
-          id: '123',
-          email: 'user@example.com',
-          name: 'John Doe'
-        }
-      }
-    });
+describe("User Service Contract", () => {
+	test("should get user by id", async () => {
+		const mockUserService = new MockUserService();
+		mockUserService.addInteraction({
+			state: "user exists",
+			uponReceiving: "a request for user",
+			withRequest: {
+				method: "GET",
+				path: "/users/123",
+				headers: {
+					Accept: "application/json",
+				},
+			},
+			willRespondWith: {
+				status: 200,
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: {
+					id: "123",
+					email: "user@example.com",
+					name: "John Doe",
+				},
+			},
+		});
 
-    const orderService = new OrderService(mockUserService);
-    const user = await orderService.getCustomerInfo('123');
-    
-    expect(user.id).toBe('123');
-    expect(user.email).toBe('user@example.com');
-  });
+		const orderService = new OrderService(mockUserService);
+		const user = await orderService.getCustomerInfo("123");
+
+		expect(user.id).toBe("123");
+		expect(user.email).toBe("user@example.com");
+	});
 });
 ```
 
@@ -568,4 +575,4 @@ describe('User Service Contract', () => {
 - Kubernetes Official Documentation
 - OpenTelemetry Documentation
 
-> この記事の完成版公開をお楽しみに！フィードバックや質問があれば、ぜひコメントでお聞かせください。 
+> この記事の完成版公開をお楽しみに！フィードバックや質問があれば、ぜひコメントでお聞かせください。

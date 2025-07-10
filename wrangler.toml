@@ -1,3 +1,7 @@
 name = "s2n-tech"
-compatibility_date = "2024-05-25"
-pages_build_output_dir = "./dist"
+main = "./dist/_worker.js/index.js"
+compatibility_date = "2025-07-05"
+
+[assets]
+binding = "ASSETS"
+directory = "./dist"

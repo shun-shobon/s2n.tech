@@ -145,11 +145,11 @@ async function getPosts() {
   const res = await fetch('https://api.example.com/posts', {
     cache: 'no-store' // リクエストごとに新しいデータを取得
   })
-  
+
   if (!res.ok) {
     throw new Error('投稿の取得に失敗しました')
   }
-  
+
   return res.json()
 }
 ```
@@ -194,34 +194,34 @@ export function SearchBox({ onSearch }: { onSearch: (query: string) => void }) {
 ```typescript
 // 静的データ（ビルド時に取得、ISG）
 async function getStaticPosts() {
-  const res = await fetch('https://api.example.com/posts', {
-    cache: 'force-cache' // デフォルト：無期限キャッシュ
-  })
-  return res.json()
+	const res = await fetch("https://api.example.com/posts", {
+		cache: "force-cache", // デフォルト：無期限キャッシュ
+	});
+	return res.json();
 }
 
 // 動的データ（リクエストごとに取得、SSR）
 async function getDynamicPosts() {
-  const res = await fetch('https://api.example.com/posts', {
-    cache: 'no-store' // キャッシュなし
-  })
-  return res.json()
+	const res = await fetch("https://api.example.com/posts", {
+		cache: "no-store", // キャッシュなし
+	});
+	return res.json();
 }
 
 // 再検証付きキャッシュ（ISR）
 async function getRevalidatedPosts() {
-  const res = await fetch('https://api.example.com/posts', {
-    next: { revalidate: 60 } // 60秒ごとに再検証
-  })
-  return res.json()
+	const res = await fetch("https://api.example.com/posts", {
+		next: { revalidate: 60 }, // 60秒ごとに再検証
+	});
+	return res.json();
 }
 
 // タグベースの再検証
 async function getPostsWithTags() {
-  const res = await fetch('https://api.example.com/posts', {
-    next: { tags: ['posts'] }
-  })
-  return res.json()
+	const res = await fetch("https://api.example.com/posts", {
+		next: { tags: ["posts"] },
+	});
+	return res.json();
 }
 ```
 
@@ -280,11 +280,11 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
       <Suspense fallback={<PostSkeleton />}>
         <PostContent slug={params.slug} />
       </Suspense>
-      
+
       <Suspense fallback={<CommentsSkeleton />}>
         <Comments slug={params.slug} />
       </Suspense>
-      
+
       <Suspense fallback={<RelatedPostsSkeleton />}>
         <RelatedPosts slug={params.slug} />
       </Suspense>
@@ -316,7 +316,7 @@ async function getPost(slug: string) {
 
 export async function PostContent({ slug }: { slug: string }) {
   const post = await getPost(slug)
-  
+
   return (
     <article>
       <h1>{post.title}</h1>
@@ -335,7 +335,7 @@ async function getComments(slug: string) {
 
 export async function Comments({ slug }: { slug: string }) {
   const comments = await getComments(slug)
-  
+
   return (
     <section>
       <h2>コメント</h2>
@@ -360,19 +360,19 @@ import { redirect } from 'next/navigation'
 
 async function submitMessage(formData: FormData) {
   'use server'
-  
+
   const name = formData.get('name') as string
   const email = formData.get('email') as string
   const message = formData.get('message') as string
-  
+
   // バリデーション
   if (!name || !email || !message) {
     throw new Error('すべてのフィールドを入力してください')
   }
-  
+
   // データベースに保存
   await saveMessage({ name, email, message })
-  
+
   // 成功ページにリダイレクト
   redirect('/contact/success')
 }
@@ -384,17 +384,17 @@ export default function ContactPage() {
         <label htmlFor="name">名前</label>
         <input type="text" id="name" name="name" required />
       </div>
-      
+
       <div>
         <label htmlFor="email">メールアドレス</label>
         <input type="email" id="email" name="email" required />
       </div>
-      
+
       <div>
         <label htmlFor="message">メッセージ</label>
         <textarea id="message" name="message" required />
       </div>
-      
+
       <button type="submit">送信</button>
     </form>
   )
@@ -411,14 +411,14 @@ import { useFormState, useFormStatus } from 'react-dom'
 
 async function submitMessage(prevState: any, formData: FormData) {
   'use server'
-  
+
   try {
     const name = formData.get('name') as string
     const email = formData.get('email') as string
     const message = formData.get('message') as string
-    
+
     await saveMessage({ name, email, message })
-    
+
     return { success: true, message: 'メッセージを送信しました' }
   } catch (error) {
     return { success: false, message: 'エラーが発生しました' }
@@ -427,7 +427,7 @@ async function submitMessage(prevState: any, formData: FormData) {
 
 function SubmitButton() {
   const { pending } = useFormStatus()
-  
+
   return (
     <button type="submit" disabled={pending}>
       {pending ? '送信中...' : '送信'}
@@ -437,7 +437,7 @@ function SubmitButton() {
 
 export function ContactForm() {
   const [state, formAction] = useFormState(submitMessage, null)
-  
+
   return (
     <form action={formAction}>
       {state?.message && (
@@ -445,22 +445,22 @@ export function ContactForm() {
           {state.message}
         </div>
       )}
-      
+
       <div>
         <label htmlFor="name">名前</label>
         <input type="text" id="name" name="name" required />
       </div>
-      
+
       <div>
         <label htmlFor="email">メールアドレス</label>
         <input type="email" id="email" name="email" required />
       </div>
-      
+
       <div>
         <label htmlFor="message">メッセージ</label>
         <textarea id="message" name="message" required />
       </div>
-      
+
       <SubmitButton />
     </form>
   )
@@ -473,31 +473,31 @@ export function ContactForm() {
 
 ```typescript
 // middleware.ts
-import { NextResponse } from 'next/server'
-import type { NextRequest } from 'next/server'
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
 export function middleware(request: NextRequest) {
-  // 認証チェック
-  const token = request.cookies.get('auth-token')
-  
-  if (request.nextUrl.pathname.startsWith('/dashboard')) {
-    if (!token) {
-      return NextResponse.redirect(new URL('/login', request.url))
-    }
-  }
-  
-  // レート制限
-  const ip = request.ip ?? '127.0.0.1'
-  if (isRateLimited(ip)) {
-    return new NextResponse('Too Many Requests', { status: 429 })
-  }
-  
-  return NextResponse.next()
+	// 認証チェック
+	const token = request.cookies.get("auth-token");
+
+	if (request.nextUrl.pathname.startsWith("/dashboard")) {
+		if (!token) {
+			return NextResponse.redirect(new URL("/login", request.url));
+		}
+	}
+
+	// レート制限
+	const ip = request.ip ?? "127.0.0.1";
+	if (isRateLimited(ip)) {
+		return new NextResponse("Too Many Requests", { status: 429 });
+	}
+
+	return NextResponse.next();
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/api/:path*']
-}
+	matcher: ["/dashboard/:path*", "/api/:path*"],
+};
 ```
 
 ### 認証状態の管理
@@ -526,11 +526,11 @@ const AuthContext = createContext<AuthContextType | null>(null)
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<User | null>(null)
   const [loading, setLoading] = useState(true)
-  
+
   useEffect(() => {
     checkAuthStatus()
   }, [])
-  
+
   const checkAuthStatus = async () => {
     try {
       const res = await fetch('/api/auth/me')
@@ -544,14 +544,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setLoading(false)
     }
   }
-  
+
   const login = async (email: string, password: string) => {
     const res = await fetch('/api/auth/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ email, password })
     })
-    
+
     if (res.ok) {
       const userData = await res.json()
       setUser(userData)
@@ -559,12 +559,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       throw new Error('ログインに失敗しました')
     }
   }
-  
+
   const logout = async () => {
     await fetch('/api/auth/logout', { method: 'POST' })
     setUser(null)
   }
-  
+
   return (
     <AuthContext.Provider value={{ user, loading, login, logout }}>
       {children}
@@ -639,4 +639,4 @@ App Routerを使うことで：
 
 App Routerは最初は概念が複雑に感じるかもしれませんが、
 慣れてくると従来のPages Routerよりも直感的で強力なアプリケーションを構築できます。
-新しいプロジェクトではぜひApp Routerを試してみてください！ 
+新しいプロジェクトではぜひApp Routerを試してみてください！

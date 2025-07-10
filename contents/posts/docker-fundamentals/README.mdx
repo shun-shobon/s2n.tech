@@ -152,7 +152,7 @@ docker exec -it <container-id> /bin/sh
 ### docker-compose.yml の例
 
 ```yaml
-version: '3.8'
+version: "3.8"
 
 services:
   # Webアプリケーション
@@ -242,7 +242,7 @@ docker-compose exec web /bin/sh
 
 ```yaml
 # docker-compose.dev.yml
-version: '3.8'
+version: "3.8"
 
 services:
   app:
@@ -286,8 +286,8 @@ services:
   mailhog:
     image: mailhog/mailhog
     ports:
-      - "1025:1025"  # SMTP
-      - "8025:8025"  # Web UI
+      - "1025:1025" # SMTP
+      - "8025:8025" # Web UI
 
 volumes:
   postgres_dev_data:
@@ -403,4 +403,4 @@ Dockerを使うことで：
 4. **ポータビリティ**: どこでも同じように動作
 
 最初は複雑に感じるかもしれませんが、一度慣れてしまえば開発効率が大幅に向上します。
-小さなプロジェクトから始めて、徐々にDockerの力を活用していきましょう！ 
+小さなプロジェクトから始めて、徐々にDockerの力を活用していきましょう！

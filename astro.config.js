@@ -1,3 +1,5 @@
+import cloudflare from "@astrojs/cloudflare";
+import mdx from "@astrojs/mdx";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
@@ -12,6 +14,7 @@ export default defineConfig({
 	},
 	site: "https://s2n.tech",
 	integrations: [
+		mdx(),
 		icon(),
 		sitemap(),
 		partytown({
@@ -23,7 +26,10 @@ export default defineConfig({
 	vite: {
 		plugins: [tailwindcss()],
 	},
-	output: "static",
+	adapter: cloudflare({
+		imageService: "compile",
+		platformProxy: true,
+	}),
 	build: {
 		format: "file",
 	},
@@ -36,7 +42,7 @@ export default defineConfig({
 				weights: [400, 700],
 				subsets: ["latin"],
 				styles: ["normal"],
-			}
-		]
-	}
+			},
+		],
+	},
 });
