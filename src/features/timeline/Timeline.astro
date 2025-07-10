@@ -4,23 +4,30 @@ import { Temporal } from "temporal-polyfill";
 
 import Heading from "@/components/Heading.astro";
 
-import { slugToYearMonth } from "../utils";
-import Entry from "./Entry.astro";
-
 const entries = await getCollection("timeline").then((entries) =>
 	entries.sort(
 		(a, b) =>
 			-Temporal.PlainYearMonth.compare(
-				slugToYearMonth(a.slug),
-				slugToYearMonth(b.slug),
+				Temporal.PlainYearMonth.from(a.data.startedAt),
+				Temporal.PlainYearMonth.from(b.data.startedAt),
 			),
 	),
 );
 ---
 
-<section>
-	<Heading lineOffset={0.6}>Timeline</Heading>
-	<ul>
-		{entries.map((entry) => <Entry entry={entry} />)}
+<section class="container mx-auto flex flex-col items-center gap-8 px-4">
+	<Heading>
+		Timeline
+		<Fragment slot="ja">これまでの経歴</Fragment>
+	</Heading>
+	<ul class="grid w-full gap-6">
+		{
+			entries.map((entry) => (
+				<li>
+					<h2>{entry.data.title}</h2>
+					<p>{entry.data.description}</p>
+				</li>
+			))
+		}
 	</ul>
 </section>

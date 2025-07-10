@@ -36,9 +36,17 @@ const technologies = defineCollection({
 });
 
 const timelineCollection = defineCollection({
-	loader: glob({ pattern: "*.md", base: "./src/content/timeline" }),
+	loader: file("./contents/timeline.toml", {
+		parser: (text) =>
+			// eslint-disable-next-line typescript/no-unnecessary-type-assertion
+			(parseTOML(text) as { timeline: Record<string, unknown>[] })
+				.timeline,
+	}),
 	schema: z.object({
 		title: z.string(),
+		startedAt: z.string().date(),
+		endedAt: z.union([z.string().date(), z.literal("present")]).optional(),
+		description: z.string().optional(),
 	}),
 });
 
