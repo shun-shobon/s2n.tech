@@ -58,3 +58,20 @@ export async function getPost(id: string): Promise<Post | null> {
 
 	return post;
 }
+
+export async function getTags(): Promise<string[]> {
+	const { posts } = await getPosts({
+		draft: true,
+	});
+
+	const tagMap = new Map<string, number>();
+	for (const post of posts) {
+		for (const tag of post.data.tags) {
+			tagMap.set(tag, (tagMap.get(tag) ?? 0) + 1);
+		}
+	}
+
+	const tags = Array.from(tagMap.entries()).sort((a, b) => b[1] - a[1]);
+
+	return tags.map(([tag]) => tag);
+}

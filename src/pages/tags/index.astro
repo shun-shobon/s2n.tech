@@ -1,20 +1,9 @@
 ---
 import Tag from "@/components/Tag.astro";
-import { getPosts } from "@/features/posts/repository";
+import { getTags } from "@/features/posts/repository";
 import BasicLayout from "@/layouts/BasicLayout.astro";
 
-const { posts } = await getPosts({
-	draft: true,
-});
-
-const tagMap = new Map<string, number>();
-for (const post of posts) {
-	for (const tag of post.data.tags) {
-		tagMap.set(tag, (tagMap.get(tag) ?? 0) + 1);
-	}
-}
-
-const tags = Array.from(tagMap.entries()).sort((a, b) => b[1] - a[1]);
+const tags = await getTags();
 ---
 
 <BasicLayout title="タグ一覧">
@@ -24,7 +13,7 @@ const tags = Array.from(tagMap.entries()).sort((a, b) => b[1] - a[1]);
 			<div
 				class="bg-background-primary border-border flex flex-wrap gap-2 rounded-2xl border p-4 shadow-lg sm:px-8 sm:py-6"
 			>
-				{tags.map(([tag]) => <Tag tag={tag} />)}
+				{tags.map((tag) => <Tag tag={tag} />)}
 			</div>
 		</div>
 	</div>
