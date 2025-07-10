@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @plugin "tailwindcss-animated";
+@plugin "@tailwindcss/typography";
 
 @theme {
 	--font-cursive: var(--font-family-caveat), cursive, sans-serif;

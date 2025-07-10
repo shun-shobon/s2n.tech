@@ -28,6 +28,7 @@
 		"@astrojs/partytown": "2.1.4",
 		"@astrojs/sitemap": "3.4.1",
 		"@shun-shobon/style-guide": "1.0.1",
+		"@tailwindcss/typography": "0.5.16",
 		"astro": "5.11.0",
 		"astro-icon": "1.1.5",
 		"eslint": "9.30.1",

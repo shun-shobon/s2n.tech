@@ -1,4 +1,6 @@
 ---
+import { render } from "astro:content";
+
 import Tag from "@/components/Tag.astro";
 import { getPost, getPosts } from "@/features/posts/repository";
 import BasicLayout from "@/layouts/BasicLayout.astro";
@@ -24,6 +26,7 @@ if (!post) {
 }
 
 const intl = new Intl.DateTimeFormat("ja-JP");
+const { Content, headings } = await render(post);
 ---
 
 <BasicLayout>
@@ -59,6 +62,34 @@ const intl = new Intl.DateTimeFormat("ja-JP");
 			</div>
 			<div class="flex flex-wrap justify-center gap-2">
 				{post.data.tags.map((tag) => <Tag tag={tag} />)}
+			</div>
+		</div>
+		<div class="mx-auto flex items-start justify-center gap-4 pt-4 sm:pt-8">
+			<div
+				class="prose prose-neutral bg-background-primary border-border w-full max-w-4xl min-w-0 rounded-2xl border p-4 shadow-lg sm:px-8 sm:py-6"
+			>
+				<Content />
+			</div>
+			<div
+				class="bg-background-primary border-border sticky top-8 hidden max-h-[calc(100dvh-var(--spacing)*16)] w-full max-w-xs gap-2 overflow-y-auto rounded-2xl border p-4 shadow-lg xl:grid"
+			>
+				<div class="text-lg font-bold">目次</div>
+				<ul class="list-disc pl-4">
+					{
+						headings
+							.filter((heading) => heading.depth < 3)
+							.map((heading) => (
+								<li>
+									<a
+										href={`#${heading.slug}`}
+										class="text-text-secondary hover:text-text-primary block py-0.5 transition-colors"
+									>
+										{heading.text}
+									</a>
+								</li>
+							))
+					}
+				</ul>
 			</div>
 		</div>
 	</div>
