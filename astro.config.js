@@ -42,6 +42,7 @@ export default defineConfig({
 				weights: [400, 700],
 				subsets: ["latin"],
 				styles: ["normal"],
+				fallback: [],
 			},
 		],
 	},

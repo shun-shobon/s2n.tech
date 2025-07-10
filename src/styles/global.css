@@ -2,13 +2,26 @@
 @plugin "tailwindcss-animated";
 
 @theme {
-	--font-cursive: var(--font-family-caveat), cursive, serif;
+	--font-cursive: var(--font-family-caveat), cursive, sans-serif;
 
-	--color-background: var(--color-white);
-	--color-border: var(--color-neutral-100);
 	--color-text-primary: var(--color-neutral-800);
+	--color-text-secondary: var(--color-neutral-600);
+	--color-background-primary: var(--color-white);
+	--color-background-secondary: var(--color-neutral-100);
+	--color-background-tertiary: var(--color-neutral-200);
+	--color-border: var(--color-neutral-100);
 
-	--bg-grid: linear-gradient(0deg, transparent calc(100% - 1px), var(--color-border) calc(100% - 1px)), linear-gradient(90deg, transparent calc(100% - 1px), var(--color-border) calc(100% - 1px));
+	--bg-grid:
+		linear-gradient(
+			0deg,
+			transparent calc(100% - 1px),
+			var(--color-border) calc(100% - 1px)
+		),
+		linear-gradient(
+			90deg,
+			transparent calc(100% - 1px),
+			var(--color-border) calc(100% - 1px)
+		);
 
 	--leading-*: initial;
 	--leading-tight: 1.25;
