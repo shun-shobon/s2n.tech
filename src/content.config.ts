@@ -2,6 +2,16 @@ import { file, glob } from "astro/loaders";
 import { defineCollection, reference, z } from "astro:content";
 import { parseTOML } from "confbox";
 
+const posts = defineCollection({
+	loader: glob({ pattern: "**/README.mdx", base: "./contents/posts" }),
+	schema: z.object({
+		title: z.string(),
+		tags: z.string().array(),
+		publishedAt: z.string().date().optional(),
+		updatedAt: z.string().date().optional(),
+	}),
+});
+
 const works = defineCollection({
 	loader: glob({ pattern: "*.md", base: "./contents/works" }),
 	schema: ({ image }) =>
@@ -35,7 +45,7 @@ const technologies = defineCollection({
 	}),
 });
 
-const timelineCollection = defineCollection({
+const timeline = defineCollection({
 	loader: file("./contents/timeline.toml", {
 		parser: (text) =>
 			// eslint-disable-next-line typescript/no-unnecessary-type-assertion
@@ -50,7 +60,8 @@ const timelineCollection = defineCollection({
 });
 
 export const collections = {
+	posts,
 	works,
 	technologies,
-	timeline: timelineCollection,
+	timeline,
 };
