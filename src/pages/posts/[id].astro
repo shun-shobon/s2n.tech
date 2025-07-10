@@ -32,7 +32,7 @@ const intl = new Intl.DateTimeFormat("ja-JP");
 const { Content, headings } = await render(post);
 ---
 
-<BasicLayout>
+<BasicLayout title={post.data.title}>
 	<div class="px-4 pb-4 sm:px-8 sm:pb-8">
 		<div class="mx-auto grid w-full max-w-4xl justify-center gap-2 sm:gap-4">
 			<h1 class="text-center text-2xl font-bold sm:text-4xl">
