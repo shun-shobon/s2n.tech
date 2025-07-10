@@ -1,0 +1,65 @@
+---
+import Tag from "@/components/Tag.astro";
+import { getPost, getPosts } from "@/features/posts/repository";
+import BasicLayout from "@/layouts/BasicLayout.astro";
+
+export async function getStaticPaths() {
+	const { posts } = await getPosts({
+		draft: true,
+	});
+
+	return posts.map((post) => ({
+		params: { id: post.id.split("/")[0] },
+	}));
+}
+
+const { id } = Astro.params;
+if (!id) {
+	return Astro.rewrite("/404");
+}
+
+const post = await getPost(id);
+if (!post) {
+	return Astro.rewrite("/404");
+}
+
+const intl = new Intl.DateTimeFormat("ja-JP");
+---
+
+<BasicLayout>
+	<div class="px-4 pb-4 sm:px-8 sm:pb-8">
+		<div class="mx-auto grid w-full max-w-4xl justify-center gap-2 sm:gap-4">
+			<h1 class="text-center text-2xl font-bold sm:text-4xl">
+				{post.data.title}
+			</h1>
+			<div class="text-text-secondary text-center text-sm">
+				{
+					post.data.publishedAt ? (
+						<>
+							<time datetime={post.data.publishedAt}>
+								{intl.format(new Date(post.data.publishedAt))}
+							</time>
+							公開
+						</>
+					) : (
+						<>未公開</>
+					)
+				}
+				{
+					post.data.updatedAt ? (
+						<>
+							・
+							<time datetime={post.data.updatedAt}>
+								{intl.format(new Date(post.data.updatedAt))}
+							</time>
+							更新
+						</>
+					) : null
+				}
+			</div>
+			<div class="flex flex-wrap justify-center gap-2">
+				{post.data.tags.map((tag) => <Tag tag={tag} />)}
+			</div>
+		</div>
+	</div>
+</BasicLayout>

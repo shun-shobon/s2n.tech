@@ -1,5 +1,5 @@
 import type { CollectionEntry } from "astro:content";
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 
 export type Post = CollectionEntry<"posts">;
 
@@ -46,4 +46,15 @@ export async function getPosts({
 	});
 
 	return { posts, total: posts.length };
+}
+
+export async function getPost(id: string): Promise<Post | null> {
+	const slug = `${id}/readme`;
+	const post = await getEntry("posts", slug);
+
+	if (!post) {
+		return null;
+	}
+
+	return post;
 }
