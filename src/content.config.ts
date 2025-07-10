@@ -7,8 +7,8 @@ const works = defineCollection({
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
-      description: z.string(),
-      date: z.string().date(),
+			description: z.string(),
+			date: z.string().date(),
 			image: image(),
 			technologies: z.array(reference("technologies")),
 			platforms: z.array(z.string()),
@@ -30,17 +30,16 @@ const technologies = defineCollection({
 			(parseTOML(text) as { technologies: Record<string, unknown>[] })
 				.technologies,
 	}),
-  schema: z.object({
-    name: z.string(),
-  })
+	schema: z.object({
+		name: z.string(),
+	}),
 });
 
 const timelineCollection = defineCollection({
 	loader: file("./contents/timeline.toml", {
 		parser: (text) =>
 			// eslint-disable-next-line typescript/no-unnecessary-type-assertion
-			(parseTOML(text) as { timeline: Record<string, unknown>[] })
-				.timeline,
+			(parseTOML(text) as { timeline: Record<string, unknown>[] }).timeline,
 	}),
 	schema: z.object({
 		title: z.string(),

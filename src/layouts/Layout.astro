@@ -1,8 +1,6 @@
 ---
 import "@/styles/global.css";
 
-import { Font } from "astro:assets";
-
 import Analytics from "@/components/Analytics.astro";
 
 interface Props {
@@ -17,8 +15,6 @@ const { title } = Astro.props;
 	<head>
 		<meta charset="utf8" />
 		<meta name="viewport" content="width=device-width" />
-
-		<Font cssVariable="--font-acafad" preload />
 
 		{/* SEO */}
 		<title>
@@ -53,7 +49,7 @@ const { title } = Astro.props;
 			cfWebAnalyticsToken={import.meta.env.PUBLIC_CF_WEB_ANALYTICS_TOKEN}
 		/>
 	</head>
-	<body class="min-h-dvh text-white">
+	<body class="min-h-dvh">
 		<slot />
 	</body>
 </html>
