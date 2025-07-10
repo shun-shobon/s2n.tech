@@ -3,8 +3,10 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
-			"@/*": ["src/*"],
+			"@/*": ["./src/*"],
 		},
+
+		"exactOptionalPropertyTypes": false,
 	},
 	"exclude": ["**/node_modules", "dist", "functions"],
 }

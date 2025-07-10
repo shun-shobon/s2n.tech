@@ -1,0 +1,25 @@
+---
+import Header from "@/components/Header.astro";
+
+import Layout from "./Layout.astro";
+
+interface Props {
+	title?: string;
+	class?: string;
+}
+
+const { title, class: className } = Astro.props;
+---
+
+<Layout
+	title={title}
+	class:list={[
+		"bg-background bg-(image:--bg-grid) bg-size-[48px_48px] bg-center bg-repeat",
+		className,
+	]}
+>
+	<div class="sticky top-0 flex justify-center p-4 sm:p-8">
+		<Header />
+	</div>
+	<slot />
+</Layout>
