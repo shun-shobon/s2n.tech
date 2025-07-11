@@ -10,7 +10,6 @@ import icon from "astro-icon";
 export default defineConfig({
 	prefetch: {
 		prefetchAll: true,
-		defaultStrategy: "viewport",
 	},
 	site: "https://s2n.tech",
 	integrations: [
