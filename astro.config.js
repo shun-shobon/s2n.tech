@@ -17,6 +17,7 @@ export default defineConfig({
 		icon({
 			include: {
 				"simple-icons": ["github", "x"],
+				"lucide": ["ellipsis", "heart", "message-circle", "send", "bookmark"],
 			},
 		}),
 		sitemap(),

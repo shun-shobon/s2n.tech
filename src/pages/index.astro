@@ -1,7 +1,54 @@
 ---
-import BasicLayout from "@/layouts/BasicLayout.astro";
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+import MyIcon from "@/assets/my-icon.png";
+import StarrySky from "@/assets/starry-sky.jpg";
+import Header from "@/components/Header.astro";
+import Layout from "@/layouts/Layout.astro";
 ---
 
-<BasicLayout>
-	<h1>Hello, World!</h1>
-</BasicLayout>
+<Layout
+	class="bg-background-primary bg-(image:--bg-grid) bg-size-[48px_48px] bg-center bg-repeat"
+>
+	<div class="grid min-h-svh w-full grid-rows-[auto_1fr]">
+		<div class="sticky top-0 isolate flex justify-center p-4 sm:p-8">
+			<Header />
+		</div>
+		<div class="flex h-full items-start justify-center perspective-distant">
+			<div
+				class="bg-background-primary border-border card grid w-80 gap-4 rounded-2xl border p-4 shadow-lg transform-3d"
+			>
+				<div class="flex items-center justify-between">
+					<div class="flex items-center gap-2">
+						<Image
+							src={MyIcon}
+							alt=""
+							class="border-border size-8 rounded-full border"
+						/>
+						<div class="flex flex-col leading-tight">
+							<span class="text-xs font-bold">Shuntaro Nishizawa</span>
+							<span class="text-text-secondary text-xs"
+								>Web Frontend Developer</span
+							>
+						</div>
+					</div>
+					<Icon name="lucide:ellipsis" class="text-text-secondary size-6" />
+				</div>
+				<Image
+					src={StarrySky}
+					alt=""
+					class="border-border aspect-square w-full rounded-2xl border object-cover"
+				/>
+				<div class="text-text-secondary flex items-center justify-between">
+					<div class="flex gap-3">
+						<Icon name="lucide:heart" class="size-6" />
+						<Icon name="lucide:message-circle" class="size-6" />
+						<Icon name="lucide:send" class="size-6" />
+					</div>
+					<Icon name="lucide:bookmark" class="size-6" />
+				</div>
+			</div>
+		</div>
+	</div>
+</Layout>
