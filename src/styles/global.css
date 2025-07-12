@@ -5,6 +5,9 @@
 @theme {
 	--font-cursive: var(--font-family-caveat), cursive, sans-serif;
 	--font-about-sans-serif: var(--font-family-zen-maru-gothic), sans-serif;
+	/* --font-about-sans-serif: "Zen Maru Gothic", sans-serif; */
+	--font-weight-normal: normal;
+	--font-weight-bold: bold;
 
 	--color-text-primary: var(--color-neutral-800);
 	--color-text-secondary: var(--color-neutral-600);

@@ -1,6 +1,6 @@
 ---
-import { Font, Image } from "astro:assets";
-
+// import { Font } from "astro:assets";
+// import { Image } from "astro:assets";
 // import HeroCard from "@/assets/hero-card.png";
 // import Header from "@/components/Header.astro";
 import About from "@/features/about/About.astro";
@@ -10,7 +10,13 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout class="bg-(image:--bg-night-sky)">
 	<Fragment slot="head">
-		<Font cssVariable="--font-family-zen-maru-gothic" preload />
+		<!-- <Font cssVariable="--font-family-zen-maru-gothic" preload /> -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 	</Fragment>
 
 	<!-- <div
