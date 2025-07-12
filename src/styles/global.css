@@ -23,6 +23,14 @@
 			transparent calc(100% - 1px),
 			var(--color-border) calc(100% - 1px)
 		);
+	--bg-night-sky: linear-gradient(
+		180deg,
+		#21292d 50%,
+		#21272f 62.5%,
+		#212d3b 75%,
+		#213a4e 87.5%,
+		#285d76 100%
+	);
 
 	--leading-*: initial;
 	--leading-tight: 1.25;

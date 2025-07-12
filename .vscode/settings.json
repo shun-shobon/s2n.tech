@@ -2,7 +2,7 @@
 	"typescript.enablePromptUseWorkspaceTsdk": true,
 	"typescript.tsdk": "node_modules/typescript/lib",
 	"eslint.useFlatConfig": true,
-	"[javascript][javascriptreact][typescript][typescriptreact][astro][json][jsonc][markdown][mdx]": {
+	"[javascript][javascriptreact][typescript][typescriptreact][astro][json][jsonc][markdown][mdx][css][postcss]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	}
 }
