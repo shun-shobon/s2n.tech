@@ -1,12 +1,16 @@
 ---
-import { Image } from "astro:assets";
+import { Font, Image } from "astro:assets";
 
 import HeroCard from "@/assets/hero-card.png";
 import Header from "@/components/Header.astro";
 import Layout from "@/layouts/Layout.astro";
 ---
 
-<Layout class="bg-zinc-900">
+<Layout class="bg-(image:--bg-night-sky)">
+	<Fragment slot="head">
+		<Font cssVariable="--font-family-zen-maru-gothic" preload />
+	</Fragment>
+
 	<div
 		id="hero-container"
 		class="overflow-hidden bg-background-primary bg-(image:--bg-grid) bg-size-[48px_48px] bg-center bg-repeat"

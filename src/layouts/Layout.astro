@@ -53,6 +53,8 @@ const { title, class: className } = Astro.props;
 		/>
 
 		<Font cssVariable="--font-family-caveat" preload />
+
+		<slot name="head" />
 	</head>
 	<body
 		class:list={[

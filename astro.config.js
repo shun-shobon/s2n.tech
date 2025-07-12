@@ -48,6 +48,14 @@ export default defineConfig({
 				styles: ["normal"],
 				fallbacks: [],
 			},
+			{
+				provider: fontProviders.google(),
+				name: "Zen Maru Gothic",
+				cssVariable: "--font-family-zen-maru-gothic",
+				weights: [400, 700],
+				styles: ["normal"],
+				fallbacks: [],
+			},
 		],
 	},
 });
