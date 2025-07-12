@@ -23,12 +23,14 @@
 		"@iconify-json/lucide": "1.2.57",
 		"@iconify-json/simple-icons": "1.2.42",
 		"@tailwindcss/vite": "4.1.11",
-		"confbox": "0.2.2"
+		"confbox": "0.2.2",
+		"gsap": "3.13.0"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.9.4",
 		"@astrojs/partytown": "2.1.4",
 		"@astrojs/sitemap": "3.4.1",
+		"@astrojs/ts-plugin": "1.10.4",
 		"@shun-shobon/style-guide": "1.0.1",
 		"@tailwindcss/typography": "0.5.16",
 		"astro": "5.11.0",

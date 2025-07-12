@@ -7,6 +7,11 @@
 		},
 
 		"exactOptionalPropertyTypes": false,
+		"plugins": [
+			{
+				"name": "@astrojs/ts-plugin",
+			},
+		],
 	},
 	"exclude": ["**/node_modules", "dist", "functions"],
 }

@@ -10,4 +10,13 @@ export default shun_shobon(
 			],
 		},
 	},
+	{
+		languageOptions: {
+			parserOptions: {
+				projectService: {
+					loadTypeScriptPlugins: true,
+				},
+			},
+		},
+	},
 );
