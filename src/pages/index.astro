@@ -1,8 +1,8 @@
 ---
-// import { Font } from "astro:assets";
-// import { Image } from "astro:assets";
-// import HeroCard from "@/assets/hero-card.png";
-// import Header from "@/components/Header.astro";
+import { Image } from "astro:assets";
+
+import HeroCard from "@/assets/hero-card.png";
+import Header from "@/components/Header.astro";
 import About from "@/features/about/About.astro";
 import Footer from "@/features/about/Footer.astro";
 import Links from "@/features/about/Links.astro";
@@ -22,16 +22,16 @@ import Layout from "@/layouts/Layout.astro";
 		/>
 	</Fragment>
 
-	<!-- <div
+	<div
+		class="fixed top-0 left-0 isolate z-50 flex w-full justify-center p-4 sm:p-8"
+	>
+		<Header />
+	</div>
+
+	<div
 		id="hero-container"
 		class="overflow-hidden bg-background-primary bg-(image:--bg-grid) bg-size-[48px_48px] bg-center bg-repeat"
 	>
-		<div
-			class="fixed top-0 left-0 isolate z-50 flex w-full justify-center p-4 sm:p-8"
-		>
-			<Header />
-		</div>
-
 		<div
 			id="hero"
 			class="grid h-dvh w-full place-items-end px-32 pt-28 pb-32 perspective-distant"
@@ -40,13 +40,15 @@ import Layout from "@/layouts/Layout.astro";
 				id="hero-card"
 				src={HeroCard}
 				alt=""
-				class="w-1/3 translate-3d drop-shadow-lg"
+				class="w-2/5 translate-3d drop-shadow-lg"
+				style={{ aspectRatio: `${HeroCard.width} / ${HeroCard.height}` }}
 			/>
 		</div>
 
 		<div class="h-dvh"></div>
-	</div> -->
-	<div class="font-about-sans-serif text-white">
+	</div>
+
+	<div class="mt-[-80dvh] font-about-sans-serif text-white">
 		<!-- 見出しの線で利用するSVGフィルター -->
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +82,6 @@ import Layout from "@/layouts/Layout.astro";
 			</defs>
 		</svg>
 
-		<div class="h-dvh"></div>
 		<div class="grid gap-16 sm:gap-24">
 			<About />
 			<Works />
@@ -91,80 +92,80 @@ import Layout from "@/layouts/Layout.astro";
 	</div>
 </Layout>
 <script>
-	// import { gsap } from "gsap";
-	// import { ScrollTrigger } from "gsap/ScrollTrigger";
-	// import { Flip } from "gsap/Flip";
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+	import { Flip } from "gsap/Flip";
 
-	// gsap.registerPlugin(ScrollTrigger);
-	// gsap.registerPlugin(Flip);
+	gsap.registerPlugin(ScrollTrigger);
+	gsap.registerPlugin(Flip);
 
-	// const card = document.querySelector("#hero-card")!;
-	// const hero = document.querySelector("#hero")!;
-	// const heroContainer = document.querySelector("#hero-container")!;
+	const card = document.querySelector("#hero-card")!;
+	const hero = document.querySelector("#hero")!;
+	const heroContainer = document.querySelector("#hero-container")!;
 
-	// let animateCtx: gsap.Context;
+	let animateCtx: gsap.Context;
 
-	// function animate() {
-	// 	if (animateCtx) {
-	// 		animateCtx.revert();
-	// 	}
+	function animate() {
+		if (animateCtx) {
+			animateCtx.revert();
+		}
 
-	// 	hero.classList.remove("place-items-center");
-	// 	hero.classList.add("place-items-end");
+		hero.classList.remove("place-items-center");
+		hero.classList.add("place-items-end");
 
-	// 	animateCtx = gsap.context(() => {
-	// 		const initialState = Flip.getState(card);
-	// 		hero.classList.remove("place-items-end");
-	// 		hero.classList.add("place-items-center");
+		animateCtx = gsap.context(() => {
+			const initialState = Flip.getState(card);
+			hero.classList.remove("place-items-end");
+			hero.classList.add("place-items-center");
 
-	// 		gsap
-	// 			.timeline({
-	// 				scrollTrigger: {
-	// 					trigger: heroContainer,
-	// 					start: "top top",
-	// 					end: "bottom bottom",
-	// 					scrub: 1,
-	// 					pin: "#hero",
-	// 					anticipatePin: 1,
-	// 				},
-	// 			})
-	// 			.fromTo(
-	// 				card,
-	// 				{
-	// 					rotateX: 10,
-	// 					rotateY: -25,
-	// 				},
-	// 				{
-	// 					rotateX: 0,
-	// 					rotateY: 0,
-	// 					scale: () => {
-	// 						const scaleX = window.innerWidth / card.clientWidth;
-	// 						const scaleY = window.innerHeight / card.clientHeight;
-	// 						return Math.max(scaleX, scaleY);
-	// 					},
-	// 					duration: 1.0,
-	// 					overwrite: "auto",
-	// 				},
-	// 				0,
-	// 			)
-	// 			.add(
-	// 				Flip.from(initialState, {
-	// 					duration: 1.0,
-	// 					overwrite: "auto",
-	// 				}),
-	// 				0,
-	// 			)
-	// 			.to(
-	// 				heroContainer,
-	// 				{
-	// 					opacity: 0,
-	// 					duration: 0.2,
-	// 				},
-	// 				"0.8",
-	// 			);
-	// 	});
-	// }
+			gsap
+				.timeline({
+					scrollTrigger: {
+						trigger: heroContainer,
+						start: "top top",
+						end: "bottom bottom",
+						scrub: 1,
+						pin: "#hero",
+						anticipatePin: 1,
+					},
+				})
+				.fromTo(
+					card,
+					{
+						rotateX: 10,
+						rotateY: -25,
+					},
+					{
+						rotateX: 0,
+						rotateY: 0,
+						scale: () => {
+							const scaleX = window.innerWidth / card.clientWidth;
+							const scaleY = window.innerHeight / card.clientHeight;
+							return Math.max(scaleX, scaleY);
+						},
+						duration: 1.0,
+						overwrite: "auto",
+					},
+					0,
+				)
+				.add(
+					Flip.from(initialState, {
+						duration: 1.0,
+						overwrite: "auto",
+					}),
+					0,
+				)
+				.to(
+					heroContainer,
+					{
+						opacity: 0,
+						duration: 0.2,
+					},
+					"0.8",
+				);
+		});
+	}
 
-	// animate();
-	// window.addEventListener("resize", animate);
+	animate();
+	window.addEventListener("resize", animate);
 </script>
