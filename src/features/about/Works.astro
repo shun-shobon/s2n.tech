@@ -12,7 +12,10 @@ works.sort((a, b) => {
 	return bDate.getTime() - aDate.getTime();
 });
 
-const intl = new Intl.DateTimeFormat("ja-JP");
+const intl = new Intl.DateTimeFormat("ja-JP", {
+	year: "numeric",
+	month: "numeric",
+});
 ---
 
 <section class="mx-auto flex flex-col items-center gap-8 px-4 sm:px-8">

@@ -1,0 +1,81 @@
+---
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+import Heading from "./Heading.astro";
+
+const timeline = await getCollection("timeline");
+timeline.sort((a, b) => {
+	const aDate = new Date(a.data.startedAt);
+	const bDate = new Date(b.data.startedAt);
+	return bDate.getTime() - aDate.getTime();
+});
+
+const intl = new Intl.DateTimeFormat("ja-JP", {
+	year: "numeric",
+	month: "numeric",
+});
+---
+
+<section class="mx-auto flex flex-col items-center gap-8 px-4 sm:px-8">
+	<Heading>TimeLine<Fragment slot="ja">これまでの経歴</Fragment></Heading>
+	<div class="grid w-full max-w-4xl gap-2 sm:gap-4">
+		<div class="flex items-center gap-1" role="presentation">
+			<Icon name="6star" class="size-2" />
+			<span class="grow border-t border-dashed"></span>
+			<Icon name="6star" class="size-2" />
+		</div>
+
+		<div
+			class="grid w-full grid-cols-1 sm:grid-cols-[1fr_calc(var(--spacing)*3)_1fr]"
+		>
+			{
+				timeline.map((item) => (
+					<div class="group flex gap-2 sm:col-span-2 sm:odd:flex-row-reverse sm:even:col-start-2">
+						<div
+							role="presentation"
+							class="flex w-3 shrink-0 flex-col items-center gap-1.5 pb-1.5"
+						>
+							<Icon name="4star" class="size-3 shrink-0 rotate-45" />
+							<span class="h-full grow border-l group-last:hidden" />
+						</div>
+
+						<article class="grid grow pb-4 group-last:pb-0">
+							<div class="text-xs leading-none sm:text-sm">
+								<time datetime={item.data.startedAt}>
+									{intl.format(new Date(item.data.startedAt))}
+								</time>
+								{item.data.endedAt && (
+									<>
+										<span>-</span>
+										{item.data.endedAt === "present" ? (
+											<span>現在</span>
+										) : (
+											<time datetime={item.data.endedAt}>
+												{intl.format(new Date(item.data.endedAt))}
+											</time>
+										)}
+									</>
+								)}
+							</div>
+							<h3 class="text-justify text-base font-bold sm:text-lg">
+								{item.data.title}
+							</h3>
+							{item.data.description && (
+								<p class="min-w-0 text-justify text-sm sm:text-base">
+									{item.data.description}
+								</p>
+							)}
+						</article>
+					</div>
+				))
+			}
+		</div>
+
+		<div class="flex items-center gap-1" role="presentation">
+			<Icon name="6star" class="size-2" />
+			<span class="grow border-t border-dashed"></span>
+			<Icon name="6star" class="size-2" />
+		</div>
+	</div>
+</section>
