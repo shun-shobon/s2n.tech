@@ -16,7 +16,7 @@ export default defineConfig({
 		mdx(),
 		icon({
 			include: {
-				"simple-icons": ["github", "x"],
+				"simple-icons": ["github", "x", "zenn"],
 				"lucide": ["ellipsis", "heart", "message-circle", "send", "bookmark"],
 			},
 		}),
