@@ -1,0 +1,58 @@
+---
+import { Image } from "astro:assets";
+import { getCollection } from "astro:content";
+import { Icon } from "astro-icon/components";
+
+import Heading from "./Heading.astro";
+
+const works = await getCollection("works");
+works.sort((a, b) => {
+	const aDate = new Date(a.data.date);
+	const bDate = new Date(b.data.date);
+	return bDate.getTime() - aDate.getTime();
+});
+
+const intl = new Intl.DateTimeFormat("ja-JP");
+---
+
+<section class="mx-auto flex flex-col items-center gap-8 px-4 sm:px-8">
+	<Heading>Works<Fragment slot="ja">作ったもの</Fragment></Heading>
+	<div class="grid w-full max-w-6xl grid-cols-2 gap-4 sm:grid-cols-3 lg:gap-6">
+		{
+			works.map((work) => (
+				<article class="flex h-full flex-col gap-1 sm:gap-2">
+					<div class="flex items-center gap-1 sm:gap-2" role="presentation">
+						<span class="grow border-t border-dashed" />
+						<Icon name="moon" class="size-2 sm:size-4" />
+						<span class="grow border-t border-dashed" />
+					</div>
+					<Image
+						src={work.data.image}
+						alt=""
+						class="aspect-video w-full rounded-lg object-cover"
+					/>
+					<div class="grid">
+						<h3 class="overflow-hidden text-base font-bold overflow-ellipsis whitespace-nowrap sm:text-lg">
+							{work.data.title}
+						</h3>
+						<time
+							datetime={work.data.date}
+							class="text-xs leading-tight sm:text-sm"
+						>
+							{intl.format(new Date(work.data.date))}
+						</time>
+					</div>
+					<p class="grow text-xs sm:text-base">{work.data.description}</p>
+					<div class="flex flex-wrap gap-x-2">
+						{work.data.technologies.map((technology) => {
+							const className =
+								"font-cursive text-xs before:content-['#'] sm:text-sm";
+							return <span class={className}>{technology.id}</span>;
+						})}
+					</div>
+					<span class="mt-1 border-t border-dashed sm:mt-2" />
+				</article>
+			))
+		}
+	</div>
+</section>
