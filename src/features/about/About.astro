@@ -1,0 +1,26 @@
+---
+import { Icon } from "astro-icon/components";
+
+import Heading from "./Heading.astro";
+---
+
+<section class="mx-auto flex flex-col items-center gap-8 px-4 sm:px-8">
+	<Heading>About<Fragment slot="ja">私について</Fragment></Heading>
+	<div class="grid w-full max-w-4xl gap-1">
+		<div class="flex items-center gap-1" role="presentation">
+			<Icon name="6star" class="size-2" />
+			<span class="grow border-t border-dashed"></span>
+			<Icon name="6star" class="size-2" />
+		</div>
+
+		<p class="px-2 leading-relaxed sm:px-4">
+			東京農工大学で情報工学を学んでいる学生です。プログラミングやWebデザインが好きで、趣味や仕事でWebアプリケーション開発を行っています。一貫した世界観を持ったWebサイトが好きで、それを作るのを目標としています。また、アクセシビリティやセマンティクスにも興味を持っていて、それらを意識したWebサイトを作ることを心がけています。自分のスキルを活かして、誰もが同じように楽しめるようなWebサイト・Webアプリケーションを作っていきたいと思っています。
+		</p>
+
+		<div class="flex items-center gap-1" role="presentation">
+			<Icon name="6star" class="size-2" />
+			<span class="grow border-t border-dashed"></span>
+			<Icon name="6star" class="size-2" />
+		</div>
+	</div>
+</section>
