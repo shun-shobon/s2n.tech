@@ -1,0 +1,44 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
+<h2 class="relative grid gap-1">
+	<span
+		class="text-center font-cursive text-6xl leading-none [text-box:trim-both_cap_alphabetic]"
+		lang="en"><slot /></span
+	>
+
+	<!-- 月の区切り線 -->
+	<div class="flex items-center gap-1 pr-1 pl-3" role="presentation">
+		<span class="grow rounded-full border [filter:url(#heading-line-filter)]"
+		></span>
+		<Icon class="size-2" name="moon" />
+		<span class="grow rounded-full border [filter:url(#heading-line-filter)]"
+		></span>
+	</div>
+
+	<span
+		class="text-center text-xs leading-none font-bold [text-box:trim-both_cap_alphabetic]"
+		><slot name="ja" /></span
+	>
+
+	<!-- 流れ星 -->
+	<div
+		role="presentation"
+		class="absolute top-0 left-1 translate-x-[-50%] translate-y-[-50%]"
+	>
+		<div class="flex rotate-[-30deg] items-center gap-0.5">
+			<Icon name="4star" class="size-1.5" />
+			<span class="w-8 rounded-full border"></span>
+		</div>
+	</div>
+	<div
+		role="presentation"
+		class="absolute -right-1 bottom-3 translate-x-[50%] translate-y-[50%]"
+	>
+		<div class="flex rotate-[-30deg] items-center gap-0.5">
+			<Icon name="4star" class="size-1.5" />
+			<span class="w-8 rounded-full border"></span>
+		</div>
+	</div>
+</h2>
