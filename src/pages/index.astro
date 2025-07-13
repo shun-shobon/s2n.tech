@@ -22,10 +22,7 @@ import Layout from "@/layouts/Layout.astro";
 		/>
 	</Fragment>
 
-	<div
-		id="bg-container"
-		class="fixed inset-0 -z-50 bg-(image:--bg-night-sky) bg-size-[100%_120%] bg-position-[50%_0%]"
-	>
+	<div id="bg-container" class="fixed inset-0 -z-50 bg-(image:--bg-night-sky)">
 		<Image src={Stars} width={1920} alt="" class="h-full w-full object-cover" />
 	</div>
 
@@ -35,13 +32,23 @@ import Layout from "@/layouts/Layout.astro";
 		<Header />
 	</div>
 
-	<div id="hero-container" class="relative h-svh w-full text-white">
-		<div class="absolute inset-0 -z-40 p-2 sm:p-4">
-			<div class="h-full w-full border-2 border-dashed border-white"></div>
+	<div
+		id="hero-container"
+		class="relative h-svh w-full overflow-x-clip text-white"
+	>
+		<div class="absolute inset-0 -z-40">
+			<div
+				class="absolute top-1/2 left-1/2 size-[120vmin] -translate-x-1/2 -translate-y-1/2 overflow-x-clip rounded-full border-2 border-dashed border-white"
+			>
+			</div>
 		</div>
 
-		<div class="absolute -inset-x-8 -top-8 hidden">
-			<Image src={HeroDeco} alt="" class="h-auto w-full" />
+		<div class="absolute -inset-x-8 -top-8 h-1/2 sm:h-2/5">
+			<Image
+				src={HeroDeco}
+				alt=""
+				class="h-full w-full object-cover object-bottom"
+			/>
 		</div>
 
 		<div class="grid h-full w-full place-items-center">
@@ -54,7 +61,9 @@ import Layout from "@/layouts/Layout.astro";
 		</div>
 	</div>
 
-	<div class="pt-24 font-about-sans-serif leading-normal text-white">
+	<div
+		class="pt-[calc(var(--spacing)*24+10vmin)] font-about-sans-serif leading-normal text-white"
+	>
 		<!-- 見出しの線で利用するSVGフィルター -->
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -97,21 +106,3 @@ import Layout from "@/layouts/Layout.astro";
 		</div>
 	</div>
 </Layout>
-<script>
-	import { gsap } from "gsap";
-	import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-	gsap.registerPlugin(ScrollTrigger);
-
-	const bgContainer = document.getElementById("bg-container")!;
-
-	gsap.to(bgContainer, {
-		scrollTrigger: {
-			trigger: document.body,
-			start: "top top",
-			end: "bottom bottom",
-			scrub: true,
-		},
-		backgroundPositionY: "100%",
-	});
-</script>
