@@ -6,8 +6,8 @@ startedAt = "2003-04-22"
 [[timeline]]
 id = "2020-04-01"
 title = "長野工業高等専門学校 電子情報工学科"
-startedAt = "2020-04-01"
-endedAt = "2023-03-31"
+startedAt = "2019-04-01"
+endedAt = "2024-03-31"
 description = """
 研究室ではホログラフィに関する研究を行い、3Dモデルをホログラムに変換する手法の研究開発に取り組んでいました。
 また、部活では情報技術研究部に所属し、高専プロコンなどのコンテストでの入賞を目指して活動していました。
@@ -23,11 +23,19 @@ id = "2020-10-01"
 title = "C-Style株式会社"
 startedAt = "2020-10-01"
 endedAt = "2024-06-30"
+description = """
+スタートアップ企業にて自社サービスの開発や、受託開発に携わっていました。
+"""
 
 [[timeline]]
 id = "2021-01-01"
 title = "サポーターズウィンターハッカソンにて最優秀賞を受賞"
 startedAt = "2021-01-01"
+description = """
+2日間のハッカソンで、友人3人と参加しました。
+GENKAINETというWebRTCを用いてインターネット上にネットワークを構築してテキストのやり取りができるWebアプリを開発し、最優秀賞を受賞しました。
+主にフロントエンドのUI部分の開発を担当しました。
+"""
 
 [[timeline]]
 id = "2021-03-01"
@@ -38,11 +46,19 @@ startedAt = "2021-03-01"
 id = "2021-10-01"
 title = "全国高専プログラミングコンテスト2021にて課題部門特別賞を受賞"
 startedAt = "2021-10-01"
+description = """
+部員2人と参加しました。
+ARLDという、ARとブロックプログラミングを用いた教育アプリケーションを開発し、特別賞を受賞しました。
+主にWebフロントエンド、バックエンド、インフラ、UIデザイン、発表を担当しました。
+"""
 
 [[timeline]]
 id = "2022-03-01"
 title = "ピクシブ株式会社"
 startedAt = "2022-03-01"
+description = """
+春の短期インターンシップに参加し、pixivFANBOXのフロントエンドにおけるパフォーマンス改善を担当しました。
+"""
 
 [[timeline]]
 id = "2022-05-01"
@@ -53,12 +69,18 @@ startedAt = "2022-05-01"
 id = "2022-09-01"
 title = "Chatwork株式会社"
 startedAt = "2022-09-01"
+description = """
+夏の短期インターンシップに参加し、DDDやアジャイル/スクラム開発を用いてWebアプリケーションの開発をチームで行いました。
+"""
 
 [[timeline]]
 id = "2023-11-01"
 title = "ピクシブ株式会社"
 startedAt = "2023-11-01"
 endedAt = "2024-11-01"
+description = """
+アルバイトとしてコミック事業部で、フロントエンドの開発に携わっていました。
+"""
 
 [[timeline]]
 id = "2023-12-01"
@@ -69,6 +91,9 @@ startedAt = "2023-12-01"
 id = "2024-03-01"
 title = "Web Speed Hackathon 2024に参加"
 startedAt = "2024-03-01"
+description = """
+Webパフォーマンスコンテストに参加し、スコア順位2位を獲得しました。
+"""
 
 [[timeline]]
 id = "2024-04-01"
@@ -90,38 +115,59 @@ startedAt = "2024-08-01"
 id = "2024-09-01"
 title = "Web Developers Conference 2024にて登壇"
 startedAt = "2024-09-01"
+description = """
+1分 de Web標準のセッションでWebGPUとfocusgroupについて登壇しました。
+"""
 
 [[timeline]]
 id = "2024-11-01"
 title = "技育展 2024 決勝進出"
 startedAt = "2024-11-01"
+description = """
+Open Hack U 2024 TOKYO Vol.2で作成した「Who is?」で技育展2024に出展し、決勝進出しました。
+"""
 
 [[timeline]]
 id = "2024-12-01"
 title = "株式会社CAM"
 startedAt = "2024-12-01"
 endedAt = "2025-02-28"
+description = """
+内定者アルバイトとして、Webアプリケーションの開発に携わっていました。
+"""
 
 [[timeline]]
 id = "2024-12-10"
 title = "ISUCON14に参加"
 startedAt = "2024-12-10"
+description = """
+ISUCON14に友人2人と参加し、スコア順位で全体8位、学生2位を獲得しました。
+"""
 
 [[timeline]]
 id = "2024-12-30"
 title = "C105に出展"
 startedAt = "2024-12-30"
+description = """
+サークル「限界開発鯖」の合本に「GPGとYubiKeyで始める暗号化ライフ」を寄稿しました。
+"""
 
 [[timeline]]
 id = "2025-02-01"
 title = "技育博でDeNA賞を受賞"
 startedAt = "2025-02-01"
+description = """
+農工祭2024で作成したRicoShotで技育博に出展し、DeNA賞を受賞しました。
+"""
 
 [[timeline]]
 id = "2025-03-01"
 title = "株式会社AbemaTV"
 startedAt = "2025-03-01"
 endedAt = "2025-05-31"
+description = """
+内定者アルバイトとして、Webアプリケーションの開発に携わっていました。
+"""
 
 [[timeline]]
 id = "2025-03-20"
@@ -134,3 +180,6 @@ id = "2025-06-01"
 title = "株式会社CyberLCH"
 startedAt = "2025-06-01"
 endedAt = "present"
+description = """
+内定者アルバイトとして、Webアプリケーションの開発に携わっています。
+"""

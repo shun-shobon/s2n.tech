@@ -41,7 +41,7 @@ const intl = new Intl.DateTimeFormat("ja-JP", {
 						</div>
 
 						<article class="grid grow pb-4 group-last:pb-0">
-							<div class="text-xs leading-none sm:text-sm">
+							<div class="text-xs leading-none sm:text-sm sm:group-odd:text-right">
 								<time datetime={item.data.startedAt}>
 									{intl.format(new Date(item.data.startedAt))}
 								</time>
@@ -58,7 +58,7 @@ const intl = new Intl.DateTimeFormat("ja-JP", {
 									</>
 								)}
 							</div>
-							<h3 class="text-justify text-base font-bold sm:text-lg">
+							<h3 class="text-justify text-base font-bold sm:text-lg sm:group-odd:text-right">
 								{item.data.title}
 							</h3>
 							{item.data.description && (
