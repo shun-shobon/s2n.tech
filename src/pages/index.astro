@@ -1,4 +1,7 @@
 ---
+import { Image } from "astro:assets";
+
+import HeroDeco from "@/assets/hero-deco.svg";
 import Header from "@/components/Header.astro";
 import About from "@/features/about/About.astro";
 import Footer from "@/features/about/Footer.astro";
@@ -20,7 +23,7 @@ import Layout from "@/layouts/Layout.astro";
 
 	<div
 		id="bg-container"
-		class="fixed inset-0 -z-10 bg-(image:--bg-night-sky) bg-size-[100%_120%] bg-position-[50%_0%]"
+		class="fixed inset-0 -z-50 bg-(image:--bg-night-sky) bg-size-[100%_120%] bg-position-[50%_0%]"
 	>
 	</div>
 
@@ -30,9 +33,24 @@ import Layout from "@/layouts/Layout.astro";
 		<Header />
 	</div>
 
-	<div id="hero-container" class="h-dvh pt-28"></div>
+	<div id="hero-container" class="relative h-svh w-full text-white">
+		<div class="absolute inset-0 -z-40 p-8">
+			<div class="h-full w-full border-2 border-dashed border-white"></div>
+		</div>
 
-	<div class="font-about-sans-serif leading-normal text-white">
+		<div class="absolute -inset-x-8 -top-8">
+			<Image src={HeroDeco} alt="" class="h-auto w-full" />
+		</div>
+
+		<div class="grid h-full w-full place-items-center">
+			<div class="grid -rotate-3 -skew-x-12 text-center font-cursive">
+				<h1 class="text-8xl">Shuntaro Nishizawa</h1>
+				<p class="text-4xl">Web Frontend Developer</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="pt-24 font-about-sans-serif leading-normal text-white">
 		<!-- 見出しの線で利用するSVGフィルター -->
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
