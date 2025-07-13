@@ -69,20 +69,6 @@ const intl = new Intl.DateTimeFormat("ja-JP", {
 
 	const works = document.querySelector(".about-works")!;
 	const items = works.querySelectorAll(".about-works-item");
-	// [...items].forEach((work) => {
-	// 	gsap.from(work, {
-	// 		scrollTrigger: {
-	// 			trigger: work,
-	// 			start: "top bottom-=20%",
-	// 			end: "top top",
-	// 		},
-	// 		opacity: 0,
-	// 		y: "10%",
-	// 		duration: 0.8,
-	// 		ease: "power3.out",
-	// 		delay: 0.5,
-	// 	});
-	// });
 	gsap.from(items, {
 		scrollTrigger: {
 			trigger: works,

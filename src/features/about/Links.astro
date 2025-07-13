@@ -24,13 +24,15 @@ const LINKS = [
 
 <section class="mx-auto flex flex-col items-center gap-8 px-4 sm:px-8">
 	<Heading>Links<Fragment slot="ja">リンク集</Fragment></Heading>
-	<div class="grid w-full max-w-4xl grid-cols-3 justify-center gap-8">
+	<div
+		class="about-links grid w-full max-w-4xl grid-cols-3 justify-center gap-8"
+	>
 		{
 			LINKS.map((link) => (
 				<a
 					href={link.href}
 					target="_blank"
-					class="flex flex-col items-center gap-2"
+					class="about-links-item flex flex-col items-center gap-2"
 				>
 					<Icon name={link.icon} class="size-8" />
 					<span>{link.label}</span>
@@ -39,3 +41,26 @@ const LINKS = [
 		}
 	</div>
 </section>
+<script>
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	const links = document.querySelector(".about-links")!;
+	const items = links.querySelectorAll(".about-links-item");
+
+	gsap.from(items, {
+		scrollTrigger: {
+			trigger: links,
+			start: "top bottom-=20%",
+			end: "top top",
+		},
+		opacity: 0,
+		y: "10%",
+		duration: 0.8,
+		ease: "power3.out",
+		delay: 0.5,
+		stagger: 0.1,
+	});
+</script>
