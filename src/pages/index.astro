@@ -36,18 +36,20 @@ import Layout from "@/layouts/Layout.astro";
 	</div>
 
 	<div id="hero-container" class="relative h-svh w-full text-white">
-		<div class="absolute inset-0 -z-40 p-8">
+		<div class="absolute inset-0 -z-40 p-2 sm:p-4">
 			<div class="h-full w-full border-2 border-dashed border-white"></div>
 		</div>
 
-		<div class="absolute -inset-x-8 -top-8">
+		<div class="absolute -inset-x-8 -top-8 hidden">
 			<Image src={HeroDeco} alt="" class="h-auto w-full" />
 		</div>
 
 		<div class="grid h-full w-full place-items-center">
-			<div class="grid -rotate-3 -skew-x-12 text-center font-cursive">
-				<h1 class="text-8xl">Shuntaro Nishizawa</h1>
-				<p class="text-4xl">Web Frontend Developer</p>
+			<div
+				class="grid -rotate-3 -skew-x-12 text-center font-cursive leading-none"
+			>
+				<h1 class="text-[clamp(2.5rem,10vw,8rem)]">Shuntaro Nishizawa</h1>
+				<p class="text-[clamp(1.25rem,5vw,4rem)]">Web Frontend Developer</p>
 			</div>
 		</div>
 	</div>
