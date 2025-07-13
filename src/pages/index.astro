@@ -2,6 +2,7 @@
 import { Image } from "astro:assets";
 
 import HeroDeco from "@/assets/hero-deco.svg";
+import Stars from "@/assets/stars.png";
 import Header from "@/components/Header.astro";
 import About from "@/features/about/About.astro";
 import Footer from "@/features/about/Footer.astro";
@@ -25,6 +26,7 @@ import Layout from "@/layouts/Layout.astro";
 		id="bg-container"
 		class="fixed inset-0 -z-50 bg-(image:--bg-night-sky) bg-size-[100%_120%] bg-position-[50%_0%]"
 	>
+		<Image src={Stars} width={1920} alt="" class="h-full w-full object-cover" />
 	</div>
 
 	<div
