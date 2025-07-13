@@ -62,8 +62,8 @@ import { Icon } from "astro-icon/components";
 		gsap.from(heading, {
 			scrollTrigger: {
 				trigger: heading,
-				start: "bottom bottom",
-				end: "bottom top",
+				start: "top bottom-=20%",
+				end: "top top",
 			},
 			opacity: 0,
 			ease: "power3.out",
@@ -74,8 +74,8 @@ import { Icon } from "astro-icon/components";
 		gsap.from(stars, {
 			scrollTrigger: {
 				trigger: heading,
-				start: "bottom bottom",
-				end: "bottom top",
+				start: "top bottom-=20%",
+				end: "top top",
 			},
 			opacity: 0,
 			translateX: "100%",

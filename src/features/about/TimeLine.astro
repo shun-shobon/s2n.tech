@@ -19,8 +19,11 @@ const intl = new Intl.DateTimeFormat("ja-JP", {
 
 <section class="mx-auto flex flex-col items-center gap-8 px-4 sm:px-8">
 	<Heading>TimeLine<Fragment slot="ja">これまでの経歴</Fragment></Heading>
-	<div class="grid w-full max-w-4xl gap-2 sm:gap-4">
-		<div class="flex items-center gap-1" role="presentation">
+	<div class="about-timeline grid w-full max-w-4xl gap-2 sm:gap-4">
+		<div
+			class="about-timeline-line-top flex items-center gap-1"
+			role="presentation"
+		>
 			<Icon name="6star" class="size-2" />
 			<span class="grow border-t border-dashed"></span>
 			<Icon name="6star" class="size-2" />
@@ -31,7 +34,7 @@ const intl = new Intl.DateTimeFormat("ja-JP", {
 		>
 			{
 				timeline.map((item) => (
-					<div class="group flex gap-2 sm:col-span-2 sm:odd:flex-row-reverse sm:even:col-start-2">
+					<div class="about-timeline-item group flex gap-2 sm:col-span-2 sm:odd:flex-row-reverse sm:even:col-start-2">
 						<div
 							role="presentation"
 							class="flex w-3 shrink-0 flex-col items-center gap-1.5 pb-1.5"
@@ -72,10 +75,63 @@ const intl = new Intl.DateTimeFormat("ja-JP", {
 			}
 		</div>
 
-		<div class="flex items-center gap-1" role="presentation">
+		<div
+			class="about-timeline-line-bottom flex items-center gap-1"
+			role="presentation"
+		>
 			<Icon name="6star" class="size-2" />
 			<span class="grow border-t border-dashed"></span>
 			<Icon name="6star" class="size-2" />
 		</div>
 	</div>
 </section>
+<script>
+	import { gsap } from "gsap";
+	import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+	gsap.registerPlugin(ScrollTrigger);
+
+	const timeline = document.querySelector(".about-timeline")!;
+	const lineTop = timeline.querySelector(".about-timeline-line-top");
+	const lineBottom = timeline.querySelector(".about-timeline-line-bottom");
+	const items = timeline.querySelectorAll(".about-timeline-item");
+
+	gsap.from(lineTop, {
+		scrollTrigger: {
+			trigger: timeline,
+			start: "top bottom-=20%",
+			end: "top top",
+		},
+		opacity: 0,
+		translateX: "-5%",
+		duration: 0.8,
+		ease: "power3.out",
+		delay: 0.5,
+	});
+	gsap.from(lineBottom, {
+		scrollTrigger: {
+			trigger: timeline,
+			start: "top bottom-=20%",
+			end: "top top",
+		},
+		opacity: 0,
+		translateX: "5%",
+		duration: 0.8,
+		ease: "power3.out",
+		delay: 0.5,
+	});
+
+	gsap.from(items, {
+		scrollTrigger: {
+			trigger: timeline,
+			start: "top bottom-=20%",
+			end: "top top",
+		},
+		opacity: 0,
+		y: "10%",
+		duration: 0.8,
+		ease: "power3.out",
+		delay: 0.5,
+		stagger: 0.1,
+	});
+</script>

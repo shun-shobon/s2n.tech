@@ -20,7 +20,9 @@ const intl = new Intl.DateTimeFormat("ja-JP", {
 
 <section class="mx-auto flex flex-col items-center gap-8 px-4 sm:px-8">
 	<Heading>Works<Fragment slot="ja">作ったもの</Fragment></Heading>
-	<div class="grid w-full max-w-6xl grid-cols-2 gap-4 sm:grid-cols-3 lg:gap-6">
+	<div
+		class="about-works grid w-full max-w-6xl grid-cols-2 gap-4 sm:grid-cols-3 lg:gap-6"
+	>
 		{
 			works.map((work) => (
 				<article class="about-works-item flex h-full flex-col gap-1 sm:gap-2">
@@ -65,19 +67,33 @@ const intl = new Intl.DateTimeFormat("ja-JP", {
 
 	gsap.registerPlugin(ScrollTrigger);
 
-	const works = document.querySelectorAll(".about-works-item");
-	[...works].forEach((work) => {
-		gsap.from(work, {
-			scrollTrigger: {
-				trigger: work,
-				start: "20% bottom",
-				end: "20% top",
-			},
-			opacity: 0,
-			y: "10%",
-			duration: 0.8,
-			ease: "power3.out",
-			delay: 0.5,
-		});
+	const works = document.querySelector(".about-works")!;
+	const items = works.querySelectorAll(".about-works-item");
+	// [...items].forEach((work) => {
+	// 	gsap.from(work, {
+	// 		scrollTrigger: {
+	// 			trigger: work,
+	// 			start: "top bottom-=20%",
+	// 			end: "top top",
+	// 		},
+	// 		opacity: 0,
+	// 		y: "10%",
+	// 		duration: 0.8,
+	// 		ease: "power3.out",
+	// 		delay: 0.5,
+	// 	});
+	// });
+	gsap.from(items, {
+		scrollTrigger: {
+			trigger: works,
+			start: "top bottom-=20%",
+			end: "top top",
+		},
+		opacity: 0,
+		y: "10%",
+		duration: 0.8,
+		ease: "power3.out",
+		delay: 0.5,
+		stagger: 0.1,
 	});
 </script>

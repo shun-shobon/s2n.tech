@@ -44,8 +44,8 @@ import Heading from "./Heading.astro";
 	gsap.from(lineTop, {
 		scrollTrigger: {
 			trigger: about,
-			start: "bottom bottom",
-			end: "bottom top",
+			start: "top bottom-=20%",
+			end: "top top",
 		},
 		opacity: 0,
 		translateX: "-5%",
@@ -56,8 +56,8 @@ import Heading from "./Heading.astro";
 	gsap.from(lineBottom, {
 		scrollTrigger: {
 			trigger: about,
-			start: "bottom bottom",
-			end: "bottom top",
+			start: "top bottom-=20%",
+			end: "top top",
 		},
 		opacity: 0,
 		translateX: "5%",
@@ -69,8 +69,8 @@ import Heading from "./Heading.astro";
 	gsap.from(text, {
 		scrollTrigger: {
 			trigger: about,
-			start: "bottom bottom",
-			end: "bottom top",
+			start: "top bottom-=20%",
+			end: "top top",
 		},
 		opacity: 0,
 		duration: 1.0,
