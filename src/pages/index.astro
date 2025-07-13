@@ -1,7 +1,4 @@
 ---
-import { Image } from "astro:assets";
-
-import HeroCard from "@/assets/hero-card.png";
 import Header from "@/components/Header.astro";
 import About from "@/features/about/About.astro";
 import Footer from "@/features/about/Footer.astro";
@@ -13,7 +10,6 @@ import Layout from "@/layouts/Layout.astro";
 
 <Layout class="bg-(image:--bg-night-sky)">
 	<Fragment slot="head">
-		<!-- <Font cssVariable="--font-family-zen-maru-gothic" preload /> -->
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -28,27 +24,9 @@ import Layout from "@/layouts/Layout.astro";
 		<Header />
 	</div>
 
-	<div
-		id="hero-container"
-		class="overflow-hidden bg-background-primary bg-(image:--bg-grid) bg-size-[48px_48px] bg-center bg-repeat"
-	>
-		<div
-			id="hero"
-			class="grid h-dvh w-full place-items-end px-32 pt-28 pb-32 perspective-distant"
-		>
-			<Image
-				id="hero-card"
-				src={HeroCard}
-				alt=""
-				class="w-2/5 translate-3d drop-shadow-lg"
-				style={{ aspectRatio: `${HeroCard.width} / ${HeroCard.height}` }}
-			/>
-		</div>
+	<div id="hero-container" class="h-dvh pt-28"></div>
 
-		<div class="h-dvh"></div>
-	</div>
-
-	<div class="mt-[-80dvh] font-about-sans-serif text-white">
+	<div class="font-about-sans-serif text-white">
 		<!-- 見出しの線で利用するSVGフィルター -->
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
@@ -91,81 +69,3 @@ import Layout from "@/layouts/Layout.astro";
 		</div>
 	</div>
 </Layout>
-<script>
-	import { gsap } from "gsap";
-	import { ScrollTrigger } from "gsap/ScrollTrigger";
-	import { Flip } from "gsap/Flip";
-
-	gsap.registerPlugin(ScrollTrigger);
-	gsap.registerPlugin(Flip);
-
-	const card = document.querySelector("#hero-card")!;
-	const hero = document.querySelector("#hero")!;
-	const heroContainer = document.querySelector("#hero-container")!;
-
-	let animateCtx: gsap.Context;
-
-	function animate() {
-		if (animateCtx) {
-			animateCtx.revert();
-		}
-
-		hero.classList.remove("place-items-center");
-		hero.classList.add("place-items-end");
-
-		animateCtx = gsap.context(() => {
-			const initialState = Flip.getState(card);
-			hero.classList.remove("place-items-end");
-			hero.classList.add("place-items-center");
-
-			gsap
-				.timeline({
-					scrollTrigger: {
-						trigger: heroContainer,
-						start: "top top",
-						end: "bottom bottom",
-						scrub: 1,
-						pin: "#hero",
-						anticipatePin: 1,
-					},
-				})
-				.fromTo(
-					card,
-					{
-						rotateX: 10,
-						rotateY: -25,
-					},
-					{
-						rotateX: 0,
-						rotateY: 0,
-						scale: () => {
-							const scaleX = window.innerWidth / card.clientWidth;
-							const scaleY = window.innerHeight / card.clientHeight;
-							return Math.max(scaleX, scaleY);
-						},
-						duration: 1.0,
-						overwrite: "auto",
-					},
-					0,
-				)
-				.add(
-					Flip.from(initialState, {
-						duration: 1.0,
-						overwrite: "auto",
-					}),
-					0,
-				)
-				.to(
-					heroContainer,
-					{
-						opacity: 0,
-						duration: 0.2,
-					},
-					"0.8",
-				);
-		});
-	}
-
-	animate();
-	window.addEventListener("resize", animate);
-</script>
