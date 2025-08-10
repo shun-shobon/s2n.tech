@@ -27,7 +27,7 @@
 	"devDependencies": {
 		"@astrojs/check": "0.9.4",
 		"@astrojs/partytown": "2.1.4",
-		"@astrojs/sitemap": "3.4.1",
+		"@astrojs/sitemap": "3.4.2",
 		"@shun-shobon/style-guide": "1.0.0",
 		"astro": "5.12.8",
 		"astro-icon": "1.1.5",
