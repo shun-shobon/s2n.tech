@@ -25,7 +25,7 @@ jobs:
             |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
 
       - name: Setup | Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup | Node.js
         uses: ./.github/actions/setup-node

@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup | Node
         uses: ./.github/actions/setup-node
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup | Node
         uses: ./.github/actions/setup-node
@@ -40,7 +40,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Setup | Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup | Node
         uses: ./.github/actions/setup-node
