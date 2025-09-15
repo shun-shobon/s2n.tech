@@ -18,7 +18,7 @@
 		"type-check": "tsc --noEmit && astro check"
 	},
 	"dependencies": {
-		"@iconify-json/lucide": "1.2.66",
+		"@iconify-json/lucide": "1.2.67",
 		"@iconify-json/material-symbols-light": "1.2.33",
 		"@iconify-json/simple-icons": "1.2.50",
 		"@tailwindcss/vite": "4.1.12",
