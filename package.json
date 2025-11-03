@@ -31,7 +31,7 @@
 		"@shun-shobon/style-guide": "1.1.1",
 		"astro": "5.15.3",
 		"astro-icon": "1.1.5",
-		"eslint": "9.37.0",
+		"eslint": "9.38.0",
 		"pnpm": "10.18.3",
 		"prettier": "3.6.2",
 		"sharp": "0.34.4",
