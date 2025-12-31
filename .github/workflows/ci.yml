@@ -23,7 +23,7 @@ jobs:
         run: pnpm run sync
 
       - name: Run | Lint
-        run: pnpm run lint:ci
+        run: pnpm run lint --max-warnings 0
 
   format:
     runs-on: ubuntu-slim
