@@ -8,7 +8,7 @@ import { slugToYearMonth } from "../utils";
 import Entry from "./Entry.astro";
 
 const entries = await getCollection("timeline").then((entries) =>
-	entries.sort(
+	entries.toSorted(
 		(a, b) =>
 			-Temporal.PlainYearMonth.compare(
 				slugToYearMonth(a.slug),
