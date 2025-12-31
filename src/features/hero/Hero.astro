@@ -1,12 +1,20 @@
 ---
-import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+
+import MyIcon from "@/assets/my-icon.png";
 
 import Links from "./Links.astro";
 ---
 
 <section class="relative grid h-svh w-full place-items-center">
 	<div class="grid justify-items-center gap-8 text-2xl sm:text-4xl">
-		<Icon name="meru" class="h-32 w-32 rounded-full sm:h-64 sm:w-64" />
+		<Image
+			src={MyIcon}
+			alt=""
+			widths={[128, 256, 512, 1024]}
+			sizes="auto, (min-width: 640px) 128px, 256px"
+			class="h-32 w-32 rounded-full sm:h-64 sm:w-64"
+		/>
 		<hgroup class="text-center">
 			<h1 class="text-4xl sm:text-6xl">Shuntaro Nishizawa</h1>
 			<p>しゅん / SHUN</p>
