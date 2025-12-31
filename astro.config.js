@@ -1,3 +1,4 @@
+import cloudflare from "@astrojs/cloudflare";
 import partytown from "@astrojs/partytown";
 import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
@@ -6,11 +7,10 @@ import icon from "astro-icon";
 
 // https://astro.build/config
 export default defineConfig({
-	prefetch: {
-		prefetchAll: true,
-		defaultStrategy: "viewport",
-	},
 	site: "https://s2n.tech",
+	adapter: cloudflare({
+		imageService: "compile",
+	}),
 	integrations: [
 		icon({
 			include: {
