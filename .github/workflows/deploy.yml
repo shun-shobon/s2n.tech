@@ -1,31 +1,42 @@
-name: Deploy
+name: deploy
 on:
+  pull_request:
   push:
+    branches:
+      - main
 
 permissions:
   contents: read
-  deployments: write
   pull-requests: write
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
-      - name: Prepare | Comment deploy start
-        if: github.event_name != 'push'
-        uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2
-        with:
-          message-id: cloudflare-deploy
-          message: |
-            ### <span aria-hidden="true">🚧</span> Deploy Preview building...
+      - name: Setup | Post comment
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --edit-last --create-if-none --body-file - <<EOF
+          ### <span aria-hidden="true">🚧</span> Deploy Preview building...
 
-            |  Name | Link |
-            |---------------------------------|------------------------|
-            |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
-            |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
+          |  Name | Link |
+          |---------------------------------|------------------------|
+          |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
+          |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
+          ---
+          EOF
 
       - name: Setup | Checkout
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+
+      - name: Setup | Node.js
+        uses: ./.github/actions/setup-node
 
       - name: Setup | Node.js
         uses: ./.github/actions/setup-node
@@ -36,26 +47,37 @@ jobs:
           PUBLIC_GTAG_ID: ${{ secrets.GTAG_ID }}
           PUBLIC_CF_WEB_ANALYTICS_TOKEN: ${{ secrets.CLOUDFLARE_WEB_ANALYTICS_TOKEN }}
 
+      - name: Setup | Get version
+        id: get-version
+        run: |
+          version="$(git rev-parse --short ${{ github.sha }})"
+          echo "version=${version}" >> $GITHUB_OUTPUT
+
       - name: Deploy | Cloudflare Pages
-        id: cloudflare
-        uses: cloudflare/pages-action@f0a1cd58cd66095dee69bfa18fa5efd1dde93bca # v1
+        id: deploy-preview
+        uses: cloudflare/wrangler-action@da0e0dfe58b7a431659754fdf3f186c529afbe65 # v3.14.1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: s2n-tech
-          directory: ./dist
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          command: >-
+            versions
+            upload
+            --minify
+            --tag "${{ steps.get-version.outputs.version }}"
+            --message "${{ github.event_name == 'pull_request' && format('Preview deployment for PR #{0}', github.event.pull_request.number) || 'Release deployment' }}"
 
-      - name: Post Deploy | Comment deploy url
-        uses: mshick/add-pr-comment@b8f338c590a895d50bcbfa6c5859251edc8952fc # v2
-        with:
-          message-id: cloudflare-deploy
-          message: |
-            ### <span aria-hidden="true">✅</span> Deploy Preview ready!
+      - name: Finish | Post comment
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh pr comment ${{ github.event.pull_request.number }} --edit-last --create-if-none --body-file - <<EOF
+          ### <span aria-hidden="true">✅</span> Deploy Preview ready!
 
-            |  Name | Link |
-            |---------------------------------|------------------------|
-            |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
-            |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
-            |<span aria-hidden="true">😎</span> Deploy Preview Url | [${{ steps.cloudflare.outputs.url }}](${{ steps.cloudflare.outputs.url }}) |
-            |<span aria-hidden="true">🌳</span> Environment | ${{ steps.cloudflare.outputs.environment }} |
+          |  Name | Link |
+          |---------------------------------|------------------------|
+          |<span aria-hidden="true">🔨</span> Latest commit | ${{ github.sha }} |
+          |<span aria-hidden="true">🔍</span> Latest deploy log | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
+          |<span aria-hidden="true">🌐</span> Preview link | [${{ steps.deploy-preview.outputs.deployment-url }}](${{ steps.deploy-preview.outputs.deployment-url }}) |
+          ---
+          EOF

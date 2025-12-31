@@ -15,7 +15,7 @@
 		"lint:fix": "eslint --fix .",
 		"start": "astro preview",
 		"sync": "astro sync",
-		"type-check": "tsc --noEmit && astro check"
+		"typecheck": "tsc --noEmit && astro check"
 	},
 	"dependencies": {
 		"@iconify-json/lucide": "1.2.79",
