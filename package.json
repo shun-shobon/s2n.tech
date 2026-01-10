@@ -27,9 +27,9 @@
 	"devDependencies": {
 		"@astrojs/check": "0.9.6",
 		"@astrojs/partytown": "2.1.4",
-		"@astrojs/sitemap": "3.6.0",
+		"@astrojs/sitemap": "3.6.1",
 		"@shun-shobon/style-guide": "2.1.0",
-		"astro": "5.16.6",
+		"astro": "5.16.7",
 		"astro-icon": "1.1.5",
 		"eslint": "9.39.2",
 		"pnpm": "10.27.0",
