@@ -15,8 +15,8 @@ importers:
         specifier: 1.2.85
         version: 1.2.85
       '@iconify-json/material-symbols-light':
-        specifier: 1.2.51
-        version: 1.2.51
+        specifier: 1.2.52
+        version: 1.2.52
       '@iconify-json/simple-icons':
         specifier: 1.2.66
         version: 1.2.66
@@ -1019,8 +1019,8 @@ packages:
   '@iconify-json/lucide@1.2.85':
     resolution: {integrity: sha512-VXUWT6KRDiVK4Ty/7Ypu+U0KnSbHzDAOOiSgLLPhU8u3ES5IusP1X7ahZb1iwiVKGWRG6gkKywaRUIZLgYWXyA==}
 
-  '@iconify-json/material-symbols-light@1.2.51':
-    resolution: {integrity: sha512-S0LR5LITSeybVfVK1Hnbjcv7/JdqVKu2ZFhpLiU2KYBkU6TbsFy3jQnKjxPNZxffxNTnxpf11hWFsvkYZGyS7Q==}
+  '@iconify-json/material-symbols-light@1.2.52':
+    resolution: {integrity: sha512-4JYiBw/n4zOHd1BA0dEvp2grh9kgpqxG2Lmfv5JUg5QVzrLq4dvY2t791OgR6oJrppXPA1cdUR1oDMZXWOFuTw==}
 
   '@iconify-json/simple-icons@1.2.66':
     resolution: {integrity: sha512-D1OnnXwiQXFkVMw5M+Bt8mPsXeMkQyGmMdrmN7lsQlKMUkfLOp6JWhnUJ92po51WXT046aF/zzqSmkKqg08p4Q==}
@@ -4236,6 +4236,7 @@ packages:
   tar@7.5.3:
     resolution: {integrity: sha512-ENg5JUHUm2rDD7IvKNFGzyElLXNjachNLp6RaGf4+JOgxXHkqA+gq81ZAMCUmtMtqBsoU62lcp6S27g1LCYGGQ==}
     engines: {node: '>=18'}
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
 
   temporal-polyfill@0.3.0:
     resolution: {integrity: sha512-qNsTkX9K8hi+FHDfHmf22e/OGuXmfBm9RqNismxBrnSmZVJKegQ+HYYXT+R7Ha8F/YSm2Y34vmzD4cxMu2u95g==}
@@ -5550,7 +5551,7 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify-json/material-symbols-light@1.2.51':
+  '@iconify-json/material-symbols-light@1.2.52':
     dependencies:
       '@iconify/types': 2.0.0
 
