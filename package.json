@@ -29,7 +29,7 @@
 		"@astrojs/partytown": "2.1.4",
 		"@astrojs/sitemap": "3.7.0",
 		"@shun-shobon/style-guide": "2.2.4",
-		"astro": "5.16.14",
+		"astro": "5.16.15",
 		"astro-icon": "1.1.5",
 		"eslint": "9.39.2",
 		"pnpm": "10.28.1",
