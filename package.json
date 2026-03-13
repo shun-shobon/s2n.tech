@@ -19,7 +19,7 @@
 	"dependencies": {
 		"@astrojs/cloudflare": "12.6.13",
 		"@iconify-json/lucide": "1.2.96",
-		"@iconify-json/material-symbols-light": "1.2.60",
+		"@iconify-json/material-symbols-light": "1.2.61",
 		"@iconify-json/simple-icons": "1.2.73",
 		"@tailwindcss/vite": "4.2.1",
 		"temporal-polyfill": "0.3.1"
