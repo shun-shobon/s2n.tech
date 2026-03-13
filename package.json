@@ -17,7 +17,7 @@
 		"typecheck": "tsc --noEmit && astro check"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "12.6.12",
+		"@astrojs/cloudflare": "12.6.13",
 		"@iconify-json/lucide": "1.2.96",
 		"@iconify-json/material-symbols-light": "1.2.60",
 		"@iconify-json/simple-icons": "1.2.72",
@@ -25,11 +25,11 @@
 		"temporal-polyfill": "0.3.0"
 	},
 	"devDependencies": {
-		"@astrojs/check": "0.9.6",
-		"@astrojs/partytown": "2.1.4",
-		"@astrojs/sitemap": "3.7.0",
+		"@astrojs/check": "0.9.7",
+		"@astrojs/partytown": "2.1.5",
+		"@astrojs/sitemap": "3.7.1",
 		"@shun-shobon/style-guide": "5.1.1",
-		"astro": "5.18.0",
+		"astro": "5.18.1",
 		"astro-icon": "1.1.5",
 		"eslint": "10.0.3",
 		"pnpm": "10.31.0",
