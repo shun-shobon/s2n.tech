@@ -4,6 +4,8 @@ minimumReleaseAgeExclude:
   - "@shun-shobon/style-guide"
   # Renovate security update: pnpm@10.28.2
   - pnpm@10.28.2
+  # Renovate security update: astro@6.1.6
+  - astro@6.1.6
 
 onlyBuiltDependencies:
   - "@tailwindcss/oxide"
