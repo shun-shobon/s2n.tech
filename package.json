@@ -37,7 +37,7 @@
 		"sharp": "0.34.5",
 		"tailwindcss": "4.2.4",
 		"tailwindcss-animated": "2.0.0",
-		"typescript": "5.9.3",
+		"typescript": "6.0.3",
 		"wrangler": "4.85.0"
 	}
 }
