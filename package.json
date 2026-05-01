@@ -20,7 +20,7 @@
 		"@astrojs/cloudflare": "12.6.13",
 		"@iconify-json/lucide": "1.2.104",
 		"@iconify-json/material-symbols-light": "1.2.69",
-		"@iconify-json/simple-icons": "1.2.79",
+		"@iconify-json/simple-icons": "1.2.80",
 		"@tailwindcss/vite": "4.2.4",
 		"temporal-polyfill": "0.3.2"
 	},
