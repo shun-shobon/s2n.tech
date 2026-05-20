@@ -36,7 +36,7 @@
 		"prettier": "3.8.3",
 		"sharp": "0.34.5",
 		"tailwindcss": "4.3.0",
-		"tailwindcss-animated": "2.0.0",
+		"tailwindcss-animated": "2.1.0",
 		"typescript": "5.9.3",
 		"wrangler": "4.92.0"
 	}
