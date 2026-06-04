@@ -38,6 +38,6 @@
 		"tailwindcss": "4.3.0",
 		"tailwindcss-animated": "2.1.0",
 		"typescript": "5.9.3",
-		"wrangler": "4.95.0"
+		"wrangler": "4.96.0"
 	}
 }
