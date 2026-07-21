@@ -12,8 +12,8 @@ importers:
         specifier: 12.6.13
         version: 12.6.13(@types/node@25.9.3)(astro@5.18.1(@types/node@25.9.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.62.0)(typescript@5.9.3)(yaml@2.9.0))(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0)
       '@iconify-json/lucide':
-        specifier: 1.2.117
-        version: 1.2.117
+        specifier: 1.2.118
+        version: 1.2.118
       '@iconify-json/material-symbols-light':
         specifier: 1.2.85
         version: 1.2.85
@@ -1036,8 +1036,8 @@ packages:
     resolution: {integrity: sha512-bV0Tgo9K4hfPCek+aMAn81RppFKv2ySDQeMoSZuvTASywNTnVJCArCZE2FWqpvIatKu7VMRLWlR1EazvVhDyhQ==}
     engines: {node: '>=18.18'}
 
-  '@iconify-json/lucide@1.2.117':
-    resolution: {integrity: sha512-7isYKJKWRZ8NfLNSY8pIYmRWiMBkopL4/X22gZfFmePFhc7az0hQ5biqBLG6vdDEvMctFu2suZB3yQ29RL+8tA==}
+  '@iconify-json/lucide@1.2.118':
+    resolution: {integrity: sha512-JBnK4YOq6K/lA0JP//27QxFxJ4120TjvfXAzGZZIGjCcXcRRRFxl1rcV7+IWdcVCe90KXdqVaAwLaLf6G3HELw==}
 
   '@iconify-json/material-symbols-light@1.2.85':
     resolution: {integrity: sha512-EZKdOTn6fVfAiQECEGhrVTtIPnIvATZhNbCUoW/kLS8YaWM9AVQP2E7yYTDff4FwruXqaRtK9ukMIvbho2Bskg==}
@@ -5891,7 +5891,7 @@ snapshots:
 
   '@humanwhocodes/retry@0.4.3': {}
 
-  '@iconify-json/lucide@1.2.117':
+  '@iconify-json/lucide@1.2.118':
     dependencies:
       '@iconify/types': 2.0.0
 
