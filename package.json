@@ -22,7 +22,7 @@
 		"@iconify-json/material-symbols-light": "1.2.86",
 		"@iconify-json/simple-icons": "1.2.90",
 		"@tailwindcss/vite": "4.3.2",
-		"temporal-polyfill": "0.3.2"
+		"temporal-polyfill": "1.0.1"
 	},
 	"devDependencies": {
 		"@astrojs/check": "0.9.9",
