@@ -29,7 +29,7 @@ importers:
     devDependencies:
       '@astrojs/check':
         specifier: 0.9.9
-        version: 0.9.9(prettier-plugin-astro@0.14.1)(prettier@3.9.5)(typescript@5.9.3)
+        version: 0.9.9(prettier-plugin-astro@0.14.1)(prettier@3.9.6)(typescript@5.9.3)
       '@astrojs/partytown':
         specifier: 2.1.7
         version: 2.1.7
@@ -38,7 +38,7 @@ importers:
         version: 3.7.3
       '@shun-shobon/style-guide':
         specifier: 5.1.1
-        version: 5.1.1(@typescript-eslint/utils@8.61.0(eslint@10.7.0(jiti@2.7.0))(typescript@5.9.3))(eslint@10.7.0(jiti@2.7.0))(prettier@3.9.5)(storybook@10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.5)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@5.9.3)
+        version: 5.1.1(@typescript-eslint/utils@8.61.0(eslint@10.7.0(jiti@2.7.0))(typescript@5.9.3))(eslint@10.7.0(jiti@2.7.0))(prettier@3.9.6)(storybook@10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.6)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@5.9.3)
       astro:
         specifier: 5.18.1
         version: 5.18.1(@types/node@25.9.3)(jiti@2.7.0)(lightningcss@1.32.0)(rollup@4.62.0)(typescript@5.9.3)(yaml@2.9.0)
@@ -52,8 +52,8 @@ importers:
         specifier: 10.33.4
         version: 10.33.4
       prettier:
-        specifier: 3.9.5
-        version: 3.9.5
+        specifier: 3.9.6
+        version: 3.9.6
       sharp:
         specifier: 0.35.3
         version: 0.35.3(@types/node@25.9.3)
@@ -4142,8 +4142,8 @@ packages:
       prettier-plugin-svelte:
         optional: true
 
-  prettier@3.9.5:
-    resolution: {integrity: sha512-/FVl766LpUfB5vXgCYOYa0MeV/441Ia99AeICQIQFTY/Nw0roZwULcXpku5i1/m5kt/baz+s4Zogspd839HSMg==}
+  prettier@3.9.6:
+    resolution: {integrity: sha512-OpN0zzVdiaiAhxpuuj5efpIS4sY9j7bY6uR5mnj5yPzGkdkjNKSJeUThPb60Jw29QuAZgA4o+/iB49kFiaBX6g==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -5182,9 +5182,9 @@ snapshots:
 
   '@antfu/utils@8.1.1': {}
 
-  '@astrojs/check@0.9.9(prettier-plugin-astro@0.14.1)(prettier@3.9.5)(typescript@5.9.3)':
+  '@astrojs/check@0.9.9(prettier-plugin-astro@0.14.1)(prettier@3.9.6)(typescript@5.9.3)':
     dependencies:
-      '@astrojs/language-server': 2.16.10(prettier-plugin-astro@0.14.1)(prettier@3.9.5)(typescript@5.9.3)
+      '@astrojs/language-server': 2.16.10(prettier-plugin-astro@0.14.1)(prettier@3.9.6)(typescript@5.9.3)
       chokidar: 4.0.3
       kleur: 4.1.5
       typescript: 5.9.3
@@ -5221,7 +5221,7 @@ snapshots:
 
   '@astrojs/internal-helpers@0.7.6': {}
 
-  '@astrojs/language-server@2.16.10(prettier-plugin-astro@0.14.1)(prettier@3.9.5)(typescript@5.9.3)':
+  '@astrojs/language-server@2.16.10(prettier-plugin-astro@0.14.1)(prettier@3.9.6)(typescript@5.9.3)':
     dependencies:
       '@astrojs/compiler': 2.13.1
       '@astrojs/yaml2ts': 0.2.4
@@ -5235,14 +5235,14 @@ snapshots:
       volar-service-css: 0.0.70(@volar/language-service@2.4.28)
       volar-service-emmet: 0.0.70(@volar/language-service@2.4.28)
       volar-service-html: 0.0.70(@volar/language-service@2.4.28)
-      volar-service-prettier: 0.0.70(@volar/language-service@2.4.28)(prettier@3.9.5)
+      volar-service-prettier: 0.0.70(@volar/language-service@2.4.28)(prettier@3.9.6)
       volar-service-typescript: 0.0.70(@volar/language-service@2.4.28)
       volar-service-typescript-twoslash-queries: 0.0.70(@volar/language-service@2.4.28)
       volar-service-yaml: 0.0.70(@volar/language-service@2.4.28)
       vscode-html-languageservice: 5.6.2
       vscode-uri: 3.1.0
     optionalDependencies:
-      prettier: 3.9.5
+      prettier: 3.9.6
       prettier-plugin-astro: 0.14.1
     transitivePeerDependencies:
       - typescript
@@ -6453,7 +6453,7 @@ snapshots:
 
   '@shikijs/vscode-textmate@10.0.2': {}
 
-  '@shun-shobon/style-guide@5.1.1(@typescript-eslint/utils@8.61.0(eslint@10.7.0(jiti@2.7.0))(typescript@5.9.3))(eslint@10.7.0(jiti@2.7.0))(prettier@3.9.5)(storybook@10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.5)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@5.9.3)':
+  '@shun-shobon/style-guide@5.1.1(@typescript-eslint/utils@8.61.0(eslint@10.7.0(jiti@2.7.0))(typescript@5.9.3))(eslint@10.7.0(jiti@2.7.0))(prettier@3.9.6)(storybook@10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.6)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@5.9.3)':
     dependencies:
       '@eslint/core': 1.1.0
       '@eslint/js': 10.0.1(eslint@10.7.0(jiti@2.7.0))
@@ -6471,18 +6471,18 @@ snapshots:
       eslint-plugin-react-hooks: 7.0.1(eslint@10.7.0(jiti@2.7.0))
       eslint-plugin-regexp: 3.0.0(eslint@10.7.0(jiti@2.7.0))
       eslint-plugin-simple-import-sort: 12.1.1(eslint@10.7.0(jiti@2.7.0))
-      eslint-plugin-storybook: 10.2.14(eslint@10.7.0(jiti@2.7.0))(storybook@10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.5)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@5.9.3)
+      eslint-plugin-storybook: 10.2.14(eslint@10.7.0(jiti@2.7.0))(storybook@10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.6)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@5.9.3)
       eslint-plugin-unicorn: 63.0.0(eslint@10.7.0(jiti@2.7.0))
       globals: 17.4.0
       local-pkg: 1.1.2
       prettier-plugin-astro: 0.14.1
-      prettier-plugin-jsdoc: 1.5.0(prettier@3.9.5)
-      prettier-plugin-pkg: 0.21.2(prettier@3.9.5)
-      prettier-plugin-tailwindcss: 0.7.2(prettier-plugin-astro@0.14.1)(prettier-plugin-jsdoc@1.5.0(prettier@3.9.5))(prettier@3.9.5)
+      prettier-plugin-jsdoc: 1.5.0(prettier@3.9.6)
+      prettier-plugin-pkg: 0.21.2(prettier@3.9.6)
+      prettier-plugin-tailwindcss: 0.7.2(prettier-plugin-astro@0.14.1)(prettier-plugin-jsdoc@1.5.0(prettier@3.9.6))(prettier@3.9.6)
       typescript-eslint: 8.56.1(eslint@10.7.0(jiti@2.7.0))(typescript@5.9.3)
     optionalDependencies:
       eslint: 10.7.0(jiti@2.7.0)
-      prettier: 3.9.5
+      prettier: 3.9.6
     transitivePeerDependencies:
       - '@ianvs/prettier-plugin-sort-imports'
       - '@prettier/plugin-hermes'
@@ -7985,11 +7985,11 @@ snapshots:
     dependencies:
       eslint: 10.7.0(jiti@2.7.0)
 
-  eslint-plugin-storybook@10.2.14(eslint@10.7.0(jiti@2.7.0))(storybook@10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.5)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@5.9.3):
+  eslint-plugin-storybook@10.2.14(eslint@10.7.0(jiti@2.7.0))(storybook@10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.6)(react-dom@19.2.7(react@19.2.7))(react@19.2.7))(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/utils': 8.61.0(eslint@10.7.0(jiti@2.7.0))(typescript@5.9.3)
       eslint: 10.7.0(jiti@2.7.0)
-      storybook: 10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.5)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
+      storybook: 10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.6)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -9368,30 +9368,30 @@ snapshots:
   prettier-plugin-astro@0.14.1:
     dependencies:
       '@astrojs/compiler': 2.13.1
-      prettier: 3.9.5
+      prettier: 3.9.6
       sass-formatter: 0.7.9
 
-  prettier-plugin-jsdoc@1.5.0(prettier@3.9.5):
+  prettier-plugin-jsdoc@1.5.0(prettier@3.9.6):
     dependencies:
       binary-searching: 2.0.5
       comment-parser: 1.4.7
       mdast-util-from-markdown: 2.0.3
-      prettier: 3.9.5
+      prettier: 3.9.6
     transitivePeerDependencies:
       - supports-color
 
-  prettier-plugin-pkg@0.21.2(prettier@3.9.5):
+  prettier-plugin-pkg@0.21.2(prettier@3.9.6):
     dependencies:
-      prettier: 3.9.5
+      prettier: 3.9.6
 
-  prettier-plugin-tailwindcss@0.7.2(prettier-plugin-astro@0.14.1)(prettier-plugin-jsdoc@1.5.0(prettier@3.9.5))(prettier@3.9.5):
+  prettier-plugin-tailwindcss@0.7.2(prettier-plugin-astro@0.14.1)(prettier-plugin-jsdoc@1.5.0(prettier@3.9.6))(prettier@3.9.6):
     dependencies:
-      prettier: 3.9.5
+      prettier: 3.9.6
     optionalDependencies:
       prettier-plugin-astro: 0.14.1
-      prettier-plugin-jsdoc: 1.5.0(prettier@3.9.5)
+      prettier-plugin-jsdoc: 1.5.0(prettier@3.9.6)
 
-  prettier@3.9.5: {}
+  prettier@3.9.6: {}
 
   pretty-format@27.5.1:
     dependencies:
@@ -9847,7 +9847,7 @@ snapshots:
       es-errors: 1.3.0
       internal-slot: 1.1.0
 
-  storybook@10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.5)(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
+  storybook@10.4.4(@testing-library/dom@10.4.1)(prettier@3.9.6)(react-dom@19.2.7(react@19.2.7))(react@19.2.7):
     dependencies:
       '@storybook/global': 5.0.0
       '@storybook/icons': 2.0.2(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
@@ -9865,7 +9865,7 @@ snapshots:
       use-sync-external-store: 1.6.0(react@19.2.7)
       ws: 8.21.0
     optionalDependencies:
-      prettier: 3.9.5
+      prettier: 3.9.6
     transitivePeerDependencies:
       - '@testing-library/dom'
       - bufferutil
@@ -10304,12 +10304,12 @@ snapshots:
     optionalDependencies:
       '@volar/language-service': 2.4.28
 
-  volar-service-prettier@0.0.70(@volar/language-service@2.4.28)(prettier@3.9.5):
+  volar-service-prettier@0.0.70(@volar/language-service@2.4.28)(prettier@3.9.6):
     dependencies:
       vscode-uri: 3.1.0
     optionalDependencies:
       '@volar/language-service': 2.4.28
-      prettier: 3.9.5
+      prettier: 3.9.6
 
   volar-service-typescript-twoslash-queries@0.0.70(@volar/language-service@2.4.28):
     dependencies:
@@ -10531,7 +10531,7 @@ snapshots:
       '@vscode/l10n': 0.0.18
       ajv: 8.20.0
       ajv-draft-04: 1.0.0(ajv@8.20.0)
-      prettier: 3.9.5
+      prettier: 3.9.6
       request-light: 0.5.8
       vscode-json-languageservice: 4.1.8
       vscode-languageserver: 9.0.1
