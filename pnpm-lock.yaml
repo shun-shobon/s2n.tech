@@ -24,8 +24,8 @@ importers:
         specifier: 4.3.3
         version: 4.3.3(vite@6.4.3(@types/node@25.9.3)(jiti@2.7.0)(lightningcss@1.32.0)(yaml@2.9.0))
       temporal-polyfill:
-        specifier: 0.3.2
-        version: 0.3.2
+        specifier: 1.0.4
+        version: 1.0.4
     devDependencies:
       '@astrojs/check':
         specifier: 0.9.10
@@ -4632,11 +4632,14 @@ packages:
     resolution: {integrity: sha512-uxc/zpqFg6x7C8vOE7lh6Lbda8eEL9zmVm/PLeTPBRhh1xCgdWaQ+J1CUieGpIfm2HdtsUpRv+HshiasBMcc6A==}
     engines: {node: '>=6'}
 
-  temporal-polyfill@0.3.2:
-    resolution: {integrity: sha512-TzHthD/heRK947GNiSu3Y5gSPpeUDH34+LESnfsq8bqpFhsB79HFBX8+Z834IVX68P3EUyRPZK5bL/1fh437Eg==}
+  temporal-polyfill@1.0.4:
+    resolution: {integrity: sha512-MLEU0qOD2uXlz24oINNtdLZQl8RgmMxSnRtKEGZGGetTJjlRwQJjk+VsJ4EREaUoiaTb8NJOcUiKtoAiWn9EBg==}
 
-  temporal-spec@0.3.1:
-    resolution: {integrity: sha512-B4TUhezh9knfSIMwt7RVggApDRJZo73uZdj8AacL2mZ8RP5KtLianh2MXxL06GN9ESYiIsiuoLQhgVfwe55Yhw==}
+  temporal-spec@1.0.1:
+    resolution: {integrity: sha512-wxVoanmDeavXie1vu2JaQ3WIc3JZnWAOYFBsJyATaVsXsycKYUflGsyBmrRSnoCpZJpwPyr38VpgSUlQ8CbFxg==}
+
+  temporal-utils@1.0.2:
+    resolution: {integrity: sha512-1B8Dl4KzrOvsNUlpoWGno2VLQlxroLjDgc5NBjVC9ax9ymdo+ezfyvhyjEMx+IVfhINr6CIG2gcnlP95iRrybQ==}
 
   tiny-inflate@1.0.3:
     resolution: {integrity: sha512-pkY1fj1cKHb2seWDy0B16HeWyczlJA9/WW3u3c4z/NiWDsO3DOU5D7nhTLE9CF0yXv/QZFY7sEJmj24dK+Rrqw==}
@@ -10063,11 +10066,14 @@ snapshots:
 
   tapable@2.3.3: {}
 
-  temporal-polyfill@0.3.2:
+  temporal-polyfill@1.0.4:
     dependencies:
-      temporal-spec: 0.3.1
+      temporal-spec: 1.0.1
+      temporal-utils: 1.0.2
 
-  temporal-spec@0.3.1: {}
+  temporal-spec@1.0.1: {}
+
+  temporal-utils@1.0.2: {}
 
   tiny-inflate@1.0.3: {}
 
