@@ -30,7 +30,7 @@
 		"@astrojs/sitemap": "3.7.4",
 		"@shun-shobon/style-guide": "5.1.1",
 		"astro": "5.18.1",
-		"astro-icon": "1.1.5",
+		"astro-icon": "1.2.0",
 		"eslint": "10.8.0",
 		"pnpm": "10.33.4",
 		"prettier": "3.9.6",
