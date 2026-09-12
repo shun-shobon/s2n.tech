@@ -4,6 +4,8 @@ minimumReleaseAgeExclude:
   - "@shun-shobon/style-guide"
   # Renovate security update: pnpm@10.28.2
   - pnpm@10.28.2
+  # Renovate security update: @astrojs/cloudflare@13.1.10
+  - "@astrojs/cloudflare@13.1.10"
 
 onlyBuiltDependencies:
   - "@tailwindcss/oxide"
