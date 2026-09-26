@@ -31,8 +31,8 @@ importers:
         specifier: 0.9.10
         version: 0.9.10(@emnapi/runtime@1.11.3)(prettier-plugin-astro@0.14.1)(prettier@3.9.8)(typescript@5.9.3)
       '@astrojs/partytown':
-        specifier: 2.1.7
-        version: 2.1.7
+        specifier: 2.1.8
+        version: 2.1.8
       '@astrojs/sitemap':
         specifier: 3.7.4
         version: 3.7.4
@@ -114,8 +114,8 @@ packages:
   '@astrojs/markdown-remark@6.3.11':
     resolution: {integrity: sha512-hcaxX/5aC6lQgHeGh1i+aauvSwIT6cfyFjKWvExYSxUhZZBBdvCliOtu06gbQyhbe0pGJNoNmqNlQZ5zYUuIyQ==}
 
-  '@astrojs/partytown@2.1.7':
-    resolution: {integrity: sha512-dbffmNmJ+sAJ0/aXSaLX4aI04EZS/2C6Mm/+fmd4ikqWO7hV6nIi0sug8Z3c+yqedJNi1swFvpwluWmGjLHNzw==}
+  '@astrojs/partytown@2.1.8':
+    resolution: {integrity: sha512-iCRNNPqvdQEORyAYC8jN8nTCN2wW66WS+Pft2fhqq52cj3GcWvzlAZlyfjtpCeiEYI0op6u5OtWqqItiS7INDA==}
 
   '@astrojs/prism@3.3.0':
     resolution: {integrity: sha512-q8VwfU/fDZNoDOf+r7jUnMC2//H2l0TuQ6FkGJL8vD8nw/q5KiL3DS1KKBI3QhI9UQhpJ5dc7AtqfbXWuOgLCQ==}
@@ -1852,8 +1852,8 @@ packages:
   '@poppinss/exception@1.2.3':
     resolution: {integrity: sha512-dCED+QRChTVatE9ibtoaxc+WkdzOSjYTKi/+uacHWIsfodVfpsueo3+DKpgU5Px8qXjgmXkSvhXvSCz3fnP9lw==}
 
-  '@qwik.dev/partytown@0.13.2':
-    resolution: {integrity: sha512-Umls4bSkuzqLVcGvf8OgwIn/OldproSAbaQ/iYGe8VPYBpl2CaOSxabWwkeC72LDFqxVL0b0q8XlI8MuChDyzg==}
+  '@qwik.dev/partytown@0.14.4':
+    resolution: {integrity: sha512-XGBgDuxgG7CsAs4PZ32GUmbD029nAeCR4VGyJRJnNp3r3uVjbZt8Dkxe8cw+f8xY6Dh8VI5cb3ygEZCqSftwtA==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -2916,10 +2916,6 @@ packages:
 
   domutils@3.2.2:
     resolution: {integrity: sha512-6kZKyUajlDuqlHKVX1w7gyslj9MPIXzIFiz/rGu35uC1wMi+kMhQwGhl4lt9unC9Vb9INnY9Z3/ZA3+FhASLaw==}
-
-  dotenv@16.6.1:
-    resolution: {integrity: sha512-uBq4egWHTcTt33a72vpSG0z3HnPuIl6NqYcTrKEg2azoEyl2hpW0zqlxysq2pK9HlDIHyHyakeYaYnSAwd8bow==}
-    engines: {node: '>=12'}
 
   dset@3.1.4:
     resolution: {integrity: sha512-2QF/g9/zTaPDc3BjNcVTGoBbXBgYfMTTceLaYcFJ/W9kggFUkhxD/hMEeuLKbugyef9SqAx8cpgwlIP/jinUTA==}
@@ -5367,9 +5363,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/partytown@2.1.7':
+  '@astrojs/partytown@2.1.8':
     dependencies:
-      '@qwik.dev/partytown': 0.13.2
+      '@qwik.dev/partytown': 0.14.4
       mrmime: 2.0.1
 
   '@astrojs/prism@3.3.0':
@@ -6553,9 +6549,7 @@ snapshots:
 
   '@poppinss/exception@1.2.3': {}
 
-  '@qwik.dev/partytown@0.13.2':
-    dependencies:
-      dotenv: 16.6.1
+  '@qwik.dev/partytown@0.14.4': {}
 
   '@rollup/pluginutils@5.4.0(rollup@4.63.4)':
     dependencies:
@@ -7715,8 +7709,6 @@ snapshots:
       dom-serializer: 2.0.0
       domelementtype: 2.3.0
       domhandler: 5.0.3
-
-  dotenv@16.6.1: {}
 
   dset@3.1.4: {}
 
