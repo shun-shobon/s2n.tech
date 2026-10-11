@@ -1,14 +1,16 @@
-import { defineCollection, reference, z } from "astro:content";
+import { glob } from "astro/loaders";
+import { z } from "astro/zod";
+import { defineCollection, reference } from "astro:content";
 
 const timelineCollection = defineCollection({
-	type: "content",
+	loader: glob({ pattern: "*.md", base: "./src/content/timeline" }),
 	schema: z.object({
 		title: z.string(),
 	}),
 });
 
 const worksCollection = defineCollection({
-	type: "content",
+	loader: glob({ pattern: "*.md", base: "./src/content/works" }),
 	schema: ({ image }) =>
 		z.object({
 			title: z.string(),
@@ -19,7 +21,7 @@ const worksCollection = defineCollection({
 				.array(
 					z.object({
 						name: z.string(),
-						url: z.string().url(),
+						url: z.url(),
 					}),
 				)
 				.optional(),
@@ -27,7 +29,7 @@ const worksCollection = defineCollection({
 });
 
 const technologyCollection = defineCollection({
-	type: "data",
+	loader: glob({ pattern: "*.yml", base: "./src/content/technologies" }),
 	schema: z.object({
 		name: z.string(),
 		icon: z.string().optional(),

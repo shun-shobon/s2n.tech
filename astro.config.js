@@ -30,6 +30,7 @@ export default defineConfig({
 		plugins: [tailwindcss()],
 	},
 	output: "static",
+	session: false,
 	build: {
 		format: "file",
 	},

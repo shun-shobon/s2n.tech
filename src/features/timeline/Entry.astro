@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { render } from "astro:content";
 import { Icon } from "astro-icon/components";
 import { Temporal } from "temporal-polyfill";
 
@@ -18,13 +19,13 @@ const MY_BIRTHDAY = Temporal.PlainYearMonth.from({
 	calendar,
 });
 
-const date = slugToYearMonth(entry.slug);
+const date = slugToYearMonth(entry.id);
 const duration = date.since(MY_BIRTHDAY);
 // 月の差が0(誕生月)のときは基本誕生日前の出来事なので-1する
 const yearsOld =
 	duration.months === 0 ? Math.max(duration.years - 1, 0) : duration.years;
 
-const { Content } = await entry.render();
+const { Content } = await render(entry);
 ---
 
 <li class="group relative py-2 pl-4">
@@ -38,8 +39,7 @@ const { Content } = await entry.render();
 		class="animate-duration-[5s] absolute top-[14px] left-[calc(0px-16px/2)] size-[16px] animate-spin"
 	/>
 	<time datetime={date.toString({ calendarName: "never" })}>
-		{date.toLocaleString("ja-JP")}
-		({yearsOld}歳)
+		{`${date.toLocaleString("ja-JP")} (${yearsOld}歳)`}
 	</time>
 	<h3 class="text-2xl">{entry.data.title}</h3>
 	<Content />

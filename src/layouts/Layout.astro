@@ -39,7 +39,11 @@ const { title } = Astro.props;
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 		<link rel="manifest" href="/manifest.webmanifest" />
 		<link rel="sitemap" href="/sitemap-index.xml" />
-		<link rel="canonical" href={new URL(Astro.url.pathname, Astro.site).href} />
+		<link
+			rel="canonical"
+			href={new URL(Astro.url.pathname.replace(/index\.html$/u, ""), Astro.site)
+				.href}
+		/>
 
 		{/* OGP */}
 		<meta property="og:title" content="Shuntaro Nishizawa - Web App Delopver" />
