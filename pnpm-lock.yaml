@@ -49,8 +49,8 @@ importers:
         specifier: 10.13.0
         version: 10.13.0(jiti@2.7.0)
       pnpm:
-        specifier: 10.34.8
-        version: 10.34.8
+        specifier: 10.34.9
+        version: 10.34.9
       prettier:
         specifier: 3.9.10
         version: 3.9.10
@@ -3424,8 +3424,8 @@ packages:
     resolution: {integrity: sha512-Nc3IT5yHzflTfbjgqWcCPpo7DaKy4FnpB0l/zCAW0Tc7jxAiuqSxHasntB3D7887LSrA93kDJ9IXovxJYxyLCA==}
     engines: {node: '>=4'}
 
-  pnpm@10.34.8:
-    resolution: {integrity: sha512-9ieo6XE0Ov5J39D2PQKCNCAd+oMdXLWIcz4eX42ya/FpiaMhYatcG02zsf28NzFgYGtbieAC323RmoWt+R/FqA==}
+  pnpm@10.34.9:
+    resolution: {integrity: sha512-9JtajqD97bRLs8DB1ldQkqU8KVDZW3rRXfEfF5dId6LeOgHAfpNOmyjOcW5RwJqUlixzBtCb4uHksYqMh2L9Mg==}
     engines: {node: '>=18.12'}
     hasBin: true
 
@@ -7964,7 +7964,7 @@ snapshots:
 
   pluralize@8.0.0: {}
 
-  pnpm@10.34.8: {}
+  pnpm@10.34.9: {}
 
   possible-typed-array-names@1.1.0: {}
 
