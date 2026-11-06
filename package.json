@@ -17,7 +17,7 @@
 		"typecheck": "tsc --noEmit && astro check"
 	},
 	"dependencies": {
-		"@astrojs/cloudflare": "14.4.3",
+		"@astrojs/cloudflare": "14.4.4",
 		"@iconify-json/lucide": "1.2.149",
 		"@iconify-json/material-symbols-light": "1.2.98",
 		"@iconify-json/simple-icons": "1.2.101",
@@ -29,7 +29,7 @@
 		"@astrojs/partytown": "2.1.9",
 		"@astrojs/sitemap": "3.7.4",
 		"@shun-shobon/style-guide": "5.1.1",
-		"astro": "7.4.4",
+		"astro": "7.4.5",
 		"astro-icon": "1.2.0",
 		"eslint": "10.13.0",
 		"pnpm": "10.34.9",
