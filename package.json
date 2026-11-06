@@ -18,7 +18,7 @@
 	},
 	"dependencies": {
 		"@astrojs/cloudflare": "14.4.4",
-		"@iconify-json/lucide": "1.2.149",
+		"@iconify-json/lucide": "1.2.151",
 		"@iconify-json/material-symbols-light": "1.2.98",
 		"@iconify-json/simple-icons": "1.2.101",
 		"@tailwindcss/vite": "4.3.4",
