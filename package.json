@@ -21,7 +21,7 @@
 		"@iconify-json/lucide": "1.2.153",
 		"@iconify-json/material-symbols-light": "1.2.100",
 		"@iconify-json/simple-icons": "1.2.102",
-		"@tailwindcss/vite": "4.3.4",
+		"@tailwindcss/vite": "4.3.5",
 		"temporal-polyfill": "1.0.8"
 	},
 	"devDependencies": {
@@ -35,7 +35,7 @@
 		"pnpm": "10.34.9",
 		"prettier": "3.10.0",
 		"sharp": "0.35.5",
-		"tailwindcss": "4.3.4",
+		"tailwindcss": "4.3.5",
 		"tailwindcss-animated": "2.1.0",
 		"typescript": "5.9.3",
 		"wrangler": "4.160.1"
